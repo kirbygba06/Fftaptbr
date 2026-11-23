@@ -166,6 +166,16 @@ WEAPONS.update({
     454: 'Manto Negro', 455: 'Manto de Luz', 456: 'Manto Senhorial', 457: 'Casaco de Prata',
     458: 'Manto Vermelho', 459: 'Manto Sábio', 460: 'Manto Mágico', 461: 'Capa Ceifador',
 })
+WEAPONS.update({
+    462: 'Botas de Batalha', 463: 'Botas Espinhos', 464: 'Botas Corrida', 465: 'Botas Vermelhas',
+    466: 'Botas de Pena', 468: 'Sapatos Galmia', 469: 'Sapatos de Fada', 471: 'Tabi Ninja',
+    472: 'Manoplas', 473: 'Braçal Ladrão', 474: 'Braçadeiras', 475: 'Braçal Genji',
+    476: 'Luvas de Fogo', 477: 'Braçal de Osso', 478: 'Anel da Sorte', 479: 'Anel Mágico',
+    480: 'Anel Angelical', 481: 'Escaravelho', 482: 'Brinco de Rubi', 483: 'Braçal Estrela',
+    484: 'Gema Mindu', 485: 'Poção', 486: 'Hi|Poção', 487: 'X|Poção', 488: 'Éter',
+    489: 'Elixir', 490: 'Antídoto', 491: 'Colírio', 492: 'Erva Eco', 493: 'Beijo da Donzela',
+    494: 'Soft', 495: 'Água Benta', 496: 'Bandagem', 497: 'Cura Total', 498: 'Pena de Fênix',
+})
 CLASSES.update(WEAPONS)
 
 # entradas do menu que o patch italiano não cobria (idx da tabela de menus -> PT-BR)
