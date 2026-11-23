@@ -126,6 +126,24 @@ WEAPONS.update({
     306: 'Arco Juramento', 307: 'Sétimo Céu', 308: 'Tiro Mithril', 309: 'Arco Marduk',
     310: 'Arco Gastra', 311: 'Balestra',
 })
+WEAPONS.update({
+    312: 'Dardo', 313: 'Lança de Lava', 315: 'Lança de Gelo', 316: 'Partasana',
+    317: 'Lança de Kain', 318: 'Tridente', 319: 'Bigode de Dragão', 320: 'Lança Mithril',
+    321: 'Lança de Odin', 322: 'Lança Fera', 323: 'Espeto Bangaa', 324: 'Sino Demônio',
+    325: 'Sino de Vidro', 326: 'Clarim', 327: 'Concha', 328: 'Sino da Terra',
+    329: 'Quena Negra', 330: 'Flauta Sátiro', 331: 'Harpa de Fada', 332: 'Flauta Aona',
+    333: 'Sineta da Cura', 334: 'Cordas Rubras', 335: 'Sino Mithril', 336: 'Rabeca Sombria',
+    337: 'Castanhola Fell', 338: 'Soqueira Dura', 339: 'Sol Nascente', 340: 'Soqueira Doente',
+    341: 'Garras do Sonho', 342: 'Soqueira Kaiser', 343: 'Garras de Gato', 344: 'Sobrevivente',
+    345: 'Presas Brancas', 346: 'Mão de Deus', 347: 'Presas de Tigre', 348: 'Garras da Morte',
+    349: 'Garras Mithril', 350: 'Graxa Explosiva', 351: 'Mãos Mágicas', 352: 'Alma Goblin',
+    353: 'Alma Flan', 354: 'Alma Bomba', 355: 'Alma Dragão', 356: 'Alma Lamia',
+    357: 'Alma Inseto', 358: 'Alma Pantera', 359: 'Alma Malboro', 360: 'Alma Olho',
+    361: 'Alma Mithril', 362: 'Alma Sinistra', 363: 'Alma Rukavi', 364: 'Arma Aiot',
+    365: 'Canhão de Prata', 366: 'Arma Tumulto', 367: 'Rifle Caos', 368: 'Arma Perdida',
+    369: 'Pacificador', 370: 'Arma Giot', 371: 'Cano Longo', 372: 'Forasteiro',
+    373: 'Arma Mithril', 375: 'Arma Chamadora',
+})
 CLASSES.update(WEAPONS)
 
 # entradas do menu que o patch italiano não cobria (idx da tabela de menus -> PT-BR)
