@@ -116,7 +116,7 @@ WEAPONS.update({
     262: 'Bastão Terra', 263: 'Bastão Força', 264: 'Bastão Chama', 265: 'Bastão Thor',
     266: 'Bastão Frio', 267: 'Bastão Estelar', 268: 'Bastão Princesa', 269: 'Bastão Mithril',
     270: 'Bastão Herege', 272: 'Maça de Guerra', 273: 'Maça de Energia', 274: 'Maça Druida',
-    275: 'Báculo Sábio', 276: 'Estrela da Manhã', 277: 'Mandrágora', 278: 'Báculo da Vida',
+    275: 'Báculo Sábio', 276: 'Estrela Matutina', 277: 'Mandrágora', 278: 'Báculo da Vida',
     279: 'Maça Lótus', 280: 'Cauda Escorp.', 281: 'Maça Zeus', 282: 'Maça Mithril',
     283: 'Cacto', 285: 'Arco Longo', 286: 'Arco Carvão', 287: 'Arco Espinho', 288: 'Arco Prego',
     289: 'Arco de Prata', 290: 'Arco de Ártemis', 291: 'Arco Yoichi', 292: 'Arco Alvo',
@@ -128,7 +128,7 @@ WEAPONS.update({
 })
 WEAPONS.update({
     312: 'Dardo', 313: 'Lança de Lava', 315: 'Lança de Gelo', 316: 'Partasana',
-    317: 'Lança de Kain', 318: 'Tridente', 319: 'Bigode de Dragão', 320: 'Lança Mithril',
+    317: 'Lança de Kain', 318: 'Tridente', 319: 'Barba de Dragão', 320: 'Lança Mithril',
     321: 'Lança de Odin', 322: 'Lança Fera', 323: 'Espeto Bangaa', 324: 'Sino Demônio',
     325: 'Sino de Vidro', 326: 'Clarim', 327: 'Concha', 328: 'Sino da Terra',
     329: 'Quena Negra', 330: 'Flauta Sátiro', 331: 'Harpa de Fada', 332: 'Flauta Aona',
@@ -143,6 +143,28 @@ WEAPONS.update({
     365: 'Canhão de Prata', 366: 'Arma Tumulto', 367: 'Rifle Caos', 368: 'Arma Perdida',
     369: 'Pacificador', 370: 'Arma Giot', 371: 'Cano Longo', 372: 'Forasteiro',
     373: 'Arma Mithril', 375: 'Arma Chamadora',
+})
+WEAPONS.update({
+    376: 'Escudo Bronze', 377: 'Escudo Redondo', 378: 'Escudo Opala', 379: 'Escudo de Gelo',
+    380: 'Escudo Chama', 381: 'Escudo Égide', 382: 'Escudo Genji', 383: 'Escudo Sacri',
+    384: 'Escudo Shijin', 385: 'Escudo Choco', 387: 'Escudo Devaneio', 388: 'Elmo de Bronze',
+    389: 'Elmo de Ferro', 390: 'Elmo Opala', 391: 'Elmo Cruz', 392: 'Elmo Diamante',
+    393: 'Elmo Genji', 394: 'Elmo Desfile', 395: 'Elmo Hanya', 396: 'Elmo Bangaa',
+    398: 'Presilha', 399: 'Fita', 400: 'Gorro de Pena', 401: 'Diadema', 402: 'Boina Verde',
+    403: 'Bandana', 404: 'Chapéu de Mago', 405: 'Grampo de Ouro', 406: 'Chapéu Ladrão',
+    407: 'Chapéu Negro', 408: 'Chapéu Branco', 409: 'Chapéu Acácia', 411: 'Couraça',
+    412: 'Armad. Bronze', 413: 'Armad. de Ferro', 414: 'Placas', 415: 'Armad. de Ouro',
+    416: 'Armad. Diamante', 417: 'Armadura Opala', 418: 'Malha Carabini', 419: 'Malha Espelho',
+    420: 'Malha Dragão', 421: 'Armadura Genji', 423: 'Armad. Adaman', 424: 'Armad. Materia',
+    425: 'Peitoral', 426: 'Traje de Couro', 427: 'Placa de Malha', 428: 'Colete Adaman',
+    429: 'Colete Sobrev.', 430: 'Brigantina', 431: 'Kimono de Judô', 432: 'Faixa de Poder',
+    433: 'Traje Gaia', 434: 'Placa Minerva', 435: 'Traje Ninja', 436: 'Traje Sombrio',
+    438: 'Colete Miragem', 439: 'Traje Borracha', 440: 'Placa de Osso', 441: 'Único',
+    442: 'Conjunto Brint', 443: 'Conjunto Galmia', 444: 'Casaco do Juiz', 445: 'Manto Templo',
+    446: 'Manto Cânhamo', 447: 'Manto de Seda', 448: 'Manto Mago', 449: 'Manto de Visco',
+    450: 'Manto Chama', 451: 'Manto Trovão', 452: 'Manto Rajada', 453: 'Manto Branco',
+    454: 'Manto Negro', 455: 'Manto de Luz', 456: 'Manto Senhorial', 457: 'Casaco de Prata',
+    458: 'Manto Vermelho', 459: 'Manto Sábio', 460: 'Manto Mágico', 461: 'Capa Ceifador',
 })
 CLASSES.update(WEAPONS)
 

@@ -15,7 +15,7 @@ A tradução entra no **slot do inglês**: escolha *English* na tela de idioma.
 | Conjuntos de habilidades | 45 nomes (idx 95–139), com "de" onde cabe (Banco de Monstros, Tormenta de Areia, Téc. de Batalha): Combate, Magia Branca/Negra/Azul/Vermelha/Temporal, Ferraria, Téc. Monge, Oração, Canção… |
 | Monstros, chefes e papéis de NPC | 50 nomes (tabela de nomes, idx 2–122): Flan de Gelo, Formigaleão, Zumbi, Olho Flutuante, Wyrm de Fogo, Chefe Borzoi, Líder de Turma, Enfermeira… (nomes próprios como Ahriman, Coeurl, Tonberry, Malboro ficam) |
 | Habilidades individuais | ~430 nomes (idx 140–574, incluindo os Combos): Roubar, Mirar: Pernas, Presa Venenosa, Foice Mortal, Golpe Ultima, Vida|Plena… (146, 178 e 207 têm códigos de controle e ficaram em inglês) |
-| Equipamento (parcial) | categorias de item não identificado (idx 686–715: Espada?, Armadura?…) e ~190 armas: espadas, facas, cajados, bastões, maças, arcos, lanças, instrumentos, garras, almas e armas de fogo (nomes 124–375; lendárias como Excalibur ficam) |
+| Equipamento (parcial) | categorias de item não identificado (idx 686–715: Espada?, Armadura?…) e ~270 armas e equipamentos: espadas, facas, cajados, bastões, maças, arcos, lanças, instrumentos, garras, almas, armas de fogo, escudos, elmos, chapéus, armaduras e mantos (nomes 124–461; lendárias como Excalibur ficam) |
 | Classes | 44 nomes (tabela `0x724C34`): Soldado, Lutador, Ladrão, Mago Branco/Negro/Azul/Vermelho/Temporal, Arqueiro, Paladino, Templário, Caçador, Bispo, Guerreiro, Esgrimista, Monge Branco, Domador, Alquimista, Sábio, Invocador… |
 
 Monstros, itens, habilidades e diálogos **não** foram tocados.
