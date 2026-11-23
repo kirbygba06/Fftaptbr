@@ -32,7 +32,7 @@ G_A_TILDE, G_O_TILDE = 27, 40  # glifos ä e ö -> viram ã e õ
 ACC01 = {'à': 0x19, 'á': 0x1A, 'â': 0x1B, 'ã': 0x1C, 'é': 0x1E, 'ê': 0x1F, 'í': 0x22,
          'ó': 0x27, 'ô': 0x28, 'õ': 0x29, 'ú': 0x2B, 'ç': 0x30,
          'Á': 0x04, 'É': 0x08, 'Í': 0x0C, 'Ó': 0x11, 'Ú': 0x15}
-PUNCT01 = {'.': 0xE5, ',': 0xED, '!': 0xEC, '?': 0xEB, ':': 0xEF, '/': 0xF2, "'": 0xF5}
+PUNCT01 = {'+': 0xFE, '|': 0xFF, '.': 0xE5, ',': 0xED, '!': 0xEC, '?': 0xEB, ':': 0xEF, '/': 0xF2, "'": 0xF5}
 
 
 def code01(ch):
@@ -105,7 +105,7 @@ SKILLSETS = {
 SKILLSET_MAX_PX = 82   # inglês/italiano usam até ~77px; exceções propositais: 96 e 119
 EXTRA_MENU.update(SKILLSETS)
 
-# habilidades individuais (idx 140-199; 146 e 178 têm códigos de controle e ficam em inglês)
+# habilidades individuais (idx 140-309; 146, 178 e 207 têm códigos de controle e ficam em inglês)
 ABILITIES = {
     140: 'Derreter', 141: 'Tal. Ninja', 142: 'Roubar', 143: 'Mirar', 144: 'Pandora',
     145: 'Garrada', 147: 'Olhar', 148: 'Chamar', 149: 'Téc. de Dragão', 150: 'Tal. Alquímico',
@@ -122,6 +122,32 @@ ABILITIES = {
     195: 'Carga Ultima', 196: 'Esmagar Ultima', 197: 'Tiro Ultima', 198: 'Espada Ultima',
     199: 'Golpe Ultima',
 }
+ABILITIES.update({
+    200: 'Vida|Plena', 201: 'Não Morto', 202: 'Tiro de Fogo', 203: 'Capturar', 204: 'Zumbificar',
+    205: 'Ifrit', 206: 'Fera de Pedra', 208: 'Mirar: Arma', 209: 'Água', 210: 'Vodu',
+    211: 'Mirar: Braço', 212: 'Redemoinho', 213: 'Rajada de Ar', 214: 'Aero', 215: 'Éter',
+    216: 'X|Poção', 217: 'Esuna', 218: 'Elixir', 219: 'Exilar', 220: 'Socorro', 221: 'Aura',
+    222: 'Febre', 223: 'Grito de Guerra', 224: 'Beijo Donzela', 225: 'Guarda Mog',
+    226: 'Sem|Guarda', 227: 'Carbuncle', 228: 'Onda Sonora', 229: 'Anular Magia',
+    230: 'Cuidar', 231: 'Contra Ataque', 232: 'Atordoar', 233: 'Canto do Sapo',
+    234: 'Bomba de Fogo', 235: 'Prender Sombra', 236: 'Pegada Macaco', 237: 'Véu de Fogo',
+    238: 'Proteger', 239: 'Roubar: Elmo', 240: 'Mastigar', 241: 'Pancada', 242: 'Tiro de Gelo',
+    243: 'Mola Amarela', 244: 'Giga Flare', 245: 'Pegar', 246: 'Mirar: Vitais',
+    247: 'Ressoar', 248: 'Kirin', 249: 'Jogar Gil', 250: 'Assaltar', 251: 'Roubar: Gil',
+    252: 'Animar', 253: 'Véu de Metal', 254: 'Disco de Prata', 255: 'Bateria de Ouro',
+    256: 'Amolecer', 257: 'Apressar', 258: 'Rasgar Ar', 259: 'Mau Hálito', 260: 'Beijo',
+    261: 'Demi', 262: 'Quarter', 263: 'Mithril', 264: 'Roubar: JP', 265: 'Lingote Negro',
+    266: 'Cure', 267: 'Curaga', 268: 'Cura', 269: 'Roubar: EXP', 270: 'Olhar Mau',
+    271: 'Atq. de Arma+', 272: 'Conversar', 273: 'Goblin', 274: 'Soco Goblin', 275: 'Inseto',
+    276: 'Tiro Confuso', 277: 'Círculo', 278: 'Cascavel', 279: 'Mirar: Carteira',
+    280: 'Silêncio', 281: 'Tiro Mudo', 282: 'Cruz Estelar', 283: 'Culinária',
+    284: 'Thunder', 285: 'Espada Raio', 286: 'Sopro Elétrico', 287: 'Thundaga', 288: 'Thundara',
+    289: 'Torm. de Areia', 290: 'Shiva', 291: 'Shell', 292: 'Afonia', 293: 'Raio Oleoso',
+    294: 'Abanar Cauda', 295: 'Roleta', 296: 'Explodir', 297: 'Ar Brilhante', 298: 'Saltar',
+    299: 'Julgar', 300: 'Absorver MP', 301: 'Miasma', 302: 'Meio MP', 303: 'Conselho',
+    304: 'Lança Mog', 305: 'Véu de Água', 306: 'Pó de Estrela', 307: 'Estaca Sombria',
+    308: 'Parar', 309: 'Tiro de Stop',
+})
 ABILITY_MAX_PX = 90
 EXTRA_MENU.update(ABILITIES)
 
