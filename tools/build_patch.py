@@ -72,6 +72,20 @@ CLASSES = {
 # entradas do menu que o patch italiano não cobria (idx da tabela de menus -> PT-BR)
 EXTRA_MENU = {34: 'Trocar Itens', 761: 'Lento', 762: 'Lento'}
 
+# conjuntos de habilidades / categorias de menu (idx 95-139 da tabela de menus)
+EXTRA_MENU.update({
+    95: 'Guarda Cartas', 96: 'Banco Monstros', 97: 'Combate', 98: 'Magia', 99: 'Ferraria',
+    100: 'Artesanato', 101: 'Avaliar', 102: 'Coletar', 103: 'Negociar', 104: 'Rastrear',
+    105: 'Itens', 106: 'Magia Azul', 107: 'Magia Vermelha', 108: 'Truques', 109: 'Controle',
+    110: 'Caça', 111: 'Cavalaria', 112: 'Oração', 113: 'Canção', 114: 'Magia Negra',
+    115: 'Hab. Sagaz', 116: 'Hab. Fantasma', 117: 'Téc. Sagrada', 118: 'Chama',
+    119: 'Tormenta Areia', 120: 'Podridão', 121: 'Encurralar', 122: 'Acrobacia',
+    123: 'Pontaria', 124: 'Defesa', 125: 'Magia Invoc.', 126: 'Fedor', 127: 'Magia Branca',
+    128: 'Debilitar', 129: 'Magia Espirit.', 130: 'Téc. Batalha', 131: 'Téc. Monge',
+    132: 'Tiro Certeiro', 133: 'Soco', 134: 'Investida', 135: 'Téc. Lutador',
+    136: 'Magia Temporal', 137: 'Téc. Esgrima', 138: 'Wyrm Gelo', 139: 'Metamorfose',
+})
+
 
 # ---------- IPS ----------
 def write_ips(path, recs):

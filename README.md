@@ -12,6 +12,7 @@ A tradução entra no **slot do inglês**: escolha *English* na tela de idioma.
 |---|---|
 | Menus de comando / sistema / loja / missões | mesmos textos do patch italiano v2, agora nos índices do inglês (tabela `0x720D44`) |
 | Tela e menu de status | índices 717–765 (Pot./Res. Mágica, Velocidade, Sem prêmio, Cores, Tipo cursor, Padrão, Rápido…) + `Trocar Itens`, `Lento` |
+| Conjuntos de habilidades | 45 nomes (idx 95–139 da tabela de menus): Combate, Magia Branca/Negra/Azul/Vermelha/Temporal, Ferraria, Téc. Monge, Oração, Canção… |
 | Classes | 44 nomes (tabela `0x724C34`): Soldado, Lutador, Ladrão, Mago Branco/Negro/Azul/Vermelho/Temporal, Arqueiro, Paladino, Templário, Caçador, Bispo, Guerreiro, Esgrimista, Monge Branco, Domador, Alquimista, Sábio, Invocador… |
 
 Monstros, itens, habilidades e diálogos **não** foram tocados.
