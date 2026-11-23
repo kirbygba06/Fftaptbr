@@ -452,6 +452,12 @@ def main():
     assert cursor + len(text) < 0xFFF000
     recs[cursor] = bytes(text)
 
+    # 2b) diálogos / textos de ajuda (bancos relocados em 0xF00000)
+    import dialogue
+    drecs, dreport = dialogue.build(rom, code01)
+    recs.update(drecs)
+    for r in dreport: print('AVISO diálogo', r)
+
     # 3) fonte: ã e õ reais
     for g, base in ((G_A_TILDE, G_A_TILDE), (G_O_TILDE, G_O_TILDE)):
         recs[FONT + g * 128] = glyph_bytes(tilde_glyph(rom, base))[:64]

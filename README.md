@@ -45,3 +45,13 @@ Magias, invocações, troféus, medalhas, minérios, materiais, comidas, itens d
 habilidade da tabela de nomes (idx 499–645). Ficam como estão só nomes próprios sem tradução
 (Ifrit, Shiva, Ramuh, Kirin, Adrammelech, Mateus, Famfrit, Ahriman, Coeurl, Tonberry, Masamune…),
 entradas com códigos de controle e as `Dummy`.
+
+## Diálogos / textos de ajuda (`tools/dialogue.py`, `tools/dialogue_translations.py`)
+Textos longos ficam em **bancos** no inglês: `0x4FA000–0x54E000` (~2.700 strings em ~22 bancos) e mais uma região em
+`0xBB1000–0xC04000`. Formato do banco: tabela de offsets u16 (relativos ao banco, termina em `FFFF`) + strings
+`[cabeçalho 2 bytes][pares 80 xx | controles 40 xx][sufixo 40 61 40 63 00]`. `40 73`=espaço, `40 6E`=quebra de linha,
+`40 70`=quebra de página, `81 08`=`&`, `80 FE`=hífen. Uma parte das strings é **comprimida** (códigos 40–7F misturados) e ainda
+não foi decodificada: só as simples são traduzidas.
+Para não quebrar referências internas, o banco original é copiado inteiro para `0xF00000+`, as traduções são anexadas no fim,
+e só a tabela de offsets e o ponteiro no código (ex.: `0x16FC4`) mudam.
+Traduzidos até agora: ajuda dos comandos de menu (`0x527704`, 41 textos) e descrição dos combos por classe (`0x534264`, 25).
