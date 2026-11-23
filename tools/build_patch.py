@@ -105,7 +105,7 @@ SKILLSETS = {
 SKILLSET_MAX_PX = 82   # inglês/italiano usam até ~77px; exceções propositais: 96 e 119
 EXTRA_MENU.update(SKILLSETS)
 
-# habilidades individuais (idx 140-309; 146, 178 e 207 têm códigos de controle e ficam em inglês)
+# habilidades individuais (idx 140-419; 146, 178 e 207 têm códigos de controle e ficam em inglês)
 ABILITIES = {
     140: 'Derreter', 141: 'Tal. Ninja', 142: 'Roubar', 143: 'Mirar', 144: 'Pandora',
     145: 'Garrada', 147: 'Olhar', 148: 'Chamar', 149: 'Téc. de Dragão', 150: 'Tal. Alquímico',
@@ -147,6 +147,33 @@ ABILITIES.update({
     299: 'Julgar', 300: 'Absorver MP', 301: 'Miasma', 302: 'Meio MP', 303: 'Conselho',
     304: 'Lança Mog', 305: 'Véu de Água', 306: 'Pó de Estrela', 307: 'Estaca Sombria',
     308: 'Parar', 309: 'Tiro de Stop',
+})
+ABILITIES.update({
+    310: 'Calafrio', 311: 'Quebra Veloc.', 312: 'Sorriso', 313: 'Sopro de Pena',
+    314: 'Chuva do Sono', 315: 'Sono', 316: 'Lentidão', 317: 'Borboleta',
+    318: 'Sinal Sagrado', 319: 'Concentrar', 320: 'Água Benta', 321: 'Cruz Santa',
+    322: 'Ocultar', 323: 'Revelar', 324: 'Sujar Provas', 325: 'Sacar Arma',
+    326: 'Esfera da Alma', 327: 'Último Suspiro', 328: 'Geomancia', 329: 'Reviver',
+    330: 'Estrondo Sônico', 331: 'Tornado Feroz', 332: 'Ataque Enxame', 333: 'Escudeiro',
+    334: 'Roubar: Escudo', 335: 'Impulso', 336: 'Espiada Mog', 337: 'Xeque Mate',
+    338: 'Sufocar', 339: 'Tiro Encantado', 340: 'Chakra', 341: 'Provocar',
+    342: 'Ataque Chocobo', 343: 'Rasgar Terra', 344: 'Ciclone', 345: 'Subjugar',
+    346: 'Death', 347: 'Dispel', 348: 'Voz do Anjo', 349: 'Tempestade', 350: 'Hibernar',
+    351: 'Sapo', 352: 'Sapo Venenoso', 353: 'Antídoto', 354: 'Garra Venenosa',
+    355: 'Véu da Terra', 356: 'Amigo', 357: 'Dragão', 358: 'Mata Wyrm',
+    359: 'Poder de Dragão', 360: 'Drenar', 361: 'Toque Drenante', 362: 'Tonberry',
+    363: 'Falcão Noturno', 364: 'Adaga', 365: 'Ceifar', 366: 'Arremessar', 367: 'Quebra Ossos',
+    368: 'Gema Cromática', 369: 'Espada Dupla', 370: 'Encarar', 371: 'Dilacerar', 372: 'Gosma',
+    373: 'Fazer Mira', 374: 'Transpassar', 375: 'Cupido', 376: 'Guarda Experta', 377: 'Bio',
+    378: 'Hi|Poção', 379: 'Tremor', 380: 'Exorcizar', 381: 'Contrafogo', 382: 'Punho Distante',
+    383: 'Revidar', 384: 'Barreira', 385: 'Quebra Poder', 386: 'Grito Bangaa', 387: 'Pantera',
+    388: 'Bandagem', 389: 'Caçada', 390: 'Cura Total', 391: 'Ajuda Mog', 392: 'Contar Ovelhas',
+    393: 'Tapa', 394: 'Apressar Final', 395: 'Berserk Final', 396: 'Haste Final', 397: 'Fire',
+    398: 'Chicote de Fogo', 399: 'Espada de Fogo', 400: 'Sopro de Fogo', 401: 'Firaga',
+    402: 'Fira', 403: 'Acelerar', 404: 'Selo de Pedra', 405: 'Surra', 406: 'Fênix',
+    407: 'Pena de Fênix', 408: 'Roubar: Arma', 409: 'Enterro', 410: 'Largar Arma',
+    411: 'Meteorito', 412: 'Cegar', 413: 'Tiro Cegante', 414: 'Blaster', 415: 'Apagão',
+    416: 'Piscada Gélida', 417: 'Blizzaga', 418: 'Blizzard', 419: 'Espada de Gelo',
 })
 ABILITY_MAX_PX = 90
 EXTRA_MENU.update(ABILITIES)
