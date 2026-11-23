@@ -325,6 +325,8 @@ def px_width(rom, text):
 from extra_translations import MENU2, NAMES2
 EXTRA_MENU.update(MENU2)
 CLASSES.update(NAMES2)
+from safe_names import SAFE
+CLASSES.update(SAFE)
 
 
 # ---------- IPS ----------

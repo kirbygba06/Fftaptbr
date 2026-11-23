@@ -75,3 +75,8 @@ Falta parear esse texto com a string comprimida da ROM. `tools/mgba_trace.lua` (
 **EWRAM** em `0x8098` (256 KB), **VRAM** em `0x48098`. O diálogo descomprimido ("Aww, man!…") está em EWRAM `0x0201769C`.
 Tentei retomar o jogo com o Unicorn (CPU ARM/Thumb em Python, `pip install unicorn`) a partir do estado, mas o jogo cai em código
 dependente de estado de hardware que não está no save state; sem um emulador completo não consegui capturar a leitura da string comprimida.
+
+### Limite de nomes (bug na loja)
+Teste em jogo: na loja, o nome "Botas de Batalha" (16 letras, ~87 px) apareceu em branco. Como hipótese, os campos de nome têm limite de caracteres/largura
+(inglês: até 15 letras e ~83 px em itens; classes até 12 letras). `tools/safe_names.py` reduz todos os nomes acima disso (ex.: `Botas Batalha`,
+`Espada Prata`, `Cav. Negro`). Se a hipótese se confirmar, dá para voltar a nomes mais longos só onde o jogo aceita.
