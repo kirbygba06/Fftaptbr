@@ -73,18 +73,25 @@ CLASSES = {
 EXTRA_MENU = {34: 'Trocar Itens', 761: 'Lento', 762: 'Lento'}
 
 # conjuntos de habilidades / categorias de menu (idx 95-139 da tabela de menus)
-EXTRA_MENU.update({
-    95: 'Guarda Cartas', 96: 'Banco Monstros', 97: 'Combate', 98: 'Magia', 99: 'Ferraria',
+SKILLSETS = {
+    95: 'Guardacartas', 96: 'Banco de Monstros', 97: 'Combate', 98: 'Magia', 99: 'Ferraria',
     100: 'Artesanato', 101: 'Avaliar', 102: 'Coletar', 103: 'Negociar', 104: 'Rastrear',
     105: 'Itens', 106: 'Magia Azul', 107: 'Magia Vermelha', 108: 'Truques', 109: 'Controle',
     110: 'Caça', 111: 'Cavalaria', 112: 'Oração', 113: 'Canção', 114: 'Magia Negra',
-    115: 'Hab. Sagaz', 116: 'Hab. Fantasma', 117: 'Téc. Sagrada', 118: 'Chama',
-    119: 'Tormenta Areia', 120: 'Podridão', 121: 'Encurralar', 122: 'Acrobacia',
-    123: 'Pontaria', 124: 'Defesa', 125: 'Magia Invoc.', 126: 'Fedor', 127: 'Magia Branca',
-    128: 'Debilitar', 129: 'Magia Espirit.', 130: 'Téc. Batalha', 131: 'Téc. Monge',
-    132: 'Tiro Certeiro', 133: 'Soco', 134: 'Investida', 135: 'Téc. Lutador',
-    136: 'Magia Temporal', 137: 'Téc. Esgrima', 138: 'Wyrm Gelo', 139: 'Metamorfose',
-})
+    115: 'Tal. Sagaz', 116: 'Tal. Fantasma', 117: 'Téc. Sagrada', 118: 'Chama',
+    119: 'Tormenta de Areia', 120: 'Podridão', 121: 'Encurralar', 122: 'Acrobacia',
+    123: 'Pontaria', 124: 'Defesa', 125: 'Invocação', 126: 'Fedor', 127: 'Magia Branca',
+    128: 'Debilitar', 129: 'Magia Espirit.', 130: 'Téc. de Batalha', 131: 'Téc. de Monge',
+    132: 'Tiro Certeiro', 133: 'Soco', 134: 'Investida', 135: 'Téc. de Lutador',
+    136: 'Magia Temporal', 137: 'Téc. de Esgrima', 138: 'Wyrm de Gelo', 139: 'Metamorfose',
+}
+SKILLSET_MAX_PX = 82   # inglês/italiano usam até ~77px; exceções propositais: 96 e 119
+EXTRA_MENU.update(SKILLSETS)
+
+
+def px_width(rom, text):
+    """largura em pixels (tabela 0x4F885B; espaço do formato 80 estimado em 4px)"""
+    return sum(4 if c == ' ' else rom[0x4F885B + code01(c)] for c in text)
 
 
 # ---------- IPS ----------
@@ -193,6 +200,8 @@ def main():
         n_menu += 1
 
     for idx, name in EXTRA_MENU.items():
+        if idx in SKILLSETS and px_width(rom, name) > SKILLSET_MAX_PX:
+            print('AVISO largura %dpx > %d: %d %s' % (px_width(rom, name), SKILLSET_MAX_PX, idx, name))
         recs[EN_MENU + 4 * idx] = struct.pack('<I', add_string(enc(name, 2 if ' ' in name else 1)))
         n_menu += 1
 
