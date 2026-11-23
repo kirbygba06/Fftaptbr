@@ -31,7 +31,7 @@ G_A_TILDE, G_O_TILDE = 27, 40  # glifos ä e ö -> viram ã e õ
 # ---------- codificação ----------
 ACC01 = {'à': 0x19, 'á': 0x1A, 'â': 0x1B, 'ã': 0x1C, 'é': 0x1E, 'ê': 0x1F, 'í': 0x22,
          'ó': 0x27, 'ô': 0x28, 'õ': 0x29, 'ú': 0x2B, 'ç': 0x30,
-         'Á': 0x04, 'É': 0x08, 'Í': 0x0C, 'Ó': 0x11, 'Ú': 0x15}
+         'Á': 0x04, 'Â': 0x05, 'É': 0x08, 'Í': 0x0C, 'Ó': 0x11, 'Ú': 0x15}
 PUNCT01 = {'+': 0xFE, '|': 0xFF, '.': 0xE5, ',': 0xED, '!': 0xEC, '?': 0xEB, ':': 0xEF, '/': 0xF2, "'": 0xF5}
 
 
@@ -105,7 +105,7 @@ SKILLSETS = {
 SKILLSET_MAX_PX = 82   # inglês/italiano usam até ~77px; exceções propositais: 96 e 119
 EXTRA_MENU.update(SKILLSETS)
 
-# habilidades individuais (idx 140-419; 146, 178 e 207 têm códigos de controle e ficam em inglês)
+# habilidades individuais (idx 140-574; 146, 178 e 207 têm códigos de controle e ficam em inglês)
 ABILITIES = {
     140: 'Derreter', 141: 'Tal. Ninja', 142: 'Roubar', 143: 'Mirar', 144: 'Pandora',
     145: 'Garrada', 147: 'Olhar', 148: 'Chamar', 149: 'Téc. de Dragão', 150: 'Tal. Alquímico',
@@ -174,6 +174,42 @@ ABILITIES.update({
     407: 'Pena de Fênix', 408: 'Roubar: Arma', 409: 'Enterro', 410: 'Largar Arma',
     411: 'Meteorito', 412: 'Cegar', 413: 'Tiro Cegante', 414: 'Blaster', 415: 'Apagão',
     416: 'Piscada Gélida', 417: 'Blizzaga', 418: 'Blizzard', 419: 'Espada de Gelo',
+})
+ABILITIES.update({
+    420: 'Blizzara', 421: 'Blitz', 422: 'Flan', 423: 'Golpe de Mana', 424: 'Flare', 425: 'Quebrar',
+    426: 'Ataque Ígneo', 427: 'Olho Flutuante', 428: 'Protect', 429: 'Troca Elemental',
+    430: 'Proeminência', 431: 'Haste', 432: 'Quebra Haste', 433: 'Pó Pesado', 434: 'Veneno',
+    435: 'Esquecimento', 436: 'Def. de Arma+', 437: 'Faca', 438: 'Arremesso', 439: 'Poção',
+    440: 'Holy', 441: 'Lâmina Sagrada', 442: 'Bola', 443: 'Bomba', 444: 'Vento Branco',
+    445: 'Chama Branca', 446: 'Beijo Tóxico', 447: 'Guarda Poderosa', 448: 'Quebra Mente',
+    449: 'Martelo Mágico', 450: 'Quebra Magia', 451: 'Erva de Gato', 452: 'Arqueiro Mortal',
+    453: 'Madeen', 454: 'Magia Matra', 455: 'Retornar Magia', 456: 'Poder Mág.+', 457: 'Defesa',
+    458: 'Raise', 459: 'Reflexo', 460: 'Engr. Verde', 461: 'Sensor', 462: 'Mutilar',
+    463: 'Karma', 464: 'Colírio', 465: 'Meteor', 466: 'Imunidade', 467: 'Manutenção',
+    468: 'Véu de Madeira', 469: 'Malboro', 470: 'Fogo de Volta', 471: 'Bloquear Flechas',
+    472: 'Erva Eco', 473: 'Sacrifício', 474: 'Unicórnio', 475: 'Ácido', 476: 'Fada', 477: 'Noite',
+    478: 'Roubar: Armad.', 479: 'Aprendizado', 480: 'Reduzir', 481: 'Quebra Vida', 482: 'Raspar',
+    483: 'Investida', 484: 'Lamia', 485: 'Ramuh', 486: 'Tiro Raio', 487: 'Derretimento',
+    488: 'Auto|Regen', 489: 'Reflect', 490: 'Luva Limite', 491: 'Lanceta', 492: 'Doma Wyrm',
+    493: 'Dracocoração', 494: 'Mão Dupla', 495: 'Auto|Vida', 496: 'Vida', 497: 'Escudo Mog',
+    502: 'Tiro Duplo', 503: 'Magia Dupla', 504: 'Dilúvio', 505: 'Golpe Selvagem', 506: 'Anel',
+    507: 'Explodir', 508: 'Quietude', 509: 'Azoth', 510: 'Omega', 511: 'Abismo',
+    512: 'Rasgar Vida', 513: 'Rasgar Coração', 514: 'Círculo Cortante', 515: 'Círculo de Fúria',
+    516: 'Troca de Lei', 517: 'Brilho Âmbar', 518: 'Alpha', 519: 'Descida', 520: 'Magi',
+    521: 'Feitiço', 522: 'Sopro de Deus', 523: 'Veloc. da Luz', 524: 'Rio de Fogo',
+    525: 'Uivo de Fúria', 526: 'Presença', 527: 'Logos', 528: 'Adrammelech', 529: 'Mateus',
+    530: 'Ultima', 531: 'Exodus', 532: 'Famfrit', 533: 'Abater', 534: 'Espada Juiz', 535: 'Prender',
+    536: 'Dom de JP', 537: 'Clipe Amarelo', 538: 'Espada Juiz', 539: 'Carta Amarela',
+    540: 'Palaistra', 541: 'Carta Branca',
+    542: 'Combo Azul', 543: 'Combo Vermelho', 544: 'Combo Caça', 545: 'Combo Cavaleiro',
+    546: 'Combo Oração', 547: 'Combo Negro', 548: 'Combo Sábio', 549: 'Combo Sagrado',
+    550: 'Combo Ladrão', 551: 'Combo Letal', 552: 'Combo Malabar', 553: 'Combo Armas',
+    554: 'Combo Defesa', 555: 'Combo Invoc.', 556: 'Combo Branco', 557: 'Combo Espírito',
+    558: 'Combo Combate', 559: 'Combo Atirador', 560: 'Combo Magia', 561: 'Combo Carga',
+    562: 'Combo Luta', 563: 'Combo Animal', 564: 'Combo Tempo', 565: 'Combo Esgrima',
+    566: 'Combo Morfo', 567: 'Combo Ninja', 568: 'Combo Gadget', 569: 'Combo Arco',
+    570: 'Combo Espada', 571: 'Combo Fera', 572: 'Combo Monge', 573: 'Combo Dragão',
+    574: 'Combo Ouro',
 })
 ABILITY_MAX_PX = 90
 EXTRA_MENU.update(ABILITIES)
