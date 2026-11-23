@@ -64,3 +64,8 @@ bits extras. Testes feitos e descartados: LZ77 do BIOS (nenhum bloco `0x10` vira
 (`(b0&0x1f)<<8|b1` cai em kana/kanji sem sentido). A rotina que desenha texto de menu (`0x12E900`, `0x12E9C8`) monta
 unidades de 2 bytes `(b0<<8|b1)&máscara`, mas o decodificador dos textos longos ainda não foi achado. Sem emulador/depurador para
 rastrear a leitura desses bytes, continuo sem poder decodificá-los com segurança.
+
+### Pista nova (save state `.st0` do usuário)
+Em `GBASTATE` (gzip), o diálogo "Aww, man! Why do I get stuck on the weak team?…" aparece **em texto simples** (pares `80 xx`) num buffer da
+RAM (offset `0x1F734` do estado) — ou seja, o jogo descomprime para texto normal; a string correspondente **não** existe em texto simples na ROM.
+Falta parear esse texto com a string comprimida da ROM. `tools/mgba_trace.lua` (não testado) registra o PC e os registradores quando o jogo escreve nesse buffer.
