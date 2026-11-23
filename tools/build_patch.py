@@ -105,6 +105,26 @@ SKILLSETS = {
 SKILLSET_MAX_PX = 82   # inglês/italiano usam até ~77px; exceções propositais: 96 e 119
 EXTRA_MENU.update(SKILLSETS)
 
+# habilidades individuais (idx 140-199; 146 e 178 têm códigos de controle e ficam em inglês)
+ABILITIES = {
+    140: 'Derreter', 141: 'Tal. Ninja', 142: 'Roubar', 143: 'Mirar', 144: 'Pandora',
+    145: 'Garrada', 147: 'Olhar', 148: 'Chamar', 149: 'Téc. de Dragão', 150: 'Tal. Alquímico',
+    151: 'Rancor', 152: 'Runas', 153: 'Ocultismo', 154: 'Magia Sombria', 155: 'Intuição',
+    156: 'Gênese', 157: 'Wicca', 158: 'Expulsar', 159: 'Magitormenta', 160: 'Golpe',
+    161: 'Calafrio', 162: 'Chamuscar', 163: 'Bum!', 164: 'Dracochama',
+    165: 'Dracoraio', 166: 'Presa Venenosa', 167: 'Aderir', 168: 'Esmagar',
+    169: 'Malícia', 170: 'Arranhão', 171: 'Fedentina', 172: 'Brilho', 173: 'Iludir',
+    174: 'Fluorescer', 175: 'Lei Avançada', 176: 'Julgamento', 177: 'Carta Branca',
+    179: 'Turbo MP', 180: 'Cura da Terra', 181: 'Mirar: Armad.', 182: 'Sopro Gélido',
+    183: 'Itens', 184: 'Parafuso Azul', 185: 'Mola Vermelha', 186: 'Roubar: Acess.',
+    187: 'Investida Mog', 188: 'Olhar Maligno', 189: 'Pesadelo', 190: 'Mirar: Pernas',
+    191: 'Astra', 192: 'Foice Mortal', 193: 'Ataque Mog', 194: 'Roubar: Habilid.',
+    195: 'Carga Ultima', 196: 'Esmagar Ultima', 197: 'Tiro Ultima', 198: 'Espada Ultima',
+    199: 'Golpe Ultima',
+}
+ABILITY_MAX_PX = 90
+EXTRA_MENU.update(ABILITIES)
+
 
 def px_width(rom, text):
     """largura em pixels (tabela 0x4F885B; espaço do formato 80 estimado em 4px)"""
@@ -217,6 +237,8 @@ def main():
         n_menu += 1
 
     for idx, name in EXTRA_MENU.items():
+        if idx in ABILITIES and px_width(rom, name) > ABILITY_MAX_PX:
+            print('AVISO habilidade %dpx: %d %s' % (px_width(rom, name), idx, name))
         if idx in SKILLSETS and px_width(rom, name) > SKILLSET_MAX_PX:
             print('AVISO largura %dpx > %d: %d %s' % (px_width(rom, name), SKILLSET_MAX_PX, idx, name))
         recs[EN_MENU + 4 * idx] = struct.pack('<I', add_string(enc(name, 2 if ' ' in name else 1)))
