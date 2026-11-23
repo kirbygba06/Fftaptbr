@@ -66,6 +66,27 @@ def decode_text(body, code01):
     return out
 
 
+def reflow(raw, code01, rom, cap=156):
+    """'Título\nparágrafo\fparágrafo' -> texto com quebras de linha e de página"""
+    title, body = raw.split('\n', 1)
+    maxlines = 7
+    pages_in, out_pages, lines = body.split('\f'), [], ['[' + title + ']']
+    def wrap(par):
+        res, cur = [], ''
+        for w in par.split(' '):
+            t = (cur + ' ' + w) if cur else w
+            if line_px(rom, code01, t) <= cap: cur = t
+            else: res.append(cur); cur = w
+        res.append(cur)
+        return res
+    for par in pages_in:
+        for ln in wrap(par):
+            if len(lines) >= maxlines: out_pages.append('\n'.join(lines)); lines = []
+            lines.append(ln)
+        out_pages.append('\n'.join(lines)); lines = []
+    return '\f'.join(out_pages)
+
+
 def auto_effects(rom, code01, bank=0x521A20, ruler=None, table=None):
     from dialogue_effects import EFFECTS
     o = banks.parse_bank(bank); ends = o[1:] + [len(rom[bank:bank + o[-1] + 0x80])]
@@ -103,11 +124,15 @@ def build(rom, code01):
     for bk, tb in MISC.items():
         plan[bk] = auto_effects(rom, code01, bk, table=tb)
         assert len(plan[bk]) == len(tb), '%X: %s' % (bk, sorted(set(tb) - set(plan[bk])))
+    from dialogue_news import NEWS
+    plan[0x513A8C] = auto_effects(rom, code01, 0x513A8C, table={k: reflow(v, code01, rom) for k, v in NEWS.items()})
+    assert len(plan[0x513A8C]) == len(NEWS), sorted(set(NEWS) - set(plan[0x513A8C]))
     plan[0x529514] = auto_effects(rom, code01, 0x529514, table=DESC)
     plan[0x54382C] = auto_effects(rom, code01, 0x54382C, ruler=pen)
     for bank, trans in plan.items():
         o = banks.parse_bank(bank)
         nxt = next(s for s in starts if s > bank)
+        if nxt - bank > 0x6000: nxt = min(nxt, bank + max(o) + 0x600)   # offsets são u16: não copiar vizinhos inteiros
         data = bytearray(rom[bank:nxt])
         ends = o[1:] + [len(data)]
         # largura máxima de linha nos textos ingleses simples do banco (caixa de ajuda)
@@ -142,7 +167,7 @@ def build(rom, code01):
                 if line_px(rom, code01, ln) > cap:
                     report.append('%X[%d]: linha %dpx > %dpx: %s' % (bank, idx, line_px(rom, code01, ln), cap, ln))
             nl_o = body.count(b'\x40\x6e') + body.count(b'\x40\x70') + 1; nl_n = text.count('\n') + text.count('\f') + 1
-            if nl_n > nl_o: report.append('%X[%d]: %d linhas > %d originais' % (bank, idx, nl_n, nl_o))
+            if nl_n > nl_o and bank != 0x513A8C: report.append('%X[%d]: %d linhas > %d originais' % (bank, idx, nl_n, nl_o))
         # ponteiros de código para o banco
         old = struct.pack('<I', 0x08000000 + bank)
         refs, p = [], rom.find(old)
