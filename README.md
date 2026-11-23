@@ -55,3 +55,12 @@ não foi decodificada: só as simples são traduzidas.
 Para não quebrar referências internas, o banco original é copiado inteiro para `0xF00000+`, as traduções são anexadas no fim,
 e só a tabela de offsets e o ponteiro no código (ex.: `0x16FC4`) mudam.
 Traduzidos até agora (~930 textos em 16 bancos): ajuda dos comandos (`0x527704`), combos (`0x534264`), efeitos curtos (`0x521A20`), descrições de habilidade (`0x529514`), penalidades de lei (`0x54382C`), falas de loja/taverna/banco de monstros (`0x4F9744`), comandos de classe (`0x531998`), descrições de classes/monstros (`0x540368`), objetivos, mensagens de sistema, locais e opções (`tools/dialogue_misc.py`). As notícias e dicas do jornal (`0x513A8C`, 57 artigos, `tools/dialogue_news.py`) são reescritas pelo código: o texto é quebrado em linhas de até 156 px e em páginas de 7 linhas. Faltam só os textos comprimidos.
+
+## Textos comprimidos (tentativa de decodificação, sem sucesso)
+Strings "comprimidas" (ex.: `0x51EBE0`, trechos de `0x51F3E0`, `0x4FE5D4`, `0x534D9C`) começam com `00 00 00 xx yy` e depois misturam
+pares `80 xx` (letras literais, só no começo: `Ramsen Ar…`) com pares cujo primeiro byte é `40/42/44/46/48/88/90/98`.
+O fim da string aparece como `42 61 40 63 20` (em vez de `40 61 40 63 00`), ou seja, o primeiro byte de cada par carrega
+bits extras. Testes feitos e descartados: LZ77 do BIOS (nenhum bloco `0x10` vira texto) e leitura dos pares como índices de glifo
+(`(b0&0x1f)<<8|b1` cai em kana/kanji sem sentido). A rotina que desenha texto de menu (`0x12E900`, `0x12E9C8`) monta
+unidades de 2 bytes `(b0<<8|b1)&máscara`, mas o decodificador dos textos longos ainda não foi achado. Sem emulador/depurador para
+rastrear a leitura desses bytes, continuo sem poder decodificá-los com segurança.
