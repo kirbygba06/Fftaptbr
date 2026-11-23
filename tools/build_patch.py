@@ -98,6 +98,19 @@ WEAPONS = {
     155: 'Sabre Azul', 157: 'Sabre Aqua', 159: 'Manganês', 160: 'Sabre Mithril',
     162: 'Sabre da Alma', 164: 'Apocalipse',
 }
+WEAPONS.update({
+    171: 'Gume Mithril', 174: 'Sequência', 176: 'Espada Antiga', 177: 'Espada Diamante',
+    178: 'Gume Duro', 181: 'Espada Mestra', 183: 'Prisma de Gelo', 185: 'Espada Sansão',
+    187: 'Predador', 189: 'Espada El Cid', 194: 'Espada Fera', 195: 'Eclipse',
+    197: 'Canivete', 198: 'Faca Kris', 202: 'Adaga Rondel', 205: 'Quebra Espada',
+    206: 'Oricalco', 208: 'Faca Mithril', 211: 'Ferrão', 216: 'Florete de Prata',
+    219: 'Esmaga Mago', 224: 'Florete Mithril', 225: 'Última Carta', 228: 'Buraco Aéreo',
+    229: 'Faca Ninja', 233: 'Caça Pétalas', 236: 'Nuvem Celeste', 240: 'Épée Mithril',
+    244: 'Cajado Branco', 245: 'Cajado Guarda', 246: 'Cajado Juiz', 247: 'Cajado Cura',
+    248: 'Cajado Puro', 249: 'Cajado Bênção', 250: 'Cajado Cobra', 251: 'Cajado Fonte',
+    252: 'Cajado Garnet', 253: 'Cajado Alegria', 254: 'Cajado Nirvana', 255: 'Cajado Mithril',
+    256: 'Cajado Poder', 257: 'Vigia dos Sonhos',
+})
 CLASSES.update(WEAPONS)
 
 # entradas do menu que o patch italiano não cobria (idx da tabela de menus -> PT-BR)
@@ -360,7 +373,7 @@ def main():
     en_fmt = lambda i: rom[struct.unpack_from('<I', rom, EN_NAMES + 4 * i)[0] - 0x08000000]
     for idx, name in CLASSES.items():
         w = px_width(rom, name)
-        if idx in WEAPONS and w > 95: print('AVISO arma %dpx: %d %s' % (w, idx, name))
+        if idx in WEAPONS and w > 88: print('AVISO arma %dpx: %d %s' % (w, idx, name))
         if idx in MONSTERS and w > 85: print('AVISO nome largo %dpx: %d %s' % (w, idx, name))
         fmt = 80 if (' ' in name or en_fmt(idx) == 0x80) else 1
         recs[EN_NAMES + 4 * idx] = struct.pack('<I', add_string(enc(name, fmt)))
