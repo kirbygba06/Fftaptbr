@@ -18,6 +18,7 @@ def enc_dlg(text, code01):
     out = bytearray()
     for c in text:
         if c == '\n': out += b'\x40\x6e'
+        elif c == '\f': out += b'\x40\x70\x40\x63'
         elif c == ' ': out += b'\x40\x73'
         elif c == '-': out += b'\x80\xfe'
         elif c == '&': out += b'\x81\x08'
@@ -43,23 +44,29 @@ def decode_text(body, code01):
     """bytes de corpo (sem cabeçalho) -> texto ASCII/Unicode, ou None se houver token desconhecido"""
     inv = {}
     for ch in ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,!?:/'()+"
-               "àáâãéêíóôõúç"):
+               "àáâãéêíóôõúç[]\""):
         inv[code01(ch) - 1] = ch
-    toks, out, i = split_tokens(body), '', 0
-    for t, p, _ in toks:
+    toks = split_tokens(body)
+    lastc = max((k for k, t in enumerate(toks) if t[0] == 0x80), default=-1)
+    toks = toks[:lastc + 1]
+    out, k = '', 0
+    while k < len(toks):
+        t, p, _ = toks[k]; k += 1
+        if t == 0x40 and p == 0x6E: out += '\n'; continue
+        if t == 0x40 and p == 0x70:
+            if k < len(toks) and toks[k][:2] == (0x40, 0x63): out += '\f'; k += 1; continue
+            return None
         if t == 0x80:
             if p == 0xFE: out += '-'
             elif p in inv: out += inv[p]
             else: return None
         elif t == 0x40 and p == 0x73: out += ' '
         elif t == 0x81 and p == 8: out += '&'
-        elif t == 0x40 and p in (0x61, 0x63, 0x77): pass
-        elif t == 0 and p is None: pass
         else: return None
     return out
 
 
-def auto_effects(rom, code01, bank=0x521A20):
+def auto_effects(rom, code01, bank=0x521A20, ruler=None, table=None):
     from dialogue_effects import EFFECTS
     o = banks.parse_bank(bank); ends = o[1:] + [len(rom[bank:bank + o[-1] + 0x80])]
     res = {}
@@ -67,11 +74,22 @@ def auto_effects(rom, code01, bank=0x521A20):
         raw = bytes(rom[bank + s:bank + e]); body = raw[2:]
         txt = decode_text(body, code01)
         if txt is None: continue
-        if txt in EFFECTS: pt = EFFECTS[txt]
+        if table is not None:
+            if idx not in table: continue
+            pt = table[idx]
+        elif ruler is not None:
+            pt = ruler(txt)
+            if pt is None: continue
+        elif txt in EFFECTS: pt = EFFECTS[txt]
         elif txt.endswith('!') and txt[:-1] in EFFECTS: pt = EFFECTS[txt[:-1]] + '!'
         else: continue
         if enc_dlg(txt, code01) in body: res[idx] = pt
     return res
+
+
+def _split_lines(raw):
+    import re
+    return re.split(b'\x40\x6e|\x40\x70\x40\x63', raw)
 
 
 def build(rom, code01):
@@ -80,6 +98,9 @@ def build(rom, code01):
     recs, cursor, report = {}, FREE, []
     plan = dict(DIALOGUE)
     plan[0x521A20] = auto_effects(rom, code01)
+    from dialogue_desc import DESC, pen
+    plan[0x529514] = auto_effects(rom, code01, 0x529514, table=DESC)
+    plan[0x54382C] = auto_effects(rom, code01, 0x54382C, ruler=pen)
     for bank, trans in plan.items():
         o = banks.parse_bank(bank)
         nxt = next(s for s in starts if s > bank)
@@ -88,7 +109,7 @@ def build(rom, code01):
         # largura máxima de linha nos textos ingleses simples do banco (caixa de ajuda)
         cap = 0
         for s_, e_ in zip(o, ends):
-            for line in bytes(rom[bank + s_ + 2:bank + e_]).split(b'\x40\x6e'):
+            for line in _split_lines(bytes(rom[bank + s_ + 2:bank + e_])):
                 px, k = 0, 0
                 while k + 1 < len(line):
                     if line[k] == 0x80: px += rom[0x4F885B + line[k + 1] + 1]; k += 2
@@ -111,10 +132,11 @@ def build(rom, code01):
             assert off < 0xFFFF
             data += new
             struct.pack_into('<H', data, 2 * idx, off)
-            for ln in text.split('\n'):
+            import re as _re
+            for ln in _re.split('[\n\f]', text):
                 if line_px(rom, code01, ln) > cap:
                     report.append('%X[%d]: linha %dpx > %dpx: %s' % (bank, idx, line_px(rom, code01, ln), cap, ln))
-            nl_o = body.count(b'\x40\x6e') + 1; nl_n = text.count('\n') + 1
+            nl_o = body.count(b'\x40\x6e') + body.count(b'\x40\x70') + 1; nl_n = text.count('\n') + text.count('\f') + 1
             if nl_n > nl_o: report.append('%X[%d]: %d linhas > %d originais' % (bank, idx, nl_n, nl_o))
         # ponteiros de código para o banco
         old = struct.pack('<I', 0x08000000 + bank)
