@@ -31,7 +31,7 @@ G_A_TILDE, G_O_TILDE = 27, 40  # glifos ä e ö -> viram ã e õ
 # ---------- codificação ----------
 ACC01 = {'à': 0x19, 'á': 0x1A, 'â': 0x1B, 'ã': 0x1C, 'é': 0x1E, 'ê': 0x1F, 'í': 0x22,
          'ó': 0x27, 'ô': 0x28, 'õ': 0x29, 'ú': 0x2B, 'ç': 0x30,
-         'Á': 0x04, 'Â': 0x05, 'É': 0x08, 'Í': 0x0C, 'Ó': 0x11, 'Ú': 0x15}
+         'Á': 0x04, 'Â': 0x05, 'Ê': 0x09, 'É': 0x08, 'Í': 0x0C, 'Ó': 0x11, 'Ú': 0x15}
 PUNCT01 = {'+': 0xFE, '|': 0xFF, '.': 0xE5, ',': 0xED, '!': 0xEC, '?': 0xEB, ':': 0xEF, '/': 0xF2, "'": 0xF5}
 
 
@@ -320,6 +320,11 @@ EXTRA_MENU.update(ABILITIES)
 def px_width(rom, text):
     """largura em pixels (tabela 0x4F885B; espaço do formato 80 estimado em 4px)"""
     return sum(4 if c == ' ' else rom[0x4F885B + code01(c)] for c in text)
+
+
+from extra_translations import MENU2, NAMES2
+EXTRA_MENU.update(MENU2)
+CLASSES.update(NAMES2)
 
 
 # ---------- IPS ----------

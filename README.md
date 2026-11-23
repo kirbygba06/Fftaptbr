@@ -39,3 +39,9 @@ Nomes longos (`Mago Vermelho`, `Cavaleiro Negro`, `Engenhoqueiro`) podem estoura
 Fire/Fira/Firaga → `Fogo`/`Fogo+`/`Fogo++`; Thunder/Thundara/Thundaga → `Trovão`/`Trovão+`/`Trovão++`;
 Blizzard/Blizzara/Blizzaga → `Gelo`/`Gelo+`/`Gelo++`; Cure/Cura/Curaga → `Cura`/`Cura+`/`Cura++`.
 Elementos (nomes 646–650): Fogo, Gelo, Raio, Sagrado, Vento.
+
+## Segunda passada (`tools/extra_translations.py`)
+Magias, invocações, troféus, medalhas, minérios, materiais, comidas, itens de missão e as categorias de
+habilidade da tabela de nomes (idx 499–645). Ficam como estão só nomes próprios sem tradução
+(Ifrit, Shiva, Ramuh, Kirin, Adrammelech, Mateus, Famfrit, Ahriman, Coeurl, Tonberry, Masamune…),
+entradas com códigos de controle e as `Dummy`.

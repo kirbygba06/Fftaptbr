@@ -1,0 +1,57 @@
+# -*- coding: utf-8 -*-
+"""Segunda passada: traduz o que tinha ficado em inglês (magias, invocações, itens, materiais,
+troféus, itens de missão, monstros). Sobrescreve entradas anteriores com o mesmo índice."""
+
+# tabela de menus (0x720D44)
+MENU2 = {
+    205: 'Ifrit', 214: 'Vento', 217: 'Purificar', 244: 'Giga Labareda', 248: 'Kirin',
+    261: 'Semi', 262: 'Quarto', 290: 'Shiva', 291: 'Muralha', 227: 'Carbúnculo',
+    346: 'Morte', 347: 'Dissipar', 377: 'Toxina', 414: 'Estourador', 421: 'Ofensiva',
+    424: 'Labareda', 428: 'Proteção', 431: 'Pressa', 440: 'Sagrado', 458: 'Ressurgir',
+    465: 'Meteoro', 485: 'Ramuh', 489: 'Refletir', 518: 'Alfa', 520: 'Magos', 531: 'Êxodo',
+    484: 'Lâmia', 716: 'Status Baixo', 734: 'Sem AP+Prêmio!', 751: 'Itens Não Eq.?',
+    757: 'Tipo A', 758: 'Tipo B', 764: 'LIG', 765: 'DESL',
+}
+
+# tabela de nomes (0x724C34)
+NAMES2 = {
+    56: 'Lâmia', 105: 'Mombomba', 163: 'Defensor', 165: 'Coração de Leão', 169: 'Espada Arcana',
+    168: 'Salve a Rainha', 184: 'Quebra Isca', 214: 'Escarlate', 226: 'Diabólica',
+    227: 'Mulher Fatal', 242: 'Carvão Aceso', 243: 'Lua de Seda', 284: 'Vésper',
+    374: 'Tiro Preso', 386: 'A Seráfica', 422: 'Maximiliano', 470: 'Calígula',
+    499: 'Troféu Mágico', 500: 'Troféu de Luta', 501: 'Troféu Esporte', 502: 'Taça de Elda',
+    503: 'Selo de Ogma', 504: 'Vaso de Ouro', 505: 'Medalha Mágica', 506: 'Medalha Antiga',
+    507: 'Medalha Litoral', 508: 'Medalha Guarda', 509: 'Broche Amigo', 510: 'Mestre Bravo',
+    511: 'Distintivo', 512: 'Iridita', 513: 'Presa Delta', 514: 'Lágrima de Gato',
+    515: 'Rubor da Dama', 516: 'Pedra do Trovão', 517: 'Pedra Tormenta', 519: 'Olho de Ahriman',
+    520: 'Pedra Wyrm', 521: 'Braçal Topázio', 522: 'Minério Zodíaco', 523: 'Mithril',
+    524: 'Materita', 525: 'Pedra Lee', 526: 'Adamantita', 527: 'Pedra Espiritual', 528: 'Âmbar',
+    529: 'Liga Adaman', 530: 'Liga Mysidia', 531: 'Liga Crusita', 532: 'Magnetita',
+    533: 'Linha Preta', 534: 'Linha Branca', 535: 'Pele de Chocobo', 536: 'Tecido Mágico',
+    537: 'Algodão Mágico', 538: 'Xale Sangrento', 539: 'Asa de Ahriman', 540: 'Asa de Fada',
+    541: 'Casca de Bomba', 542: 'Pele de Pantera', 543: 'Couro de Tigre', 544: 'Charque',
+    545: 'Verdura Gysahl', 546: 'Ovo de Chocobo', 547: 'Cogumelo Ouro', 548: 'Água da Vida',
+    550: 'Gelo Cyril', 551: 'Pão Choco', 552: 'Gratinado Choco', 553: 'Pão Infantil',
+    554: 'Pão Adulto', 555: 'Vinho Malboro', 556: 'Sopa Gedegg', 557: 'Texto Antigo',
+    558: 'Velino Mágico', 559: 'Emblema Justiça', 560: 'Distintivo Amigo',
+    561: 'Conto de Runba', 562: 'Prisão do Herói', 563: 'Tomo Edaroya', 564: 'Dever de Casa',
+    565: 'Enciclopédia', 566: 'Dicionário', 567: 'Guia Monstros', 568: 'Livros Secretos',
+    569: 'Caderno Esboços', 570: 'Urso de Pelúcia', 571: 'Rabo de Rato', 572: 'Rabo de Coelho',
+    573: 'Madeira Danbuk', 574: 'Madeira Lunar', 576: 'Poste Relógio', 577: 'Caneta Tinteiro',
+    578: 'Tampões', 579: 'Cristal', 580: 'Estátua Velha', 581: 'Broche Vizinho', 582: 'Tricórdio',
+    583: 'Espada Oxidada', 584: 'Espada Partida', 585: 'Espada Torta', 586: 'Lança Oxidada',
+    587: 'Selo de Fogo', 588: 'Selo de Água', 589: 'Selo de Vento', 590: 'Selo da Terra',
+    591: 'Ceffyl Mente', 592: 'Ceffyl Corpo', 593: 'Distintivo Pena', 594: 'Insígnia',
+    595: 'Busca Aliados', 597: 'Caixa Tranquila', 598: 'Dados Viciados', 599: 'Escudo Serpente',
+    600: 'Corda Estase', 601: 'Picareta Mithril', 602: 'Almíscar', 603: 'Poção do Amor',
+    604: 'Lamp. Tonberry', 605: 'Pergam. Stilpool', 606: 'Vaso de Flores',
+    607: 'Osso de Dragão', 608: 'Osso de Animal', 609: 'Crânio', 610: 'Chave Helje',
+    611: 'Engrenagem', 612: 'Peça de Arma', 613: 'Irrigador', 614: 'Flor de Seda',
+    615: 'Flor Lunar', 616: 'Flor Telaq', 617: 'Rosa Azul', 618: 'Flores Brancas',
+    619: 'Maçã de Sangue', 620: 'Fruta Mágica', 621: 'Fruta Poder', 622: 'Vermelhão',
+    623: 'Gil Roubado', 624: 'Notas Antigas', 625: 'Moedas Antigas',
+    626: 'Habilidades', 627: 'Técnicas', 628: 'Magia Cromática', 629: 'Cavalaria', 630: 'Oração',
+    631: 'Defesa', 632: 'Magia Espiritual', 633: 'Caça', 634: 'Investida', 635: 'Magia Temporal',
+    636: 'Mira', 637: 'Tiro Certeiro', 638: 'Pontaria', 639: 'Roubar', 640: 'Encurralar',
+    641: 'Controle', 642: 'Metamorfose', 643: 'Chamar', 644: 'Invocação', 645: 'Itens',
+}
