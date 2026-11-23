@@ -111,6 +111,21 @@ WEAPONS.update({
     252: 'Cajado Garnet', 253: 'Cajado Alegria', 254: 'Cajado Nirvana', 255: 'Cajado Mithril',
     256: 'Cajado Poder', 257: 'Vigia dos Sonhos',
 })
+WEAPONS.update({
+    258: 'Bastão', 259: 'Bastão Ígneo', 260: 'Bastão Trovão', 261: 'Bastão Granizo',
+    262: 'Bastão Terra', 263: 'Bastão Força', 264: 'Bastão Chama', 265: 'Bastão Thor',
+    266: 'Bastão Frio', 267: 'Bastão Estelar', 268: 'Bastão Princesa', 269: 'Bastão Mithril',
+    270: 'Bastão Herege', 272: 'Maça de Guerra', 273: 'Maça de Energia', 274: 'Maça Druida',
+    275: 'Báculo Sábio', 276: 'Estrela da Manhã', 277: 'Mandrágora', 278: 'Báculo da Vida',
+    279: 'Maça Lótus', 280: 'Cauda Escorp.', 281: 'Maça Zeus', 282: 'Maça Mithril',
+    283: 'Cacto', 285: 'Arco Longo', 286: 'Arco Carvão', 287: 'Arco Espinho', 288: 'Arco Prego',
+    289: 'Arco de Prata', 290: 'Arco de Ártemis', 291: 'Arco Yoichi', 292: 'Arco Alvo',
+    293: 'Arco Perseu', 294: 'Arco Mithril', 295: 'Arco Crescente', 296: 'Malarco',
+    297: 'Arco Ventoso', 298: 'Arco Ranger', 299: 'Cranequim', 300: 'Arco Gêmeo',
+    301: 'Arco Caça', 302: 'Arco Fada', 303: 'Arco Hades', 304: 'Arco Nike', 305: 'Arco Mestre',
+    306: 'Arco Juramento', 307: 'Sétimo Céu', 308: 'Tiro Mithril', 309: 'Arco Marduk',
+    310: 'Arco Gastra', 311: 'Balestra',
+})
 CLASSES.update(WEAPONS)
 
 # entradas do menu que o patch italiano não cobria (idx da tabela de menus -> PT-BR)
