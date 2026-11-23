@@ -69,3 +69,9 @@ rastrear a leitura desses bytes, continuo sem poder decodificá-los com seguran�
 Em `GBASTATE` (gzip), o diálogo "Aww, man! Why do I get stuck on the weak team?…" aparece **em texto simples** (pares `80 xx`) num buffer da
 RAM (offset `0x1F734` do estado) — ou seja, o jogo descomprime para texto normal; a string correspondente **não** existe em texto simples na ROM.
 Falta parear esse texto com a string comprimida da ROM. `tools/mgba_trace.lua` (não testado) registra o PC e os registradores quando o jogo escreve nesse buffer.
+
+### Layout do save state `.st0` (gzip, `GBASTATE`) — descoberto
+`0x00–0x97` cabeçalho (registradores r0–r12, sp, lr, pc, cpsr em big-endian a partir de `0x1C`), **IWRAM** em `0x98` (32 KB),
+**EWRAM** em `0x8098` (256 KB), **VRAM** em `0x48098`. O diálogo descomprimido ("Aww, man!…") está em EWRAM `0x0201769C`.
+Tentei retomar o jogo com o Unicorn (CPU ARM/Thumb em Python, `pip install unicorn`) a partir do estado, mas o jogo cai em código
+dependente de estado de hardware que não está no save state; sem um emulador completo não consegui capturar a leitura da string comprimida.
