@@ -86,6 +86,20 @@ MONSTERS = {
 }
 CLASSES.update(MONSTERS)
 
+# espadas, lâminas e sabres (tabela de nomes 124-168); nomes lendários mantidos
+WEAPONS = {
+    124: 'Espada Curta', 125: 'Espada de Prata', 126: 'Espada Buster', 127: 'Espada Ladra',
+    128: 'Espada Vendaval', 129: 'Espada Rubra', 132: 'Espada Mithril', 133: 'Espada Vitória',
+    134: 'Espada Onion', 136: 'Espada Laglace', 137: 'Lâmina Ceifeira', 138: 'Lâmina Sombria',
+    139: 'Lâmina Solar', 140: 'Lâmina Atmos', 141: 'Língua de Fogo', 142: 'Lâmina do Ar',
+    143: 'Gume de Gelo', 144: 'Lâmina Kwigon', 145: 'Lâmina Ogun', 146: 'Lâmina Pérola',
+    147: 'Lâmina Paraiba', 148: 'Lâmina Vênus', 149: 'Lâmina Materia', 150: 'Lâmina Mithril',
+    151: 'Lâmina Ébano', 152: 'Lâmina Adaman', 153: 'Ayvuir Vermelho', 154: 'Ayvuir Azul',
+    155: 'Sabre Azul', 157: 'Sabre Aqua', 159: 'Manganês', 160: 'Sabre Mithril',
+    162: 'Sabre da Alma', 164: 'Apocalipse',
+}
+CLASSES.update(WEAPONS)
+
 # entradas do menu que o patch italiano não cobria (idx da tabela de menus -> PT-BR)
 EXTRA_MENU = {34: 'Trocar Itens', 761: 'Lento', 762: 'Lento'}
 
@@ -210,6 +224,15 @@ ABILITIES.update({
     566: 'Combo Morfo', 567: 'Combo Ninja', 568: 'Combo Gadget', 569: 'Combo Arco',
     570: 'Combo Espada', 571: 'Combo Fera', 572: 'Combo Monge', 573: 'Combo Dragão',
     574: 'Combo Ouro',
+})
+ABILITIES.update({
+    686: 'Espada?', 687: 'Espada Afiada?', 688: 'Espada Torta?', 689: 'Espada Oxidada?',
+    690: 'Espadão?', 691: 'Espada Pesada?', 692: 'Faca?', 693: 'Espada Fina?', 694: 'Lâmina?',
+    695: 'Cajado Velho?', 696: 'Bastão?', 697: 'Clava Pesada?', 698: 'Arco?', 699: 'Arco Grande?',
+    700: 'Lança?', 701: 'Instrumento?', 702: 'Luvas?', 703: 'Bijuteria?', 704: 'Arma Velha?',
+    705: 'Escudo?', 706: 'Elmo Oxidado?', 707: 'Gorro Velho?', 708: 'Armadura?',
+    709: 'Roupas?', 710: 'Manto?', 711: 'Botas?', 712: 'Manopla?', 713: 'Berloque?', 714: 'Bolsa?',
+    715: 'Metal?',
 })
 ABILITY_MAX_PX = 90
 EXTRA_MENU.update(ABILITIES)
@@ -337,6 +360,7 @@ def main():
     en_fmt = lambda i: rom[struct.unpack_from('<I', rom, EN_NAMES + 4 * i)[0] - 0x08000000]
     for idx, name in CLASSES.items():
         w = px_width(rom, name)
+        if idx in WEAPONS and w > 95: print('AVISO arma %dpx: %d %s' % (w, idx, name))
         if idx in MONSTERS and w > 85: print('AVISO nome largo %dpx: %d %s' % (w, idx, name))
         fmt = 80 if (' ' in name or en_fmt(idx) == 0x80) else 1
         recs[EN_NAMES + 4 * idx] = struct.pack('<I', add_string(enc(name, fmt)))
