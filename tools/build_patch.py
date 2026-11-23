@@ -176,6 +176,7 @@ WEAPONS.update({
     489: 'Elixir', 490: 'Antídoto', 491: 'Colírio', 492: 'Erva Eco', 493: 'Beijo da Donzela',
     494: 'Soft', 495: 'Água Benta', 496: 'Bandagem', 497: 'Cura Total', 498: 'Pena de Fênix',
 })
+WEAPONS.update({646: 'Fogo', 647: 'Gelo', 648: 'Raio', 649: 'Sagrado', 650: 'Vento'})   # elementos
 CLASSES.update(WEAPONS)
 
 # entradas do menu que o patch italiano não cobria (idx da tabela de menus -> PT-BR)
@@ -229,11 +230,11 @@ ABILITIES.update({
     252: 'Animar', 253: 'Véu de Metal', 254: 'Disco de Prata', 255: 'Bateria de Ouro',
     256: 'Amolecer', 257: 'Apressar', 258: 'Rasgar Ar', 259: 'Mau Hálito', 260: 'Beijo',
     261: 'Demi', 262: 'Quarter', 263: 'Mithril', 264: 'Roubar: JP', 265: 'Lingote Negro',
-    266: 'Cure', 267: 'Curaga', 268: 'Cura', 269: 'Roubar: EXP', 270: 'Olhar Mau',
+    266: 'Cura', 267: 'Cura++', 268: 'Cura+', 269: 'Roubar: EXP', 270: 'Olhar Mau',
     271: 'Atq. de Arma+', 272: 'Conversar', 273: 'Goblin', 274: 'Soco Goblin', 275: 'Inseto',
     276: 'Tiro Confuso', 277: 'Círculo', 278: 'Cascavel', 279: 'Mirar: Carteira',
     280: 'Silêncio', 281: 'Tiro Mudo', 282: 'Cruz Estelar', 283: 'Culinária',
-    284: 'Thunder', 285: 'Espada Raio', 286: 'Sopro Elétrico', 287: 'Thundaga', 288: 'Thundara',
+    284: 'Trovão', 285: 'Espada Raio', 286: 'Sopro Elétrico', 287: 'Trovão++', 288: 'Trovão+',
     289: 'Torm. de Areia', 290: 'Shiva', 291: 'Shell', 292: 'Afonia', 293: 'Raio Oleoso',
     294: 'Abanar Cauda', 295: 'Roleta', 296: 'Explodir', 297: 'Ar Brilhante', 298: 'Saltar',
     299: 'Julgar', 300: 'Absorver MP', 301: 'Miasma', 302: 'Meio MP', 303: 'Conselho',
@@ -260,15 +261,15 @@ ABILITIES.update({
     378: 'Hi|Poção', 379: 'Tremor', 380: 'Exorcizar', 381: 'Contrafogo', 382: 'Punho Distante',
     383: 'Revidar', 384: 'Barreira', 385: 'Quebra Poder', 386: 'Grito Bangaa', 387: 'Pantera',
     388: 'Bandagem', 389: 'Caçada', 390: 'Cura Total', 391: 'Ajuda Mog', 392: 'Contar Ovelhas',
-    393: 'Tapa', 394: 'Apressar Final', 395: 'Berserk Final', 396: 'Haste Final', 397: 'Fire',
-    398: 'Chicote de Fogo', 399: 'Espada de Fogo', 400: 'Sopro de Fogo', 401: 'Firaga',
-    402: 'Fira', 403: 'Acelerar', 404: 'Selo de Pedra', 405: 'Surra', 406: 'Fênix',
+    393: 'Tapa', 394: 'Apressar Final', 395: 'Berserk Final', 396: 'Haste Final', 397: 'Fogo',
+    398: 'Chicote de Fogo', 399: 'Espada de Fogo', 400: 'Sopro de Fogo', 401: 'Fogo++',
+    402: 'Fogo+', 403: 'Acelerar', 404: 'Selo de Pedra', 405: 'Surra', 406: 'Fênix',
     407: 'Pena de Fênix', 408: 'Roubar: Arma', 409: 'Enterro', 410: 'Largar Arma',
     411: 'Meteorito', 412: 'Cegar', 413: 'Tiro Cegante', 414: 'Blaster', 415: 'Apagão',
-    416: 'Piscada Gélida', 417: 'Blizzaga', 418: 'Blizzard', 419: 'Espada de Gelo',
+    416: 'Piscada Gélida', 417: 'Gelo++', 418: 'Gelo', 419: 'Espada de Gelo',
 })
 ABILITIES.update({
-    420: 'Blizzara', 421: 'Blitz', 422: 'Flan', 423: 'Golpe de Mana', 424: 'Flare', 425: 'Quebrar',
+    420: 'Gelo+', 421: 'Blitz', 422: 'Flan', 423: 'Golpe de Mana', 424: 'Flare', 425: 'Quebrar',
     426: 'Ataque Ígneo', 427: 'Olho Flutuante', 428: 'Protect', 429: 'Troca Elemental',
     430: 'Proeminência', 431: 'Haste', 432: 'Quebra Haste', 433: 'Pó Pesado', 434: 'Veneno',
     435: 'Esquecimento', 436: 'Def. de Arma+', 437: 'Faca', 438: 'Arremesso', 439: 'Poção',

@@ -34,3 +34,8 @@ Texto novo vai em `0xFE5000` (livre; o patch italiano usa `0xFE4000–0xFE4587`)
 ## Não verificado
 Sem emulador no ambiente: os glifos foram conferidos renderizando a fonte da ROM, **não** no jogo.
 Nomes longos (`Mago Vermelho`, `Cavaleiro Negro`, `Engenhoqueiro`) podem estourar caixas pequenas; teste.
+
+## Convenção de magias em níveis
+Fire/Fira/Firaga → `Fogo`/`Fogo+`/`Fogo++`; Thunder/Thundara/Thundaga → `Trovão`/`Trovão+`/`Trovão++`;
+Blizzard/Blizzara/Blizzaga → `Gelo`/`Gelo+`/`Gelo++`; Cure/Cura/Curaga → `Cura`/`Cura+`/`Cura++`.
+Elementos (nomes 646–650): Fogo, Gelo, Raio, Sagrado, Vento.
