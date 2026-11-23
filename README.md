@@ -54,4 +54,4 @@ Textos longos ficam em **bancos** no inglês: `0x4FA000–0x54E000` (~2.700 stri
 não foi decodificada: só as simples são traduzidas.
 Para não quebrar referências internas, o banco original é copiado inteiro para `0xF00000+`, as traduções são anexadas no fim,
 e só a tabela de offsets e o ponteiro no código (ex.: `0x16FC4`) mudam.
-Traduzidos até agora: ajuda dos comandos de menu (`0x527704`, 41 textos) e descrição dos combos por classe (`0x534264`, 25).
+Traduzidos até agora: ajuda dos comandos de menu (`0x527704`, 41 textos), descrição dos combos por classe (`0x534264`, 25) e mensagens curtas de efeito de habilidade (`0x521A20`, 351 textos; `tools/dialogue_effects.py`).

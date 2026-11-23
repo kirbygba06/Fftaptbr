@@ -39,11 +39,48 @@ def line_px(rom, code01, line):
     return sum(4 if c == ' ' else 7 if c == '&' else rom[0x4F885B + (0xFF if c == '-' else code01(c))] for c in line)
 
 
+def decode_text(body, code01):
+    """bytes de corpo (sem cabeçalho) -> texto ASCII/Unicode, ou None se houver token desconhecido"""
+    inv = {}
+    for ch in ("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,!?:/'()+"
+               "àáâãéêíóôõúç"):
+        inv[code01(ch) - 1] = ch
+    toks, out, i = split_tokens(body), '', 0
+    for t, p, _ in toks:
+        if t == 0x80:
+            if p == 0xFE: out += '-'
+            elif p in inv: out += inv[p]
+            else: return None
+        elif t == 0x40 and p == 0x73: out += ' '
+        elif t == 0x81 and p == 8: out += '&'
+        elif t == 0x40 and p in (0x61, 0x63, 0x77): pass
+        elif t == 0 and p is None: pass
+        else: return None
+    return out
+
+
+def auto_effects(rom, code01, bank=0x521A20):
+    from dialogue_effects import EFFECTS
+    o = banks.parse_bank(bank); ends = o[1:] + [len(rom[bank:bank + o[-1] + 0x80])]
+    res = {}
+    for idx, (s, e) in enumerate(zip(o, ends)):
+        raw = bytes(rom[bank + s:bank + e]); body = raw[2:]
+        txt = decode_text(body, code01)
+        if txt is None: continue
+        if txt in EFFECTS: pt = EFFECTS[txt]
+        elif txt.endswith('!') and txt[:-1] in EFFECTS: pt = EFFECTS[txt[:-1]] + '!'
+        else: continue
+        if enc_dlg(txt, code01) in body: res[idx] = pt
+    return res
+
+
 def build(rom, code01):
     banks.rom = bytes(rom)
     starts = sorted({a for a, _, _ in banks.scan(0x4F9000, 0x54F000)})
     recs, cursor, report = {}, FREE, []
-    for bank, trans in DIALOGUE.items():
+    plan = dict(DIALOGUE)
+    plan[0x521A20] = auto_effects(rom, code01)
+    for bank, trans in plan.items():
         o = banks.parse_bank(bank)
         nxt = next(s for s in starts if s > bank)
         data = bytearray(rom[bank:nxt])
