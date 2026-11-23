@@ -99,6 +99,10 @@ def build(rom, code01):
     plan = dict(DIALOGUE)
     plan[0x521A20] = auto_effects(rom, code01)
     from dialogue_desc import DESC, pen
+    from dialogue_misc import MISC
+    for bk, tb in MISC.items():
+        plan[bk] = auto_effects(rom, code01, bk, table=tb)
+        assert len(plan[bk]) == len(tb), '%X: %s' % (bk, sorted(set(tb) - set(plan[bk])))
     plan[0x529514] = auto_effects(rom, code01, 0x529514, table=DESC)
     plan[0x54382C] = auto_effects(rom, code01, 0x54382C, ruler=pen)
     for bank, trans in plan.items():
@@ -121,11 +125,12 @@ def build(rom, code01):
             orig = bytes(rom[bank + s:bank + e])
             hdr, body = orig[:2], orig[2:]
             toks = split_tokens(body)
-            for t in toks:
-                assert t[0] not in (0x40, 0x81) or t[1] in OK_CTRL or (t[0] == 0x81 and t[1] == 8), \
-                    'controle não suportado em %X[%d]: %02x %02x' % (bank, idx, t[0], t[1] or 0)
             last = max(k for k, t in enumerate(toks) if t[0] == 0x80)
             suffix = body[toks[last][2] + 2:]
+            for t in toks[:last + 1]:
+                assert t[0] not in (0x40, 0x81) or t[1] in OK_CTRL or (t[0] == 0x81 and t[1] == 8), \
+                    'controle não suportado em %X[%d]: %02x %02x' % (bank, idx, t[0], t[1] or 0)
+
             new = hdr + enc_dlg(text, code01) + suffix
             if len(data) % 2: data += b'\0'
             off = len(data)
