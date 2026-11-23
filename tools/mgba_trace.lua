@@ -6,7 +6,7 @@
 --  2) carregue este script (ele fica esperando);
 --  3) avance até o diálogo aparecer; o script grava em 'ffta_trace.txt' (pasta do mGBA) os endereços de ROM lidos,
 --     o PC da rotina que escreve o texto e os registradores.
-local WATCH_LO, WATCH_HI = 0x0201F700, 0x0201F900   -- buffer onde o texto descomprimido apareceu no seu save state (ajuste se preciso)
+local WATCH_LO, WATCH_HI = 0x02017680, 0x02017800   -- buffer do texto descomprimido (EWRAM 0x0201769C no save state; 0x1F734 era o offset no ARQUIVO .st0)
 local out = io.open("ffta_trace.txt", "w")
 local count = 0
 local function dump(tag)
