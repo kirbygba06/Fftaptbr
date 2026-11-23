@@ -69,6 +69,23 @@ CLASSES = {
 }
 
 
+# monstros, chefes e papéis de NPC da tabela de nomes (nomes próprios mantidos)
+MONSTERS = {
+    2: 'Flan de Gelo', 7: 'Formigaleão', 8: 'Creme', 9: 'Vampiro', 15: 'Granada',
+    19: 'Trovodraco', 27: 'Duende', 30: 'Zumbi', 37: 'Mestre Tonberry', 46: 'Gelodraco',
+    47: 'Pele Dura', 48: 'Olho Flutuante', 49: 'Bomba', 54: 'Malboro Grande',
+    59: 'Gorro Vermelho', 60: 'Wyrm de Fogo', 61: 'Pantera Rubra', 62: 'Gelatina',
+    70: 'Novato', 72: 'Líder de Turma', 73: 'Prof. de E.F.', 75: 'Enfermeira',
+    76: 'Zelador', 77: 'Sr. Leslaie', 78: 'Rainha Guerreira', 83: 'Arrombador',
+    84: 'Caixa', 85: 'Estátua', 86: 'Esfera', 87: 'Capo Borzoi', 88: 'Chefe Borzoi',
+    94: 'Wyrm Mundial', 95: 'Chefe Ba', 98: 'Malboro Chefe', 99: 'Ferreiro',
+    100: 'Armeiro', 101: 'Coeurl Supremo', 102: 'Perdido', 103: 'Sentinela',
+    104: 'Corvo Sinistro', 106: 'Asas Rubras', 108: 'Rainha Lamia', 112: 'Lorde Sinistro',
+    114: 'Chefe Hel', 115: 'Chefe Gelm', 116: 'Chefe Kagle', 117: 'Chefe Fes',
+    120: 'Diaboro', 121: 'Clã Borzoi', 122: 'Oficial',
+}
+CLASSES.update(MONSTERS)
+
 # entradas do menu que o patch italiano não cobria (idx da tabela de menus -> PT-BR)
 EXTRA_MENU = {34: 'Trocar Itens', 761: 'Lento', 762: 'Lento'}
 
@@ -208,6 +225,8 @@ def main():
     # 2) classes
     en_fmt = lambda i: rom[struct.unpack_from('<I', rom, EN_NAMES + 4 * i)[0] - 0x08000000]
     for idx, name in CLASSES.items():
+        w = px_width(rom, name)
+        if idx in MONSTERS and w > 85: print('AVISO nome largo %dpx: %d %s' % (w, idx, name))
         fmt = 80 if (' ' in name or en_fmt(idx) == 0x80) else 1
         recs[EN_NAMES + 4 * idx] = struct.pack('<I', add_string(enc(name, fmt)))
 
