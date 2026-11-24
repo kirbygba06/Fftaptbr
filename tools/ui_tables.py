@@ -101,9 +101,22 @@ NAMES = {23: 'Juiz', 55: 'Cavaleiro Negro', 59: 'Caixa Misteriosa', 60: 'Estátu
  69: 'Lorde Fantasma', 82: 'Lorde do Medo', 84: 'Arqui-Demônio', 85: 'Mamaflan', 79: 'Adamantoise'}
 
 # menu (0x720D44) restantes
-MENU = {65: '/usado', 91: 'Jagd', 720: 'AP Fim', 721: 'Item Fim', 724: 'HP MAX', 725: 'MP MAX', 749: 'EXP?'}
+MENU = {65: '/usado', 91: 'Jagd', 720: 'AP Fim', 721: 'Item Fim', 724: 'HP MAX', 725: 'MP MAX', 749: 'EXP?', 146: 'Téc. Gladiador', 178: 'Dano {81 03} MP', 207: '100{81 07} Lã', 498: 'NV? S-Flare', 499: 'NV3 Sem Def', 500: 'NV5 Morte', 501: 'NV? Sagrado'}
 
-TABLES = [(0x728F38, UI), (0x728684, CLANS), (0x729484, TITLES), (0x729C74, NEWS), (0x72C3F8, MISSIONS), (0x725C40, NAMES), (0x720D44, MENU)]
+# 0x724C34 (tabela de nomes): leis, categorias de arma, status, locais, luas
+LAWS = {655: 'Em Grupo', 656: 'HP Cheio', 658: 'Imitador', 659: 'Luta', 660: 'Alvo: Área', 661: 'Alvo: Todos', 662: 'Espadas', 663: 'Lâminas',
+ 664: 'Sabres', 665: 'Esp. Cavaleiro', 666: 'Espadões', 667: 'Montantes', 668: 'Facas', 669: 'Floretes', 670: 'Katanas', 671: 'Lanças', 672: 'Instrumentos',
+ 673: 'Soqueiras', 674: 'Alma', 675: 'Projéteis', 676: 'Trevas', 677: 'Cajados', 678: 'Bastões', 679: 'Maças', 680: 'Mãos Nuas',
+ 681: 'Dano {81 03} 100', 682: 'Cura {81 02} 50', 683: 'Cura {81 02} 100', 684: 'Cura {81 03} 50', 685: 'Cura {81 03} 100', 686: 'Cura',
+ 687: 'Pedra', 688: 'Sapo', 689: 'Veneno', 690: 'Confusão', 691: 'Fúria', 692: 'Silêncio', 693: 'Encanto', 694: 'Prender', 695: 'Atordoar', 696: 'Lentidão',
+ 697: 'Parar', 699: 'Barreira', 700: 'Proteger', 701: 'Acelerar', 702: 'Dano2: Humano', 703: 'Dano2: Bangaa', 704: 'Dano2: Nu Mou', 705: 'Dano2: Viera',
+ 706: 'Dano2: Moogle', 707: 'Dano2: Animal', 708: 'Cartas de Lei', 709: 'Só Mag. Cura', 710: '(não usado)', 711: 'Antilei R1', 712: 'Antilei R2',
+ 713: 'Antilei R3', 714: 'Antilei R4', 715: 'Antilei R5', 716: 'Antilei R6', 717: 'Onipotente', 718: 'Palácio Bervenia', 723: 'Porto Baguba',
+ 725: 'Planície Giza', 726: 'Picos Kudik', 727: 'Pântano Uladon', 728: 'Areias Jeraw', 729: 'Passagem Lutia', 731: 'Rio Ulei', 733: 'Vulcão Roda',
+ 734: 'Areias Eluut', 735: 'Caverna Nargai', 737: 'Dunas Delia', 738: 'Areias Gotor', 740: 'Planície Deti', 741: 'Garganta Siena', 743: 'Caverna Tubola',
+ 747: 'Vale Âmbar', 748: 'Lua do Rei', 749: 'Lua Louca', 750: 'Lua do Sábio', 751: 'Lua do Caçador', 752: 'Lua do Bardo', 596: 'Ache Aliados 2'}
+
+TABLES = [(0x728F38, UI), (0x728684, CLANS), (0x729484, TITLES), (0x729C74, NEWS), (0x72C3F8, MISSIONS), (0x725C40, NAMES), (0x720D44, MENU), (0x724C34, LAWS)]
 
 
 UI.update({45: 'Descarte um item.', 71: 'Sobrescrever slot.'})
