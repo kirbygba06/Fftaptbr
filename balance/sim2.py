@@ -305,7 +305,7 @@ def score_ability(u, a, own, foes, rng):
     vals.sort(key=lambda x: -x[0]); v0, t0 = vals[0]
     if len(vals) > 1 and ex > 0:
         m = min(ex, len(vals) - 1); rest = [v for v, _ in vals[1:1 + int(math.ceil(m))]]
-        frac = m / max(1, len(rest)); v0 += sum(rest) * frac * (1 - P['FF']) - sum(rest) * frac * P['FF'] * 0.5 if harmful else sum(rest) * frac
+        frac = m / max(1, len(rest)); v0 += sum(rest) * frac * (1 - P['FF']) - sum(rest) * frac * P['FF'] * 0.5
     return v0, t0
 def do_effects(u, t, a, own, foes, rng, e1ok):
     first = True; ok = True; res = []
@@ -418,6 +418,10 @@ def take_turn(u, own, foes, rng):
                     if ex > 0:
                         pool = [x for x in (foes if t in foes else own) if x is not t and (x['hp'] > 0 or any(e['kind'] == 'revive' for e in a.eff))]
                         rng.shuffle(pool); targets += pool[:int(ex) + (1 if rng.random() < ex - int(ex) else 0)]
+                        if t in own and not is_harm(a):
+                            lf = [f for f in foes if f['hp'] > 0]
+                            for _i in range(1, len(targets)):
+                                if lf and rng.random() < P['FF']: targets[_i] = rng.choice(lf)
                     if a.mp:
                         _c = a.mp * (2 if u['s'] == 'Turbo MP' else 0.5 if u['s'] == 'Half MP' else 1); u['mp'] -= _c; u['mpsp'] = u.get('mpsp', 0) + _c
                     for tt in targets: do_effects(u, tt, a, own, foes, rng, True)
