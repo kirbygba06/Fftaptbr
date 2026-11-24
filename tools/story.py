@@ -37,10 +37,10 @@ def build(rom, code01, translations):
             _, suffix = to_markup(body, code01)
             new_hdr = hdr_i & ~2 if comp else hdr_i
             maxlines = max(1, (new_hdr >> 4) & 0xF)
-            for page in text.split('\f'):
+            for page in re.split('\f|\\{40 61\\}\\{40 63\\}', text):
                 if page.count('\n') + 1 > maxlines:
                     report.append('B%d[%d]: %d linhas > %d: %s' % (k, idx, page.count('\n') + 1, maxlines, page.split('\n')[0]))
-            for ln in re.split('[\n\f]', text):
+            for ln in re.split('[\n\f]|\\{40 61\\}\\{40 63\\}', text):
                 w = markup_px(rom, code01, ln)
                 if w > cap: report.append('B%d[%d]: linha %dpx > %dpx: %s' % (k, idx, w, cap, ln))
             if len(data) % 2: data += b'\0'
