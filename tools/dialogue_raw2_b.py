@@ -16,7 +16,7 @@ RAW2 = {
   3: 'Cidade viera escondida\nno fundo da mata.', 4: 'Cidade nu mou. Sede do\nsaber e da alquimia.', 6: 'Floresta escura e profunda.\nEsconderijo de ladrões.',
   7: 'Planícies verdes ondulam.\nMuscmaloi cresce aqui.', 8: 'Picos imponentes. Lar de\num tigre ameaçado.', 9: 'Pântano fundo e perigoso\ncheio de ilhas.',
   10: 'Areias quentes sopram no\nmaior deserto de Ivalice.', 14: 'Planícies onde lutaram os\ntreze cavaleiros da lenda.', 16: 'Deserto perigoso{81 16} lar de\nmonstros e tesouros.',
-  17: 'Vento frio sopra desta\ncaverna.\fUma cidade antiga dizem\ndormir lá no fundo.', 18: 'Sempre se ouve o canto\ndos pássaros aqui.\fUm forte abandonado fica\nno meio da mata.',
+  17: 'Vento frio sopra desta\ncaverna.\fDizem que uma cidade\nantiga dorme no fundo.', 18: 'Sempre se ouve o canto\ndos pássaros aqui.\fUm forte abandonado fica\nno meio da mata.',
   19: 'Deserto das areias que\nlatem.\fDizem vir dos ossos de\numa besta celeste.', 20: 'Deserto de miragens e\nchocobos vermelhos.', 21: 'Planícies onduladas e\npragas de insetos.',
   22: 'Terras planas de areia\namarela e terra vermelha.\fÂmbar costuma ser achado\naqui entre as rochas.', 24: 'Floresta verde, famosa\npelo minério de materita.', 25: 'Cavernas antigamente\nexploradas por mithril.',
   27: 'Jagd sem lei onde se\nouvem vozes fantasmas.', 28: 'Jagd sem lei destruído\npela magia selvagem.', 29: 'Belo vale onde as rochas\nbrilham em âmbar.\fOs reis de Ivalice tinham\num palácio de verão aqui.',

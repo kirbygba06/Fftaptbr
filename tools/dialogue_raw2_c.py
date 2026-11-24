@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+"""Mensagens do registro de batalha com variáveis (0x521A20)."""
+N, V = '{40 25 40}', '{40 25 41}'
+RAW2 = {
+ 0x521A20: {
+  1: N + ' JP roubados!', 2: N + ' gils roubados!', 3: V + ' detectado!', 4: V + ' escapou!', 5: V + ' tomado!', 6: N + ' gils roubados!',
+  7: N + ' EXP roubado!', 8: N + ' JP roubados!', 9: N + ' JP recebidos!', 10: V + ' capturado!', 11: 'Virou ' + V + '!', 12: N + ' gils perdidos!',
+  13: V + ' quebrou!', 14: N + ' gils caíram!', 15: V + ' reequipado.', 18: V + ' aprendeu!', 19: V + ' virou zumbi!', 20: N + ' EXP ganho!',
+  21: V + ' subiu de nível!', 22: 'Veloc. de ' + V + ' zerou!', 23: V + ' voltou no tempo!', 24: 'Barreira de ' + V + ' some!', 25: 'Proteção de ' + V + ' some!',
+  26: V + ' acordou!', 27: V + ' pode falar!', 28: V + ' voltou a si!', 29: V + ' pode se mover!', 30: V + ' pode agir!', 31: V + ' lembrou!',
+  34: 'Cartão amarelo: ' + V + '!', 35: V + ': Para a prisão!', 36: V + ' enfim acordou!', 37: 'Dias restantes: ' + N, 38: 'Batalhas faltam: ' + N,
+  39: 'Inimigos faltam: ' + N, 40: 'Faltam p/ soltar: ' + N, 41: 'Batalhas p/ soltar: ' + N, 42: V + ' tomado!', 46: 'Duplo Lanç.: ' + V + ' +?',
+  47: V + ' caiu...', 51: V + ' recebeu JP!', 52: 'Cartão amarelo anulado!', 58: 'Reviver KO!', 135: 'Fúria!', 158: 'Reviver KO!', 287: 'Fúria!', 309: 'Reviver KO!',
+  340: 'Golpe final (HP{81 02}10)!', 391: V + ' capturado!', 392: V + ' saiu da batalha!', 393: 'Anula o turno do juiz!', 400: 'Mudança aleatória de lei!',
+ },
+ 0x527704: {
+  1: 'Veja condições de vitória/\nderrota e info da missão.', 2: 'Veja as leis atuais e\nuse cartas de lei.', 5: 'Salva o jogo como está e\nvolta à tela de título.',
+  7: 'Move a unidade. Ataques\npor trás acertam mais.', 14: 'Todos os aliados com combo\natacam juntos.\fIneficaz com só uma\nunidade. Usa todo o JP.', 15: 'Muda equipamento,\nhabilidades, classes, etc.',
+  16: 'Mostra informações sobre\no Clã {40 25 03}.', 17: 'Use um Game Link para trocar\ne jogar com um amigo.\fSe for bem, pode ganhar\num extra!', 19: 'Salva, carrega jogos e\najusta as opções.',
+  21: 'Carrega dados salvos e\nretoma de onde parou.', 23: 'Pague gil para tirar uma\nunidade da prisão.', 24: 'Cumpra pena na prisão para\napagar sua ficha.\fUnidades presas por perdão\nnão podem ser soltas.',
+  29: 'Troque cartas de lei.\nAs taxas mudam sempre.', 30: 'Receba dicas sobre as\ntendências das cartas de lei.', 34: 'Só saberá o que é a\nmercadoria ao comprar!\fQuanto mais link,\nmais variedade.',
+  38: 'Dê itens aos monstros\npara deixá-los felizes.\fMonstros felizes ajudam\nmais na batalha.', 39: 'Só dá para capturar um\nmonstro de cada tipo.\fCapturar outro solta\no antigo.',
+  41: 'Aceite uma missão por\numa taxa de informação.', 42: 'Cancele missão atual.\nAlgumas não cancelam.', 46: 'Muda de classe. Todos os\nitens saem do equipamento.',
+  57: 'Cancela a escolha e\nvolta ao menu.', 61: 'Lista os itens da missão.\fDescarte itens indesejados\nnesta tela.', 64: 'Itens bônus aparecem se\nvocê arrumar símbolos...\f...no mapa-múndi numa\nordem específica!',
+  66: 'Confirme os itens especiais\ndesta missão.', 78: 'Lista as cartas de lei.\fDescarte cartas indesejadas\nnesta tela.',
+  79: 'Use todo o JP para invocar o\ntotema humano, Mateus.\fCausa enorme dano de HP\na todos os inimigos.', 80: 'Use todo o JP para invocar o\ntotema bangaa, Adrammelech.\fCausa enorme dano de HP\na todos os inimigos.',
+  81: 'Use todo o JP para invocar o\ntotema nu mou, Ultima.\fCausa enorme dano de MP\na todos os inimigos.', 82: 'Use todo o JP para invocar o\ntotema viera, Exodus.\fCausa enorme dano de MP\na todos os inimigos.',
+  83: 'Use todo o JP para invocar o\ntotema moogle, Famfrit.\fCausa enorme dano de HP\na todos os inimigos.', 92: 'Venda e compre itens e\nadquira mercadorias.', 94: 'Unidades fora da batalha\npodem ser visitadas aqui.',
+  95: 'Troque cartas de lei e\nviole a lei sem penalidade!',
+ },
+ 0x531998: {
+  0: 'Use itens como "poção"\ne "antídoto".', 1: 'Comando de mago azul.\nUsa habilidades aprendidas.', 2: 'Comando de mago vermelho.\nUsa magia ofensiva.',
+  3: 'Comando de sprite.\nPregar uma peça sórdida.', 4: 'Comando de domador.\nControla vários monstros.', 9: 'Comando de mago negro.\nUsa magia elemental.',
+  10: 'Comando de sábio. Usa\nmagias novas e diferentes.', 11: 'Comando de ilusionista.\nDano a todos os inimigos.', 12: 'Comando de templário. Usa\nmagia de apoio e a espada.',
+  14: 'Comando de formiga-leão.\nAtaca com areia giratória.', 15: 'Comando de zumbi. Drena\nvida de um inimigo.', 16: 'Comando de assassino.\nEncurrala o inimigo.',
+  19: 'Comando de defensor.\nProtege você e aliados.', 20: 'Comando de invocador.\nInvoca criaturas do éter.', 21: 'Comando de malboro.\nEnvenena com gosma/sopro.',
+  22: 'Comando de mago branco.\nAjuda aliados com cura.', 23: 'Comando de pele-dura.\nEnfraquece por autodefesa.', 25: 'Cmd. de soldado/guerreiro.\nAbala a defesa inimiga.',
+  27: 'Comando de atirador. Ataca\nequipamento, gil e vida.', 29: 'Comando de cav. mog. Usa o\nímpeto para causar dano.', 30: 'Comando de lutador.\nUsa técnicas de espada.',
+  31: 'Comando de mago temporal.\nDobra o tecido do tempo.', 33: 'Comando de dragão de gelo.\nLibera morte gélida.', 36: 'Comando de ninja. Luta com\ntécnicas de terra distante.',
+  39: 'Comando de engenhoqueiro.\nTira algo da caixa.', 40: 'Comando de pantera verm.\nRasga com garras de veneno.', 41: 'Comando de gladiador.\nUne magia e esgrima.',
+  42: 'Comando de olho-flutuante.\nAtira o mal pelo olho.', 43: 'Comando de animista.\nToma a força dos animais.', 44: 'Comando de dragoon. Usa\ntécnicas dos dragões.',
+  45: 'Comando de alquimista. Muda\na forma da matéria.', 49: 'Comando de biskmatar. Usa\nmagia de poder negativo.', 51: 'Comando de li-grim. Maneja\no poder primordial do mundo.',
+  58: 'Comando de granada.\nEnvolve a área em fogo.', 60: 'Comando de trovadragão.\nDispara raio dragônico.', 61: 'Comando de lilith. Ataca\ncom veneno e magia.',
+  64: 'Comando de mestre-amora.\nAtaca com pura malícia.', 66: 'Comando de malboro gigante.\nCospe veneno e sons ruins.', 68: 'Comando de vampiro. Usa\npoder sombrio para matar.',
+  69: 'Comando de titânia. Destrói\ninimigos com luz ardente.', 70: 'Comando de Mestre da Lei.\nLeis reservadas ao Mestre.', 71: 'Comando de juiz.\nSentença aos criminosos.',
+  72: 'Carta de lei em branco.\nPermite criar leis.',
+ },
+}
