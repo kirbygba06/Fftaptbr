@@ -460,6 +460,13 @@ def main():
     recs.update(drecs)
     for r in dreport: print('AVISO diálogo', r)
 
+    # 2c) diálogos de história (bancos com tabela de offsets em 0xBB064C)
+    import story
+    from story_translations import STORY
+    srecs, sreport = story.build(rom, code01, STORY)
+    recs.update(srecs)
+    for r in sreport: print('AVISO história', r)
+
     # 3) fonte: ã e õ reais
     for g, base in ((G_A_TILDE, G_A_TILDE), (G_O_TILDE, G_O_TILDE)):
         recs[FONT + g * 128] = glyph_bytes(tilde_glyph(rom, base))[:64]

@@ -88,3 +88,10 @@ Para traduzir, o gerador descomprime, troca o texto e grava a string **sem compr
 `tools/textbanks.py` lê os bancos (inclui os 78 bancos de história em `0xBB0748–0xC0B000`: ~8.400 entradas, ~1.960 comprimidas). Traduzido até agora com este método:
 descrições de lojas/tavernas (`0x51EBE0`) e regras de batalha (`0x51F3E0`).
 Como rodar o mGBA do AppImage aqui: extrair (`--appimage-extract`), `libEGL.so.1` falsa (stub em C), Xvfb, `mgba-qt -g` (GDB na porta 2345) e teclas via XTEST (`python-xlib`).
+
+### Diálogos de história (`tools/story.py`, `tools/story_translations.py`, `tools/dump_story.py`)
+O jogo acha o banco de uma cena em `P + tabela[k+1]`, com `P = 0x08BB064C` para o inglês (tabela de u32 no início de P; entrada 0 = fim).
+O gerador copia o banco para `0xF40000+`, anexa as strings traduzidas (sem compressão, cabeçalho `& ~2`) e troca só o offset da tabela.
+Confirmado no jogo (mGBA): o buffer de texto da primeira cena mostrou "Ah, cara! Por que sempre caio no time fraco?…".
+Escala do trabalho: ~2.160 falas (~200 mil caracteres) nos bancos 0–52; traduzido até agora: banco 0 (prólogo, 60 falas).
+`python3 tools/dump_story.py ROM.gba [banco]` exporta o inglês em marcação (`/` = quebra, `¶` = página, `{40 25 00}` = variável).
