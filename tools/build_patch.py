@@ -472,6 +472,45 @@ def main():
         assert c_ >= b_, 'SOBREPOSIÇÃO de registros no espaço livre: %X-%X x %X-%X' % (a_, b_, c_, d_)
     assert _rs[-1][1] <= 0xFE0000 or True
 
+    # 2c) tabelas de texto curto (interface, clãs, títulos, manchetes, missões): strings novas após o último registro
+    import ui_tables
+    from textbanks import from_markup as _fm
+    _ui_base = (max(o + len(d) for o, d in recs.items()) + 3) & ~3
+    _ui = bytearray(); _seen = {}
+    def _ow(p):
+        s_ = bytearray(); e_ = p
+        while rom[e_] != 0 and e_ - p < 300: s_.append(rom[e_]); e_ += 1
+        if s_[0] == 1: return sum(rom[0x4F885B + g] for g in s_[1:])
+        w_ = i_ = 0
+        while i_ < len(s_):
+            if s_[i_] == 0x80 and i_ + 1 < len(s_): w_ += rom[0x4F885B + s_[i_ + 1] + 1]; i_ += 2
+            elif s_[i_] == 0x40 and i_ + 1 < len(s_): w_ += 4 if s_[i_ + 1] == 0x73 else 0; i_ += 2
+            else: i_ += 1
+        return w_
+    _lim = {}
+    for _b, _t in ui_tables.TABLES:
+        _m = 0
+        for _i in range(2048):
+            _q = struct.unpack_from('<I', rom, _b + 4 * _i)[0]
+            if not (0x08000000 <= _q < 0x09000000): break
+            _m = max(_m, _ow(_q - 0x08000000))
+        _lim[_b] = _m
+    _pw = lambda t: sum(4 if c == ' ' else 7 if c == '&' else rom[0x4F885B + (0xFF if c == '-' else code01(c))] for c in t if c not in '{}')
+    for _base, _tab in ui_tables.TABLES:
+        for _idx, _pt in sorted(_tab.items()):
+            _p = struct.unpack_from('<I', rom, _base + 4 * _idx)[0] - 0x08000000
+            _fmt1 = rom[_p] == 1
+            _pt = ui_tables.shorten(_pt, _lim[_base], _pw)
+            _data = enc(_pt, 1) if (_fmt1 and ' ' not in _pt and '{' not in _pt and '&' not in _pt and '-' not in _pt) else _fm(_pt, code01, b'\0')
+            if _pw(_pt) > _lim[_base]: print('AVISO tabela %X[%d]: %dpx > %d: %s' % (_base, _idx, _pw(_pt), _lim[_base], _pt))
+            if _data not in _seen:
+                _seen[_data] = _ui_base + len(_ui); _ui += _data
+                if len(_ui) % 2: _ui += b'\0'
+            recs[_base + 4 * _idx] = struct.pack('<I', 0x08000000 + _seen[_data])
+    assert _ui_base + len(_ui) < 0xFFF000, hex(_ui_base + len(_ui))
+    recs[_ui_base] = bytes(_ui)
+    print('tabelas curtas: %d bytes em 0x%X' % (len(_ui), _ui_base))
+
     # 3) fonte: ã e õ reais
     for g, base in ((G_A_TILDE, G_A_TILDE), (G_O_TILDE, G_O_TILDE)):
         recs[FONT + g * 128] = glyph_bytes(tilde_glyph(rom, base))[:64]
