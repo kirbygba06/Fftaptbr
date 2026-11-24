@@ -13,7 +13,7 @@ AI = dict(LAMBDA=0.15, SLEEP_V=2.0, HASTE_V=1.0)          # parâmetros da IA do
 OBS_HIT = {'Rockseal': 0.60, 'Charmshot': 0.95, 'Cupid': 0.80, 'Checkmate': 0.60, 'Death Sickle': 0.60}   # precisão registrada (comunidade) vs humano nv25 sem equipamento
 IMMSET = {'Frog', 'Stop', 'Disable', 'Immobilize', 'Berserk', 'Blind', 'Confusion', 'Confuse', 'Doom', 'Sleep', 'Petrify', 'KO', 'Slow', 'Silence', 'Poison', 'Addle', 'Charm'}
 GAP = [0]   # distância entre as frentes das equipes (modelo de mapa); 0 = sem restrição de alcance
-P = dict(MAP=0, P_LARGE=0.25, SMALL=(4, 7), LARGE=(10, 13), HASTE=2.0, DS2=1.0, OBS=0, IMM={10: 0.0, 25: 0.10, 45: 0.25}, SV=1.0, DURM=1.0, POISON=0.10, REACH_MOV=0.07, FACE=(0.5, 0.3, 0.2), AOE_X=1.0, FF=0.25)     # parâmetros de sensibilidade
+P = dict(PROG=0, APB=40, MAP=0, P_LARGE=0.25, SMALL=(4, 7), LARGE=(10, 13), HASTE=2.0, DS2=1.0, OBS=0, IMM={10: 0.0, 25: 0.10, 45: 0.25}, SV=1.0, DURM=1.0, POISON=0.10, REACH_MOV=0.07, FACE=(0.5, 0.3, 0.2), AOE_X=1.0, FF=0.25)     # parâmetros de sensibilidade
 # CONFIRMADO (teste comunitário nível 25): Stop 3, Silence 3, Slow 3, Haste 3, Doom 3, Petrify até curar. Charm e Sleep terminam ao receber dano (duração natural: suposição).
 # SUPOSIÇÃO: Confusion, Poison (turnos e %), Sleep/Charm natural, Blind, Berserk, Disable, Immobilize, buffs.
 DUR = {'Stop': 3, 'Sleep': 4, 'Petrify': 99, 'Charm': 4, 'Confusion': 4, 'Confuse': 4, 'Berserk': 4, 'Blind': 4, 'Silence': 3, 'Disable': 4, 'Addle': 4, 'Immobilize': 4, 'Slow': 3,
@@ -91,7 +91,11 @@ def mk(j, level, g, abil, cfg=None, scenario_mp=None):
     u['wep'] = g['wep'][t] * (0.8 if rob else 1.0); u['dfn'] += g['mage_def'][t] if rob else g['phys_def'][t]; u['rs'] += g['mage_res'][t] if rob else g['phys_res'][t]; u['pw'] += g['rod_pow'][t] if rob else 0
     u['imm'] = random.random() < P['IMM'].get(level, 0.25 if level > 25 else 0.10 if level > 12 else 0.0)
     u['maxhp'] = u['hp']; u['mp0'] = u['mp']; u['cnt'] = 0; u['st'] = {}; u['wr'] = RANGE_W.get(j['name'], 1)
-    A, Sup = kit_for(j['name'], cap_for(level))
+    if P.get('PROG'):
+        import progression
+        _n, Sup = progression.kit_prog(j['name'], level, P['APB'], APMOD)
+        A = [CAT[norm(x)] for x in _n if norm(x) in CAT and x not in DISABLE]
+    else: A, Sup = kit_for(j['name'], cap_for(level))
     u['abs'] = [FIGHT] + A; u['sup'] = [s for s in SUPPORT_PRIO if s in Sup]; u['s'] = u['sup'][0] if u['sup'] else None
     if P.get('NO_DS'): u['sup'] = [x for x in u['sup'] if x != 'Double Sword']; u['s'] = u['sup'][0] if u['sup'] else None
     if P.get('NO_DC'): u['sup'] = [x for x in u['sup'] if x != 'Doublecast']; u['s'] = u['sup'][0] if u['sup'] else None

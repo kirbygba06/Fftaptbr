@@ -44,9 +44,10 @@ def undo_ctx(saved):
         if a.name in saved: a.mp, a.power, a.area, a.eff = saved[a.name]
     sim2.APMOD.clear(); sim2.DISABLE.clear()
 DUR0 = dict(sim2.DUR)
+PROG_ON = int(os.environ.get('PROG', '0')); APB = int(os.environ.get('APB', '40'))
 def setp():
     sim2.DUR.clear(); sim2.DUR.update(DUR0)
-    sim2.P.update(dict(MAP=1, HASTE=2.0, DS2=1.0, NO_DS=0, NO_DC=0, OBS=0, DURM=1.0, SV=1.0, FF=0.25)); sim2.DUR['Charm'] = 4
+    sim2.P.update(dict(PROG=PROG_ON, APB=APB, MAP=1, HASTE=2.0, DS2=1.0, NO_DS=0, NO_DC=0, OBS=0, DURM=1.0, SV=1.0, FF=0.25)); sim2.DUR['Charm'] = 4
 SIZE = 5
 def team_task(a):
     label, spec, lv, n, seed = a; setp(); sim2.DUR.update(spec.get('dur') or {}); sim2.reset_stats(); s = spec_build(spec); saved = apply_ctx(s, spec)
