@@ -94,7 +94,9 @@ def mk(j, level, g, abil, cfg=None, scenario_mp=None):
     if P.get('PROG') == 2:
         import progression
         _pl = progression.plan(j['race'], j['name'], level, P['APB'], APMOD, P.get('BATT'))
-        _n = _pl['kit_A'] if P.get('SEC', 1) else [x for x in _pl['kit_A'] if x not in sum(_pl['prereq'].values(), [])]
+        _sr = {1: 'auto', 0: 'none', 2: 'prereq'}[P.get('SEC', 1)]
+        _pl = progression.plan(j['race'], j['name'], level, P['APB'], APMOD, P.get('BATT'), 'prereq' if _sr == 'prereq' else 'auto') if _sr != 'none' else _pl
+        _n = _pl['kit_A'] if _sr != 'none' else _pl.get('kit_A_own', _pl['kit_A'])
         Sup = _pl['kit_S']; A = [CAT[norm(x)] for x in _n if norm(x) in CAT and x not in DISABLE]
     elif P.get('PROG'):
         import progression

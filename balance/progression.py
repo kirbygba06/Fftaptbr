@@ -15,7 +15,8 @@ S0 = ['Shortsword', 'Silver Sword', 'Sweep Blade', 'Barong', 'Falchion', 'Jack K
       'Longbow', 'Char Bow', 'Thorn Bow', 'Demon Bell', 'Glass Bell', 'War Trumpet', 'Hard Knuckles', 'Rising Sun', 'Aiot Gun']
 ST0 = {norm(x) for x in S0}; ST1 = {norm(x) for x in S1}; ST2 = {norm(x) for x in S2}
 BATT_MULT = 1.0
-BATTLES = {10: 12, 25: 40, 45: 90, 50: 100}          # SUPOSIÇÃO: batalhas jogadas ao chegar no nível
+MIX_W = float(os.environ.get('MIXW', '0.4'))
+BATTLES = {10: 16, 25: 40, 45: 90, 50: 100}      # 20 batalhas já na luta contra Famfrit (nível 10–15)          # SUPOSIÇÃO: batalhas jogadas ao chegar no nível
 STAGE_AT = {0: 0, 1: 10, 2: 20, 3: 35}                 # batalhas para o estoque 0 (inicial), 1, 2 e 3 (depois: lojas maiores e saque)
 _items = {norm(t['name']): t for t in sim.load()['items']}
 def stage_of(item):
@@ -74,10 +75,18 @@ def _pool(cls, battles, apmod, kinds=('A',)):
         out.append((apmod.get(k['name'], k['ap']), i, k))
     out.sort(key=lambda x: (x[0], x[1])); return out
 _cache2 = {}
-def plan(race, cls, level, ap_per_battle=40, apmod=None, battles=None):
+EV = json.load(open(os.path.join(here, 'ability_ev.json')))
+import sim as _sim
+_ROLE = {}
+def role(c):
+    if not _ROLE:
+        import sim as s_
+        for k, v in s_.__dict__.items(): pass
+    return 'mag' if c in ('White Mage', 'Black Mage', 'Illusionist', 'Alchemist', 'Sage', 'Time Mage', 'Red Mage', 'Elementalist', 'Summoner', 'Bishop', 'Blue Mage', 'Beastmaster', 'Morpher', 'Animist') else 'fis'
+def plan(race, cls, level, ap_per_battle=40, apmod=None, battles=None, sec_rule='auto'):
     """Retorna dict(feasible, cost, kit_A, kit_S, prereq): custo para liberar a classe + habilidades próprias com o AP que sobra."""
     apmod = apmod or {}; b = battles if battles else int(round((BATTLES.get(level) or int(round(level * 1.9))) * BATT_MULT))
-    key = (race, cls, b, ap_per_battle, tuple(sorted(apmod.items())))
+    key = (race, cls, b, ap_per_battle, tuple(sorted(apmod.items())), sec_rule)
     if key in _cache2: return _cache2[key]
     budget = b * ap_per_battle; learned = {}; cost = [0]; ok = [True]
     def unlock(c, seen=()):
@@ -97,6 +106,21 @@ def plan(race, cls, level, ap_per_battle=40, apmod=None, battles=None):
             if cst <= left: left -= cst; (A if k['type'] == 'A' else S).append(k['name'])
         res['kit_A'] = A; res['kit_S'] = S
         pre = PREREQ.get(race, {}).get(cls, [])
-        if pre:   # conjunto secundário: a classe de pré-requisito com mais habilidades aprendidas (somente as dominadas)
-            pc = max(pre, key=lambda x: x[1])[0]; res['kit_A'] = A + [a for a in learned.get(pc, []) if a not in A]
+        res['kit_A_own'] = list(A); sec = None; secA = []
+        prereq_cls = max(pre, key=lambda x: x[1])[0] if pre else None
+        if sec_rule == 'prereq' or (sec_rule == 'auto' and level <= 15):
+            if prereq_cls: sec = prereq_cls; secA = [a for a in learned.get(prereq_cls, []) if a not in A]
+        elif sec_rule == 'auto':
+            best = (-1, None, [])
+            for c2 in set(INIT.get(race, [])) | set(learned.keys()):
+                if c2 == cls: continue
+                have = list(learned.get(c2, [])); lft = left
+                for cst, i, k in _pool(c2, b, apmod):
+                    if k['name'] in have: continue
+                    if cst <= lft: lft -= cst; have.append(k['name'])
+                top = sorted((EV.get(a, 0) for a in have), reverse=True)[:3]
+                sc = sum(top) * (1.0 if role(c2) == role(cls) or c2 == 'White Mage' else MIX_W)
+                if sc > best[0]: best = (sc, c2, have)
+            if best[1]: sec = best[1]; secA = [a for a in best[2] if a not in A]
+        res['sec_class'] = sec; res['kit_A'] = A + secA
     _cache2[key] = res; return res
