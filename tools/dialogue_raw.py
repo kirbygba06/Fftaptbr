@@ -3,6 +3,7 @@
 M = '{40 67 00}[{40 25 1c}]'      # nome da missão entre colchetes
 N = '{40 25 0c}'                    # nome de quem reporta
 RAW = {
+ 0x4FE5D4: {},
  0x51FAD4: {
   0: M + '\nfoi um grande sucesso!\nGanhamos um bônus!',
   1: 'Beleza!\n' + M + '\nconcluída!',
@@ -126,7 +127,7 @@ RAW = {
   30: 'Facção do recém-\nformado "Clã Doned".\nEm rápida ascensão.',
  },
  0x5510DC: {
-  0: 'Espada de aspecto\nestranho.\nCompre para inspecionar.',
+  0: 'Espada de aspecto estranho.\nCompre para inspecionar.',
   1: 'Espada de lâmina afiada.\nCompre para inspecionar.',
   2: 'Espada de lâmina curva.\nCompre para inspecionar.',
   3: 'Espada muito antiga.\nCompre para inspecionar.',

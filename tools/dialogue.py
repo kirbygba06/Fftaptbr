@@ -153,6 +153,9 @@ def build(rom, code01):
     plan[0x534D9C] = auto_effects(rom, code01, 0x534D9C, table=_tab)
     plan[0x54382C] = auto_effects(rom, code01, 0x54382C, ruler=pen)
     from dialogue_raw import RAW
+    from dialogue_quests import fit
+    from story import markup_px as _mpx
+    RAW[0x4FE5D4] = fit(rom, code01, _mpx)
     raw_banks = set(RAW)
     for bk, tb in RAW.items(): plan[bk] = tb
     for bank, trans in plan.items():
@@ -171,6 +174,13 @@ def build(rom, code01):
                     elif line[k] in (0x40, 0x81): px += 4 if line[k:k + 2] == b'\x40\x73' else 0; k += 2
                     else: break
                 cap = max(cap, px) if px < 400 else cap
+        if bank in (0x4FE5D4,):    # banco grande: offsets u16 estouram se o original for mantido inteiro; recompacta
+            _new = bytearray(data[:min(o)])
+            for _i in range(len(o)):
+                if len(_new) % 2: _new += b'\0'
+                if _i in trans: struct.pack_into('<H', _new, 2 * _i, 0); continue
+                struct.pack_into('<H', _new, 2 * _i, len(_new)); _new += data[o[_i]:ends[_i]]
+            data = _new
         for idx, text in sorted(trans.items()):
             s, e = o[idx], ends[idx]
             hdr_i, body, comp = get_string(rom, bank, o, ends, idx)
@@ -179,6 +189,8 @@ def build(rom, code01):
                 from textbanks import to_markup, from_markup
                 from story import markup_px
                 _, sfx = to_markup(body, code01)
+                _otxt, _ = to_markup(body, code01)
+                if text.count('\n') > _otxt.count('\n'): report.append('%X[%d]: %d linhas > %d originais' % (bank, idx, text.count('\n') + 1, _otxt.count('\n') + 1))
                 new = hdr + from_markup(text, code01, sfx)
                 if len(data) % 2: data += b'\0'
                 off = len(data); assert off < 0xFFFF
