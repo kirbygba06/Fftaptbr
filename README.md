@@ -80,3 +80,11 @@ dependente de estado de hardware que não está no save state; sem um emulador c
 Teste em jogo: na loja, o nome "Botas de Batalha" (16 letras, ~87 px) apareceu em branco. Como hipótese, os campos de nome têm limite de caracteres/largura
 (inglês: até 15 letras e ~83 px em itens; classes até 12 letras). `tools/safe_names.py` reduz todos os nomes acima disso (ex.: `Botas Batalha`,
 `Espada Prata`, `Cav. Negro`). Se a hipótese se confirmar, dá para voltar a nomes mais longos só onde o jogo aceita.
+
+### Compressão dos textos longos — DECIFRADA (rotina da ROM em `0x54A0`, achada com mGBA + GDB)
+Strings cujo cabeçalho (u16) tem o **bit 1 ligado** são comprimidas: depois do cabeçalho vêm 4 bytes (tamanho, big-endian) e um fluxo de opcodes
+(LZ com literais, cópias, zeros e 0xFF). `tools/ffta_lz.py` implementa o descompressor; o resultado é o mesmo formato `80 xx`/`40 xx` dos textos simples.
+Para traduzir, o gerador descomprime, troca o texto e grava a string **sem compressão** com o cabeçalho com o bit 1 desligado (`hdr & ~2`).
+`tools/textbanks.py` lê os bancos (inclui os 78 bancos de história em `0xBB0748–0xC0B000`: ~8.400 entradas, ~1.960 comprimidas). Traduzido até agora com este método:
+descrições de lojas/tavernas (`0x51EBE0`) e regras de batalha (`0x51F3E0`).
+Como rodar o mGBA do AppImage aqui: extrair (`--appimage-extract`), `libEGL.so.1` falsa (stub em C), Xvfb, `mgba-qt -g` (GDB na porta 2345) e teclas via XTEST (`python-xlib`).

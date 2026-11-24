@@ -8,6 +8,7 @@ INTEIRO para o espaço livre e as traduções são ANEXADAS no fim; só a tabela
 ponteiros do código (palavras de 32 bits com o endereço do banco) são alterados."""
 import struct
 import banks
+from ffta_lz import decompress
 from dialogue_translations import DIALOGUE
 
 FREE = 0xF00000
@@ -38,6 +39,16 @@ def split_tokens(b):
 
 def line_px(rom, code01, line):
     return sum(4 if c == ' ' else 7 if c == '&' else rom[0x4F885B + (0xFF if c == '-' else code01(c))] for c in line)
+
+
+def get_string(rom, bank, o, ends, idx):
+    """(cabeçalho u16, corpo plano 80/40, comprimida?) – descomprime se o bit 1 do cabeçalho estiver ligado"""
+    p = bank + o[idx]
+    hdr = struct.unpack_from('<H', rom, p)[0]
+    if hdr & 2:
+        out, _ = decompress(rom, p + 2)
+        return hdr, out, True
+    return hdr, bytes(rom[p + 2:bank + ends[idx]]), False
 
 
 def decode_text(body, code01):
@@ -92,7 +103,7 @@ def auto_effects(rom, code01, bank=0x521A20, ruler=None, table=None):
     o = banks.parse_bank(bank); ends = o[1:] + [len(rom[bank:bank + o[-1] + 0x80])]
     res = {}
     for idx, (s, e) in enumerate(zip(o, ends)):
-        raw = bytes(rom[bank + s:bank + e]); body = raw[2:]
+        hdr_, body, comp_ = get_string(rom, bank, o, ends, idx)
         txt = decode_text(body, code01)
         if txt is None: continue
         if table is not None:
@@ -104,7 +115,7 @@ def auto_effects(rom, code01, bank=0x521A20, ruler=None, table=None):
         elif txt in EFFECTS: pt = EFFECTS[txt]
         elif txt.endswith('!') and txt[:-1] in EFFECTS: pt = EFFECTS[txt[:-1]] + '!'
         else: continue
-        if enc_dlg(txt, code01) in body: res[idx] = pt
+        if comp_ or enc_dlg(txt, code01) in body: res[idx] = pt
     return res
 
 
@@ -137,8 +148,8 @@ def build(rom, code01):
         ends = o[1:] + [len(data)]
         # largura máxima de linha nos textos ingleses simples do banco (caixa de ajuda)
         cap = 0
-        for s_, e_ in zip(o, ends):
-            for line in _split_lines(bytes(rom[bank + s_ + 2:bank + e_])):
+        for i_, (s_, e_) in enumerate(zip(o, ends)):
+            for line in _split_lines(get_string(rom, bank, o, ends, i_)[1]):
                 px, k = 0, 0
                 while k + 1 < len(line):
                     if line[k] == 0x80: px += rom[0x4F885B + line[k + 1] + 1]; k += 2
@@ -147,8 +158,8 @@ def build(rom, code01):
                 cap = max(cap, px) if px < 400 else cap
         for idx, text in sorted(trans.items()):
             s, e = o[idx], ends[idx]
-            orig = bytes(rom[bank + s:bank + e])
-            hdr, body = orig[:2], orig[2:]
+            hdr_i, body, comp = get_string(rom, bank, o, ends, idx)
+            hdr = struct.pack('<H', hdr_i & ~2 if comp else hdr_i)
             toks = split_tokens(body)
             last = max(k for k, t in enumerate(toks) if t[0] == 0x80)
             suffix = body[toks[last][2] + 2:]
