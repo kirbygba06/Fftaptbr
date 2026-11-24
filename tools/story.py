@@ -17,11 +17,13 @@ def markup_px(rom, code01, line):
 
 
 def build(rom, code01, translations):
-    recs, cursor, report = {}, FREE_STORY, []
+    recs, cursor, report, done = {}, FREE_STORY, [], {}
     u32 = lambda a: struct.unpack_from('<I', rom, a)[0]
     for k, tr in sorted(translations.items()):
         ent = P_EN + 4 * (k + 1)
         A = P_EN + u32(ent)
+        if A in done:    # banco-alias (mesmo endereço de outro já traduzido)
+            recs[ent] = struct.pack('<I', done[A] - P_EN); continue
         nxt = P_EN + u32(ent + 4) if u32(ent + 4) > u32(ent) else P_EN + u32(P_EN)
         o = parse_table(rom, A)
         ends = o[1:] + [nxt - A]
@@ -49,6 +51,7 @@ def build(rom, code01, translations):
             struct.pack_into('<H', data, 2 * idx, off)
         cursor = (cursor + 3) & ~3
         recs[ent] = struct.pack('<I', cursor - P_EN)
+        done[A] = cursor
         recs[cursor] = bytes(data)
         cursor += len(data)
     return recs, report

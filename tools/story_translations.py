@@ -1536,4 +1536,33 @@ STORY = {
   2: 'Foi por pouco.\nDevo outra a você,\n{40 25 00}.',
   3: 'Para isso servem\nos amigos, Ritz!',
  },
+ 35: {
+  0: 'Esqueci que estamos\nnum jagd...',
+  1: '{40 21 03}Kupopo... Sinto\npartir, mas...\nfoi uma boa vida.',
+  2: '...?\nMontblanc?\nMontblanc!',
+  4: 'Não sei você, mas\neu não estou pronto\npara morrer!\fVejo você de volta\nna loja!',
+  5: 'Sinto muito, mas\nestou ferido demais\npara ser útil.\fVoltarei ao palácio.\nAdeus.',
+  6: 'Não vou morrer aqui!\nAcho que voltarei\npara meu antigo clã!',
+  7: 'Esta é minha chance\nde sair daqui inteiro!\nTchau!',
+  8: 'Não creio que sirva\npara esse negócio\nde clã.\fPartirei antes de\nser um fardo maior.\nNos veremos de novo!',
+ },
+ 36: {
+  0: 'Cuidado,\n{40 25 00}! É o\nmorde-lâmina!\fPodemos vencê-lo,\nmas só se formos\nunidos.',
+  1: 'Parece difícil!\nAquilo é uma lança\nnas costas dele!?',
+  2: 'Conseguimos! Nós\no vencemos. Esse\ntrabalho está feito.',
+  3: 'É. Ei, Ritz...\nPensou mais em\nir...\fHum... esqueça.\n(Ritz e Mewt...\f... Terei que lutar\ncom eles antes\ndisso acabar?)',
+ },
+ 37: {
+  0: 'Você não é um\nBorzoi! O que\nfaz aqui?',
+  1: 'Mamãããe!',
+  2: 'Não... não pode.',
+  3: 'Desculpe, Chefe...',
+ },
+ 38: {
+  0: 'Como nos\nacharam!?',
+  1: 'Chefe...!',
+  2: 'Não achei que\nseria assim...\nChefe...',
+ },
 }
+STORY[39] = STORY[35]
+STORY[40] = STORY[35]
