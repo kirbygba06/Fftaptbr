@@ -1,0 +1,3490 @@
+id="mw-content-text" class="mw-body-content mw-content-ltr" lang="en" dir="ltr">This is a sub-page of Final Fantasy Tactics Advance.
+Information
+Obviously this isn't complete yet, but I thought I may as well put it here now.
+The item names are from the Universal String Table.
+Ability data starts at 0x0055187C in the ROM.
+Ability Data Structure
+The Ability Data Structure is 0x1C bytes long.
+Name
+Length
+Offset
+Type
+Max Value
+Description
+Name ID	
+2	
+0x00	
+uint16	
+0x2FE	
+The name ID of the ability
+Element	
+1	
+0x02	
+uint8	
+8	
+Elemental Damage.
+Values:
+0x00 - None
+0x01 - Fire
+0x02 - Wind
+0x03 - Earth
+0x04 - Water
+0x05 - Ice
+0x06 - Lightning
+0x07 - Holy
+0x08 - Dark
+AP	
+1	
+0x03	
+uint8{{User:	
+100	
+AP in game = This * 10
+Values 0x64 and above display as "999" in game.
+MP cost	
+1	
+0x04	
+uint8	
+255	
+How much MP is used.
+Weapon Required	
+1	
+0x05	
+uint8	
+3	
+This seems to determine whether or not the held weapon is "used" for the ability.
+Values:
+0x00 - Not Required
+0x01 - Required
+0x02 - Spear Required (Jump)
+0x03 - Bow Required (Doom Archer)
+A check is made at 08026EC6 to see if the Ability is Jump or Doom Archer, values 0x02 and 0x03 are not checked otherwise.
+Horizontal Range	
+1	
+0x06	
+uint8	
+0x80	
+Range
+Values:
+0x40 - Line (used for breath moves and full line moves (like Chocobo Rush)
+0x80 - Weapon Range
+Vertical Range	
+1	
+0x07	
+uint8	
+255	
+Allowed difference in height between the unit using the ability and the targeted panel.
+A value of 0 allows the unit to ignore height difference when choosing a target panel.
+Targeting	
+1	
+0x08	
+uint8	
+7	
+This byte determines how units are targeted.
+Values:
+0x00 - No Targeting
+0x01 - Cursor Selection
+0x02 - Auto-Select with no Help Text
+0x03 - Auto-Select with Help Text
+0x04 - Directional
+0x05 - Peirce
+0x06 - Infront of Caster
+0x07 - Infront and Behind Caster
+Horizontal Area of Effect	
+1	
+0x09	
+uint8	
+0x80	
+The AoE of the move. Used with Range.
+Values observed:
+0x01 - Single target
+0x02 - Spear(?)
+0x04 - Breath (Bangaa Cry)
+0x05 - Normal aura (Cure, Fire, etc)
+0x0D - Big aura (Summons)
+0x40 - Full map (Range = 0)
+0x80 - Full line.
+Vertical Area of Effect	
+1	
+0x0A	
+uint8	
+255	
+Allowed difference in height between the targeted panel and the affected units.
+A value of 0 makes the ability affect units regardless of height difference.
+Power	
+1	
+0x0B	
+uint8	
+255	
+The power of the move.
+Effects	
+4	
+0x0C	
+4 * uint8	
+0xD0	
+An index number of the effects of the ability.
+Values observed:
+0x00 - None
+0x01 - None
+0x02 - Gadget Defense Up
+0x03 - Gadget Protect
+0x04 - Resonance
+0x05 - Gadget Shell
+0x06 - Gadget Blind
+0x07 - Gadget Heal
+0x08 - Gadget Sleep
+0x09 - Gadget Haste
+0x0A - Gadget Dispel
+0x0B - Gadget Poison
+0x0C - Gadget Resistance Up
+0x0D - Gadget Doom
+0x0E - 100% HP Revival
+0x0F - 25% HP Revival
+0x10 - Self: Speed Down
+0x11 - Draw Weapon
+0x12 - 25% Recoil Damage
+0x13 - Kill Self
+0x14 - Self: Caster's HP Damage
+0x15 - If Effect 1 Hits, 25% Recoil Damage
+0x16 - Self: Speed Down
+0x17 - Self: 1x Damage
+0x18 - Drain
+0x19 - Self: 1x Healing
+0x1A - Lose 30 Gil
+0x1B - If Effect 1 Hits, Delay Enemy
+0x1C - AType,   Default, Delay Unit
+0x1D - Add: Quick
+0x1E - Add: Attack Up, Def Up, Pow Up, Res Up
+0x1F - Doom Archer
+0x20 - Matra Magic
+0x21 - 90% of Current HP Damage
+0x22 - Steal 2 JP
+0x23 - 1x MP Damage, Capped at Max MP
+0x24 - Heal 80 MP
+0x25 - Add: Astra
+0x26 - Cancel: Debuffs
+0x27 - If Effect 1 Hits: Add: Frog
+0x28 - Add: Frog
+0x29 - Cancel: Frog
+0x2A - Add: Cover
+0x2B - Aim: Wallet
+0x2C - Add: Advice
+0x2D - Add: Shell
+0x2E - Elementalshift
+0x2F - If Effect 1 Hits: Add: Stop
+0x30 - Add: Stop
+0x31 - Add: Speed Down
+0x32 - 4x Damage
+0x33 - Targets Kills * 10 Damage
+0x34 - 1x Damage, 100% Hit
+0x35 - 1x Damage, 100% Hit
+0x36 - 999 Damage
+0x37 - Limit Glove
+0x38 - 30 Damage
+0x39 - 50% of Current HP Damage
+0x3A - 25% of Current HP Damage
+0x3B - Mutilate
+0x3C - Goblin Punch
+0x3D - Deal Between 2-12 Damage
+0x3E - Non-Undead, Damage Equal to Lost HP
+0x3F - 1x Damage
+0x40 - 1x Damage, Capped to Max HP
+0x41 - 0.5x Damage, 2x Hit
+0x42 - 2x Damage, 0.5x Hit
+0x43 - Throw
+0x44 - If Effect 1 Hits: Add: Disable
+0x45 - Add: Disable
+0x46 - Cancel: Disable
+0x47 - Add: Immobilize
+0x48 - If Effect 1 Hits: Add: Immobilize
+0x49 - Add: Immobilize
+0x4A - Cancel: Immobilize
+0x4B - If Effect 1 Hits: Knockback
+0x4C - If Effect 1 Hits: Add: Berserk
+0x4D - Add: Berserk
+0x4E - Add: Protect
+0x4F - Hastebreak
+0x50 - Aim: Vitals
+0x51 - Acid
+0x52 - Add: Reflect
+0x53 - Sensor
+0x54 - Add: Blind
+0x55 - SType,   Default, Eff1Dep: Inflict Blind
+0x56 - Eyesight: Add: Blind
+0x57 - Add: Blind
+0x58 - Cancel: Blind
+0x59 - Fully Heal HP
+0x5A - Heal Equal to Current HP
+0x5B - 1x Healing
+0x5C - Add: Confuse
+0x5D - If Effect 1 Hits: Add: Confuse
+0x5E - Eyesight: Add: Confuse
+0x5F - Add: Confuse
+0x60 - Bad Breath
+0x61 - Add: Sleep
+0x62 - Add: Petrify
+0x63 - Cancel: Petrify
+0x64 - Add: Defense Down, Resistance Down
+0x65 - Break Armor
+0x66 - Add: Slow
+0x67 - If Effect 1 Hits: Add: Slow
+0x68 - Add: Slow
+0x69 - Add: Haste
+0x6A - Cancel: Buffs
+0x6B - Soundwave
+0x6C - Add: Expert Guard
+0x6D - Add: Silence
+0x6E - If Effect 1 Hits: Add: Silence
+0x6F - Add: Silence
+0x70 - Cancel: Silence
+0x71 - Hibernate
+0x72 - Enemy: Steal JP
+0x73 - Enemy: Steal Gil
+0x74 - Enemy: Steal EXP
+0x75 - Enemy: Steal Accessory
+0x76 - Enemy: Steal Armor
+0x77 - Enemy: Steal Helmet
+0x78 - Enemy: Steal Shield
+0x79 - Enemy: Steal Weapon
+0x7A - Enemy, 0.25x Hit: Steal Ability
+0x7B - Add: Vanish
+0x7C - If Effect 1 Hits: Add: Poison
+0x7D - Add: Poison
+0x7E - Cancel: Poison
+0x7F - Add: Undead
+0x80 - Cancel: Undead
+0x81 - Break Weapon
+0x82 - Add: Attack Down
+0x83 - Add: Boost
+0x84 - Add: Addle
+0x85 - Add: Defense Up
+0x86 - Hurl
+0x87 - Add: Defending
+0x88 - If Effect 1 Hits: Add: Magic Down
+0x89 - Add: Magic Down
+0x8A - Add: Resistance Up
+0x8B - Cureall
+0x8C - Enemy, If Effect 1 Hits: Add: Charm
+0x8D - Add: Charm
+0x8E - Enemy: Add: Charm
+0x8F - Lawshift
+0x90 - Non-Undead, Lv=Digit: 1x Damage
+0x91 - Undead, Lv=Digit: 1x Healing
+0x92 - Lv/3: Add: Defense Down
+0x93 - Lv/3: Add: Resistance Down
+0x94 - Non-Undead, Lv/5: Add: Death
+0x95 - Undead, Lv/5: Fully Heal HP
+0x96 - Lv=Day: 1x Damage
+0x97 - Enemy, 100% Hit, 1x MP Damage
+0x98 - Enemy, If Effect 1 Hits: 1x Damage
+0x99 - Enemy: 100% Hit, 1x Damage
+0x9A - Enemy: 1x Damage
+0x9B - Enemy: Add: Berserk
+0x9C - Enemy: Disarm
+0x9D - Parley
+0x9E - Heal 80 MP
+0x9F - Non-Self, Damage Equal to HP
+0xA0 - Non-Self, 1x Damage
+0xA1 - Non-Self, Add: Sleep
+0xA2 - Non-Undead, Fully Heal MP
+0xA3 - Non-Undead, Cancel: Debuffs
+0xA4 - Non-Undead, 1x Damage
+0xA5 - Non-Undead, Add: Regen
+0xA6 - Non-Undead, Add: Reraise
+0xA7 - Non-Undead, Fully Heal HP
+0xA8 - Non-Undead, 1x Healing
+0xA9 - Non-Undead, If Effect 2 Hits, Add: Confuse
+0xAA - Non-Undead, Add: Doom
+0xAB - Non-Undead: If Effect 1 Hits, Add: Doom
+0xAC - 100% Add: Death
+0xAD - Non-Undead, Add: Death
+0xAE - Non-Undead, Add: Charm
+0xAF - Non-Monster: 1x Damage
+0xB0 - Break Weapon
+0xB1 - Non-Dragon, 1x Damage
+0xB2 - Undead: Damage Equal to Max HP
+0xB3 - Undead: Damage Equal to Max HP
+0xB4 - Undead: 1x Damage
+0xB5 - Undead: Heal to Full HP
+0xB6 - Undead: 1x Healing
+0xB7 - Exorcise
+0xB8 - Undead: Add: Charm
+0xB9 - Monster: 1x Damage
+0xBA - Monster: 2x Damage
+0xBB - Monster: Parley
+0xBC - Monster: Addle
+0xBD - Capture
+0xBE - Dragon: 2x Damage
+0xBF - Dragon: Parley
+0xC0 - Mug
+0xC1 - Control
+0xC2 - Friend
+0xC3 - Add: Regen
+0xC4 - Heal Undead Equal to Caster's Lost HP
+0xC5 - 2x Damage
+0xC6 - 0.5x Damage
+0xC7 - 3x Damage
+0xC8 - Morph
+0xC9 - Enemy, Add: Sleep
+0xCA - 100% Accuracy, 0.5x Damage
+0xCB - Add: Stop on Judge
+0xCC - Add: Immobilize, Disable
+0xCD - Give JP
+0xCE - Remove Yellow Card
+0xCF - Add Yellow Card
+0xD0 - If Effect 1 Hits, Steal 2 JP
+Properties	
+4	
+0x10	
+uint32	
+0xFFFFFFFF	
+The properties (in binary flags) that the ability has.
+Values observed
+0x00000001 - Self-Targetable
+0x00000002 - Unknown
+0x00000004 - Unknown
+0x00000008 - Unknown
+0x00000010 - Unknown
+0x00000020 - Offensive
+0x00000040 - Ignore Reaction
+0x00000080 - Reflectable
+0x00000100 - Double Cast
+0x00000200 - Ignore Silence
+0x00000400 - Enable Beastmaster
+0x00000800 - Trigger Learning
+0x00001000 - Blocked by Cover
+0x00002000 - Unknown
+0x00004000 - Stealable
+0x00008000 - Return Magic
+0x00010000 - Throw/Hurl
+0x00020000 - Trigger Absorb-MP
+0x00040000 - Physical
+0x00080000 - Enable Morpher
+0x00100000 - Unknown
+0x00200000 - Unknown
+0x00400000 - Unknown
+0x00800000 - Unknown
+0x01000000 - Unknown
+0x02000000 - Unknown
+0x04000000 - Unknown
+0x08000000 - Unknown
+0x10000000 - Unknown
+0x20000000 - Unknown
+0x40000000 - Unknown
+0x80000000 - Unknown
+Animation ID	
+2	
+0x14	
+uint16	
+unknown	
+The animation that the ability uses.
+Description ID	
+2	
+0x16	
+uint16	
+unknown	
+The description text that the ability uses.
+AI Condition	
+1	
+0x18	
+uint8	
+unknown	
+Special AI conditions.
+Values observed:
+0x00 - Normal
+0x01 - Judge/Judge Sword
+0x02 - Mug
+0x03 - Sensor/Mog Peek
+0x04 - Remove From Battle
+0x05 - Steal: Item/Ability
+0x06 - Steal: Gil
+0x07 - Steal: EXP
+0x08 - Steal: JP
+0x09 - Hunting
+0x0A - Capture
+0x0B - Morph
+0x0C - Gil Toss
+0x0D - Aim: Item
+0x0E - Aim: Wallet
+0x0F - Draw Weapon
+0x10 - Lawshift/Blank Card
+0x11 - Matra Magic
+...
+0x13 - Zombify
+...
+0x33 - JP Gift
+0x34 - Yellow Clip
+0x35 - Yellow Card
+AI Behavior	
+1	
+0x19	
+uint8	
+0x3	
+When the ability should be used.
+0x0 - Unknown
+0x1 - Prioritize Low HP
+0x2 - Prioritize Healthy
+0x3 - Last Resort
+AI Priority	
+1	
+0x1A	
+uint8	
+100	
+High values are less likely.
+Buffer	
+1	
+0x1B	
+uint8	
+0	
+Alignment byte.
+List of abilities
+This is the order in which the abilities are stored within the game.
+Index
+Name
+Element
+MP
+Power
+Range (Aura)
+AP
+0x000	
+-	
+None	
+0	
+0	
+0 (0)	
+10
+0x001	
+Cure	
+Holy	
+6	
+40	
+4 (5)	
+100
+0x002	
+Cura	
+Holy	
+10	
+60	
+4 (5)	
+200
+0x003	
+Curaga	
+Holy	
+16	
+80	
+4 (5)	
+300
+0x004	
+Esuna	
+None	
+18	
+0	
+4 (5)	
+200
+0x005	
+Life	
+Holy	
+10	
+90	
+4 (1)	
+200
+0x006	
+Full-Life	
+Holy	
+20	
+100	
+4 (1)	
+300
+0x007	
+Auto-Life	
+Holy	
+16	
+0	
+4 (1)	
+200
+0x008	
+Shell	
+None	
+6	
+0	
+4 (5)	
+100
+0x009	
+Protect	
+None	
+6	
+0	
+4 (5)	
+100
+0x00A	
+Dispel	
+None	
+12	
+0	
+3 (5)	
+200
+0x00B	
+Holy	
+Holy	
+32	
+50	
+3 (5)	
+300
+0x00C	
+Barrier	
+None	
+10	
+0	
+3 (1)	
+300
+0x00D	
+Judge	
+None	
+6	
+0	
+3 (1)	
+300
+0x00E	
+Break	
+None	
+20	
+0	
+3 (1)	
+200
+0x00F	
+Water	
+Water	
+12	
+34	
+3 (5)	
+200
+0x010	
+Aero	
+Wind	
+12	
+34	
+3 (5)	
+200
+0x011	
+Drain	
+None	
+12	
+30	
+4 (1)	
+100
+0x012	
+Blind	
+None	
+12	
+0	
+4 (1)	
+100
+0x013	
+Raise	
+Holy	
+22	
+45	
+4 (5)	
+300
+0x014	
+Giga Flare	
+None	
+40	
+65	
+3 (5)	
+300
+0x015	
+Bio	
+None	
+12	
+45	
+3 (5)	
+300
+0x016	
+Ultima Blow	
+None	
+60	
+0	
+Weapon (1)	
+999
+0x017	
+Fire	
+Fire	
+6	
+30	
+4 (5)	
+100
+0x018	
+Fira	
+Fire	
+12	
+40	
+4 (5)	
+200
+0x019	
+Firaga	
+Fire	
+24	
+50	
+4 (5)	
+300
+0x01A	
+Thunder	
+Lightning	
+6	
+30	
+4 (5)	
+100
+0x01B	
+Thundara	
+Lightning	
+12	
+40	
+4 (5)	
+200
+0x01C	
+Thundaga	
+Lightning	
+24	
+50	
+4 (5)	
+300
+0x01D	
+Blizzard	
+Ice	
+6	
+30	
+4 (5)	
+100
+0x01E	
+Blizzara	
+Ice	
+12	
+40	
+4 (5)	
+200
+0x01F	
+Blizzaga	
+Ice	
+24	
+50	
+4 (5)	
+300
+0x020	
+Sleep	
+None	
+10	
+0	
+4 (5)	
+200
+0x021	
+Doublecast	
+None	
+0	
+0	
+0 (0)	
+999
+0x022	
+Quicken	
+None	
+24	
+0	
+3 (1)	
+300
+0x023	
+Slow	
+None	
+12	
+0	
+3 (5)	
+200
+0x024	
+Reflect	
+None	
+8	
+0	
+3 (1)	
+300
+0x025	
+-	
+None	
+0	
+0	
+0 (1)	
+100
+0x026	
+Stop	
+None	
+24	
+0	
+3 (5)	
+300
+0x027	
+Quarter	
+None	
+10	
+0	
+3 (1)	
+200
+0x028	
+Demi	
+None	
+24	
+0	
+3 (1)	
+300
+0x029	
+Silence	
+None	
+8	
+0	
+3 (5)	
+200
+0x02A	
+Haste	
+None	
+24	
+0	
+3 (1)	
+200
+0x02B	
+Prominence	
+Fire	
+32	
+20	
+0 (64)	
+100
+0x02C	
+Tempest	
+Lightning	
+32	
+17	
+0 (64)	
+100
+0x02D	
+Freezeblink	
+Ice	
+32	
+20	
+0 (64)	
+100
+0x02E	
+Star Cross	
+Holy	
+32	
+17	
+0 (64)	
+300
+0x02F	
+Stardust	
+None	
+32	
+20	
+0 (64)	
+300
+0x030	
+Deluge	
+Water	
+32	
+17	
+0 (64)	
+200
+0x031	
+Soil Evidence	
+Earth	
+32	
+17	
+0 (64)	
+200
+0x032	
+Wild Tornado	
+Wind	
+32	
+17	
+0 (64)	
+200
+0x033	
+Fire Whip	
+Fire	
+12	
+30	
+4 (1)	
+100
+0x034	
+Earth Heal	
+Earth	
+12	
+40	
+4 (1)	
+200
+0x035	
+White Flame	
+Fire	
+24	
+40	
+3 (5)	
+100
+0x036	
+Shining Air	
+Wind	
+12	
+30	
+4 (1)	
+200
+0x037	
+Evil Gaze	
+Dark	
+12	
+30	
+4 (1)	
+300
+0x038	
+Heavy Dust	
+Earth	
+12	
+30	
+4 (1)	
+200
+0x039	
+Sliprain	
+Water	
+12	
+30	
+4 (1)	
+200
+0x03A	
+Elementalshift	
+None	
+6	
+0	
+4 (1)	
+300
+0x03B	
+Astra	
+None	
+8	
+0	
+4 (5)	
+200
+0x03C	
+Rasp	
+None	
+24	
+60	
+3 (5)	
+100
+0x03D	
+Death	
+Dark	
+36	
+0	
+3 (1)	
+200
+0x03E	
+Meteor	
+None	
+40	
+50	
+3 (5)	
+300
+0x03F	
+Flare	
+None	
+36	
+65	
+3 (1)	
+300
+0x040	
+Poison	
+Dark	
+10	
+0	
+4 (5)	
+100
+0x041	
+Toad	
+None	
+36	
+0	
+3 (1)	
+200
+0x042	
+Break	
+None	
+1	
+0	
+0 (1)	
+300
+0x043	
+Item	
+None	
+0	
+0	
+0 (0)	
+100
+0x044	
+Unicorn	
+Holy	
+12	
+40	
+4 (13)	
+200
+0x045	
+Ifrit	
+Fire	
+18	
+40	
+4 (13)	
+200
+0x046	
+Ramuh	
+Lightning	
+18	
+40	
+4 (13)	
+200
+0x047	
+Shiva	
+Ice	
+18	
+40	
+4 (13)	
+200
+0x048	
+Kirin	
+None	
+24	
+0	
+4 (13)	
+200
+0x049	
+Carbuncle	
+None	
+12	
+0	
+4 (13)	
+300
+0x04A	
+Phoenix	
+Holy	
+24	
+0	
+4 (13)	
+300
+0x04B	
+Madeen	
+Holy	
+36	
+52	
+4 (13)	
+300
+0x04C	
+First Aid	
+None	
+0	
+25	
+0 (1)	
+100
+0x04D	
+Powerbreak	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x04E	
+Mindbreak	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x04F	
+Magicbreak	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x050	
+Speedbreak	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x051	
+Mug	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x052	
+Provoke	
+None	
+0	
+0	
+1 (1)	
+300
+0x053	
+Sensor	
+None	
+0	
+0	
+4 (1)	
+300
+0x054	
+Body Slam	
+None	
+0	
+45	
+1 (1)	
+300
+0x055	
+Greased Bolt	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x056	
+Downsize	
+None	
+24	
+0	
+Weapon (1)	
+300
+0x057	
+Nurse	
+None	
+0	
+30	
+0 (5)	
+100
+0x058	
+Cover	
+None	
+0	
+0	
+4 (1)	
+200
+0x059	
+-	
+None	
+0	
+0	
+0 (1)	
+100
+0x05A	
+Subdue	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x05B	
+Parley	
+None	
+0	
+0	
+1 (1)	
+200
+0x05C	
+Saint Cross	
+Holy	
+24	
+35	
+0 (4)	
+300
+0x05D	
+Holy Blade	
+Holy	
+32	
+0	
+Weapon (1)	
+300
+0x05E	
+Defense	
+None	
+0	
+0	
+0 (1)	
+200
+0x05F	
+Drop Weapon	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x060	
+Tremor	
+None	
+0	
+30	
+0 (4)	
+100
+0x061	
+Hibernate	
+None	
+0	
+0	
+0 (1)	
+100
+0x062	
+Mow Down	
+None	
+0	
+40	
+0 (4)	
+200
+0x063	
+Aura	
+None	
+0	
+0	
+0 (1)	
+300
+0x064	
+Expert Guard	
+None	
+0	
+0	
+0 (1)	
+300
+0x065	
+Meltdown	
+None	
+0	
+0	
+0 (4)	
+200
+0x066	
+Whirlwind	
+None	
+0	
+25	
+0 (4)	
+100
+0x067	
+Earth Render	
+Earth	
+0	
+34	
+Line (128)	
+200
+0x068	
+Chakra	
+None	
+0	
+35	
+0 (1)	
+200
+0x069	
+Revive	
+None	
+0	
+0	
+1 (1)	
+300
+0x06A	
+Exorcise	
+Holy	
+0	
+0	
+1 (1)	
+300
+0x06B	
+Holy Sign	
+None	
+0	
+0	
+1 (1)	
+200
+0x06C	
+Air Render	
+None	
+0	
+45	
+3 (1)	
+200
+0x06D	
+Far Fist	
+None	
+0	
+35	
+4 (5)	
+200
+0x06E	
+Air Blast	
+Wind	
+0	
+35	
+Line (4)	
+300
+0x06F	
+Backdraft	
+Fire	
+0	
+60	
+1 (1)	
+300
+0x070	
+Rush	
+None	
+0	
+0	
+Weapon (1)	
+100
+0x071	
+Wild Swing	
+None	
+0	
+0	
+0 (4)	
+200
+0x072	
+Beatdown	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x073	
+Blitz	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x074	
+Fire Sword	
+Fire	
+10	
+54	
+1 (1)	
+200
+0x075	
+Bolt Sword	
+Lightning	
+10	
+54	
+1 (1)	
+200
+0x076	
+Ice Sword	
+Ice	
+10	
+54	
+1 (1)	
+200
+0x077	
+Ultima Sword	
+None	
+60	
+0	
+Weapon (1)	
+999
+0x078	
+Warcry	
+None	
+0	
+0	
+0 (4)	
+300
+0x079	
+Cheer	
+None	
+0	
+0	
+0 (1)	
+100
+0x07A	
+Soul Sphere	
+None	
+0	
+0	
+4 (5)	
+300
+0x07B	
+Lifebreak	
+Dark	
+0	
+0	
+Weapon (1)	
+300
+0x07C	
+Jump	
+None	
+0	
+0	
+4 (1)	
+100
+0x07D	
+Lancet	
+None	
+0	
+35	
+1 (1)	
+300
+0x07E	
+Wyrmtamer	
+None	
+0	
+0	
+1 (1)	
+200
+0x07F	
+Fire Breath	
+Fire	
+0	
+40	
+Line (4)	
+300
+0x080	
+Bolt Breath	
+Lightning	
+0	
+40	
+Line (4)	
+300
+0x081	
+Ice Breath	
+Ice	
+0	
+40	
+Line (4)	
+300
+0x082	
+Wyrmkiller	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x083	
+Bangaa Cry	
+None	
+0	
+45	
+Line (4)	
+200
+0x084	
+Mog Attack	
+None	
+0	
+0	
+Weapon (1)	
+100
+0x085	
+Mog Guard	
+None	
+0	
+0	
+0 (1)	
+200
+0x086	
+Mog Lance	
+None	
+0	
+0	
+3 (1)	
+200
+0x087	
+Mog Rush	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x088	
+Mog Shield	
+None	
+0	
+0	
+4 (1)	
+300
+0x089	
+Mog Peek	
+None	
+0	
+0	
+4 (1)	
+300
+0x08A	
+Mog Aid	
+None	
+0	
+35	
+0 (1)	
+300
+0x08B	
+Ultima Charge	
+None	
+60	
+0	
+Weapon (1)	
+999
+0x08C	
+Swarmstrike	
+None	
+0	
+0	
+Weapon (1)	
+100
+0x08D	
+Shadowstick	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x08E	
+Checkmate	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x08F	
+Featherblow	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x090	
+Swallowtail	
+None	
+0	
+0	
+0 (4)	
+300
+0x091	
+Manastrike	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x092	
+Piercethrough	
+None	
+0	
+0	
+Line (2)	
+200
+0x093	
+Nighthawk	
+None	
+0	
+0	
+4 (1)	
+200
+0x094	
+Throw	
+None	
+0	
+0	
+4 (1)	
+100
+0x095	
+Wood Veil	
+None	
+4	
+15	
+4 (1)	
+200
+0x096	
+Fire Veil	
+Fire	
+4	
+15	
+4 (1)	
+200
+0x097	
+Earth Veil	
+Earth	
+4	
+15	
+4 (1)	
+200
+0x098	
+Metal Veil	
+None	
+4	
+15	
+4 (1)	
+200
+0x099	
+Water Veil	
+Water	
+4	
+15	
+4 (1)	
+200
+0x09A	
+Unspell	
+None	
+4	
+0	
+1 (1)	
+300
+0x09B	
+Oblivion	
+None	
+24	
+0	
+1 (1)	
+300
+0x09C	
+Shadowbind	
+None	
+12	
+0	
+1 (1)	
+200
+0x09D	
+Last Breath	
+Dark	
+32	
+0	
+1 (1)	
+300
+0x09E	
+Aphonia	
+None	
+12	
+0	
+1 (1)	
+200
+0x09F	
+Nightmare	
+None	
+18	
+0	
+1 (1)	
+300
+0x0A0	
+Ague	
+None	
+12	
+0	
+1 (1)	
+200
+0x0A1	
+Rockseal	
+None	
+32	
+0	
+1 (1)	
+300
+0x0A2	
+Ultima Masher	
+None	
+60	
+0	
+Weapon (1)	
+999
+0x0A3	
+Steal: Armor	
+None	
+0	
+0	
+1 (1)	
+300
+0x0A4	
+Steal: Shield	
+None	
+0	
+0	
+1 (1)	
+200
+0x0A5	
+Steal: Access.	
+None	
+0	
+0	
+1 (1)	
+300
+0x0A6	
+Steal: Helm	
+None	
+0	
+0	
+1 (1)	
+300
+0x0A7	
+Steal: Weapon	
+None	
+0	
+0	
+1 (1)	
+300
+0x0A8	
+Steal: Gil	
+None	
+0	
+0	
+1 (1)	
+100
+0x0A9	
+Steal: EXP	
+None	
+0	
+0	
+1 (1)	
+100
+0x0AA	
+Steal: JP	
+None	
+0	
+0	
+1 (1)	
+200
+0x0AB	
+Steal: Ability	
+None	
+0	
+0	
+1 (1)	
+300
+0x0AC	
+Boost	
+None	
+0	
+0	
+0 (1)	
+100
+0x0AD	
+Aim: Legs	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x0AE	
+Aim: Arm	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x0AF	
+Cupid	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x0B0	
+Burial	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x0B1	
+Take Aim	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x0B2	
+Faster	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x0B3	
+Blackout	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x0B4	
+Sonic Boom	
+None	
+0	
+0	
+4 (5)	
+200
+0x0B5	
+Oust	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x0B6	
+Advice	
+None	
+0	
+0	
+1 (1)	
+100
+0x0B7	
+Aim: Vitals	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x0B8	
+Hunting	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x0B9	
+Addle	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x0BA	
+Ultima Shot	
+None	
+60	
+0	
+Weapon (1)	
+999
+0x0BB	
+Sidewinder	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x0BC	
+Capture	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x0BD	
+Goblin	
+None	
+0	
+0	
+4 (1)	
+200
+0x0BE	
+Flan	
+None	
+0	
+0	
+4 (1)	
+200
+0x0BF	
+Bomb	
+None	
+0	
+0	
+4 (1)	
+200
+0x0C0	
+Dragon	
+None	
+0	
+0	
+4 (1)	
+200
+0x0C1	
+Lamia	
+None	
+0	
+0	
+4 (1)	
+200
+0x0C2	
+Bug	
+None	
+0	
+0	
+4 (1)	
+200
+0x0C3	
+Tonberry	
+None	
+0	
+0	
+4 (1)	
+200
+0x0C4	
+Panther	
+None	
+0	
+0	
+4 (1)	
+200
+0x0C5	
+Malboro	
+None	
+0	
+0	
+4 (1)	
+200
+0x0C6	
+Floateye	
+None	
+0	
+0	
+4 (1)	
+200
+0x0C7	
+Undead	
+None	
+0	
+0	
+4 (1)	
+200
+0x0C8	
+Fairy	
+None	
+0	
+0	
+4 (1)	
+200
+0x0C9	
+Rockbeast	
+None	
+0	
+0	
+4 (1)	
+200
+0x0CA	
+Goblin	
+None	
+0	
+0	
+0 (1)	
+200
+0x0CB	
+Flan	
+None	
+0	
+0	
+0 (1)	
+200
+0x0CC	
+Bomb	
+None	
+0	
+0	
+0 (1)	
+200
+0x0CD	
+Dragon	
+None	
+0	
+0	
+0 (1)	
+200
+0x0CE	
+Lamia	
+None	
+0	
+0	
+0 (1)	
+200
+0x0CF	
+Bug	
+None	
+0	
+0	
+0 (1)	
+200
+0x0D0	
+Panther	
+None	
+0	
+0	
+0 (1)	
+200
+0x0D1	
+Malboro	
+None	
+0	
+0	
+0 (1)	
+200
+0x0D2	
+Floateye	
+None	
+0	
+0	
+0 (1)	
+200
+0x0D3	
+Hurl	
+None	
+0	
+0	
+4 (1)	
+100
+0x0D4	
+Ring	
+None	
+0	
+0	
+4 (1)	
+200
+0x0D5	
+Firebomb	
+Fire	
+0	
+30	
+4 (1)	
+300
+0x0D6	
+Ball	
+None	
+0	
+0	
+4 (1)	
+200
+0x0D7	
+Dagger	
+None	
+0	
+35	
+4 (1)	
+300
+0x0D8	
+Smile	
+None	
+0	
+0	
+4 (1)	
+300
+0x0D9	
+Gil Toss	
+None	
+0	
+0	
+4 (1)	
+100
+0x0DA	
+Mythril	
+None	
+0	
+0	
+0 (1)	
+200
+0x0DB	
+Beso Toxico	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x0DC	
+Death Sickle	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x0DD	
+Conceal	
+None	
+0	
+0	
+0 (1)	
+100
+0x0DE	
+Doom Archer	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x0DF	
+Doubleshot	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x0E0	
+Aim: Armor	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x0E1	
+Aim: Weapon	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x0E2	
+Aim: Wallet	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x0E3	
+Sheep Count	
+None	
+8	
+0	
+4 (5)	
+100
+0x0E4	
+100% Wool	
+None	
+8	
+0	
+0 (1)	
+200
+0x0E5	
+Cuisine	
+None	
+32	
+0	
+1 (1)	
+300
+0x0E6	
+Tail Wag	
+None	
+8	
+0	
+1 (1)	
+200
+0x0E7	
+Chocobo Rush	
+None	
+12	
+45	
+Line (128)	
+300
+0x0E8	
+Frogsong	
+None	
+18	
+0	
+4 (1)	
+200
+0x0E9	
+Friend	
+None	
+12	
+0	
+4 (13)	
+300
+0x0EA	
+Catnip	
+None	
+12	
+0	
+1 (1)	
+100
+0x0EB	
+Fireshot	
+Fire	
+0	
+0	
+Weapon (1)	
+100
+0x0EC	
+Boltshot	
+Lightning	
+0	
+0	
+Weapon (1)	
+100
+0x0ED	
+Iceshot	
+Ice	
+0	
+0	
+Weapon (1)	
+100
+0x0EE	
+Confushot	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x0EF	
+Charmshot	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x0F0	
+Blindshot	
+None	
+0	
+0	
+Weapon (1)	
+100
+0x0F1	
+Silenshot	
+None	
+0	
+0	
+Weapon (1)	
+200
+0x0F2	
+Stopshot	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x0F3	
+Red Spring	
+None	
+12	
+0	
+0 (64)	
+200
+0x0F4	
+Blue Screw	
+None	
+12	
+0	
+0 (64)	
+200
+0x0F5	
+Green Gear	
+None	
+12	
+0	
+0 (64)	
+200
+0x0F6	
+Silver Disc	
+None	
+12	
+0	
+0 (64)	
+200
+0x0F7	
+Gold Battery	
+None	
+12	
+40	
+0 (64)	
+200
+0x0F8	
+Black Ingot	
+None	
+12	
+0	
+0 (64)	
+200
+0x0F9	
+Chroma Gem	
+None	
+12	
+0	
+0 (64)	
+200
+0x0FA	
+Yellow Spring	
+None	
+12	
+0	
+0 (64)	
+200
+0x0FB	
+Potion	
+Holy	
+0	
+40	
+1 (1)	
+100
+0x0FC	
+Hi-Potion	
+Holy	
+0	
+60	
+1 (1)	
+100
+0x0FD	
+X-Potion	
+Holy	
+0	
+80	
+1 (1)	
+100
+0x0FE	
+Ether	
+None	
+0	
+0	
+1 (1)	
+100
+0x0FF	
+Elixir	
+Holy	
+0	
+100	
+1 (1)	
+100
+0x100	
+Phoenix Down	
+Holy	
+0	
+90	
+1 (1)	
+100
+0x101	
+Echo Screen	
+None	
+0	
+0	
+1 (1)	
+100
+0x102	
+Maiden Kiss	
+None	
+0	
+0	
+1 (1)	
+100
+0x103	
+Soft	
+None	
+0	
+0	
+1 (1)	
+100
+0x104	
+Holy Water	
+None	
+0	
+0	
+1 (1)	
+100
+0x105	
+Antidote	
+None	
+0	
+0	
+1 (1)	
+100
+0x106	
+Eye Drops	
+None	
+0	
+0	
+1 (1)	
+100
+0x107	
+Bandage	
+None	
+0	
+0	
+1 (1)	
+100
+0x108	
+Cureall	
+None	
+0	
+0	
+1 (1)	
+100
+0x109	
+Draw Weapon	
+None	
+0	
+0	
+0 (1)	
+100
+0x10A	
+Goblin Punch	
+None	
+8	
+30	
+1 (1)	
+100
+0x10B	
+Magic Hammer	
+None	
+8	
+38	
+3 (1)	
+100
+0x10C	
+Mutilate	
+None	
+18	
+0	
+1 (1)	
+100
+0x10D	
+Acid	
+None	
+12	
+0	
+3 (1)	
+100
+0x10E	
+Sacrifice	
+None	
+0	
+0	
+1 (1)	
+100
+0x10F	
+Blowup	
+None	
+2	
+15	
+0 (4)	
+100
+0x110	
+Flame Attack	
+Fire	
+0	
+40	
+3 (1)	
+100
+0x111	
+Chill	
+Ice	
+0	
+40	
+0 (4)	
+100
+0x112	
+Mighty Guard	
+None	
+8	
+0	
+1 (1)	
+100
+0x113	
+Guard-Off	
+None	
+10	
+0	
+1 (1)	
+100
+0x114	
+Dragon Force	
+None	
+12	
+0	
+1 (1)	
+100
+0x115	
+Night	
+None	
+24	
+0	
+0 (64)	
+100
+0x116	
+Twister	
+None	
+20	
+0	
+3 (5)	
+100
+0x117	
+Hand Slap	
+None	
+0	
+45	
+1 (1)	
+100
+0x118	
+Poison Frog	
+None	
+0	
+0	
+3 (1)	
+100
+0x119	
+Kiss	
+None	
+0	
+0	
+1 (1)	
+100
+0x11A	
+LV3 Def-less	
+None	
+12	
+0	
+3 (5)	
+100
+0x11B	
+Sandstorm	
+Earth	
+0	
+40	
+0 (4)	
+100
+0x11C	
+LV5 Death	
+Dark	
+24	
+0	
+3 (5)	
+100
+0x11D	
+Suffocate	
+None	
+0	
+0	
+1 (1)	
+100
+0x11E	
+Resonate	
+None	
+20	
+0	
+0 (64)	
+100
+0x11F	
+Limit Glove	
+None	
+4	
+0	
+1 (1)	
+100
+0x120	
+Matra Magic	
+None	
+24	
+0	
+3 (1)	
+100
+0x121	
+Munch	
+None	
+0	
+47	
+1 (1)	
+100
+0x122	
+Knife	
+None	
+8	
+0	
+1 (1)	
+100
+0x123	
+Karma	
+None	
+0	
+0	
+1 (1)	
+100
+0x124	
+Voodoo	
+None	
+0	
+0	
+1 (1)	
+100
+0x125	
+Poison Claw	
+None	
+8	
+30	
+1 (1)	
+100
+0x126	
+Hastebreak	
+None	
+12	
+0	
+1 (1)	
+100
+0x127	
+Rend	
+None	
+0	
+35	
+1 (1)	
+100
+0x128	
+Blaster	
+None	
+0	
+0	
+3 (1)	
+100
+0x129	
+Bad Breath	
+None	
+20	
+0	
+1 (1)	
+100
+0x12A	
+Goo	
+None	
+0	
+0	
+1 (1)	
+100
+0x12B	
+Soundwave	
+None	
+0	
+0	
+3 (5)	
+100
+0x12C	
+Stare	
+None	
+12	
+0	
+Line (4)	
+100
+0x12D	
+Roulette	
+Dark	
+20	
+0	
+0 (64)	
+100
+0x12E	
+Devil Gaze	
+None	
+0	
+0	
+Line (4)	
+100
+0x12F	
+Circle	
+None	
+0	
+0	
+3 (1)	
+100
+0x130	
+Drain Touch	
+None	
+10	
+20	
+1 (1)	
+100
+0x131	
+LV? S-Flare	
+Dark	
+30	
+55	
+0 (64)	
+100
+0x132	
+Miasma	
+None	
+0	
+20	
+3 (5)	
+100
+0x133	
+Zombify	
+Dark	
+0	
+45	
+1 (1)	
+100
+0x134	
+White Wind	
+None	
+12	
+0	
+3 (5)	
+100
+0x135	
+Angel Whisper	
+Holy	
+24	
+30	
+3 (1)	
+100
+0x136	
+Meteorite	
+None	
+22	
+50	
+3 (1)	
+100
+0x137	
+LV?D Holy	
+Holy	
+32	
+65	
+0 (64)	
+100
+0x138	
+Adrammalech	
+None	
+0	
+85	
+0 (64)	
+100
+0x139	
+Mateus	
+None	
+0	
+85	
+0 (64)	
+100
+0x13A	
+Ultima	
+None	
+0	
+85	
+0 (64)	
+100
+0x13B	
+Exodus	
+None	
+0	
+85	
+0 (64)	
+100
+0x13C	
+Famfrit	
+None	
+0	
+85	
+0 (64)	
+100
+0x13D	
+Explode	
+Fire	
+24	
+40	
+3 (5)	
+300
+0x13E	
+Stillness	
+None	
+24	
+0	
+3 (5)	
+300
+0x13F	
+Azoth	
+None	
+12	
+0	
+0 (64)	
+100
+0x140	
+Omega	
+None	
+10	
+0	
+Weapon (1)	
+300
+0x141	
+Abyss	
+None	
+12	
+48	
+3 (5)	
+300
+0x142	
+Life Render	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x143	
+Heart Render	
+None	
+0	
+0	
+Weapon (1)	
+300
+0x144	
+Ripcircle	
+None	
+0	
+45	
+0 (4)	
+300
+0x145	
+Furycircle	
+None	
+0	
+50	
+0 (4)	
+100
+0x146	
+Lawshift	
+None	
+0	
+0	
+0 (64)	
+300
+0x147	
+Amber Gleam	
+None	
+0	
+0	
+0 (64)	
+200
+0x148	
+Alpha	
+None	
+0	
+99	
+4 (5)	
+300
+0x149	
+Descent	
+None	
+0	
+0	
+0 (64)	
+100
+0x14A	
+Magi	
+None	
+0	
+50	
+0 (64)	
+100
+0x14B	
+Spellbind	
+None	
+0	
+50	
+4 (1)	
+200
+0x14C	
+Breath of God	
+None	
+0	
+40	
+4 (5)	
+200
+0x14D	
+Lightspeed	
+None	
+0	
+45	
+1 (1)	
+300
+0x14E	
+Firestream	
+Fire	
+0	
+35	
+Line (128)	
+200
+0x14F	
+Howl of Rage	
+None	
+0	
+0	
+0 (4)	
+300
+0x150	
+Presence	
+None	
+0	
+50	
+1 (1)	
+100
+0x151	
+Logos	
+None	
+0	
+0	
+3 (5)	
+100
+0x152	
+Abate	
+None	
+32	
+0	
+0 (64)	
+999
+0x153	
+Judge Sword	
+None	
+0	
+0	
+Weapon (1)	
+100
+0x154	
+Bind	
+None	
+16	
+0	
+3 (1)	
+300
+0x155	
+JP Gift	
+None	
+0	
+0	
+1 (1)	
+100
+0x156	
+Yellow Clip	
+None	
+8	
+0	
+1 (1)	
+200
+0x157	
+Judge Sword	
+None	
+0	
+0	
+Weapon (1)	
+100
+0x158	
+Yellow Card	
+None	
+20	
+0	
+1 (1)	
+999
+0x159	
+Palaistra	
+None	
+0	
+0	
+0 (4)	
+200
+0x15A	
+Blank Card	
+None	
+0	
+0	
+0 (64)	
+999
+Retrieved from "https://datacrystal.tcrf.net/w/index.php?title=Final_Fantasy_Tactics_Advance/Abilities&oldid=50523"
+		Category: Subpages
+	Navigation menu
+		Personal tools
+		Create account
+Log in
+		Namespaces
+		Page
+Discussion
+		English
+		Views
+		Read
+View source
+View history
+		More
+				Search
+		Navigation
+		Main Page
+Recent changes
+Random page
+Help
+		Community
+		ROMhack.ing
+TCRF
+Discord (RHDI)
+Discord (TCRF)
+Fan Translation Community History
+		Games
+		By platform
+By series
+By content
+By hardware
+By release date
+By developer
+By publisher
+RHDI Games List
+Translation Request List
+		Tools
+		What links here
+Related changes
+Special pages
+Printable version
+Permanent link
+Page information
+	 This page was last edited on 24 January 2024, at 02:41.
+	Content is available under GNU Free Documentation License 1.2 unless otherwise noted.
+	Privacy policy
+	About Data Crystal
+	Disclaimers
+------MultipartBoundary--IEH576Pb7avcMIqewpYkK6CFg4FZVcR3Lgoz8uMTmx----
+Content-Type: image/png
+Content-Transfer-Encoding: binary
+Content-Location: https://datacrystal.tcrf.net/w/resources/assets/poweredby_mediawiki_88x31.png
+�PNG
+
+   IHDR   �   >   ���   gAMA  ���a    cHRM  z&  ��  �   ��  u0  �`  :�  p��Q�8UP���+�pf���)����H9{@PY����E���ma��A�$�����o@åa+*�6�.�B�q?ҥ�����I�=���P��:G �l���6-��34'dYF�4�����λ�[�)�AY!8d��N�E�;�B�m�J �2Mp���/��� ���ƕ
+���v�3 ��'�%��"Z
+�1.��9.ʲA-@��d߾}��f�����q�����i߾=�;w�AFCs���H������
+a I`-�1!j���� �
+u'�%H�\D`�m���
+ ���,�. Uf���w |���"!!����ח=z�����ɓ��=��CDD�j�xFFcƌ�'���_���G�AӴ�j~!ҡϑ\��¿�� ��6�NWy^&����"�4�����`+@>�(�I���D�mMn\��Aqq1={�d̘1!���b�֭lٲ��{���o����C���z� 'HB�&Z�R��{҅���9 dp
+(��p��$�{�Sr1��]v��2" ��Q�\W�0���ү_?^|�E}�����C��x�bfΜI�޽[����rs�m[4d����2�f�b��H�.�W��KW	��ʚr[e���r�Tgu�SE�>��Rs���5�a
+i��̙3u����;w��;wr��a�Κ�FUU.\�@qqq��}����ʅ\�x�^yzz:;w�$55U�����@qq1۷o'==ݣ��?Χ�~JVV�U�:--�͛7s��Q4M���Z�p��~���t��j�r��yJJJ���E����{7k���*)�(�A�*@vRnn�q���Z�N�:�+��RnT��0�ѯ~GQKȦ���7�ѨS�ٳg��C�H�����ΰa�BQv��MII�gr�ƍ���0z�hTU%))��G��a��V+iii��������j�땗������w��[o����ӹt��Ǐ��Ϗ�'Ob��صk'N�`֬Yz�g�y���̚5���t��ӹ���̟��gF��,�DFF��o���ˆ}:t(���X�`������;Ȳ�#�R�E���e����"�V��T�
+y��j������=Ǐ����������{�^�r����zu����4EQHHH`�ʕ����v�Z"""0` III���TTT�i�&L&���Y��������_������Qf0xF畗����C��h��N��h��G@	B���9���7���샪�#���� V�Z�ɓ'IJJBATT�{�fŊ�>}�	&�uF��$I,_��޽����Jg���c��p8t����:t�d2�m�60���QVVv]��n�{�oٲ���b��)�£�>JFFs�ΥW�^2��]�M���^&�gL ��w1�AB !��� � ���D��6D�N ��X�9�-ڴ��s΢�[�V�������pf�9g���_]�jr�]w��o�`�C�%##�y�������O?��k4���;�׿�Exx8ԏ%%%1o�>>������_XX��l��׷�Q�"!���W}���
+�N'�Z5V�MӸZ�OFF=z�����=s�ν��a�Zٽ{w��A�称]�Ş�r6�pbB�hR�j��`�`���f�|S��G�l�+.��������I��vE*:����ߩ_^Q������K�DHH���F������o��ձ�����|��b!�NYq9����a?��Ұ��(�~hY٨WJ�R�P�L"�y�I���j��#~�1��)����
+#��� ŀ����>���v���i�Q�1R\\̊+�R����%�4��`��FBEE�Q��3];5�Q��_�v���&]�[B;��\������c[P�=��hlVg�ܘ-�W�6��X���"C��~YqE�5�a���d��}��\\�fR|4����)�(�}q��+Ԙ_�L�&�y������r��F+>���&��իdff�m۶z�Ƶ;�}��Z��Xvv6_~�% �G�F��y�7o^���k1\f��?��I�bO�ͥ*��9xS�6���F�>]�����]1FG���pV��)��>�R,o�C���5�7jT�����H٩M/�"�^z���ر��{��k����V��{�aĈ$''�~�z�����g���L�0�#F��?��˗/7h{���$''s��)�,55�����$n��ƏϢE����� ��ѣغuk={t۶mz'����gú�t�ڕ�� ^y��O�Κ5k��-������ә>}: ࡇb������+e�ۙ1c��������3ϰb�
+f͚ŕ+W��ʺ�3���ooo���Y�h|��f�B�e�=�ҥK�s����7B�`�͛7�۷۷o�3***سg�~η1u����K����Z������k�5��Ӕ��&'u�
+���x҃6s�
+����fS�M��R��{A	��?'�ŷ��+�cG1�����kPjE����r� ��0JT��b���FG��+_�l6�v�Z}��p8x� �(�ڒ��ÿ��/$Ib�����d��>>����ɣ{���f�D����;���ɓ$&&RZZʀX�|y��u#�^�m�o�}��!ji_�����da+��@_������A婴ƧP>�3B2�EvB�*҅4��,�1g��z_�JCJ?������Hf͚���s�"����#--��������ك���m��t�o�����������ӧ���O��[�ӧ��7�6mZ�贫Ihh(���|�����A5���#��ؽ{7v�]O8���cȐ!��f=�c�֭��ȑ#u��Zr��i)..&22�5k��p�E���F�� F?3�@_�Ee���b�m�E8���� �#Q%BC �VTQ�f���By9�	��3��l	���(�O#`8{��\�����S��H%HH>��Z�T�J��$��Ij��ټ���ݻ�u��铺������%���\I����%//����$+W���p\��=f�$I�f���g����#G�6�رcٸq#[�l�O��������n^��M����۷�u���_�����R%6셥�2������B���eK9r�q�g���cn��J�{�QBQS/`��)?|��HMC;p��RT�t:cU�{,·�'+f���D�]UB���mF��!B�\�ڻ�������'�|�_��W5��Mp]3f'N���?&??���ȑ#��[���o�ȑ#zfɠA�h�j����|���dff2r�H��Ҙ3g�>�m6��6M��>��3��](p����a���l��R3�TQs~��ʋ�q�W�\/$�d@�r"�_�*�=���ɤa�w�}t���cD�-]�v�W�:u*�W�&++��/��+�Я_?�2KHH������ĉٿ?999�_��3f\w��W_}�w���ϳhѢ��q����h�ƠA��۸�w'���PW�z�)BBB�ի�>�, ���ׯ�a���Ś]JEY��Lh� \^h��)p*L�mk��
+�9WpGU��v'�Ppf��r���8PP�kV�����_��`�����77��-�   %tEXtdate:create 2020-12-18T19:32:02+00:00��C�   %tEXtdate:modify 2020-12-18T19:32:02+00:00���~    IEND�B`�
+------MultipartBoundary--IEH576Pb7avcMIqewpYkK6CFg4FZVcR3Lgoz8uMTmx----
+Content-Type: image/png
+Content-Transfer-Encoding: binary
+Content-Location: https://datacrystal.tcrf.net/w/resources/assets/licenses/gnu-fdl.png
+�PNG
+
+   IHDR   X      T��  yPLTE���  ���WB ��� !���`K.!# ���������������p\CZE#aL/��������̹�������574���{lQ��该����^I,���231���_J-���]H+���nZA�{d���wbI���������	���/1.���[]Z�������u_�����啀}�������xazkP���]_\������\G*��Ī��342���oqn���mW9jQ������#$"�zc���������������vaH��������j\^[������}hO+-*|gN���
+���GIF���:;9=?@=}nS���fP3LNKJKI������OQN�~������vgLxzw����ƿ���kU7���������`b_��ϥ�����|esur���$%#��혌z���~�}���s_F�ybo[B���dO1ydK���XD'��|mol������zeL������r\�ü�w`������463���ACA���lnk���_a^WYV������ø�ƻ����q]D���FHExiN�����礦�"$!HIG�������~gmY@���Y[X��ͦ�����������|mR������bda���M  gIDATx^��c��L��$K�ضm[׶m�6۶m�=3I&ɤ��{�tզ3��W]��d�>M�v[�X~f���?��M�?.��6�"5s� B
+�E�i�X(y�����C��|�?И�eS'3����-�+��3@��z�� R����q��\ xqKc�h$��p��&o@�}j�k�|���$7��3l�X���8&ĩÇȢh=�K'�-p2��l~������0���"��&ր�G3��$`�8�ԩ��_X��`�e��Rq�""�x��%�'��q�h7\�x�����\��-�8��2�!o|�k�I��c�� ����?7qw�����6M�?���W��    IEND�B`�
+------MultipartBoundary--IEH576Pb7avcMIqewpYkK6CFg4FZVcR3Lgoz8uMTmx----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://datacrystal.tcrf.net/w/load.php?lang=en&modules=site.styles&only=styles&skin=vector
+@charset "utf-8";
+* { image-rendering: pixelated; }
+#ca-ve-edit, .mw-editsection-visualeditor, .mw-editsection-divider { display: none !important; }
+.navbox a { white-space: nowrap; }
+.nop p { padding: 0px; margin: 0px; }
+.breakout { float: right; border: 1px solid rgb(136, 136, 136); background: rgb(255, 255, 255); padding: 0.2em; }
+.breakouttitle { text-align: center; background: rgb(204, 204, 255); border-top: 1px solid rgb(102, 170, 102); border-bottom: 1px solid rgb(102, 170, 102); }
+.contributionscores .header { background-color: rgb(238, 238, 238); border-bottom: 1px solid rgb(153, 153, 153); font-weight: bold; }
+.contributionscores .header td { padding-left: 0.2em; padding-right: 0.2em; }
+.contributionscores td { padding-left: 0.2em; padding-right: 0.2em; border-bottom: 1px solid rgb(204, 204, 204); }
+input, textarea { border: 1px solid rgb(204, 204, 204); background: rgb(248, 248, 248); color: rgb(0, 0, 0); }
+table.wikitable, table.prettytable { margin: 1em 1em 1em 0px; background: rgb(249, 249, 249); border: 1px solid rgb(170, 170, 170); border-collapse: collapse; }
+.wikitable th, .wikitable td, .prettytable th, .prettytable td { border: 1px solid rgb(170, 170, 170); padding: 0.2em; }
+.wikitable th, .prettytable th { background: rgb(242, 242, 242); text-align: center; }
+.wikitable caption, .prettytable caption { font-weight: bold; }
+div.thumb img.thumbimage { background-color: rgb(255, 255, 255); }
+#content .gallerybox div.thumb { background-color: rgb(249, 249, 249); }
+.gallerybox .thumb img, #file img { background: url("/w/images/5/5d/Checker-16x16.png") repeat white; }
+.ns-0 .gallerybox .thumb img, .ns-2 .gallerybox .thumb img, .ns-100 .gallerybox .thumb img, .nochecker .gallerybox .thumb img { background: none; }
+.msgbox { margin: 0em 2em 1em 3em; border: 1px solid rgb(136, 136, 136); background: rgb(221, 221, 221); color: rgb(0, 0, 0); border-radius: 0px 8px; padding: 0px; border-spacing: 0px; }
+.msgbox td { vertical-align: middle; padding: 0.5em 1em 0.5em 0em; width: 100%; }
+.msgbox .msgboximg { vertical-align: middle; width: 0%; padding: 0.5em 1em; }
+table.navbox { border: 1px solid rgb(68, 68, 170); padding: 1px; margin: 0.5em auto; width: 90%; clear: both; font-size: 95%; }
+.navbox th { background: rgb(204, 204, 255); color: rgb(0, 0, 0); }
+.navboxhead { background: rgb(238, 238, 255) !important; }
+div.topicon { position: absolute; z-index: 10; top: 6px; right: 10px; display: block !important; }
+pre:not(.CodeMirror-line), code:not(.CodeMirror-line) { display: inline-block; }
+pre, tt, code { font-size: 110%; }
+textarea, pre, code, tt { font-family: Consolas, "DejaVu Sans Mono", "Droid Sans Mono", "Lucida Console", "Courier New", monospace; }
+.toclimit-2 .toclevel-1 ul, .toclimit-3 .toclevel-2 ul, .toclimit-4 .toclevel-3 ul, .toclimit-5 .toclevel-4 ul, .toclimit-6 .toclevel-5 ul, .toclimit-7 .toclevel-6 ul { display: none; }
+.mw-userlink[href="https://datacrystal.tcrf.net/wiki/User:Bast"], .mw-userlink[href="/wiki/User:Bast"], .mw-userlink[href="https://datacrystal.tcrf.net/wiki/User:CounterDiving"], .mw-userlink[href="/wiki/User:CounterDiving"], .mw-userlink[href="https://datacrystal.tcrf.net/wiki/User:Raspberry"], .mw-userlink[href="/wiki/User:Raspberry"] { color: rgb(193, 156, 11); font-weight: bold; }
+.mw-userlink[href="https://datacrystal.tcrf.net/wiki/User:GlitterBerri"], .mw-userlink[href="/wiki/User:GlitterBerri"], .mw-userlink[href="https://datacrystal.tcrf.net/wiki/User:GoldS"], .mw-userlink[href="/wiki/User:GoldS"], .mw-userlink[href="https://datacrystal.tcrf.net/wiki/User:HugetteHikari"], .mw-userlink[href="/wiki/User:HugetteHikari"], .mw-userlink[href="https://datacrystal.tcrf.net/wiki/User:Rick"], .mw-userlink[href="/wiki/User:Rick"], .mw-userlink[href="https://datacrystal.tcrf.net/wiki/User:Sanqui"], .mw-userlink[href="/wiki/User:Sanqui"] { color: rgb(46, 204, 112); font-weight: bold; }
+.mw-userlink[href="https://datacrystal.tcrf.net/wiki/User:FuzzyBot"], .mw-userlink[href="/wiki/User:FuzzyBot"], .mw-userlink[href="https://datacrystal.tcrf.net/wiki/User:XkeeperBot"], .mw-userlink[href="/wiki/User:XkeeperBot"] { color: rgb(128, 128, 128); font-weight: bold; }
+.mw-userlink[href="https://datacrystal.tcrf.net/wiki/User:Revenant"], .mw-userlink[href="/wiki/User:Revenant"] { color: rgb(155, 88, 182); font-weight: bold; }
+.mw-userlink[href="https://datacrystal.tcrf.net/wiki/User:Xkeeper"], .mw-userlink[href="/wiki/User:Xkeeper"] { color: rgb(255, 163, 250); font-weight: bold; }
+.mw-userlink[href="https://datacrystal.tcrf.net/wiki/User:Rachel_Mae"], .mw-userlink[href="/wiki/User:Rachel_Mae"] { color: rgb(126, 61, 255); font-weight: bold; }
+.mw-userlink[href="https://datacrystal.tcrf.net/wiki/User:Hawk"], .mw-userlink[href="/wiki/User:Hawk"] { color: rgb(82, 163, 41); font-weight: bold; }
+table.col-1-center td:nth-child(1) { text-align: center; }
+table.col-1-right td:nth-child(1) { text-align: right; }
+table.col-2-center td:nth-child(2) { text-align: center; }
+table.col-2-right td:nth-child(2) { text-align: right; }
+table.col-3-center td:nth-child(3) { text-align: center; }
+table.col-3-right td:nth-child(3) { text-align: right; }
+table.col-4-center td:nth-child(4) { text-align: center; }
+table.col-4-right td:nth-child(4) { text-align: right; }
+table.col-5-center td:nth-child(5) { text-align: center; }
+table.col-5-right td:nth-child(5) { text-align: right; }
+table.col-6-center td:nth-child(6) { text-align: center; }
+table.col-6-right td:nth-child(6) { text-align: right; }
+table.col-7-center td:nth-child(7) { text-align: center; }
+table.col-7-right td:nth-child(7) { text-align: right; }
+table.col-8-center td:nth-child(8) { text-align: center; }
+table.col-8-right td:nth-child(8) { text-align: right; }
+table.col-9-center td:nth-child(9) { text-align: center; }
+table.col-9-right td:nth-child(9) { text-align: right; }
+table.col-10-center td:nth-child(10) { text-align: center; }
+table.col-10-right td:nth-child(10) { text-align: right; }
+table.col-11-center td:nth-child(11) { text-align: center; }
+table.col-11-right td:nth-child(11) { text-align: right; }
+table.col-12-center td:nth-child(12) { text-align: center; }
+table.col-12-right td:nth-child(12) { text-align: right; }
+table.col-13-center td:nth-child(13) { text-align: center; }
+table.col-13-right td:nth-child(13) { text-align: right; }
+table.col-14-center td:nth-child(14) { text-align: center; }
+table.col-14-right td:nth-child(14) { text-align: right; }
+table.col-15-center td:nth-child(15) { text-align: center; }
+table.col-15-right td:nth-child(15) { text-align: right; }
+table.col-16-center td:nth-child(16) { text-align: center; }
+table.col-16-right td:nth-child(16) { text-align: right; }
+@media screen {
+  #mw-page-base { background-image: linear-gradient(rgb(255, 255, 255) 30%, rgba(36, 255, 0, 0) 100%); background-color: transparent; }
+}
+div.topicon { position: absolute; z-index: 10; top: -55px; right: 10px; display: block !important; }
+------MultipartBoundary--IEH576Pb7avcMIqewpYkK6CFg4FZVcR3Lgoz8uMTmx----
+Content-Type: image/png
+Content-Transfer-Encoding: binary
+Content-Location: https://datacrystal.tcrf.net/w/skins/datacrystal.png?fe07c
+�PNG
+
+   IHDR   �   �   ��Ŭ���5Ue���^��_$/��_E.�K#pQ�̎�f�-kͬ�zw�V������Y4u\,��b>��Z�� zR�ۉ�g��m|N��g�1�ccN:FK��g���~㸗�c_�7����T�g8�U�/��y��T�!ΘB����ǢĹ(���u�+gY��:�Y��v= �s��b>�c[s�5�XkEA�DlD��˶C"��u]c^��Z4X�ԕ3 (� 'ֹXյ7�Z	�I����C�I��鬞}�r��5����=?�o���o|Y�j�c}�?0�x%C}����y8� ˺=�����.ꊚ�"Ì#��P �r�Uc��G��]E��p��9��r���M���`���PUcP�M]��B�>j�D�^�t/�g`s�|����Ur���b�;E����s�~���^���]�������1��,��1$��ط'b��)ˤ�Q9��r��3CDEӍ�jTuk�>D�! �t��1p��Z��T�H��� QDf��uk�k!
+���Q�"���iwֳ���lv#Y���j�(*>����}���|ŷ���q����l���%�^��}���].��E�-4x+10B A@X�p�����
+`��U\U���(�� D����֌�Yg��T����Q�B����� "�!��� ��V�	�l�t��V7������.���Q?D���w���G^*���e��;.���� U���5���t���l�b��b���l;��]���]�!� U�3��Y��m�c[�7����C�������]�eۣ�� 3�r�[̛[��fM2��s��Qy�\�.L��{,W-ڮG�1y"�bx΢�+TU��V�qKws �5�W����4T�w��[��Pc��?�������.�L_������ѯ����ר���^G2�Ԅ3���L���BEXc��U��Rb[�����*�j�W��\�,tݵ��g?v�+����5�����2oWݗD�?O��s��y���kG���4v�Jc���zk "��X.T������3��(?���U�����}�O���ϯÅ��Q5�>� uep��Ƿ��c+�Im�^c2#�MF���Ts�b����J�
+B��V�>��Ue�C�bj/���|���-������*����w������'*��R�\֍H�hr�Q�2|�|=��2x6&����������6?������8����O��d{��tGc�)\��C@�I�4|��4���_��]�;��sT����o��e?��V$>$���v��s���_�U����|��S����2�/�f��mN�# J	]��U��P������:�s��e�d��0����`-��4s)]ilu$ԗM�$������%}�LL*��a(�b~�� ��j�b�/&����]w��#?��_����3�����V$>(�����/X���#|�� Dc�U���Uh����勄��GI;q�9�.�aF�XH��D5����b�[ۘ���2w߇�ּ�b���z�9�X��p�P;B�=4s:4'�(�3�2UU��R	J������	�(y�������3,��Ĉn�S���Ⅸ�+����?��W��p�����K�}wQ�ɫ��/�9y�c�ݝF%mT�"��X(#��i�/14�r�B�C@��ӉAPN^h6�%Dv� �Q'm@��a�AW*�S���dZ��]0dh~j��3��k�Ǳ|�1�N�����u����N ��u�_��B��Y��$"���?�>o��ï�Ź��#�vu���?���i4�L�ݼ0%���8ZkPg��2�Z��Y�Q������=+�l
+���د�=����=�ߧ�&�K}�!�Tu&7��=�V��6�&��]5~u����H��Dh΋q����1���{�j��W,O�ڎ��N�-�R��K�S4��b������&�rl*s�
+[��-�؞�2M�G�XKp-W7�8�S��u�q�a-I7�r���C�"r.wG�B��`о���b�܎��+�S�z�^�f{��*N�����v����}V���o����ۇ��}��ԩ���n�3��k�h^�'�n1A^��hd��B$��pfׇ5T�`+٫�PSJx>�M��/����Ұ;u�%�dG��� ��,�x��\���%��j�ᱬa��4�^'����nOTsCT2"�>/�X8=�O���$޷)�P& �93�3*�7��)�g�����$^c�D���̨�אK,)6*��d8ǝq�̡�� mm�Q� ��f���{��+Qy҃8Ƕ�Ґv
++f+i&f+��׌`��3�Tp����t��*C\�\�X��X��h�3�G�?{�o�a\DQ�#>ʒ4��D�)���t����M�]hFe+��Nc�.lS�7�kcrJ{�3w�8xO�"�)ŵ��\M����u	��ht��D�{�1&�QޖI�,gr��1�>JS9�k��Rc�>�}������[ڷ���s�#���5�0�x5���5���6J�	��i��@�L�+�����fW1��+���o���)���p]M\k�m�^�&�f_X��9�/;���>��̹,����M�Ѳ?/Ƒ����7�ΜS0)W7^�}8Ǉ�a�Ħ��HVC�h�J$񏽍��s����r%"1|�t�~��k�����r�q�x��c/ f����J���eM����Z�V���a�i}�> �`S�#8k�j�Qf�l�.]4pU�>F�
+��EǷ�8F5�(&���}#���f�#;]�i	���Lu�UIIPK��κs�]-m��y�*�˩�L���]�0�j�0��$ [U����"�?��Y�Y]�>�&W3�I1{��>�b���"��)�7�ǀ5#&T��}����XN�2�=���D]%��a�?NPY�2�ņy���tz+��:z��`4�ˠ�p�lˏ����s|�k�nE�2��Ua�ܖՊ���D�&M�6MD��G�;��\�y2j��,]{�H"�\��:�S�jLdi¢C�k �>	�~G�=@���!ìo��$��4��^?�!X�]Ȇe�O�n�
+s�"m��>BMu�5|�~����*�ry�/�W�Z�*����/h��*�L1䦏��dUM²R��x�!� Ƙ�=�7��P����ͯy����?}�Hp����d�O�[��&�[���I�*_�"_It8V�E�&��GBs�5�������36&j�zE��|�[HL:Y� ����1�t�T��u��&�%������Ґ��;^ 9�8$���mۛihq��|��DeC����h���R�(Zb������)i?�����0P-��["wYe�Ǫj��Z�Ě�x���0��I�q&�3)6Λ�Y�\U� �I���q��kY�]��v}"�d6z��}_T��R������o���-�y��Y�g��D�n:�4�c��o3�ۤ�M���+6|�Z!"���U��z�;^�|�稬aKz�z��q娶��"J:1$���c>=�}>ŉ��.b+  ��vnh''e��=� �gρs��ݝ�4�����]����MJO"J��-3�e�+Lq,�7���o��QY�&�_9�g��A댦2��]�%hN�$#�>�g܊>���~���F�@G�c� ���4&#�&$�F�� �or�d�6��%���a�X1¹
+L}�DpvĽ�L����Cҿ����aa	�`n�hrYh%��8t�w��֠�M�`�	ʺ�'Qb~�	���G�����>	�yi���4ܘt���G$��Q�8��,I�lx�u�̺������M��"h{?� �2��~��,~�g����f�|�0.5���|�Bp��r�&pl�R�t�M8UZ*�Q��tǌ�����L�?^��0X*��~h�0�ɬ�4M/A���߀�u����0˔�0�"D#4J�K�z�{ظЬ��(i�$��e�E$K+��{L�Z��hАX/��sޟ����P]��l��v�ܣL�9��D"A�@x���]�����3�}+��Z&m�S��P1�"no�9t4A��k@�11���,Z�.o8~Ohs2�H1�"8�O#���5e��Җ7�����g��8�e����/C�N��K;4AY�3"�ojҬ�Df�FC�cߓ��Ez�>��2��M�(`m�}��E����B*�>����^���m��ƠF��Z�g���|#16�tL�
+1��b�UaՒ�iM�5��^'t���ayM�*�iâ.R!�����CM�^p���u�u0Y��L�'���};���ou���\���8֘RG�k8o�A��;AnѹYU���b��w��+h�y�( [DV�@>�=�e=IZ�: g��P$�.��!D�Lt1� )��:�����>��u�
+x�kI�P'����
+DGȾ �?"�Gy��6J\˥6�m�RT�1�܎����E��e�`U�Ճ�#�g�"BqP��5�)��ly�t
+#��j�L�cP0Ք� ](+�-,���sfU�!Ʊ�+ؒ|�B�0�\��`�D�QM�2��d��3yV��Qb��!�2�h�g@0yJ�9�e8k�0�&�ͮ�o�2��V�Y(�fWe��ʕ6���t���h:u?����p�fP��r��5d�Aj�cf-(�Tn#"ȹ�M(!�n��v�uEW�+�{�DpY
+����y'�N��YB�{f���Z�+�x�[��&�bk>Ǽi��*�6��qX�S��M�IE8�IK�.���Ӛ�i_�����(���b�`��y���X��p� �٭'�yZ?��zE{�	�;��ڴ�p�	�wE�yG�v����� G����U�|UWy9rJj�X̰�7��\C�È��l���S�A����J=��ֈ>�=T9�1�.�i)S�'�ؚ��b=Ia��za�rF"�V�t׼�YW���wwa()0�ha(��ٻ�x8%��4@�^�R�$
+|Q1�"�g��U��u��|Ü��D�r�Y��s��+�`�`"Q�62ulX	��@&�$ZO��i��>I���8�fR�f��3l͛��)�!�Do&b{�4hm�^���k���	�ؑȊ�S��K����d
+4+��~CUpT�Iq�9��kM�Y�랪�TDCI���yx$���R�0`{Q��Z���RPT�;�t
+�p�� f>	k?����%6�(O��>o�p����Je�hR�����>�˥�Єp|R���k:��V�NG�C� 
+���-��CMF:����}/j�f��6pnLH9Q�zb�,1}���j�_|�������v��H���*�[ho-��Lu+�1,��1��{�V��%��)1��ԤI�����&� ��s\X�>���t򵳇`+~@�C޵��7%v�f	J;q�)�˰`e�4�	���M���N-��͊�|����}��9$J���I��e�8C��Iٟ�ڪ�aM�ff�X	F��n��U���qXz䔦��D�>)�Ov~�~��?�q4�1w�� ��]s��?����u���n��X8Ę۾ϫԳq }�����D�!�;��n�T �~����\�]++VC#��V��I�lV6����� A��DCg��_����d��Dj��I#"q_
+af�u}� ޣ�9ǔ�5����lP��3k�@gh]֘tnHt*/	��f�y�|�R}���!��a�lyX����'�zJ�XAJ!"Y�,&Tv�ӱ!1
+�p:�����[(�Bc����U�e;�a�A{{oGS 3D���a�L����\�)V?����(�a�2�(t(٧�\�i�T�&�c
+�䎉
+�d�*ۓd���D:��NDTO��0�SB撨Zq^3�|	;�2	������q2��G&*�b�	�5�Ğs1�}�m�>�a#�9?tT`�k��H��l����5�]?�_��Щ���zt������D'�ዿV��s�V��
+|�mucU7Kk����SA]��(V��I�9:��XL�N�d�ЩHmJ��`$%W����Ͱ�D����j�D�����9�%9q�C8ELĮ����+b�1kTR���:��3��t�-��	Q����}p�Σ�H��	`����3ϸܞ���G؉̤�&�l�x�qs�q���2��dO�_�qIJS�GH;��p��Q��ܹ&����wB��È@��G̳��(��I���a�U�_�2F�4��N��o#�~��?
+��H���ox���V~�-�z�����|i�q�G�����XSn�)��O�D���ϛ����:l}&���(>��A{��m�"@��Vb�}��E=0��Ä��/�!��(��&	����Z�z�r�|��;��������Ƒ���2}���_�b둱[=8�����{9��}�a�]����j,����,�@�{������T��`2
+;��L�'uOA���Z�V\��l�,~Ӹ��Κ3ZY~F��?Y��;~�6W��WWsl/��/T� ��{�2�d� K�NkYDSg�4d��{e�^�ŀrXS~���Ij�Zh�9Lȝb���2�Y�VkĬ�|Two{akQ��f��4��}����}�s�����پ2����Uz�#��!�h!1���^�k�u�eL�a�4��jP�)e1!�H&�}�# �f�s ��K���u�*x�Ay�:IxӀn`��U݄���g��{��3�gz.gl��W�������~�����ж�v�����0sM�I'�˴�1�ݚ�0k�h!��ˬE�r��?����.�d,��/y��S�����Ҩ��D��;Fc�����Y��?�CF��@AP!ߤ��׮� ���"o�j�jl��`A���π�����jq�#�տb���a���ξ�W�i�����=b����ӧN^Ѷ+s���q%x	,�n�)AX!y	O@����:�C ��!'O��'LkFrW
+�3K��A���¬��c�T���&딎��6��x;�KJ[ձ�:v�mf׃���z�k��g�C��P�5O|| �O[�n�/����>��J�h��a�P�49l���Y:W9S�X����=T3�$Вx�ԟ��{�]���'��@�5����=[i��>]Ϸ?�ƽW���S�p��}[��kol��;�?���r����Lr��+Ġ�
+3Y���~F�i0��Zb�^|9�A>�=���DG7SF�Z�xs���x���u�U����G�0���rP8�j��'n�M�N%�#Um��yޥq�k����@w����|k��O\�fք=�㴱4������"�mh:�72��uDCa_����n3��	39�5m�:�]*���h��ԑ�Ay����O׵�&�_Y�&1ϠL`���c�,�r>�EشKP�%$�sɲ6�N�D��J��㧫�c���:2�����ۻs�6�U=*�2�e�&�6�,C����̩�^��y��L�f�-�w!ڬ��0��ޣitqJ����W���\0#\ 6�_�=�jZ��rİ�Z4�`��f���޾��L=�d� �yw���6�?���߯��6�����\bl$�cO�:��>�t�V�d��� ��aFT�2��L�0�V�㗢)v�}��x$�9N�IOf=�ôݺfl��s�;�4�Ҩ��y(�f�:��O�!�Ҽ�5I��I�"�7�Ɛ��I�z��'.��|��;lռğ��|Q���9OTO���W���������s��6+;�p��(�pk��v�����>p�"�鲂�Hu�W�A��K�|��R�%�ET���M�4P�X�f����m����ۅ��^��������G������y��KW�Ջ����Ϲ��;rzg��}J��L&4V'�߄�_Z��B��]���9�a2�°.�Y��6eI%��{t>@E�45.m���]�l>�	���|1-�@�*�����s�� I���ij'���m��Y�:���⦫�K5@���5gv4zT��P�T�%����1��P�Ր_�ꂀ8!;��aܰT�9�LBH���Y�D��]o���4�ב���Ys�k�øǌ#��Ͻ����,SZE�sٝ|����9GM������0�Ze��t���0�0*��sQ2�]����Ù�O���)-{a�
+�5��
+M]��]
+ޏ��9�S4�O�٫�93&#a� 1��Zp+n~��;���+���{�ٹ���=f)I}��Ͼ�=��Yw��¹t��cH��9C��PO�)���@���� �x\�1��D0�� {v���C�0�$i�s��X���/�+�p�Ib^�	�ÑAyY� ������gw���m��;{�����~����q �7_���������2v�if/V�?�4lC�*�:|�P������N譫���@�����=}��q� ��>��O��{>^qs�s���PC�Z|{��{���a�Nv���=
+�Sf��a�,5�Ov����&�nH����m��&��gߊv�K�:u�wv�w}���ac��P���}��E�k̓8Ͼ�Z�q���橉ؐ8Ok�j�m�f�)q�_S6�i�0Fn�G��p���y3 ���yr�����g�ͯ�-T���y�D��)O�0u^F�6v����w�KyK�Iǧ4Ę�܌�L�q���C唓М����hY���`�&�+�`:�8�� �8��H8MҞ0>ϡ[%eh.�Q�`����~�m��>���:���e���(Y�\W�}R#���^'��� c��poݣ{}@�߾��,���\��%����}�_-�];���=�Σ��L�I-eEi��a�r&+�r#�q0P�J*�p�o�'u��#W;�.Y��4�jž�l8Ԓv�|k�����7�s�ч�鶗>�k��ҽ�� ��u�c7�rQ��*�ݗ����;���9}�rgg�w+뽧��]ve]nt�j���mZ�1�hު��~�b/a��@s�P�PU���(���1�ݟBX����6�:4���l>��|���f>�@U׿cl�Af�]T�o}��v��Q����ﰈT�E���]���]}�j���v�sy۶'|�6!F�DTYWYآ+> ��8\+���]ס�:��!i��v���TBP��)���4�ߑa|�O��Qٸ�T�����m��'���*�x"�������*��K��{x�*�̈́�Im��Ƅk��i�$ɔ!��Ūm�d]�hOC�f�f@\�g%|��U�(D����|+w��ؘ?6�|�Xw�����$��k�c�x��x����q ч*�a ]�+�e1��5�T�j4#�Hc����P]�a�\��a��1���g3��3�u����0�Vu%�u��=�Z(�	ƭ��XT�H�)*�iT��D'�~�s������q��[����R�6s].�WH���!���q�u�|��e2��"�mK�Ւ���Z����|���Bg�Fl�16czg��U�vç��	�>	觢��!�[��i�c�M������~A���O��MKl* ��p"��R.�/>|����B.r��L؊>���������V%�����*��f��iVUU�:��4��Nl>g�?�L�c��1�g|��NڊH��'>!�y��n�cz��w��	b�q%���0�㕡c��+Y۬�1T�%(� ��u}UU�sni��eç��N�]��PP	��xҗ˟�����8�;~�ݿŎ���1�r�C�9�g�`�q✕�k�@D��mI��+'��������������8����}>�	}�    IEND�B`�
+------MultipartBoundary--IEH576Pb7avcMIqewpYkK6CFg4FZVcR3Lgoz8uMTmx----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: binary
+Content-Location: https://datacrystal.tcrf.net/w/skins/Vector/resources/common/images/search.svg?bbf78
+		search
+------MultipartBoundary--IEH576Pb7avcMIqewpYkK6CFg4FZVcR3Lgoz8uMTmx----
+Content-Type: image/svg+xml
+Content-Transfer-Encoding: binary
+Content-Location: https://datacrystal.tcrf.net/w/skins/Vector/resources/common/images/bullet-icon.svg?d4515
+------MultipartBoundary--IEH576Pb7avcMIqewpYkK6CFg4FZVcR3Lgoz8uMTmx----
+Content-Type: text/css
+Content-Transfer-Encoding: binary
+Content-Location: https://datacrystal.tcrf.net/w/load.php?lang=en&modules=skins.vector.styles.legacy&only=styles&skin=vector
+@charset "utf-8";
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after { animation-delay: -0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0ms !important; }
+}
+body { margin: 0px; }
+main { display: block; }
+hr { box-sizing: content-box; height: 0px; overflow: visible; }
+abbr[title] { border-bottom: 1px dotted; cursor: help; }
+@supports (text-decoration:underline dotted) {
+  abbr[title] { border-bottom: 0px; text-decoration: underline dotted; }
+}
+pre, code, tt, kbd, samp { font-family: monospace, monospace; }
+sub, sup { line-height: 1; }
+img { border: 0px; }
+button, input, optgroup, select, textarea { margin: 0px; }
+legend { color: inherit; padding: 0px; }
+div.tright, div.floatright, table.floatright { clear: right; float: right; }
+div.tleft, div.floatleft, table.floatleft { float: left; clear: left; }
+div.floatright, table.floatright { margin: 0px 0px 0.5em 0.5em; }
+div.floatleft, table.floatleft { margin: 0px 0.5em 0.5em 0px; }
+div.thumb { width: auto; background-color: transparent; margin-bottom: 0.5em; }
+div.tleft { margin: 0.5em 1.4em 1.3em 0px; }
+div.tright { margin: 0.5em 0px 1.3em 1.4em; }
+.thumbcaption { text-align: left; line-height: 1.4em; padding: 3px; }
+div.thumbinner { padding: 3px; text-align: center; overflow: hidden; }
+.mw-message-box { color: rgb(0, 0, 0); box-sizing: border-box; margin-bottom: 16px; border: 1px solid rgb(162, 169, 177); padding: 12px 24px; overflow-wrap: break-word; overflow: hidden; background-color: rgb(234, 236, 240); }
+.mw-message-box > :only-child { margin: 0px; }
+.mw-message-box h2 { color: inherit; display: block; border: 0px; font-size: 1em; font-weight: bold; }
+.mw-message-box .mw-logevent-loglines li { font-size: 90%; }
+.mw-message-box-error { background-color: rgb(254, 231, 230); border-color: rgb(221, 51, 51); }
+.mw-message-box-warning { background-color: rgb(254, 246, 231); border-color: rgb(255, 204, 51); }
+.mw-message-box-success { background-color: rgb(213, 253, 244); border-color: rgb(20, 134, 109); }
+.toctogglecheckbox:checked ~ ul { display: none; }
+@media screen {
+  html, body { height: 100%; }
+  :focus { outline-color: rgb(51, 102, 204); }
+  html { font-size: 100%; }
+  html, body { font-family: sans-serif; }
+  ul { list-style-image: url("/w/skins/Vector/resources/common/images/bullet-icon.svg?d4515"); }
+  pre, .mw-code { line-height: 1.3; }
+  .mw-jump-link:not(:focus) { display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important; }
+  .mw-editsection, .mw-editsection-like { font-family: sans-serif; }
+  .mw-body h1, .mw-body-content h1, .mw-body-content h2 { margin-bottom: 0.25em; padding: 0px; font-family: "Linux Libertine", Georgia, Times, serif; line-height: 1.3; }
+  .mw-body h1:lang(ja), .mw-body-content h1:lang(ja), .mw-body-content h2:lang(ja), .mw-body h1:lang(he), .mw-body-content h1:lang(he), .mw-body-content h2:lang(he), .mw-body h1:lang(ko), .mw-body-content h1:lang(ko), .mw-body-content h2:lang(ko) { font-family: sans-serif; }
+  .mw-body h1:lang(my), .mw-body-content h1:lang(my), .mw-body-content h2:lang(my) { line-height: normal; }
+  .mw-body h1, .mw-body-content h1 { font-size: 1.8em; }
+  .vector-body { font-size: calc(0.875em); line-height: 1.6; }
+  .vector-body #siteSub { font-size: 12.8px; }
+  .vector-body h1 { margin-top: 1em; }
+  .vector-body h2 { margin-top: 1em; font-size: 1.5em; }
+  .vector-body h3, .vector-body h4, .vector-body h5, .vector-body h6 { margin-top: 0.3em; margin-bottom: 0px; padding-bottom: 0px; line-height: 1.6; }
+  .vector-body h3 { font-size: 1.2em; }
+  .vector-body h3, .vector-body h4 { font-weight: bold; }
+  .vector-body h4, .vector-body h5, .vector-body h6 { font-size: 100%; }
+  .vector-body .toc h2 { font-family: sans-serif; font-size: 100%; }
+  .vector-body p { margin: 0.5em 0px; }
+  .vector-body blockquote { border-left: 4px solid rgb(234, 236, 240); padding: 8px 32px; }
+  .vector-body blockquote > :first-child { margin-top: 0px; }
+  .vector-body blockquote > :last-child { margin-bottom: 0px; }
+  .mw-parser-output a.external { background-image: url("/w/skins/Vector/resources/common/images/link-external-small-ltr-progressive.svg?14604"); background-position: right center; background-repeat: no-repeat; background-size: 0.857em auto; padding-right: 1em; }
+  .mw-indicators { font-size: 0.875em; line-height: 1.6; position: relative; float: right; }
+  .mw-indicator { display: inline-block; }
+  #localNotice { margin-bottom: 0.9em; }
+  #siteNotice { font-size: 0.8em; margin: 24px 0px; position: relative; text-align: center; }
+  .mw-portlet .vector-menu-heading { display: none; }
+  .mw-portlet ul { list-style: none; margin: 0px; }
+  .vector-menu-dropdown { position: relative; }
+  .vector-menu-dropdown .vector-menu-content { position: absolute; top: 100%; left: -1px; opacity: 0; height: 0px; visibility: hidden; overflow: hidden; min-width: 100%; margin: 0px; padding: 0px; z-index: 3; }
+  .vector-menu-dropdown .vector-menu-content-list { list-style: none; }
+  .vector-menu-dropdown .mw-list-item { padding: 0px; margin: 0px; }
+  .vector-menu-dropdown .mw-list-item a { display: block; white-space: nowrap; cursor: pointer; }
+  .vector-menu-dropdown .selected a, .vector-menu-dropdown .selected a:visited { color: rgb(32, 33, 34); text-decoration: none; }
+  .vector-menu-checkbox { cursor: pointer; position: absolute; top: 0px; left: 0px; z-index: 1; opacity: 0; width: 100%; height: 100%; margin: 0px; padding: 0px; display: none; }
+  .vector-menu-checkbox:checked ~ .vector-menu-content { opacity: 1; visibility: visible; height: auto; }
+  :not(:checked) > .vector-menu-checkbox { display: block; }
+  .vector-menu-checkbox:focus + .vector-menu-heading { outline: -webkit-focus-ring-color auto; }
+  .vector-menu-portal { margin: 0px 0.6em 0px 0.7em; padding: 0.25em 0px; direction: ltr; }
+  .vector-menu-portal .vector-menu-heading { display: block; color: rgb(84, 89, 93); margin: 0.5em 0px 0px 0.666667em; border: 0px; padding: 0.25em 0px; font-size: 0.75em; font-weight: normal; cursor: default; }
+  .vector-menu-portal .vector-menu-content { margin-left: 0.5em; padding-top: 0px; }
+  .vector-menu-portal .vector-menu-content ul { list-style: none; margin: 0px; padding-top: 0.3em; }
+  .vector-menu-portal .vector-menu-content li { margin: 0px; padding: 0.25em 0px; font-size: 0.75em; line-height: 1.125em; overflow-wrap: break-word; }
+  .vector-menu-portal .vector-menu-content li a { color: rgb(6, 69, 173); }
+  .vector-menu-portal .vector-menu-content li a:visited { color: rgb(11, 0, 128); }
+  .vector-search-box-inner { position: relative; height: 100%; }
+  .vector-search-box-input { background-color: rgba(255, 255, 255, 0.5); color: rgb(0, 0, 0); width: 100%; height: 2.15385em; box-sizing: border-box; border: 1px solid rgb(162, 169, 177); border-radius: 2px; padding: 5px 2.15385em 5px 0.4em; box-shadow: transparent 0px 0px 0px 1px inset; font-family: inherit; font-size: 0.8125em; direction: ltr; transition-property: border-color, box-shadow; transition-duration: 250ms; appearance: none; }
+  .vector-search-box-inner:hover .vector-search-box-input { border-color: rgb(114, 119, 125); }
+  .vector-search-box-input:focus, .vector-search-box-inner:hover .vector-search-box-input:focus { outline: 0px; border-color: rgb(51, 102, 204); box-shadow: rgb(51, 102, 204) 0px 0px 0px 1px inset; }
+  .vector-search-box-input::-webkit-input-placeholder { color: rgb(114, 119, 125); opacity: 1; }
+  .vector-search-box-input::placeholder { color: rgb(114, 119, 125); opacity: 1; }
+  .vector-search-box-input::-webkit-search-decoration, .vector-search-box-input::-webkit-search-cancel-button, .vector-search-box-input::-webkit-search-results-button, .vector-search-box-input::-webkit-search-results-decoration { display: none; }
+  .searchButton { background-color: transparent; position: absolute; top: 1px; bottom: 1px; right: 1px; min-width: 28px; width: 2.15385em; border: 0px; padding: 0px; cursor: pointer; font-size: 0.8125em; direction: ltr; text-indent: -99999px; white-space: nowrap; overflow: hidden; z-index: 1; }
+  .searchButton[name="go"] { background: url("/w/skins/Vector/resources/common/images/search.svg?bbf78") center center / 1.23077em auto no-repeat; opacity: 0.67; }
+  .search-toggle { display: block; float: right; }
+  .vector-search-box-collapses > div { display: none; }
+  #p-logo { width: 10em; height: 160px; margin-bottom: 1em; }
+  #p-logo a { background-position: center center; background-repeat: no-repeat; display: block; width: 10em; height: 160px; text-decoration: none; }
+  .mw-footer { direction: ltr; }
+  .mw-footer ul { list-style: none; margin: 0px; padding: 0px; }
+  .mw-footer li { color: rgb(32, 33, 34); margin: 0px; padding: 0.5em 0px; font-size: 0.75em; }
+  #footer-icons { float: right; }
+  #footer-icons li { float: left; margin-left: 0.5em; line-height: 2; text-align: right; }
+  #footer-info li { line-height: 1.4; }
+  #footer-places li { float: left; margin-right: 1em; line-height: 2; }
+}
+@media screen and (min-width: 1000px) {
+  .search-toggle { display: none; }
+}
+@media screen and (min-width: 1000px) {
+  .vector-search-box-collapses > div { display: block; }
+}
+@media print {
+  .toc, body { padding: 10px; font-family: "Linux Libertine", Georgia, Times, serif; }
+  .printfooter, .mw-footer, .thumb, figure, table, ol, dl, ul, h3, h4, h5, h6 { font-family: sans-serif; }
+  img { font-family: "Linux Libertine", Georgia, Times, serif; }
+  .mw-body a:not(.image) { border-bottom: 1px solid rgb(170, 170, 170); }
+  .firstHeading { font-size: 25pt; line-height: 28pt; margin-bottom: 20px; padding-bottom: 5px; }
+  .firstHeading, h2 { overflow: hidden; border-bottom: 2px solid rgb(0, 0, 0); }
+  h3, h4, h5, h6 { margin: 30px 0px 0px; }
+  h2, h3, h4, h5, h6 { padding: 0px; position: relative; }
+  h2 { font-size: 18pt; line-height: 24pt; margin-bottom: 0.25em; }
+  h3 { font-size: 14pt; line-height: 20pt; }
+  h4, h5, h6 { font-size: 12pt; line-height: 16pt; }
+  p { font-size: 12pt; line-height: 16pt; margin-top: 5px; text-align: justify; }
+  p::before { content: ""; display: block; width: 120pt; overflow: hidden; }
+  blockquote { border-left: 2px solid rgb(0, 0, 0); padding-left: 20px; }
+  ol, ul { margin: 10px 0px 0px 1.6em; padding: 0px; }
+  ol li, ul li { padding: 2px 0px; font-size: 12pt; }
+  table ol li, table ul li { font-size: inherit; }
+  .toc { break-before: avoid; break-after: avoid; background: none; border: 0px; display: table; }
+  .toc a { border: 0px; font-weight: normal; }
+  .toc > ul > li { margin-bottom: 4px; font-weight: bold; }
+  .toc ul { margin: 0px; list-style: none; }
+  .toc ul ul { padding-left: 30px; }
+  .toc li.toclevel-1 > a { font-size: 12pt; font-weight: bold; }
+  #mw-navigation, .noprint, .mw-jump-link, .mw-portlet-lang, .toc .tocnumber, .mw-checkbox-hack-checkbox, .mw-checkbox-hack-button { display: none; }
+  .printfooter { margin-top: 10px; border-top: 3px solid rgb(0, 0, 0); padding-top: 10px; font-size: 10pt; clear: both; }
+  .mw-footer { margin-top: 12px; border-top: 1px solid rgb(238, 238, 238); padding-top: 5px; }
+  #footer-info { margin: 0px; padding: 0px; }
+  #footer-info li { color: rgb(153, 153, 153); list-style: none; display: block; padding-bottom: 10px; font-size: 10pt; }
+  #footer-info li a { color: rgb(153, 153, 153) !important; }
+  #footer-info-lastmod { color: rgb(0, 0, 0); font-size: 12pt; font-weight: bold; }
+}
+@media screen {
+  body { background-color: rgb(246, 246, 246); overflow-y: scroll; }
+  .mw-body, .parsoid-body { background-color: rgb(255, 255, 255); color: rgb(32, 33, 34); direction: ltr; padding: 1em; }
+  #p-personal { position: absolute; top: 6px; right: 0.75em; z-index: 100; }
+  #p-personal ul { padding-left: 10em; }
+  .mw-body, #mw-data-after-content { margin-left: 10em; }
+  .mw-body { margin-top: -1px; border-width: 1px 0px 1px 1px; border-style: solid; border-color: rgb(167, 215, 249); border-image: none; }
+  .mw-body .firstHeading { overflow: visible; }
+  .mw-indicators { z-index: 1; }
+  .vector-body { position: relative; z-index: 0; }
+  #mw-page-base { background-color: rgb(251, 251, 251); background-image: linear-gradient(rgb(255, 255, 255) 50%, rgb(246, 246, 246) 100%); background-position: left bottom; height: 5em; }
+  #mw-head-base { margin-top: -5em; margin-left: 10em; height: 5em; }
+  #mw-navigation h2 { position: absolute; top: -9999px; }
+  #mw-head { position: absolute; top: 0px; right: 0px; width: 100%; }
+  #left-navigation { float: left; margin-left: 10em; margin-top: 2.5em; margin-bottom: -2.5em; }
+  #right-navigation { float: right; margin-top: 2.5em; }
+  .vector-search-box { float: left; margin-right: 0.5em; margin-left: 0.5em; }
+  .vector-search-box form { margin: 0.5em 0px 0px; }
+  .vector-search-box-inner { min-width: 5em; width: 20vw; max-width: 20em; }
+  #mw-panel { position: absolute; top: 0px; width: 10em; left: 0px; }
+  #p-logo + .mw-portlet .vector-menu-heading { display: none; }
+  .mw-footer { margin-left: 10em; margin-top: 0px; padding: 0.75em; }
+  .mw-content-ltr { direction: ltr; }
+  .mw-content-rtl { direction: rtl; }
+  .vector-menu-checkbox:checked + .vector-menu-heading::after { transform: scaleY(-1); }
+  .vector-menu-dropdown { direction: ltr; float: left; cursor: pointer; position: relative; line-height: 1.125em; }
+  .vector-menu-dropdown .vector-menu-heading { display: flex; color: rgb(84, 89, 93); font-size: 0.8125em; background-position: right bottom; margin: 0px -1px 0px 0px; padding: 1.25em 8px 6px; font-weight: normal; }
+  .vector-menu-dropdown .vector-menu-heading::after { content: ""; background: url("/w/skins/Vector/resources/common/images/arrow-down.svg?9426f") 100% 50% no-repeat; width: 1.23077em; height: 1.23077em; opacity: 0.84; }
+  .vector-menu-dropdown .vector-menu-heading:hover, .vector-menu-dropdown .vector-menu-heading:focus { color: rgb(32, 33, 34); }
+  .vector-menu-dropdown .vector-menu-heading:hover::after, .vector-menu-dropdown .vector-menu-heading:focus::after { opacity: 1; }
+  .vector-menu-dropdown .vector-menu-content { line-height: 1.125em; background-color: rgb(255, 255, 255); border-width: 0px 1px 1px; border-style: solid; border-color: rgb(162, 169, 177); border-image: none; box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 1px 0px; transition-property: opacity; transition-duration: 100ms; }
+  .vector-menu-dropdown:hover .vector-menu-content { opacity: 1; visibility: visible; height: auto; }
+  .vector-menu-dropdown .mw-list-item { text-align: left; line-height: 1em; }
+  .vector-menu-dropdown .mw-list-item a:not(.mw-ui-icon) { font-size: 0.8125em; }
+  .vector-menu-dropdown .mw-list-item a { padding: 0.625em; color: rgb(6, 69, 173); }
+  .vector-menu-dropdown .mw-list-item.selected a, .vector-menu-dropdown .mw-list-item.selected a:visited { color: rgb(32, 33, 34); text-decoration: none; }
+  .vector-menu-tabs-legacy { background-position: left bottom; float: left; height: 2.5em; padding-left: 1px; }
+  .vector-menu-tabs-legacy .vector-menu-heading { display: none; }
+  .vector-menu-tabs-legacy ul { float: left; height: 100%; list-style: none; margin: 0px; padding: 0px; }
+  .vector-menu-tabs-legacy li { background-image: linear-gradient(to top, rgb(119, 193, 246) 0px, rgb(232, 242, 248) 1px, rgb(255, 255, 255) 100%); background-position: left bottom; background-repeat: repeat-x; float: left; display: block; height: 100%; margin: 0px; padding: 0px; line-height: 1.125em; white-space: nowrap; }
+  .vector-menu-tabs-legacy li a { background-position: right bottom; color: rgb(6, 69, 173); box-sizing: border-box; display: block; float: left; height: 3.07692em; position: relative; padding-top: 1.25em; padding-left: 8px; padding-right: 8px; font-size: 0.8125em; cursor: pointer; }
+  .vector-menu-tabs-legacy .new a, .vector-menu-tabs-legacy .new a:visited { color: rgb(186, 0, 0); }
+  .vector-menu-tabs-legacy .selected { background: rgb(255, 255, 255); }
+  .vector-menu-tabs-legacy .selected a, .vector-menu-tabs-legacy .selected a:visited { color: rgb(32, 33, 34); text-decoration: none; }
+  .vector-menu-tabs-legacy .icon a { background-position: right bottom; background-repeat: no-repeat; }
+  .vector-menu-tabs, .vector-menu-tabs a, #mw-head .vector-menu-dropdown .vector-menu-heading { background-image: linear-gradient(rgba(167, 215, 249, 0) 0px, rgb(167, 215, 249) 100%); background-repeat: no-repeat; background-size: 1px 100%; }
+  #mw-head .vector-menu-dropdown .vector-menu-heading { background-position: right bottom; }
+  .vector-menu-portal .vector-menu-heading { background-image: linear-gradient(to right, rgba(200, 204, 209, 0) 0px, rgb(200, 204, 209) 33%, rgb(200, 204, 209) 66%, rgba(200, 204, 209, 0) 100%); background-position: center bottom; background-repeat: no-repeat; background-size: 100% 1px; }
+  .vector-search-box h3 { display: block; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; border: 0px; padding: 0px; overflow: hidden; position: absolute !important; }
+  #mw-panel { font-size: inherit; }
+  #mw-panel nav:first-child { background-image: none; }
+  #mw-panel nav:first-child .vector-menu-heading { display: none; }
+  #mw-panel nav:first-child .vector-menu-content { margin-left: 0.5em; }
+  @keyframes rotate { 
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+  .vector-menu-tabs .mw-watchlink.icon a { width: 2.15385em; height: 0px; padding: 3.07692em 0px 0px; overflow: hidden; }
+  .vector-menu-tabs .mw-watchlink.icon a::before { background-repeat: no-repeat; background-position: 50% 50%; content: ""; display: block; position: absolute; top: 1.07692em; left: 0.384615em; width: 1.23077em; height: 1.23077em; }
+  .vector-menu-tabs #ca-unwatch.icon a::before { background-image: url("/w/skins/Vector/resources/common/images/unwatch-icon.svg?4152f"); }
+  .vector-menu-tabs #ca-unwatch.mw-watchlink-temp.icon a::before { background-image: url("/w/skins/Vector/resources/common/images/unwatch-temp-icon.svg?195f5"); }
+  .vector-menu-tabs #ca-watch.icon a::before { background-image: url("/w/skins/Vector/resources/common/images/watch-icon.svg?6ab6f"); }
+  .vector-menu-tabs #ca-unwatch.icon a:hover::before, .vector-menu-tabs #ca-unwatch.icon a:focus::before { background-image: url("/w/skins/Vector/resources/common/images/unwatch-icon-hl.svg?a4731"); }
+  .vector-menu-tabs #ca-unwatch.mw-watchlink-temp.icon a:hover::before, .vector-menu-tabs #ca-unwatch.mw-watchlink-temp.icon a:focus::before { background-image: url("/w/skins/Vector/resources/common/images/unwatch-temp-icon-hl.svg?f3db6"); }
+  .vector-menu-tabs #ca-watch.icon a:hover::before, .vector-menu-tabs #ca-watch.icon a:focus::before { background-image: url("/w/skins/Vector/resources/common/images/watch-icon-hl.svg?9bf90"); }
+  .vector-menu-tabs #ca-unwatch.icon .loading::before, .vector-menu-tabs #ca-watch.icon .loading::before { animation: 700ms linear 0s infinite normal none running rotate; outline: 0px; cursor: default; pointer-events: none; transform-origin: 50% 50%; }
+  .vector-user-menu-legacy { }
+  .vector-user-menu-legacy li { font-size: 0.75em; float: left; margin-left: 0.75em; padding-top: 0.5em; line-height: 1.16667; }
+  .vector-user-menu-legacy #pt-anonuserpage, .vector-user-menu-legacy #pt-tmpuserpage, .vector-user-menu-legacy #pt-userpage a { background-position: left 0.333333em; background-image: url("/w/skins/Vector/resources/skins.vector.styles.legacy/images/user-avatar.svg?b7f58"); background-repeat: no-repeat; background-size: 1.16667em 1.16667em; padding-top: 0.5em; padding-left: 1.5em; }
+  .vector-user-menu-legacy #pt-userpage { padding-top: 0px; }
+  .vector-user-menu-legacy #pt-userpage a { display: inline-block; }
+  .vector-user-menu-legacy #pt-anonuserpage, .vector-user-menu-legacy #pt-tmpuserpage { color: rgb(84, 89, 93); }
+  .vector-user-menu-legacy .vector-menu-content-list { display: flex; flex-wrap: wrap; flex-grow: 1; justify-content: flex-end; align-items: baseline; }
+}
+@media screen and (min-width: 982px) {
+  .mw-body, #mw-head-base, #left-navigation, #mw-data-after-content, .mw-footer { margin-left: 11em; }
+  .mw-body { padding: 1.25em 1.5em 1.5em; }
+  .mw-footer { padding: 1.25em; }
+  #mw-panel { padding-left: 0.5em; }
+  .vector-search-box { margin-right: 1em; }
+  #p-personal { right: 1em; }
+}
+@media print {
+  .noprint, .mw-cite-backlink, .mw-redirectedfrom, .patrollink, #column-one, #footer-places, #mw-navigation, #f-poweredbyico, #f-copyrightico, li#about, li#disclaimer, li#mobileview, li#privacy { display: none; }
+  #footer { background: rgb(255, 255, 255); color: rgb(0, 0, 0); margin-top: 1em; border-top: 1pt solid rgb(170, 170, 170); padding-top: 5px; direction: ltr; }
+}
+.mw-wiki-logo { background-image: url("/w/skins/datacrystal.png?fe07c"); }
+@media print {
+  table.floatright, div.floatright { border: 0px; }
+  table.floatleft, div.floatleft { border: 0px; }
+  div.thumb { break-inside: avoid; }
+  div.thumb a { border-bottom: 0px; }
+  div.thumbinner { border: 1px; background-color: rgb(255, 255, 255); font-size: 10pt; color: rgb(102, 102, 102); border-radius: 2px; min-width: 100px; }
+  .thumbborder { border: 1pt solid rgb(221, 221, 221); }
+  .magnify { display: none; }
+  .mw-parser-output a.external { }
+  .mw-parser-output a.external.text::after, .mw-parser-output a.external.autonumber::after { content: ' (' attr(href) ')'; word-break: break-all; overflow-wrap: break-word; }
+  .mw-parser-output a.external.text[href^="//"]::after, .mw-parser-output a.external.autonumber[href^="//"]::after { content: ' (https:' attr(href) ')'; }
+  .wikitable { background: rgb(255, 255, 255); margin: 1em 0px; border: 1pt solid rgb(170, 170, 170); border-collapse: collapse; font-size: 10pt; break-inside: avoid; }
+  .wikitable > caption { padding: 5px; font-size: 10pt; }
+  .wikitable > tr > th, .wikitable > tr > td, .wikitable > * > tr > th, .wikitable > * > tr > td { border: 1pt solid rgb(170, 170, 170); padding: 0.4em 0.6em; background: rgb(255, 255, 255) !important; color: rgb(0, 0, 0) !important; }
+  .wikitable > tr > th, .wikitable > * > tr > th { text-align: center; }
+  table.listing, table.listing td { border: 1pt solid rgb(0, 0, 0); border-collapse: collapse; }
+  .catlinks ul { display: inline; padding: 0px; list-style: none; }
+  .catlinks li { display: inline-block; line-height: 1.15; margin: 0.1em 0px; border-left: 1pt solid rgb(170, 170, 170); padding: 0px 0.4em; }
+  .catlinks li:first-child { border-left: 0px; padding-left: 0.2em; }
+  .mw-hidden-catlinks, .catlinks { display: none; }
+  .mw-editsection, .mw-editsection-like, .mw-indicators, #siteNotice, .usermessage { display: none; }
+  .printfooter { padding: 1em 0px; }
+  .center { text-align: center; }
+  a { background: none !important; padding: 0px !important; }
+  a, a.external, a.new, a.stub { color: inherit !important; text-decoration: inherit !important; }
+  dt { font-weight: bold; }
+  h1, h2, h3, h4, h5, h6 { font-weight: bold; break-after: avoid; break-before: avoid; }
+  p { margin: 1em 0px; line-height: 1.2; orphans: 3; widows: 3; }
+  img, figure { break-inside: avoid; }
+  img { border: 0px; vertical-align: middle; }
+  pre, .mw-code { background: rgb(255, 255, 255); color: rgb(0, 0, 0); border: 1pt dashed rgb(0, 0, 0); padding: 1em; font-size: 8pt; white-space: pre-wrap; overflow-x: hidden; overflow-wrap: break-word; }
+  ul { list-style-type: square; }
+  .toctogglecheckbox:checked + .toctitle { display: none; }
+  .toc { background-color: rgb(249, 249, 249); border: 1pt solid rgb(170, 170, 170); padding: 5px; display: table; }
+  .tocnumber, .toctext { display: table-cell; }
+  .tocnumber { padding-left: 0px; padding-right: 0.5em; }
+  .mw-content-ltr .tocnumber { padding-left: 0px; padding-right: 0.5em; }
+  .mw-content-rtl .tocnumber { padding-left: 0.5em; padding-right: 0px; }
+}
+@media screen {
+  div.thumbinner { border: 1px solid rgb(200, 204, 209); background-color: rgb(248, 249, 250); font-size: 94%; }
+  .thumbimage { background-color: rgb(255, 255, 255); border: 1px solid rgb(200, 204, 209); }
+  .thumbcaption { border: 0px; font-size: 94%; }
+  .thumbborder { border: 1px solid rgb(234, 236, 240); }
+  .magnify { float: right; margin-left: 3px; }
+  .magnify a { display: block; text-indent: 15px; white-space: nowrap; overflow: hidden; width: 15px; height: 11px; background-image: url("/w/resources/src/mediawiki.skinning/images/magnify-clip-ltr.svg?8330e"); user-select: none; }
+  .mw-content-ltr .thumbcaption { text-align: left; }
+  .mw-content-rtl .thumbcaption { text-align: right; }
+  .mw-content-ltr .magnify { margin-left: 3px; margin-right: 0px; float: right; }
+  .mw-content-ltr .magnify a { background-image: url("/w/resources/src/mediawiki.skinning/images/magnify-clip-ltr.svg?8330e"); }
+  .mw-content-rtl .magnify { margin-left: 0px; margin-right: 3px; float: left; }
+  .mw-content-rtl .magnify a { background-image: url("/w/resources/src/mediawiki.skinning/images/magnify-clip-rtl.svg?38fd5"); }
+  a.new { color: rgb(186, 0, 0); }
+  a.mw-selflink { color: inherit; font-weight: bold; text-decoration: inherit; }
+  a.mw-selflink:hover { cursor: inherit; text-decoration: inherit; }
+  a.mw-selflink:active, a.mw-selflink:visited { color: inherit; }
+  a.new:visited { color: rgb(165, 88, 88); }
+  .mw-parser-output a.extiw, .mw-parser-output a.external { color: rgb(51, 102, 187); }
+  .mw-parser-output a.extiw:visited, .mw-parser-output a.external:visited { color: rgb(102, 51, 102); }
+  .mw-parser-output a.extiw:active, .mw-parser-output a.external:active { color: rgb(187, 102, 51); }
+  .mw-underline-always a { text-decoration: underline; }
+  .mw-underline-never a { text-decoration: none; }
+  .plainlinks a.external { background: none !important; padding: 0px !important; }
+  .mw-body-content::after { clear: both; content: ""; display: block; }
+  .mw-body-content a.external.free { overflow-wrap: break-word; }
+  .mw-body-content .error { font-size: larger; color: rgb(221, 51, 51); }
+  .rtl .mw-parser-output a.external.free, .rtl .mw-parser-output a.external.autonumber { direction: ltr; unicode-bidi: embed; }
+  .mw-hide-empty-elt .mw-parser-output:not(.mw-show-empty-elt) .mw-empty-elt { display: none; }
+  .wikitable { background-color: rgb(248, 249, 250); color: rgb(32, 33, 34); margin: 1em 0px; border: 1px solid rgb(162, 169, 177); border-collapse: collapse; }
+  .wikitable > tr > th, .wikitable > tr > td, .wikitable > * > tr > th, .wikitable > * > tr > td { border: 1px solid rgb(162, 169, 177); padding: 0.2em 0.4em; }
+  .wikitable > tr > th, .wikitable > * > tr > th { background-color: rgb(234, 236, 240); text-align: center; }
+  .wikitable > caption { font-weight: bold; }
+  #catlinks { text-align: left; }
+  .catlinks { border: 1px solid rgb(162, 169, 177); background-color: rgb(248, 249, 250); padding: 5px; margin-top: 1em; clear: both; }
+  .catlinks ul { display: inline; margin: 0px; padding: 0px; list-style: none; }
+  .catlinks li { display: inline-block; line-height: 1.25em; border-left: 1px solid rgb(162, 169, 177); margin: 0.125em 0px; padding: 0px 0.5em; }
+  .catlinks li:first-child { padding-left: 0.25em; border-left: 0px; }
+  .catlinks li a.mw-redirect { font-style: italic; }
+  .mw-hidden-cats-hidden, .catlinks-allhidden { display: none; }
+  .emptyPortlet { display: none; }
+  .printfooter, .client-nojs #t-print { display: none; }
+  .mw-editsection { user-select: none; }
+  .mw-editsection, .mw-editsection-like { font-size: small; font-weight: normal; margin-left: 1em; vertical-align: baseline; line-height: 1em; }
+  .mw-content-ltr .mw-editsection, .mw-content-rtl .mw-content-ltr .mw-editsection, .mw-content-ltr .mw-editsection-like, .mw-content-rtl .mw-content-ltr .mw-editsection-like { margin-left: 1em; margin-right: 0px; }
+  .mw-content-rtl .mw-editsection, .mw-content-ltr .mw-content-rtl .mw-editsection, .mw-content-rtl .mw-editsection-like, .mw-content-ltr .mw-content-rtl .mw-editsection-like { margin-right: 1em; margin-left: 0px; }
+  .mw-indicators { float: right; }
+  #siteNotice { position: relative; text-align: center; margin: 0px; }
+  #localNotice { margin-bottom: 0.9em; }
+  #siteSub { display: none; }
+  #contentSub, #contentSub2 { font-size: 84%; line-height: 1.2em; margin: 0px 0px 1.4em 1em; color: rgb(84, 89, 93); width: auto; }
+  span.subpages { display: block; }
+  .usermessage { background-color: rgb(254, 246, 231); border: 1px solid rgb(255, 204, 51); color: rgb(0, 0, 0); font-weight: bold; margin: 2em 0px 1em; padding: 0.5em 1em; vertical-align: middle; }
+  a { text-decoration: none; color: rgb(6, 69, 173); background: none; }
+  a:not([href]) { cursor: pointer; }
+  a:visited { color: rgb(11, 0, 128); }
+  a:active { color: rgb(250, 167, 0); }
+  a:hover, a:focus { text-decoration: underline; }
+  a:lang(ar), a:lang(kk-arab), a:lang(mzn), a:lang(ps), a:lang(ur) { text-decoration: none; }
+  img { border: 0px; vertical-align: middle; }
+  hr { height: 1px; background-color: rgb(162, 169, 177); border: 0px; margin: 0.2em 0px; }
+  h1, h2, h3, h4, h5, h6 { color: rgb(0, 0, 0); margin: 0px; padding-top: 0.5em; padding-bottom: 0.17em; overflow: hidden; }
+  h1, h2 { margin-bottom: 0.6em; border-bottom: 1px solid rgb(162, 169, 177); }
+  h3, h4, h5 { margin-bottom: 0.3em; }
+  h1 { font-size: 188%; font-weight: normal; }
+  h2 { font-size: 150%; font-weight: normal; }
+  h3 { font-size: 128%; }
+  h4 { font-size: 116%; }
+  h5 { font-size: 108%; }
+  h6 { font-size: 100%; }
+  p { margin: 0.4em 0px 0.5em; }
+  p img { margin: 0px; }
+  ul { margin: 0.3em 0px 0px 1.6em; padding: 0px; }
+  ol { margin: 0.3em 0px 0px 3.2em; padding: 0px; list-style-image: none; }
+  li { margin-bottom: 0.1em; }
+  dt { font-weight: bold; margin-bottom: 0.1em; }
+  dl { margin-top: 0.2em; margin-bottom: 0.5em; }
+  dd { margin-left: 1.6em; margin-bottom: 0.1em; }
+  pre, code, tt, kbd, samp, .mw-code { font-family: monospace, monospace; }
+  pre, code, .mw-code { background-color: rgb(248, 249, 250); color: rgb(0, 0, 0); border: 1px solid rgb(234, 236, 240); }
+  code { border-radius: 2px; padding: 1px 4px; }
+  pre, .mw-code { padding: 1em; white-space: pre-wrap; overflow-x: hidden; overflow-wrap: break-word; }
+  table { font-size: 100%; }
+  fieldset { border: 1px solid rgb(42, 75, 141); margin: 1em 0px; padding: 0px 1em 1em; }
+  legend { padding: 0.5em; }
+  form { border: 0px; margin: 0px; }
+  textarea { display: block; box-sizing: border-box; width: 100%; border: 1px solid rgb(200, 204, 209); padding: 0.1em; }
+  .center { width: 100%; text-align: center; }
+  .center * { margin-left: auto; margin-right: auto; }
+  .small { font-size: 94%; }
+  table.small { font-size: 100%; }
+  @counter-style meetei { system: numeric; symbols: "꯰" "꯱" "꯲" "꯳" "꯴" "꯵" "꯶" "꯷" "꯸" "꯹"; suffix: ") "; }
+  @counter-style santali { system: numeric; symbols: "᱐" "᱑" "᱒" "᱓" "᱔" "᱕" "᱖" "᱗" "᱘" "᱙"; }
+  @counter-style myanmar_with_period { system: numeric; symbols: "၀" "၁" "၂" "၃" "၄" "၅" "၆" "၇" "၈" "၉"; suffix: "။ "; }
+  ol:lang(azb) li, ol:lang(bcc) li, ol:lang(bgn) li, ol:lang(bqi) li, ol:lang(fa) li, ol:lang(glk) li, ol:lang(kk-arab) li, ol:lang(lrc) li, ol:lang(luz) li, ol:lang(mzn) li { list-style-type: persian; }
+  ol:lang(ckb) li, ol:lang(sdh) li { list-style-type: arabic-indic; }
+  ol:lang(hi) li, ol:lang(mai) li, ol:lang(mr) li, ol:lang(ne) li { list-style-type: devanagari; }
+  ol:lang(as) li, ol:lang(bn) li { list-style-type: bengali; }
+  ol:lang(mni) li { list-style-type: meetei; }
+  ol:lang(or) li { list-style-type: oriya; }
+  ol:lang(sat) li { list-style-type: santali; }
+  ol:lang(blk) li, ol:lang(kjp) li, ol:lang(ksw) li, ol:lang(mnw) li, ol:lang(my) li, ol:lang(shn) li { list-style-type: myanmar_with_period; }
+  .mw-content-ltr ul, .mw-content-rtl .mw-content-ltr ul { margin: 0.3em 0px 0px 1.6em; padding: 0px; }
+  .mw-content-rtl ul, .mw-content-ltr .mw-content-rtl ul { margin: 0.3em 1.6em 0px 0px; padding: 0px; }
+  .mw-content-ltr ol, .mw-content-rtl .mw-content-ltr ol { margin: 0.3em 0px 0px 3.2em; padding: 0px; }
+  .mw-content-rtl ol, .mw-content-ltr .mw-content-rtl ol { margin: 0.3em 3.2em 0px 0px; padding: 0px; }
+  .mw-content-ltr dd, .mw-content-rtl .mw-content-ltr dd { margin-left: 1.6em; margin-right: 0px; }
+  .mw-content-rtl dd, .mw-content-ltr .mw-content-rtl dd { margin-right: 1.6em; margin-left: 0px; }
+  h1:lang(anp), h1:lang(as), h1:lang(bh), h1:lang(bho), h1:lang(blk), h1:lang(bn), h1:lang(gu), h1:lang(hi), h1:lang(kjp), h1:lang(kn), h1:lang(ks), h1:lang(ksw), h1:lang(ml), h1:lang(mr), h1:lang(my), h1:lang(mai), h1:lang(mnw), h1:lang(ne), h1:lang(new), h1:lang(or), h1:lang(pa), h1:lang(pi), h1:lang(sa), h1:lang(shn), h1:lang(syl), h1:lang(ta), h1:lang(te) { line-height: 1.6em !important; }
+  h2:lang(anp), h2:lang(as), h2:lang(bh), h2:lang(bho), h2:lang(blk), h2:lang(bn), h2:lang(gu), h2:lang(hi), h2:lang(kjp), h2:lang(kn), h2:lang(ks), h2:lang(ksw), h2:lang(ml), h2:lang(mr), h2:lang(my), h2:lang(mai), h2:lang(mnw), h2:lang(ne), h2:lang(new), h2:lang(or), h2:lang(pa), h2:lang(pi), h2:lang(sa), h2:lang(shn), h2:lang(syl), h2:lang(ta), h2:lang(te), h3:lang(anp), h3:lang(as), h3:lang(bh), h3:lang(bho), h3:lang(blk), h3:lang(bn), h3:lang(gu), h3:lang(hi), h3:lang(kjp), h3:lang(kn), h3:lang(ks), h3:lang(ksw), h3:lang(ml), h3:lang(mr), h3:lang(my), h3:lang(mai), h3:lang(mnw), h3:lang(ne), h3:lang(new), h3:lang(or), h3:lang(pa), h3:lang(pi), h3:lang(sa), h3:lang(shn), h3:lang(syl), h3:lang(ta), h3:lang(te), h4:lang(anp), h4:lang(as), h4:lang(bh), h4:lang(bho), h4:lang(blk), h4:lang(bn), h4:lang(gu), h4:lang(hi), h4:lang(kjp), h4:lang(kn), h4:lang(ks), h4:lang(ksw), h4:lang(ml), h4:lang(mr), h4:lang(my), h4:lang(mai), h4:lang(mnw), h4:lang(ne), h4:lang(new), h4:lang(or), h4:lang(pa), h4:lang(pi), h4:lang(sa), h4:lang(shn), h4:lang(syl), h4:lang(ta), h4:lang(te), h5:lang(anp), h5:lang(as), h5:lang(bh), h5:lang(bho), h5:lang(blk), h5:lang(bn), h5:lang(gu), h5:lang(hi), h5:lang(kjp), h5:lang(kn), h5:lang(ks), h5:lang(ksw), h5:lang(ml), h5:lang(mr), h5:lang(my), h5:lang(mai), h5:lang(mnw), h5:lang(ne), h5:lang(new), h5:lang(or), h5:lang(pa), h5:lang(pi), h5:lang(sa), h5:lang(shn), h5:lang(syl), h5:lang(ta), h5:lang(te), h6:lang(anp), h6:lang(as), h6:lang(bh), h6:lang(bho), h6:lang(blk), h6:lang(bn), h6:lang(gu), h6:lang(hi), h6:lang(kjp), h6:lang(kn), h6:lang(ks), h6:lang(ksw), h6:lang(ml), h6:lang(mr), h6:lang(my), h6:lang(mai), h6:lang(mnw), h6:lang(ne), h6:lang(new), h6:lang(or), h6:lang(pa), h6:lang(pi), h6:lang(sa), h6:lang(shn), h6:lang(syl), h6:lang(ta), h6:lang(te) { line-height: 1.4em; }
+  h2:lang(th) { line-height: 1.6; }
+  .toc, .toccolours { border: 1px solid rgb(162, 169, 177); background-color: rgb(248, 249, 250); padding: 5px; font-size: 95%; }
+  .toc { display: table; padding: 7px; }
+  .toc h2 { display: inline; border: 0px; padding: 0px; font-size: 100%; font-weight: bold; }
+  .toc .toctitle { text-align: center; }
+  .toc ul { list-style: none; margin: 0.3em 0px; padding: 0px; text-align: left; }
+  .toc ul ul { margin: 0px 0px 0px 2em; }
+  table.toc { border-collapse: collapse; }
+  table.toc td { padding: 0px; }
+  .tocnumber, .toctext { display: table-cell; text-decoration: inherit; }
+  .tocnumber { color: rgb(32, 33, 34); padding-left: 0px; padding-right: 0.5em; }
+  .mw-content-ltr .tocnumber { padding-left: 0px; padding-right: 0.5em; }
+  .mw-content-rtl .tocnumber { padding-left: 0.5em; padding-right: 0px; }
+  .toctogglecheckbox { position: absolute; opacity: 0; z-index: -1; display: inline !important; }
+  .toctogglespan { font-size: 94%; }
+  .toctogglespan::before { content: " ["; }
+  .toctogglespan::after { content: "]"; }
+  .toctogglelabel { cursor: pointer; color: rgb(6, 69, 173); }
+  .toctogglelabel:hover { text-decoration: underline; }
+  .toctogglecheckbox:focus + .toctitle .toctogglelabel { text-decoration: underline; outline: -webkit-focus-ring-color auto; }
+  .toctogglecheckbox:checked + .toctitle .toctogglelabel::after { content: "show"; }
+  .toctogglecheckbox:not(:checked) + .toctitle .toctogglelabel::after { content: "hide"; }
+  .toc .toctitle { direction: ltr; }
+  .mw-content-ltr .toc ul, .mw-content-rtl .mw-content-ltr .toc ul { text-align: left; }
+  .mw-content-rtl .toc ul, .mw-content-ltr .mw-content-rtl .toc ul { text-align: right; }
+  .mw-content-ltr .toc ul ul, .mw-content-rtl .mw-content-ltr .toc ul ul { margin: 0px 0px 0px 2em; }
+  .mw-content-rtl .toc ul ul, .mw-content-ltr .mw-content-rtl .toc ul ul { margin: 0px 2em 0px 0px; }
+}
+------MultipartBoundary--IEH576Pb7avcMIqewpYkK6CFg4FZVcR3Lgoz8uMTmx------

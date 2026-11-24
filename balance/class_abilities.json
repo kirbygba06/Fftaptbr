@@ -1,0 +1,2930 @@
+[
+ {
+  "cls": "Soldier",
+  "name": "First Aid",
+  "item": "Shortsword",
+  "ap": 100,
+  "type": "A",
+  "desc": "Cure HP and status"
+ },
+ {
+  "cls": "Soldier",
+  "name": "Powerbreak",
+  "item": "Barong",
+  "ap": 200,
+  "type": "A",
+  "desc": "Lower target's weapon attack"
+ },
+ {
+  "cls": "Soldier",
+  "name": "Mindbreak",
+  "item": "Buster Sword",
+  "ap": 200,
+  "type": "A",
+  "desc": "Lower target's magic"
+ },
+ {
+  "cls": "Soldier",
+  "name": "Magicbreak",
+  "item": "Ancient Sword",
+  "ap": 200,
+  "type": "A",
+  "desc": "MP damage"
+ },
+ {
+  "cls": "Soldier",
+  "name": "Speedbreak",
+  "item": "Silver Sword",
+  "ap": 200,
+  "type": "A",
+  "desc": "Lower target's speed"
+ },
+ {
+  "cls": "Soldier",
+  "name": "Mug",
+  "item": "Diamond Sword",
+  "ap": 300,
+  "type": "A",
+  "desc": "Damages target and steals carried gil"
+ },
+ {
+  "cls": "Soldier",
+  "name": "Provoke",
+  "item": "Blood Sword",
+  "ap": 300,
+  "type": "A",
+  "desc": "Cause Berserk status"
+ },
+ {
+  "cls": "Soldier",
+  "name": "Sensor",
+  "item": "Burglar Sword",
+  "ap": 300,
+  "type": "A",
+  "desc": "Find hidden equipment on enemy"
+ },
+ {
+  "cls": "Soldier",
+  "name": "Monkey Grip",
+  "item": "Vigilante",
+  "ap": 300,
+  "type": "S",
+  "desc": "Hold two-handed weapon with one hand"
+ },
+ {
+  "cls": "Soldier",
+  "name": "Shieldbearer",
+  "item": "Bronze Shield",
+  "ap": 300,
+  "type": "S",
+  "desc": "Equip a shield no matter what job"
+ },
+ {
+  "cls": "Soldier",
+  "name": "Combat Combo",
+  "item": "Mythril Sword",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Paladin",
+  "name": "Nurse",
+  "item": "Defender",
+  "ap": 100,
+  "type": "A",
+  "desc": "Cure HP and status"
+ },
+ {
+  "cls": "Paladin",
+  "name": "Defense",
+  "item": "Lionheart",
+  "ap": 200,
+  "type": "A",
+  "desc": "Raise Defence and Resistance"
+ },
+ {
+  "cls": "Paladin",
+  "name": "Cover",
+  "item": "SaveTheQueen",
+  "ap": 200,
+  "type": "A",
+  "desc": "Take damage for a clan member"
+ },
+ {
+  "cls": "Paladin",
+  "name": "Subdue",
+  "item": "Ancient Sword",
+  "ap": 200,
+  "type": "A",
+  "desc": "Low damage attack"
+ },
+ {
+  "cls": "Paladin",
+  "name": "Drop Weapon",
+  "item": "Ragnarok",
+  "ap": 200,
+  "type": "A",
+  "desc": "Disarm target"
+ },
+ {
+  "cls": "Paladin",
+  "name": "Parley",
+  "item": "Barong",
+  "ap": 200,
+  "type": "A",
+  "desc": "Remove weakened monsters from battle"
+ },
+ {
+  "cls": "Paladin",
+  "name": "Saint Cross",
+  "item": "Arch Sword",
+  "ap": 300,
+  "type": "A",
+  "desc": "Holy damage in a cross-shaped area"
+ },
+ {
+  "cls": "Paladin",
+  "name": "Holy Blade",
+  "item": "Excalibur",
+  "ap": 300,
+  "type": "A",
+  "desc": "Heavy holy damage"
+ },
+ {
+  "cls": "Paladin",
+  "name": "Reflex",
+  "item": "Genji Armor",
+  "ap": 300,
+  "type": "R",
+  "desc": "Completely dodge attacks"
+ },
+ {
+  "cls": "Paladin",
+  "name": "Weapon Def+",
+  "item": "Diamond Armor",
+  "ap": 300,
+  "type": "S",
+  "desc": "Raises Weapon Defence"
+ },
+ {
+  "cls": "Paladin",
+  "name": "Knight Combo",
+  "item": "Mythril Brand",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Fighter",
+  "name": "Rush",
+  "item": "Sweep Blade",
+  "ap": 100,
+  "type": "A",
+  "desc": "Damage and push back target"
+ },
+ {
+  "cls": "Fighter",
+  "name": "Wild Swing",
+  "item": "Ogun Blade",
+  "ap": 200,
+  "type": "A",
+  "desc": "Damage all adjacent units"
+ },
+ {
+  "cls": "Fighter",
+  "name": "Beatdown",
+  "item": "Shadow Blade",
+  "ap": 200,
+  "type": "A",
+  "desc": "Double damage, halved accuracy"
+ },
+ {
+  "cls": "Fighter",
+  "name": "Blitz",
+  "item": "Sun Blade",
+  "ap": 200,
+  "type": "A",
+  "desc": "Double accuracy,halved damage"
+ },
+ {
+  "cls": "Fighter",
+  "name": "Air Render",
+  "item": "Atmos Blade",
+  "ap": 200,
+  "type": "A",
+  "desc": "Wide ranged attack"
+ },
+ {
+  "cls": "Fighter",
+  "name": "Far Fist",
+  "item": "Kwigon Blade",
+  "ap": 200,
+  "type": "A",
+  "desc": "Wide ranged area damage attack"
+ },
+ {
+  "cls": "Fighter",
+  "name": "Air Blast",
+  "item": "Air Blade",
+  "ap": 300,
+  "type": "A",
+  "desc": "Wind area damage"
+ },
+ {
+  "cls": "Fighter",
+  "name": "Backdraft",
+  "item": "Flametongue",
+  "ap": 300,
+  "type": "A",
+  "desc": "Fire area damage, causes self damage"
+ },
+ {
+  "cls": "Fighter",
+  "name": "Bonecrusher",
+  "item": "Ninja Gear",
+  "ap": 300,
+  "type": "R",
+  "desc": "Counter with 1.5 times damage"
+ },
+ {
+  "cls": "Fighter",
+  "name": "Strikeback",
+  "item": "Wygar",
+  "ap": 300,
+  "type": "R",
+  "desc": "Block attack and counter"
+ },
+ {
+  "cls": "Fighter",
+  "name": "Doublehand",
+  "item": "Venus Blade",
+  "ap": 300,
+  "type": "S",
+  "desc": "Hold sword with two hands"
+ },
+ {
+  "cls": "Fighter",
+  "name": "Fight Combo",
+  "item": "Mythril Blade",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Thief",
+  "name": "Steal:Armor",
+  "item": "Rondell Dagger",
+  "ap": 200,
+  "type": "A",
+  "desc": "Steal enemy's armor"
+ },
+ {
+  "cls": "Thief",
+  "name": "Steal:Shield",
+  "item": "Scramasax",
+  "ap": 200,
+  "type": "A",
+  "desc": "Steal enemy's shield"
+ },
+ {
+  "cls": "Thief",
+  "name": "Steal:Access",
+  "item": "Jambiya",
+  "ap": 300,
+  "type": "A",
+  "desc": "Steal enemy's accessory"
+ },
+ {
+  "cls": "Thief",
+  "name": "Steal:Helm",
+  "item": "Kard",
+  "ap": 100,
+  "type": "A",
+  "desc": "Steal enemy's helmet"
+ },
+ {
+  "cls": "Thief",
+  "name": "Steal:Weapon",
+  "item": "Sword Breaker",
+  "ap": 300,
+  "type": "A",
+  "desc": "Steal enemy's weapon"
+ },
+ {
+  "cls": "Thief",
+  "name": "Steal:Gil",
+  "item": "Jack Knife",
+  "ap": 100,
+  "type": "A",
+  "desc": "Steal Gil from an enemy"
+ },
+ {
+  "cls": "Thief",
+  "name": "Steal:EXP",
+  "item": "Khukuri",
+  "ap": 100,
+  "type": "A",
+  "desc": "Steal EXP from an enemy"
+ },
+ {
+  "cls": "Thief",
+  "name": "Steal:JP",
+  "item": "Orichalcum",
+  "ap": 200,
+  "type": "A",
+  "desc": "Steal JP from an enemy"
+ },
+ {
+  "cls": "Thief",
+  "name": "Steal:Ability",
+  "item": "Cinquedea",
+  "ap": 300,
+  "type": "A",
+  "desc": "Steal an ability from an enemy"
+ },
+ {
+  "cls": "Thief",
+  "name": "Counter",
+  "item": "Brigandine",
+  "ap": 300,
+  "type": "R",
+  "desc": "Counter an enemy's attack"
+ },
+ {
+  "cls": "Thief",
+  "name": "Maintenance",
+  "item": "Adaman Vest",
+  "ap": 300,
+  "type": "S",
+  "desc": "Prevent equipment from being stolen/broken"
+ },
+ {
+  "cls": "Thief",
+  "name": "Thief Combo",
+  "item": "Mythril Knife",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Ninja",
+  "name": "Throw",
+  "item": "Ninja Knife",
+  "ap": 100,
+  "type": "A",
+  "desc": "Throw an item from your inventory"
+ },
+ {
+  "cls": "Ninja",
+  "name": "Wood Veil",
+  "item": "Kotetsu",
+  "ap": 200,
+  "type": "A",
+  "desc": "Damage and immobilise"
+ },
+ {
+  "cls": "Ninja",
+  "name": "Fire Veil",
+  "item": "Ashura",
+  "ap": 200,
+  "type": "A",
+  "desc": "Fire damage and confuse"
+ },
+ {
+  "cls": "Ninja",
+  "name": "Earth Veil",
+  "item": "Osafune",
+  "ap": 200,
+  "type": "A",
+  "desc": "Earth damage and Slow"
+ },
+ {
+  "cls": "Ninja",
+  "name": "Metal Veil",
+  "item": "Kikuichimonji",
+  "ap": 200,
+  "type": "A",
+  "desc": "Damage and Darkness"
+ },
+ {
+  "cls": "Ninja",
+  "name": "Water Veil",
+  "item": "Murasame",
+  "ap": 200,
+  "type": "A",
+  "desc": "Water damage and Silence"
+ },
+ {
+  "cls": "Ninja",
+  "name": "Unspell",
+  "item": "Heaven's Cloud",
+  "ap": 300,
+  "type": "A",
+  "desc": "Nullify Magic effect"
+ },
+ {
+  "cls": "Ninja",
+  "name": "Oblivion",
+  "item": "Masamune",
+  "ap": 300,
+  "type": "A",
+  "desc": "Inflict Addle status ailment"
+ },
+ {
+  "cls": "Ninja",
+  "name": "Last Haste",
+  "item": "Ninja Gear",
+  "ap": 300,
+  "type": "S",
+  "desc": "Haste status when critical"
+ },
+ {
+  "cls": "Ninja",
+  "name": "Double Sword",
+  "item": "Nosada",
+  "ap": 999,
+  "type": "S",
+  "desc": "Equip a weapon in each hand"
+ },
+ {
+  "cls": "White Mage",
+  "name": "Cure",
+  "item": "White Staff",
+  "ap": 100,
+  "type": "A",
+  "desc": "Recover a little HP"
+ },
+ {
+  "cls": "White Mage",
+  "name": "Cura",
+  "item": "Cure Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Recover some HP"
+ },
+ {
+  "cls": "White Mage",
+  "name": "Curaga",
+  "item": "Spring Staff",
+  "ap": 300,
+  "type": "A",
+  "desc": "Recover a lot of HP"
+ },
+ {
+  "cls": "White Mage",
+  "name": "Esuna",
+  "item": "Pure Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Cure status ailments"
+ },
+ {
+  "cls": "White Mage",
+  "name": "Life",
+  "item": "Bless Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Revive KO'd unit with half HP"
+ },
+ {
+  "cls": "White Mage",
+  "name": "Full-Life",
+  "item": "Nirvana Staff",
+  "ap": 300,
+  "type": "A",
+  "desc": "Revive Ko'd unit with full HP"
+ },
+ {
+  "cls": "White Mage",
+  "name": "Auto-Life",
+  "item": "Cheer Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Casts Reraise status on target"
+ },
+ {
+  "cls": "White Mage",
+  "name": "Shell",
+  "item": "Judge Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Raises Magic Resistance"
+ },
+ {
+  "cls": "White Mage",
+  "name": "Protect",
+  "item": "Guard Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Raises Weapon Defence"
+ },
+ {
+  "cls": "White Mage",
+  "name": "Turbo MP",
+  "item": "White Robe",
+  "ap": 300,
+  "type": "S",
+  "desc": "Use double MP but raise power"
+ },
+ {
+  "cls": "White Mage",
+  "name": "White Combo",
+  "item": "Mythril Staff",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Black Mage",
+  "name": "Fire",
+  "item": "Rod",
+  "ap": 100,
+  "type": "A",
+  "desc": "Weak fire damage"
+ },
+ {
+  "cls": "Black Mage",
+  "name": "Fira",
+  "item": "Firewheel Rod",
+  "ap": 200,
+  "type": "A",
+  "desc": "Average fire damage"
+ },
+ {
+  "cls": "Black Mage",
+  "name": "Firaga",
+  "item": "Flame Rod",
+  "ap": 300,
+  "type": "A",
+  "desc": "Strong fire damage"
+ },
+ {
+  "cls": "Black Mage",
+  "name": "Thunder",
+  "item": "Rod",
+  "ap": 100,
+  "type": "A",
+  "desc": "Weak thunder damage"
+ },
+ {
+  "cls": "Black Mage",
+  "name": "Thundara",
+  "item": "Thunder Rod",
+  "ap": 200,
+  "type": "A",
+  "desc": "Average thunder damage"
+ },
+ {
+  "cls": "Black Mage",
+  "name": "Thundaga",
+  "item": "Thor Rod",
+  "ap": 300,
+  "type": "A",
+  "desc": "Strong thunder damage"
+ },
+ {
+  "cls": "Black Mage",
+  "name": "Blizzard",
+  "item": "Rod",
+  "ap": 100,
+  "type": "A",
+  "desc": "Weak ice damage"
+ },
+ {
+  "cls": "Black Mage",
+  "name": "Blizzara",
+  "item": "Sleet Rod",
+  "ap": 200,
+  "type": "A",
+  "desc": "Average ice damage"
+ },
+ {
+  "cls": "Black Mage",
+  "name": "Blizzaga",
+  "item": "Chill Rod",
+  "ap": 300,
+  "type": "A",
+  "desc": "Strong ice damage"
+ },
+ {
+  "cls": "Black Mage",
+  "name": "Return Magic",
+  "item": "Black Robe",
+  "ap": 300,
+  "type": "R",
+  "desc": "Counter Magic with Magic"
+ },
+ {
+  "cls": "Black Mage",
+  "name": "Geomancy",
+  "item": "Sage Robe",
+  "ap": 300,
+  "type": "S",
+  "desc": "Increases elemental power"
+ },
+ {
+  "cls": "Black Mage",
+  "name": "Black Combo",
+  "item": "Mythril Rod",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Illusionist",
+  "name": "Prominence",
+  "item": "Firewheel Rod",
+  "ap": 100,
+  "type": "A",
+  "desc": "Fire damage to all enemies"
+ },
+ {
+  "cls": "Illusionist",
+  "name": "Tempest",
+  "item": "Thunder Rod",
+  "ap": 100,
+  "type": "A",
+  "desc": "Thunder damage to all enemies"
+ },
+ {
+  "cls": "Illusionist",
+  "name": "Freezeblink",
+  "item": "Sleet Rod",
+  "ap": 100,
+  "type": "A",
+  "desc": "Ice damage to all enemies"
+ },
+ {
+  "cls": "Illusionist",
+  "name": "Star Cross",
+  "item": "Princess Rod",
+  "ap": 300,
+  "type": "A",
+  "desc": "Holy damage to all enemies"
+ },
+ {
+  "cls": "Illusionist",
+  "name": "Stardust",
+  "item": "Stardust Rod",
+  "ap": 300,
+  "type": "A",
+  "desc": "Damage to all enemies"
+ },
+ {
+  "cls": "Illusionist",
+  "name": "Deluge",
+  "item": "Chill Rod",
+  "ap": 300,
+  "type": "A",
+  "desc": "Water damage to all enemies"
+ },
+ {
+  "cls": "Illusionist",
+  "name": "Soil Evidence",
+  "item": "Terre Rod",
+  "ap": 200,
+  "type": "A",
+  "desc": "Earth damage to all enemies"
+ },
+ {
+  "cls": "Illusionist",
+  "name": "Wild Tornado",
+  "item": "Thor Rod",
+  "ap": 200,
+  "type": "A",
+  "desc": "Wind damage to all enemies"
+ },
+ {
+  "cls": "Illusionist",
+  "name": "Absorb MP",
+  "item": "Lordly Robe",
+  "ap": 300,
+  "type": "R",
+  "desc": "Absorb MP used by enemy's attack"
+ },
+ {
+  "cls": "Illusionist",
+  "name": "Half MP",
+  "item": "Light Robe",
+  "ap": 300,
+  "type": "S",
+  "desc": "Half MP usage when casting Magic"
+ },
+ {
+  "cls": "Illusionist",
+  "name": "Spell Combo",
+  "item": "Mythril Rod",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Blue Mage",
+  "name": "Damage > MP",
+  "item": "Judo Uniform",
+  "ap": 300,
+  "type": "R",
+  "desc": "MP damage instead of HP damage"
+ },
+ {
+  "cls": "Blue Mage",
+  "name": "Immunity",
+  "item": "Survival Vest",
+  "ap": 300,
+  "type": "S",
+  "desc": "Immune to Status ailments"
+ },
+ {
+  "cls": "Blue Mage",
+  "name": "Learning",
+  "item": "Blue Saber",
+  "ap": 400,
+  "type": "S",
+  "desc": "Learn monsters' abilities"
+ },
+ {
+  "cls": "Blue Mage",
+  "name": "Blue Combo",
+  "item": "Mythril Saber",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Archer",
+  "name": "Boost",
+  "item": "Longbow",
+  "ap": 100,
+  "type": "A",
+  "desc": "Raise strength of next attack"
+ },
+ {
+  "cls": "Archer",
+  "name": "Aim:Legs",
+  "item": "Thorn Bow",
+  "ap": 200,
+  "type": "A",
+  "desc": "Immobilise enemy"
+ },
+ {
+  "cls": "Archer",
+  "name": "Aim:Arm",
+  "item": "Nail Bow",
+  "ap": 200,
+  "type": "A",
+  "desc": "Disable enemy's actions"
+ },
+ {
+  "cls": "Archer",
+  "name": "Cupid",
+  "item": "Artemis Bow",
+  "ap": 200,
+  "type": "A",
+  "desc": "Inflict Charm status on enemy"
+ },
+ {
+  "cls": "Archer",
+  "name": "Burial",
+  "item": "Silver Bow",
+  "ap": 300,
+  "type": "A",
+  "desc": "Remove Undead from battle"
+ },
+ {
+  "cls": "Archer",
+  "name": "Take Aim",
+  "item": "Yoichi Bow",
+  "ap": 300,
+  "type": "A",
+  "desc": "Never miss attack,halved damage"
+ },
+ {
+  "cls": "Archer",
+  "name": "Faster",
+  "item": "Perseus Bow",
+  "ap": 300,
+  "type": "A",
+  "desc": "Attack and nullify R-abilities"
+ },
+ {
+  "cls": "Archer",
+  "name": "Blackout",
+  "item": "Char Bow",
+  "ap": 200,
+  "type": "A",
+  "desc": "Inflict darkness status ailment on enemy"
+ },
+ {
+  "cls": "Archer",
+  "name": "Block Arrows",
+  "item": "Green Beret",
+  "ap": 300,
+  "type": "R",
+  "desc": "Block all arrow attacks"
+ },
+ {
+  "cls": "Archer",
+  "name": "Concentrate",
+  "item": "Target Bow",
+  "ap": 300,
+  "type": "S",
+  "desc": "Raises accuracy of most actions"
+ },
+ {
+  "cls": "Archer",
+  "name": "Bow Combo",
+  "item": "Mythril Bow",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Hunter",
+  "name": "Sonic Boom",
+  "item": "Cranequin",
+  "ap": 200,
+  "type": "A",
+  "desc": "Area Damage"
+ },
+ {
+  "cls": "Hunter",
+  "name": "Oust",
+  "item": "Windslash Bow",
+  "ap": 200,
+  "type": "A",
+  "desc": "Remove weakened monster from battle"
+ },
+ {
+  "cls": "Hunter",
+  "name": "Advice",
+  "item": "Twin Bow",
+  "ap": 100,
+  "type": "A",
+  "desc": "Raise critical ratio"
+ },
+ {
+  "cls": "Hunter",
+  "name": "Aim:Vitals",
+  "item": "Fey Bow",
+  "ap": 300,
+  "type": "A",
+  "desc": "Inflict random status ailment"
+ },
+ {
+  "cls": "Hunter",
+  "name": "Hunting",
+  "item": "Hunt Bow",
+  "ap": 300,
+  "type": "A",
+  "desc": "Receive more JP from a KO"
+ },
+ {
+  "cls": "Hunter",
+  "name": "Addle",
+  "item": "Master Bow",
+  "ap": 200,
+  "type": "A",
+  "desc": "Inflict Addle status ailment"
+ },
+ {
+  "cls": "Hunter",
+  "name": "Ultima Shot",
+  "item": "Seventh Heaven",
+  "ap": 999,
+  "type": "A",
+  "desc": "Heavy damage"
+ },
+ {
+  "cls": "Hunter",
+  "name": "Sidewinder",
+  "item": "Hades Bow",
+  "ap": 300,
+  "type": "A",
+  "desc": "Heavy damage to monsters"
+ },
+ {
+  "cls": "Hunter",
+  "name": "Capture",
+  "item": "Ranger Bow",
+  "ap": 200,
+  "type": "A",
+  "desc": "Capture weakened monster"
+ },
+ {
+  "cls": "Hunter",
+  "name": "Auto-Regen",
+  "item": "Gaia Gear",
+  "ap": 300,
+  "type": "R",
+  "desc": "Regen status effect when attacked"
+ },
+ {
+  "cls": "Hunter",
+  "name": "Weapon Atk+",
+  "item": "Nike Bow",
+  "ap": 300,
+  "type": "S",
+  "desc": "Raises weapon attack"
+ },
+ {
+  "cls": "Hunter",
+  "name": "Hunt Combo",
+  "item": "Mythril Shot",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Warrior",
+  "name": "First Aid",
+  "item": "Shortsword",
+  "ap": 100,
+  "type": "A",
+  "desc": "Cure HP and status"
+ },
+ {
+  "cls": "Warrior",
+  "name": "Powerbreak",
+  "item": "Samson Sword",
+  "ap": 200,
+  "type": "A",
+  "desc": "Lower target's weapon attack"
+ },
+ {
+  "cls": "Warrior",
+  "name": "Mindbreak",
+  "item": "Buster Sword",
+  "ap": 200,
+  "type": "A",
+  "desc": "Lower target's magic"
+ },
+ {
+  "cls": "Warrior",
+  "name": "Magicbreak",
+  "item": "Falchion",
+  "ap": 200,
+  "type": "A",
+  "desc": "MP damage"
+ },
+ {
+  "cls": "Warrior",
+  "name": "Speedbreak",
+  "item": "Silver Sword",
+  "ap": 200,
+  "type": "A",
+  "desc": "Lower target's speed"
+ },
+ {
+  "cls": "Warrior",
+  "name": "Body Slam",
+  "item": "Striborg",
+  "ap": 300,
+  "type": "A",
+  "desc": "Heavy damage,but recoils"
+ },
+ {
+  "cls": "Warrior",
+  "name": "Greased Bolt",
+  "item": "Gale Sword",
+  "ap": 300,
+  "type": "A",
+  "desc": "Attack and nullify R-abilities"
+ },
+ {
+  "cls": "Warrior",
+  "name": "Downsize",
+  "item": "Restorer",
+  "ap": 300,
+  "type": "A",
+  "desc": "Halve target's HP"
+ },
+ {
+  "cls": "Warrior",
+  "name": "Monkey Grip",
+  "item": "Claymore",
+  "ap": 300,
+  "type": "S",
+  "desc": "Hold two-handed weapon with one hand"
+ },
+ {
+  "cls": "Warrior",
+  "name": "Shieldbearer",
+  "item": "Bronze Shield",
+  "ap": 300,
+  "type": "S",
+  "desc": "Equip a shield no matter what job"
+ },
+ {
+  "cls": "Warrior",
+  "name": "Combat Combo",
+  "item": "Mythril Sword",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Dragoon",
+  "name": "Jump",
+  "item": "Javelin",
+  "ap": 100,
+  "type": "A",
+  "desc": ""
+ },
+ {
+  "cls": "Dragoon",
+  "name": "Lancet",
+  "item": "Restorer",
+  "ap": 300,
+  "type": "A",
+  "desc": "Attack and drain HP"
+ },
+ {
+  "cls": "Dragoon",
+  "name": "Wyrmtamer",
+  "item": "Buster Sword",
+  "ap": 200,
+  "type": "A",
+  "desc": "Remove weakened Dragon from battle"
+ },
+ {
+  "cls": "Dragoon",
+  "name": "Fire Breath",
+  "item": "Lava Spear",
+  "ap": 300,
+  "type": "A",
+  "desc": "Fire damage in a T-area"
+ },
+ {
+  "cls": "Dragoon",
+  "name": "Bolt Breath",
+  "item": "Gae Bolg",
+  "ap": 300,
+  "type": "A",
+  "desc": "Lightning damage in a T-area"
+ },
+ {
+  "cls": "Dragoon",
+  "name": "Ice Breath",
+  "item": "Ice Lance",
+  "ap": 300,
+  "type": "A",
+  "desc": "Ice damage in a T-area"
+ },
+ {
+  "cls": "Dragoon",
+  "name": "Wyrmkiller",
+  "item": "Blood Sword",
+  "ap": 300,
+  "type": "A",
+  "desc": "Heavy damage to Dragons"
+ },
+ {
+  "cls": "Dragoon",
+  "name": "Bangaa Cry",
+  "item": "Dragon Whisker",
+  "ap": 200,
+  "type": "A",
+  "desc": "Damage in a T-area"
+ },
+ {
+  "cls": "Dragoon",
+  "name": "Dragonheart",
+  "item": "Vitanova",
+  "ap": 300,
+  "type": "R",
+  "desc": "Reraise status effect when damaged"
+ },
+ {
+  "cls": "Dragoon",
+  "name": "Dragon Combo",
+  "item": "Mythril Spear",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Defender",
+  "name": "Tremor",
+  "item": "El Cid Sword",
+  "ap": 100,
+  "type": "A",
+  "desc": "Damage and knock back surrounding units"
+ },
+ {
+  "cls": "Defender",
+  "name": "Meltdown",
+  "item": "Vajra",
+  "ap": 200,
+  "type": "A",
+  "desc": "Use HP to do damage to surrounding units"
+ },
+ {
+  "cls": "Defender",
+  "name": "Defense",
+  "item": "Lionheart",
+  "ap": 200,
+  "type": "A",
+  "desc": "Raise Defense and Resistance"
+ },
+ {
+  "cls": "Defender",
+  "name": "Drop Weapon",
+  "item": "Ragnarok",
+  "ap": 200,
+  "type": "A",
+  "desc": "Make target drop weapon"
+ },
+ {
+  "cls": "Defender",
+  "name": "Hibernate",
+  "item": "Defender",
+  "ap": 100,
+  "type": "A",
+  "desc": "Hibernate and remove all status ailments"
+ },
+ {
+  "cls": "Defender",
+  "name": "Mow Down",
+  "item": "Striborg",
+  "ap": 200,
+  "type": "A",
+  "desc": "Area damage but lowers speed"
+ },
+ {
+  "cls": "Defender",
+  "name": "Aura",
+  "item": "Lohengrin",
+  "ap": 300,
+  "type": "A",
+  "desc": "Casts Reraise and Regen"
+ },
+ {
+  "cls": "Defender",
+  "name": "Expert Guard",
+  "item": "SaveTheQueen",
+  "ap": 300,
+  "type": "A",
+  "desc": "Prevent all damage"
+ },
+ {
+  "cls": "Defender",
+  "name": "Last Berserk",
+  "item": "Predator",
+  "ap": 300,
+  "type": "R",
+  "desc": "Berserk status when critical"
+ },
+ {
+  "cls": "Defender",
+  "name": "Weapon Def+",
+  "item": "Diamond Armor",
+  "ap": 300,
+  "type": "S",
+  "desc": "Raises weapon defence"
+ },
+ {
+  "cls": "Defender",
+  "name": "Defend Combo",
+  "item": "Mythril Brand",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Gladiator",
+  "name": "Rush",
+  "item": "Sweep Blade",
+  "ap": 100,
+  "type": "A",
+  "desc": "Damage and push back target"
+ },
+ {
+  "cls": "Gladiator",
+  "name": "Wild Swing",
+  "item": "Ogun Blade",
+  "ap": 200,
+  "type": "A",
+  "desc": "Attack all surrounding targets"
+ },
+ {
+  "cls": "Gladiator",
+  "name": "Beatdown",
+  "item": "Shadow Blade",
+  "ap": 200,
+  "type": "A",
+  "desc": "Double damage,halved accuracy"
+ },
+ {
+  "cls": "Gladiator",
+  "name": "Blitz",
+  "item": "Sun Blade",
+  "ap": 200,
+  "type": "A",
+  "desc": "Double accuracy,halved damage"
+ },
+ {
+  "cls": "Gladiator",
+  "name": "Fire Sword",
+  "item": "Flametongue",
+  "ap": 200,
+  "type": "A",
+  "desc": "Fire damage"
+ },
+ {
+  "cls": "Gladiator",
+  "name": "Bolt Sword",
+  "item": "Air Blade",
+  "ap": 200,
+  "type": "A",
+  "desc": "Lightning damage"
+ },
+ {
+  "cls": "Gladiator",
+  "name": "Ice Sword",
+  "item": "Ice Brand",
+  "ap": 200,
+  "type": "A",
+  "desc": "Ice damage"
+ },
+ {
+  "cls": "Gladiator",
+  "name": "Ultima Sword",
+  "item": "Materia Blade",
+  "ap": 999,
+  "type": "A",
+  "desc": "Heavy damage"
+ },
+ {
+  "cls": "Gladiator",
+  "name": "Strikeback",
+  "item": "Wygar",
+  "ap": 300,
+  "type": "R",
+  "desc": "Block attack and counter"
+ },
+ {
+  "cls": "Gladiator",
+  "name": "Doublehand",
+  "item": "Venus Blade",
+  "ap": 300,
+  "type": "S",
+  "desc": "Hold sword with two hands"
+ },
+ {
+  "cls": "Gladiator",
+  "name": "Sword Combo",
+  "item": "Mythril Blade",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "White Monk",
+  "name": "Whirlwind",
+  "item": "Hard Knuckles",
+  "ap": 100,
+  "type": "A",
+  "desc": "Attack all surrounding units"
+ },
+ {
+  "cls": "White Monk",
+  "name": "Air Render",
+  "item": "Kaiser Knuckles",
+  "ap": 200,
+  "type": "A",
+  "desc": "Wide ranged attack"
+ },
+ {
+  "cls": "White Monk",
+  "name": "Earth Render",
+  "item": "Tiger Fangs",
+  "ap": 200,
+  "type": "A",
+  "desc": "Attack all units in a straight line"
+ },
+ {
+  "cls": "White Monk",
+  "name": "Far Fist",
+  "item": "Godhand",
+  "ap": 200,
+  "type": "A",
+  "desc": "Wide ranged area damage"
+ },
+ {
+  "cls": "White Monk",
+  "name": "Chakra",
+  "item": "Cat Claws",
+  "ap": 200,
+  "type": "A",
+  "desc": "Restore HP and remove status ailments"
+ },
+ {
+  "cls": "White Monk",
+  "name": "Revive",
+  "item": "Survivor",
+  "ap": 300,
+  "type": "A",
+  "desc": "Revive KO'd unit"
+ },
+ {
+  "cls": "White Monk",
+  "name": "Exorcise",
+  "item": "Rising Sun",
+  "ap": 300,
+  "type": "A",
+  "desc": "Remove Undead from battle"
+ },
+ {
+  "cls": "White Monk",
+  "name": "Holy Sign",
+  "item": "White Fangs",
+  "ap": 200,
+  "type": "A",
+  "desc": "Dispel magic effects"
+ },
+ {
+  "cls": "White Monk",
+  "name": "Reflex",
+  "item": "Mirage Vest",
+  "ap": 300,
+  "type": "R",
+  "desc": "Avoid damage from attack"
+ },
+ {
+  "cls": "White Monk",
+  "name": "Counter",
+  "item": "Brigandine",
+  "ap": 300,
+  "type": "R",
+  "desc": "Counter an enemy's attack"
+ },
+ {
+  "cls": "White Monk",
+  "name": "Monk Combo",
+  "item": "Mythril Claws",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Bishop",
+  "name": "Cura",
+  "item": "Cure Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Recover some HP"
+ },
+ {
+  "cls": "Bishop",
+  "name": "Dispel",
+  "item": "Bless Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Dispel magic effects"
+ },
+ {
+  "cls": "Bishop",
+  "name": "Holy",
+  "item": "Nirvana Staff",
+  "ap": 300,
+  "type": "A",
+  "desc": "Holy damage"
+ },
+ {
+  "cls": "Bishop",
+  "name": "Barrier",
+  "item": "Garnet Staff",
+  "ap": 300,
+  "type": "A",
+  "desc": "Raise Defense and Resistance"
+ },
+ {
+  "cls": "Bishop",
+  "name": "Judge",
+  "item": "Cheer Staff",
+  "ap": 300,
+  "type": "A",
+  "desc": "Steal JP"
+ },
+ {
+  "cls": "Bishop",
+  "name": "Water",
+  "item": "Spring Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Water element damage"
+ },
+ {
+  "cls": "Bishop",
+  "name": "Aero",
+  "item": "Judge Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Air element damage"
+ },
+ {
+  "cls": "Bishop",
+  "name": "Break",
+  "item": "Snake Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Petrifies enemy"
+ },
+ {
+  "cls": "Bishop",
+  "name": "Return Magic",
+  "item": "Black Robe",
+  "ap": 300,
+  "type": "R",
+  "desc": "Counter Magic with Magic"
+ },
+ {
+  "cls": "Bishop",
+  "name": "Half MP",
+  "item": "Light Robe",
+  "ap": 300,
+  "type": "S",
+  "desc": "Half MP usage when casting Magic"
+ },
+ {
+  "cls": "Bishop",
+  "name": "Pray Combo",
+  "item": "Mythril Staff",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Templar",
+  "name": "Astra",
+  "item": "SaveTheQueen",
+  "ap": 200,
+  "type": "A",
+  "desc": "Prevent next status ailment"
+ },
+ {
+  "cls": "Templar",
+  "name": "Warcry",
+  "item": "Javelin",
+  "ap": 300,
+  "type": "A",
+  "desc": "Reduce surrounding units' speed"
+ },
+ {
+  "cls": "Templar",
+  "name": "Rasp",
+  "item": "Apocalypse",
+  "ap": 100,
+  "type": "A",
+  "desc": "MP damage"
+ },
+ {
+  "cls": "Templar",
+  "name": "Cheer",
+  "item": "Partisan",
+  "ap": 100,
+  "type": "A",
+  "desc": "Raise weapon attack"
+ },
+ {
+  "cls": "Templar",
+  "name": "Silence",
+  "item": "Ragnarok",
+  "ap": 200,
+  "type": "A",
+  "desc": "Inflict Silence status ailment"
+ },
+ {
+  "cls": "Templar",
+  "name": "Soul Sphere",
+  "item": "Arch Sword",
+  "ap": 300,
+  "type": "A",
+  "desc": "MP damage"
+ },
+ {
+  "cls": "Templar",
+  "name": "Haste",
+  "item": "Lohengrin",
+  "ap": 200,
+  "type": "A",
+  "desc": "Causes Haste status"
+ },
+ {
+  "cls": "Templar",
+  "name": "Lifebreak",
+  "item": "Kain's Lance",
+  "ap": 300,
+  "type": "A",
+  "desc": "Damage equal to lost HP"
+ },
+ {
+  "cls": "Templar",
+  "name": "Bonecrusher",
+  "item": "Carabini Mail",
+  "ap": 300,
+  "type": "R",
+  "desc": "Counter with 1.5 times damage"
+ },
+ {
+  "cls": "Templar",
+  "name": "Weapon Atk+",
+  "item": "Trident",
+  "ap": 300,
+  "type": "S",
+  "desc": "Raises weapon attack"
+ },
+ {
+  "cls": "Templar",
+  "name": "Sacred Combo",
+  "item": "Mythril Brand",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Time Mage",
+  "name": "Haste",
+  "item": "Firewheel Rod",
+  "ap": 200,
+  "type": "A",
+  "desc": "Causes Haste status"
+ },
+ {
+  "cls": "Time Mage",
+  "name": "Quicken",
+  "item": "Thor Rod",
+  "ap": 300,
+  "type": "A",
+  "desc": "Makes unit take turn immediately"
+ },
+ {
+  "cls": "Time Mage",
+  "name": "Slow",
+  "item": "Terre Rod",
+  "ap": 200,
+  "type": "A",
+  "desc": "Causes Slow status"
+ },
+ {
+  "cls": "Time Mage",
+  "name": "Reflect",
+  "item": "Thunder Rod",
+  "ap": 300,
+  "type": "A",
+  "desc": "Reflect Magic back at unit"
+ },
+ {
+  "cls": "Time Mage",
+  "name": "Stop",
+  "item": "Chill Rod",
+  "ap": 300,
+  "type": "A",
+  "desc": "Stops enemy in time"
+ },
+ {
+  "cls": "Time Mage",
+  "name": "Silence",
+  "item": "Sleet Rod",
+  "ap": 200,
+  "type": "A",
+  "desc": "Inflict Silence status ailment"
+ },
+ {
+  "cls": "Time Mage",
+  "name": "Quarter",
+  "item": "Force Rod",
+  "ap": 200,
+  "type": "A",
+  "desc": "Reduce target's HP by 1/4"
+ },
+ {
+  "cls": "Time Mage",
+  "name": "Demi",
+  "item": "Stardust Rod",
+  "ap": 300,
+  "type": "A",
+  "desc": "Reduce target's HP by 1/2"
+ },
+ {
+  "cls": "Time Mage",
+  "name": "Last Quicken",
+  "item": "Lordly Robe",
+  "ap": 300,
+  "type": "R",
+  "desc": "Casts Quicken when critical"
+ },
+ {
+  "cls": "Time Mage",
+  "name": "Time Combo",
+  "item": "Mythril Rod",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Alchemist",
+  "name": "Astra",
+  "item": "Sage Crosier",
+  "ap": 200,
+  "type": "A",
+  "desc": "Prevent next status ailment"
+ },
+ {
+  "cls": "Alchemist",
+  "name": "Death",
+  "item": "Life Crosier",
+  "ap": 300,
+  "type": "A",
+  "desc": "KO target"
+ },
+ {
+  "cls": "Alchemist",
+  "name": "Meteor",
+  "item": "Scorpion Tail",
+  "ap": 300,
+  "type": "A",
+  "desc": "Powerful area damage"
+ },
+ {
+  "cls": "Alchemist",
+  "name": "Rasp",
+  "item": "Energy Mace",
+  "ap": 100,
+  "type": "A",
+  "desc": "MP damage"
+ },
+ {
+  "cls": "Alchemist",
+  "name": "Flare",
+  "item": "Lotus Mace",
+  "ap": 300,
+  "type": "A",
+  "desc": "Powerful damage"
+ },
+ {
+  "cls": "Alchemist",
+  "name": "Poison",
+  "item": "Druid Mace",
+  "ap": 100,
+  "type": "A",
+  "desc": "Poison target"
+ },
+ {
+  "cls": "Alchemist",
+  "name": "Toad",
+  "item": "Mandragora",
+  "ap": 200,
+  "type": "A",
+  "desc": "Turn target into a frog"
+ },
+ {
+  "cls": "Alchemist",
+  "name": "Magic Pow+",
+  "item": "Morning Star",
+  "ap": 300,
+  "type": "S",
+  "desc": "Raises Magic"
+ },
+ {
+  "cls": "Alchemist",
+  "name": "Maintenance",
+  "item": "Adaman Vest",
+  "ap": 300,
+  "type": "S",
+  "desc": "Prevent items from being stolen/broken"
+ },
+ {
+  "cls": "Alchemist",
+  "name": "Gold Combo",
+  "item": "Mythril Mace",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Goblin",
+  "item": "Demon Bell,War Trumpet",
+  "ap": 200,
+  "type": "A",
+  "desc": "Control Goblins"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Flan",
+  "item": "Demon Bell,Glass Bell",
+  "ap": 200,
+  "type": "A",
+  "desc": "Control Flan"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Bomb",
+  "item": "Demon Bell,Aona Flute",
+  "ap": 200,
+  "type": "A",
+  "desc": "Control Bombs"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Dragon",
+  "item": "Earth Bell",
+  "ap": 200,
+  "type": "A",
+  "desc": "Control Dragons"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Lamia",
+  "item": "Glass Bell",
+  "ap": 200,
+  "type": "A",
+  "desc": "Control Lamia"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Bug",
+  "item": "Fairy Harp",
+  "ap": 200,
+  "type": "A",
+  "desc": "Control Bugs"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Tonberry",
+  "item": "Blood Strings",
+  "ap": 200,
+  "type": "A",
+  "desc": "Control Tonberrys"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Panther",
+  "item": "War Trumpet",
+  "ap": 200,
+  "type": "A",
+  "desc": "Control Panthers"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Malboro",
+  "item": "Aona Flute",
+  "ap": 200,
+  "type": "A",
+  "desc": "Control Malboro"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Floateye",
+  "item": "Black Quena",
+  "ap": 200,
+  "type": "A",
+  "desc": "Control Floateyes"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Undead",
+  "item": "Black Quena",
+  "ap": 200,
+  "type": "A",
+  "desc": "Control the Undead"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Fairy",
+  "item": "Fairy Harp",
+  "ap": 200,
+  "type": "A",
+  "desc": "Control Fairys"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Rockbeast",
+  "item": "Conch Shell",
+  "ap": 200,
+  "type": "A",
+  "desc": "Control Rockbeasts"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Last Haste",
+  "item": "Ninja Gear",
+  "ap": 300,
+  "type": "R",
+  "desc": "Haste status when critical"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Immunity",
+  "item": "Survival Vest",
+  "ap": 300,
+  "type": "S",
+  "desc": "Immune to status ailments"
+ },
+ {
+  "cls": "Beastmaster",
+  "name": "Beast Combo",
+  "item": "Mythril Bell",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Morpher",
+  "name": "Goblin",
+  "item": "Goblin Soul",
+  "ap": 200,
+  "type": "A",
+  "desc": "Morph into Goblin"
+ },
+ {
+  "cls": "Morpher",
+  "name": "Flan",
+  "item": "Flan Soul",
+  "ap": 200,
+  "type": "A",
+  "desc": "Morph into Flan"
+ },
+ {
+  "cls": "Morpher",
+  "name": "Bomb",
+  "item": "Bomb Soul",
+  "ap": 200,
+  "type": "A",
+  "desc": "Morph into Bomb"
+ },
+ {
+  "cls": "Morpher",
+  "name": "Dragon",
+  "item": "Dragon Soul",
+  "ap": 200,
+  "type": "A",
+  "desc": "Morph into Dragon"
+ },
+ {
+  "cls": "Morpher",
+  "name": "Lamia",
+  "item": "Lamia Soul",
+  "ap": 200,
+  "type": "A",
+  "desc": "Morph into Lamia"
+ },
+ {
+  "cls": "Morpher",
+  "name": "Bug",
+  "item": "Bug Soul",
+  "ap": 200,
+  "type": "A",
+  "desc": "Morph into Bug"
+ },
+ {
+  "cls": "Morpher",
+  "name": "Panther",
+  "item": "Panther Soul",
+  "ap": 200,
+  "type": "A",
+  "desc": "Morph into Panther"
+ },
+ {
+  "cls": "Morpher",
+  "name": "Malboro",
+  "item": "Malboro Soul",
+  "ap": 200,
+  "type": "A",
+  "desc": "Morph into Malboro"
+ },
+ {
+  "cls": "Morpher",
+  "name": "Floateye",
+  "item": "Eye Soul",
+  "ap": 200,
+  "type": "A",
+  "desc": "Morph into Floateye"
+ },
+ {
+  "cls": "Morpher",
+  "name": "Damage > MP",
+  "item": "Judo Uniform",
+  "ap": 300,
+  "type": "R",
+  "desc": "MP damage instead of HP damage"
+ },
+ {
+  "cls": "Morpher",
+  "name": "Morph Combo",
+  "item": "Mythril Soul",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Sage",
+  "name": "Drain",
+  "item": "Energy Mace",
+  "ap": 100,
+  "type": "A",
+  "desc": "Attack and drain HP from target"
+ },
+ {
+  "cls": "Sage",
+  "name": "Blind",
+  "item": "Druid Mace",
+  "ap": 100,
+  "type": "A",
+  "desc": "Cause Darkness status ailment"
+ },
+ {
+  "cls": "Sage",
+  "name": "Water",
+  "item": "Battle Mace",
+  "ap": 200,
+  "type": "A",
+  "desc": "Water elemental damage"
+ },
+ {
+  "cls": "Sage",
+  "name": "Aero",
+  "item": "Battle Mace",
+  "ap": 200,
+  "type": "A",
+  "desc": "Wind elemental damage"
+ },
+ {
+  "cls": "Sage",
+  "name": "Raise",
+  "item": "Life Crosier",
+  "ap": 300,
+  "type": "A",
+  "desc": "Heal HP and revive KO'd unit"
+ },
+ {
+  "cls": "Sage",
+  "name": "Giga Flare",
+  "item": "Lotus Mace",
+  "ap": 300,
+  "type": "A",
+  "desc": "Powerful area damage"
+ },
+ {
+  "cls": "Sage",
+  "name": "Bio",
+  "item": "Madragora",
+  "ap": 300,
+  "type": "A",
+  "desc": "Inflicts Poison"
+ },
+ {
+  "cls": "Sage",
+  "name": "Ultima Blow",
+  "item": "Zeus Mace",
+  "ap": 999,
+  "type": "A",
+  "desc": "Heavy damage"
+ },
+ {
+  "cls": "Sage",
+  "name": "Reflex",
+  "item": "Mirage Vest",
+  "ap": 300,
+  "type": "R",
+  "desc": "Avoid damage from attack"
+ },
+ {
+  "cls": "Sage",
+  "name": "Weapon Def+",
+  "item": "Dark Gear",
+  "ap": 300,
+  "type": "S",
+  "desc": "Raises Weapon Defence"
+ },
+ {
+  "cls": "Sage",
+  "name": "Shieldbearer",
+  "item": "Round Shield",
+  "ap": 300,
+  "type": "S",
+  "desc": "Equip shield no matter what job"
+ },
+ {
+  "cls": "Sage",
+  "name": "Wise Combo",
+  "item": "Mythril Mace",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Fencer",
+  "name": "Swarmstrike",
+  "item": "Stinger",
+  "ap": 100,
+  "type": "A",
+  "desc": "Half damage and Poison"
+ },
+ {
+  "cls": "Fencer",
+  "name": "Shadowstick",
+  "item": "Silver Rapier",
+  "ap": 200,
+  "type": "A",
+  "desc": "Reduce target's speed"
+ },
+ {
+  "cls": "Fencer",
+  "name": "Checkmate",
+  "item": "Gupti Aga",
+  "ap": 300,
+  "type": "A",
+  "desc": "Cast Doom on enemy"
+ },
+ {
+  "cls": "Fencer",
+  "name": "Featherblow",
+  "item": "Estoc",
+  "ap": 200,
+  "type": "A",
+  "desc": "Double accuracy,half damage"
+ },
+ {
+  "cls": "Fencer",
+  "name": "Swallowtail",
+  "item": "Djinn Flyssa",
+  "ap": 300,
+  "type": "A",
+  "desc": "Attack surrounding units"
+ },
+ {
+  "cls": "Fencer",
+  "name": "Manastrike",
+  "item": "Mage Masher",
+  "ap": 300,
+  "type": "A",
+  "desc": "MP damage"
+ },
+ {
+  "cls": "Fencer",
+  "name": "Piercethrough",
+  "item": "Flamberge",
+  "ap": 200,
+  "type": "A",
+  "desc": "Attack two adjacent units"
+ },
+ {
+  "cls": "Fencer",
+  "name": "Nighthawk",
+  "item": "Joyeuse",
+  "ap": 200,
+  "type": "A",
+  "desc": "Wide ranged attack"
+ },
+ {
+  "cls": "Fencer",
+  "name": "Reflex",
+  "item": "Mirage Vest",
+  "ap": 300,
+  "type": "R",
+  "desc": "Avoid damage from attack"
+ },
+ {
+  "cls": "Fencer",
+  "name": "Shieldbearer",
+  "item": "Bronze Shield",
+  "ap": 300,
+  "type": "S",
+  "desc": "Equip shield no matter what job"
+ },
+ {
+  "cls": "Fencer",
+  "name": "Lunge Combo",
+  "item": "Mythril Rapier",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Elementalist",
+  "name": "Fire Whip",
+  "item": "Scarlette",
+  "ap": 100,
+  "type": "A",
+  "desc": "Fire damage and Disable"
+ },
+ {
+  "cls": "Elementalist",
+  "name": "Earth Heal",
+  "item": "Fleuret",
+  "ap": 200,
+  "type": "A",
+  "desc": "Heals HP"
+ },
+ {
+  "cls": "Elementalist",
+  "name": "White Flame",
+  "item": "Flamberge",
+  "ap": 100,
+  "type": "A",
+  "desc": "Heals HP"
+ },
+ {
+  "cls": "Elementalist",
+  "name": "Shining Air",
+  "item": "Djinn Flyssa",
+  "ap": 200,
+  "type": "A",
+  "desc": "Wind damage and Blind"
+ },
+ {
+  "cls": "Elementalist",
+  "name": "Evil Gaze",
+  "item": "Joyeuse",
+  "ap": 300,
+  "type": "A",
+  "desc": "Dark damage and Confusion"
+ },
+ {
+  "cls": "Elementalist",
+  "name": "Heavy Dust",
+  "item": "Estoc",
+  "ap": 200,
+  "type": "A",
+  "desc": "Earth damage and Immobilize"
+ },
+ {
+  "cls": "Elementalist",
+  "name": "Sliprain",
+  "item": "Silver Rapier",
+  "ap": 200,
+  "type": "A",
+  "desc": "Water damage and Slow"
+ },
+ {
+  "cls": "Elementalist",
+  "name": "Elementalshift",
+  "item": "Epeprism",
+  "ap": 300,
+  "type": "A",
+  "desc": "Shift target's elemental resistance"
+ },
+ {
+  "cls": "Elementalist",
+  "name": "Absorb MP",
+  "item": "Lordly Robe",
+  "ap": 300,
+  "type": "R",
+  "desc": "Absorb MP used by enemy's attack"
+ },
+ {
+  "cls": "Elementalist",
+  "name": "Spirit Combo",
+  "item": "Mythril Rapier",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Red Mage",
+  "name": "Barrier",
+  "item": "Mage Masher",
+  "ap": 300,
+  "type": "A",
+  "desc": "Raise Defense and Resistance"
+ },
+ {
+  "cls": "Red Mage",
+  "name": "Fire",
+  "item": "Scarlette",
+  "ap": 100,
+  "type": "A",
+  "desc": "Weak fire damage"
+ },
+ {
+  "cls": "Red Mage",
+  "name": "Thunder",
+  "item": "Stinger",
+  "ap": 100,
+  "type": "A",
+  "desc": "Weak thunder damage"
+ },
+ {
+  "cls": "Red Mage",
+  "name": "Blizzard",
+  "item": "Flamberge",
+  "ap": 100,
+  "type": "A",
+  "desc": "Weak ice damage"
+ },
+ {
+  "cls": "Red Mage",
+  "name": "Cure",
+  "item": "Fleuret",
+  "ap": 100,
+  "type": "A",
+  "desc": "Recover a little HP"
+ },
+ {
+  "cls": "Red Mage",
+  "name": "Sleep",
+  "item": "Estoc",
+  "ap": 200,
+  "type": "A",
+  "desc": "Inflicts Sleep status ailment"
+ },
+ {
+  "cls": "Red Mage",
+  "name": "Poison",
+  "item": "Silver Rapier",
+  "ap": 100,
+  "type": "A",
+  "desc": "Inflicts Poison"
+ },
+ {
+  "cls": "Red Mage",
+  "name": "Doublecast",
+  "item": "Madu",
+  "ap": 999,
+  "type": "A",
+  "desc": "Cast two spells in one turn"
+ },
+ {
+  "cls": "Red Mage",
+  "name": "Catch",
+  "item": "Chain Plate",
+  "ap": 300,
+  "type": "R",
+  "desc": "Catch item thrown by enemy"
+ },
+ {
+  "cls": "Red Mage",
+  "name": "Magic Pow+",
+  "item": "Colichemarde",
+  "ap": 300,
+  "type": "S",
+  "desc": "Raise Magic"
+ },
+ {
+  "cls": "Red Mage",
+  "name": "Red Combo",
+  "item": "Mythril Rapier",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Summoner",
+  "name": "Unicorn",
+  "item": "Pure Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Heal HP and status"
+ },
+ {
+  "cls": "Summoner",
+  "name": "Ifrit",
+  "item": "Guard Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Fire damage"
+ },
+ {
+  "cls": "Summoner",
+  "name": "Ramuh",
+  "item": "Judge Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Thunder damage"
+ },
+ {
+  "cls": "Summoner",
+  "name": "Shiva",
+  "item": "Snake Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Ice damage"
+ },
+ {
+  "cls": "Summoner",
+  "name": "Kirin",
+  "item": "Cure Staff",
+  "ap": 200,
+  "type": "A",
+  "desc": "Casts Regen on units"
+ },
+ {
+  "cls": "Summoner",
+  "name": "Carbuncle",
+  "item": "Garnet Staff",
+  "ap": 300,
+  "type": "A",
+  "desc": "Casts Reflect on units"
+ },
+ {
+  "cls": "Summoner",
+  "name": "Phoenix",
+  "item": "Nirvana Staff",
+  "ap": 300,
+  "type": "A",
+  "desc": "Revive KO'd units"
+ },
+ {
+  "cls": "Summoner",
+  "name": "Madeen",
+  "item": "Cheer Staff",
+  "ap": 300,
+  "type": "A",
+  "desc": "Holy damage"
+ },
+ {
+  "cls": "Summoner",
+  "name": "Half MP",
+  "item": "Light Robe",
+  "ap": 300,
+  "type": "S",
+  "desc": "Half MP usage when casting magic"
+ },
+ {
+  "cls": "Summoner",
+  "name": "Summon Combo",
+  "item": "Mythrill Staff",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Assassin",
+  "name": "Shadowbind",
+  "item": "Fey Bow",
+  "ap": 200,
+  "type": "A",
+  "desc": "Cast stop on target"
+ },
+ {
+  "cls": "Assassin",
+  "name": "Last Breath",
+  "item": "Petalchaser",
+  "ap": 300,
+  "type": "A",
+  "desc": "Instantly KO target"
+ },
+ {
+  "cls": "Assassin",
+  "name": "Aphonia",
+  "item": "Murasame",
+  "ap": 200,
+  "type": "A",
+  "desc": "Inflict Silence status ailment"
+ },
+ {
+  "cls": "Assassin",
+  "name": "Nightmare",
+  "item": "Kikuichimonji",
+  "ap": 300,
+  "type": "A",
+  "desc": "Cast Sleep and Doom on target"
+ },
+ {
+  "cls": "Assassin",
+  "name": "Ague",
+  "item": "Ranger Bow",
+  "ap": 200,
+  "type": "A",
+  "desc": "Cast Slow on target"
+ },
+ {
+  "cls": "Assassin",
+  "name": "Rockseal",
+  "item": "Kotetsu",
+  "ap": 300,
+  "type": "A",
+  "desc": "Cast Petrify on target"
+ },
+ {
+  "cls": "Assassin",
+  "name": "Oblivion",
+  "item": "Masamune",
+  "ap": 300,
+  "type": "A",
+  "desc": "Inflict Addle status ailment"
+ },
+ {
+  "cls": "Assassin",
+  "name": "Ultima Masher",
+  "item": "Zanmato",
+  "ap": 999,
+  "type": "A",
+  "desc": "Heavy damage"
+ },
+ {
+  "cls": "Assassin",
+  "name": "Return Fire",
+  "item": "Power Sash",
+  "ap": 300,
+  "type": "R",
+  "desc": "Return arrow attacks"
+ },
+ {
+  "cls": "Assassin",
+  "name": "Killer Combo",
+  "item": "Mythril Epee",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Sniper",
+  "name": "Doubleshot",
+  "item": "Twin Bow",
+  "ap": 300,
+  "type": "A",
+  "desc": "Attack twice consecutively"
+ },
+ {
+  "cls": "Sniper",
+  "name": "Beso Toxico",
+  "item": "Cranequin",
+  "ap": 200,
+  "type": "A",
+  "desc": "Attack and Poison"
+ },
+ {
+  "cls": "Sniper",
+  "name": "Death Sickle",
+  "item": "Hades Bow",
+  "ap": 300,
+  "type": "A",
+  "desc": "Cast doom on enemy"
+ },
+ {
+  "cls": "Sniper",
+  "name": "Conceal",
+  "item": "Windslash Bow",
+  "ap": 100,
+  "type": "A",
+  "desc": "Become invisible to enemys,except Panthers"
+ },
+ {
+  "cls": "Sniper",
+  "name": "Doom Archer",
+  "item": "Max's Oathbow",
+  "ap": 300,
+  "type": "A",
+  "desc": "HP and MP damage equal to damage taken"
+ },
+ {
+  "cls": "Sniper",
+  "name": "Aim: Armor",
+  "item": "Fey Bow",
+  "ap": 300,
+  "type": "A",
+  "desc": "Destroy target's armour"
+ },
+ {
+  "cls": "Sniper",
+  "name": "Aim: Weapon",
+  "item": "Master Bow",
+  "ap": 300,
+  "type": "A",
+  "desc": "Destory target's weapon"
+ },
+ {
+  "cls": "Sniper",
+  "name": "Aim: Wallet",
+  "item": "Hunt Bow",
+  "ap": 200,
+  "type": "A",
+  "desc": "Steal gil from enemy"
+ },
+ {
+  "cls": "Sniper",
+  "name": "Auto-Regen",
+  "item": "Gaia Gear",
+  "ap": 300,
+  "type": "R",
+  "desc": "Regen status effect when attacked"
+ },
+ {
+  "cls": "Sniper",
+  "name": "Sniper Combo",
+  "item": "Mythril Shot",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Animist",
+  "name": "Sheep Count",
+  "item": "Glass Bell",
+  "ap": 100,
+  "type": "A",
+  "desc": "Put enemies to sleep"
+ },
+ {
+  "cls": "Animist",
+  "name": "100% Wool",
+  "item": "Earth Bell",
+  "ap": 200,
+  "type": "A",
+  "desc": "Raises Defence and Resistance"
+ },
+ {
+  "cls": "Animist",
+  "name": "Cuisine",
+  "item": "Heal Chime",
+  "ap": 300,
+  "type": "A",
+  "desc": "Fully restores HP"
+ },
+ {
+  "cls": "Animist",
+  "name": "Tail Wag",
+  "item": "Fairy Harp",
+  "ap": 200,
+  "type": "A",
+  "desc": "Inflict Charm status on enemy"
+ },
+ {
+  "cls": "Animist",
+  "name": "Chocobo Rush",
+  "item": "Satyr Flute",
+  "ap": 300,
+  "type": "A",
+  "desc": "Straight line damage"
+ },
+ {
+  "cls": "Animist",
+  "name": "Frogsong",
+  "item": "Aona Flute",
+  "ap": 200,
+  "type": "A",
+  "desc": "Turn enemy into a frog"
+ },
+ {
+  "cls": "Animist",
+  "name": "Friend",
+  "item": "Blood Strings",
+  "ap": 300,
+  "type": "A",
+  "desc": "Summon random spirit"
+ },
+ {
+  "cls": "Animist",
+  "name": "Catnip",
+  "item": "War Trumpet",
+  "ap": 100,
+  "type": "A",
+  "desc": "Inflict Berserk status"
+ },
+ {
+  "cls": "Animist",
+  "name": "Block Arrows",
+  "item": "Green Beret",
+  "ap": 300,
+  "type": "R",
+  "desc": "Block all arrow attack"
+ },
+ {
+  "cls": "Animist",
+  "name": "Animal Combo",
+  "item": "Mythril Bell",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Mog Knight",
+  "name": "Mog Attack",
+  "item": "Flametongue",
+  "ap": 100,
+  "type": "A",
+  "desc": "Damage and push back target"
+ },
+ {
+  "cls": "Mog Knight",
+  "name": "Mog Guard",
+  "item": "Kwigon Blade",
+  "ap": 200,
+  "type": "A",
+  "desc": "Raise Defence and Resistance"
+ },
+ {
+  "cls": "Mog Knight",
+  "name": "Mog Lance",
+  "item": "Atmos Blade",
+  "ap": 200,
+  "type": "A",
+  "desc": "Wide ranged attack"
+ },
+ {
+  "cls": "Mog Knight",
+  "name": "Mog Rush",
+  "item": "Shadow Blade",
+  "ap": 200,
+  "type": "A",
+  "desc": "Double damage,halved accuracy"
+ },
+ {
+  "cls": "Mog Knight",
+  "name": "Mog Shield",
+  "item": "Pearl Blade",
+  "ap": 300,
+  "type": "A",
+  "desc": "Prevent next status ailment"
+ },
+ {
+  "cls": "Mog Knight",
+  "name": "Mog Peek",
+  "item": "Paraiba Blade",
+  "ap": 300,
+  "type": "A",
+  "desc": "Find hidden equipment on enemy"
+ },
+ {
+  "cls": "Mog Knight",
+  "name": "Mog Aid",
+  "item": "Icebrand",
+  "ap": 300,
+  "type": "A",
+  "desc": "Cure HP and status"
+ },
+ {
+  "cls": "Mog Knight",
+  "name": "Ultima Charge",
+  "item": "Materia Blade",
+  "ap": 999,
+  "type": "A",
+  "desc": "Heavy damage"
+ },
+ {
+  "cls": "Mog Knight",
+  "name": "Last Haste",
+  "item": "Gold Armor",
+  "ap": 300,
+  "type": "R",
+  "desc": "Haste status when critical"
+ },
+ {
+  "cls": "Mog Knight",
+  "name": "Shieldbearer",
+  "item": "Round Shield",
+  "ap": 300,
+  "type": "S",
+  "desc": "Equip a shield no matter what job"
+ },
+ {
+  "cls": "Mog Knight",
+  "name": "Charge Combo",
+  "item": "Mythril Blade",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Gunner",
+  "name": "Fireshot",
+  "item": "Aiot Gun",
+  "ap": 100,
+  "type": "A",
+  "desc": "Fire damage"
+ },
+ {
+  "cls": "Gunner",
+  "name": "Boltshot",
+  "item": "Riot Gun",
+  "ap": 100,
+  "type": "A",
+  "desc": "Thunder damage"
+ },
+ {
+  "cls": "Gunner",
+  "name": "Iceshot",
+  "item": "Giot Gun",
+  "ap": 100,
+  "type": "A",
+  "desc": "Ice damage"
+ },
+ {
+  "cls": "Gunner",
+  "name": "Confushot",
+  "item": "Chaos Rifle",
+  "ap": 200,
+  "type": "A",
+  "desc": "Attack and Confuse"
+ },
+ {
+  "cls": "Gunner",
+  "name": "Charmshot",
+  "item": "Peacemaker",
+  "ap": 300,
+  "type": "A",
+  "desc": "Attack and Charm"
+ },
+ {
+  "cls": "Gunner",
+  "name": "Blindshot",
+  "item": "Silver Cannon",
+  "ap": 100,
+  "type": "A",
+  "desc": "Attack and Darkness"
+ },
+ {
+  "cls": "Gunner",
+  "name": "Silenshot",
+  "item": "Lost Gun",
+  "ap": 200,
+  "type": "A",
+  "desc": "Attack and Silence"
+ },
+ {
+  "cls": "Gunner",
+  "name": "Stopshot",
+  "item": "Outsider",
+  "ap": 300,
+  "type": "A",
+  "desc": "Attack and Stop"
+ },
+ {
+  "cls": "Gunner",
+  "name": "Concentrate",
+  "item": "Longbarrel",
+  "ap": 300,
+  "type": "S",
+  "desc": "Raises accuracy of most actions"
+ },
+ {
+  "cls": "Gunner",
+  "name": "Gun Combo",
+  "item": "Mythril Gun",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Juggler",
+  "name": "Hurl",
+  "item": "Kris Knife",
+  "ap": 100,
+  "type": "A",
+  "desc": "Throw an unequipped weapon"
+ },
+ {
+  "cls": "Juggler",
+  "name": "Ring",
+  "item": "Rondell Dagger",
+  "ap": 200,
+  "type": "A",
+  "desc": "Cast Stop on target"
+ },
+ {
+  "cls": "Juggler",
+  "name": "Firebomb",
+  "item": "Khukuri",
+  "ap": 300,
+  "type": "A",
+  "desc": "Damage and Berserk"
+ },
+ {
+  "cls": "Juggler",
+  "name": "Ball",
+  "item": "Scramasax",
+  "ap": 200,
+  "type": "A",
+  "desc": "Inflict Confuse"
+ },
+ {
+  "cls": "Juggler",
+  "name": "Dagger",
+  "item": "Jambiya",
+  "ap": 300,
+  "type": "A",
+  "desc": "Damage and Disable"
+ },
+ {
+  "cls": "Juggler",
+  "name": "Smile",
+  "item": "Orichalcum",
+  "ap": 300,
+  "type": "A",
+  "desc": "Makes unit take turn immdeiately(Quicken)"
+ },
+ {
+  "cls": "Juggler",
+  "name": "Gil Toss",
+  "item": "Jack Knife",
+  "ap": 100,
+  "type": "A",
+  "desc": "Throw Gil at enemy"
+ },
+ {
+  "cls": "Juggler",
+  "name": "Catch",
+  "item": "Chain Plate",
+  "ap": 300,
+  "type": "R",
+  "desc": "Catch item thrown by enemy"
+ },
+ {
+  "cls": "Juggler",
+  "name": "Return Fire",
+  "item": "Power Sash",
+  "ap": 300,
+  "type": "R",
+  "desc": "Return arrow attacks"
+ },
+ {
+  "cls": "Juggler",
+  "name": "Juggle Combo",
+  "item": "Mythril Knife",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ },
+ {
+  "cls": "Gadgeteer",
+  "name": "Red Spring",
+  "item": "Rising Sun",
+  "ap": 200,
+  "type": "A",
+  "desc": "Haste status on all"
+ },
+ {
+  "cls": "Gadgeteer",
+  "name": "Blue Screw",
+  "item": "White Fangs",
+  "ap": 200,
+  "type": "A",
+  "desc": "Dispel on all"
+ },
+ {
+  "cls": "Gadgeteer",
+  "name": "Green Gear",
+  "item": "Sick Knuckles",
+  "ap": 200,
+  "type": "A",
+  "desc": "Poison all"
+ },
+ {
+  "cls": "Gadgeteer",
+  "name": "Silver Disc",
+  "item": "Hard Knuckles",
+  "ap": 200,
+  "type": "A",
+  "desc": "Darkness on all"
+ },
+ {
+  "cls": "Gadgeteer",
+  "name": "Gold Battery",
+  "item": "Cat Claws",
+  "ap": 200,
+  "type": "A",
+  "desc": "Recover HP for all"
+ },
+ {
+  "cls": "Gadgeteer",
+  "name": "Black Ingot",
+  "item": "Death Claws",
+  "ap": 200,
+  "type": "A",
+  "desc": "Doom on all"
+ },
+ {
+  "cls": "Gadgeteer",
+  "name": "Chroma Gem",
+  "item": "Dream Claws",
+  "ap": 200,
+  "type": "A",
+  "desc": "Sleep on all"
+ },
+ {
+  "cls": "Gadgeteer",
+  "name": "Yellow Spring",
+  "item": "Survivor",
+  "ap": 200,
+  "type": "A",
+  "desc": "Casts Protect and Shell on all"
+ },
+ {
+  "cls": "Gadgeteer",
+  "name": "Auto-Regen",
+  "item": "Gaia Gear",
+  "ap": 300,
+  "type": "R",
+  "desc": "Regen status effect when attacked"
+ },
+ {
+  "cls": "Gadgeteer",
+  "name": "Damage > MP",
+  "item": "Judo Uniform",
+  "ap": 300,
+  "type": "S",
+  "desc": "MP damage instead of HP damage"
+ },
+ {
+  "cls": "Gadgeteer",
+  "name": "Gadget Combo",
+  "item": "Mythril Claws",
+  "ap": 100,
+  "type": "C",
+  "desc": "Use JP to attack with clan members"
+ }
+]

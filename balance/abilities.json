@@ -1,0 +1,4202 @@
+[
+ {
+  "name": "Mug",
+  "sets": "BATTLE TECH (Human)",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,     Enemy, Mug Effect",
+   "100%H,     Enemy, Eff1Dep: 100% Damage"
+  ]
+ },
+ {
+  "name": "Cure",
+  "sets": "WHITE MAGIC, RED MAGIC",
+  "power": "40 (MPow)",
+  "mp": "6",
+  "range": "4",
+  "elem": "Holy",
+  "area": "r1/v1",
+  "effects": [
+   "100%H, NonUndead, 100% Heal",
+   "AType,    Undead, 100% Damage"
+  ]
+ },
+ {
+  "name": "Cura",
+  "sets": "WHITE MAGIC, PRAYER",
+  "power": "60 (MPow)",
+  "mp": "10",
+  "range": "4",
+  "elem": "Holy",
+  "area": "r1/v2",
+  "effects": [
+   "100%H, NonUndead, 100% Heal",
+   "AType,    Undead, 100% Damage"
+  ]
+ },
+ {
+  "name": "Curaga",
+  "sets": "WHITE MAGIC",
+  "power": "80 (MPow)",
+  "mp": "16",
+  "range": "4",
+  "elem": "Holy",
+  "area": "r1/v3",
+  "effects": [
+   "100%H, NonUndead, 100% Heal",
+   "AType,    Undead, 100% Damage"
+  ]
+ },
+ {
+  "name": "Esuna",
+  "sets": "WHITE MAGIC",
+  "power": "---",
+  "mp": "18",
+  "range": "4",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "100%H,   Default, Esuna"
+  ]
+ },
+ {
+  "name": "Life",
+  "sets": "WHITE MAGIC",
+  "power": "90 (MPow)",
+  "mp": "10",
+  "range": "4",
+  "elem": "Holy",
+  "area": "One Unit",
+  "effects": [
+   "100%H, KOed Unit, Revive to 25% HP",
+   "AType,    Undead, 100% Damage"
+  ]
+ },
+ {
+  "name": "Full-Life",
+  "sets": "WHITE MAGIC",
+  "power": "100 (MPow)",
+  "mp": "20",
+  "range": "4",
+  "elem": "Holy",
+  "area": "One Unit",
+  "effects": [
+   "100%H, KOed Unit, Revive to full HP",
+   "AType,    Undead, 100% Damage"
+  ]
+ },
+ {
+  "name": "Auto-Life",
+  "sets": "WHITE MAGIC",
+  "power": "---",
+  "mp": "16",
+  "range": "4",
+  "elem": "Holy",
+  "area": "One Unit",
+  "effects": [
+   "100%H, NonUndead, Inflict Auto-Life"
+  ]
+ },
+ {
+  "name": "Shell",
+  "sets": "WHITE MAGIC",
+  "power": "---",
+  "mp": "6",
+  "range": "4",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "100%H,   Default, Inflict Shell"
+  ]
+ },
+ {
+  "name": "Protect",
+  "sets": "WHITE MAGIC",
+  "power": "---",
+  "mp": "6",
+  "range": "4",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "100%H,   Default, Inflict Protect"
+  ]
+ },
+ {
+  "name": "Dispel",
+  "sets": "PRAYER",
+  "power": "---",
+  "mp": "12",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "100%H,   Default, Dispel"
+  ]
+ },
+ {
+  "name": "Holy",
+  "sets": "PRAYER",
+  "power": "50 (MPow)",
+  "mp": "32",
+  "range": "3",
+  "elem": "Holy",
+  "area": "r1/v1",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Barrier",
+  "sets": "PRAYER, RED MAGIC",
+  "power": "---",
+  "mp": "10",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Inflict Shell",
+   "100%H,   Default, Inflict Protect"
+  ]
+ },
+ {
+  "name": "Judge",
+  "sets": "PRAYER",
+  "power": "---",
+  "mp": "6",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, Steal 2 JP"
+  ]
+ },
+ {
+  "name": "Break",
+  "sets": "PRAYER",
+  "power": "---",
+  "mp": "20",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Petrify"
+  ]
+ },
+ {
+  "name": "Water",
+  "sets": "SAGACITY SKILL, PRAYER",
+  "power": "34 (MPow)",
+  "mp": "12",
+  "range": "3",
+  "elem": "Water",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Aero",
+  "sets": "SAGACITY SKILL, PRAYER",
+  "power": "34 (MPow)",
+  "mp": "12",
+  "range": "3",
+  "elem": "Wind",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Drain",
+  "sets": "SAGACITY SKILL",
+  "power": "30 (MPow)",
+  "mp": "12",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage, capped to Target's Max HP",
+   "100%H,      Self, Eff1Dep: Heal Eff1 Damage"
+  ]
+ },
+ {
+  "name": "Blind",
+  "sets": "SAGACITY SKILL",
+  "power": "---",
+  "mp": "12",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Blind"
+  ]
+ },
+ {
+  "name": "Raise",
+  "sets": "SAGACITY SKILL",
+  "power": "45 (MPow)",
+  "mp": "22",
+  "range": "4",
+  "elem": "Holy",
+  "area": "r1/v2",
+  "effects": [
+   "100%H, NonUndead, 100% Heal",
+   "AType,    Undead, 100% Damage",
+   "100%H, KOed Unit, Revive to 25% HP"
+  ]
+ },
+ {
+  "name": "Giga Flare",
+  "sets": "SAGACITY SKILL",
+  "power": "65 (MPow)",
+  "mp": "40",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v1",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Bio",
+  "sets": "SAGACITY SKILL",
+  "power": "45 (MPow)",
+  "mp": "12",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v1",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Poison"
+  ]
+ },
+ {
+  "name": "Ultima Blow",
+  "sets": "SAGACITY SKILL",
+  "power": "As Weapon",
+  "mp": "60",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 300% Damage"
+  ]
+ },
+ {
+  "name": "Fire",
+  "sets": "BLACK MAGIC, RED MAGIC, MELT",
+  "power": "30 (MPow)",
+  "mp": "6",
+  "range": "4",
+  "elem": "Fire",
+  "area": "r1/v1",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Fira",
+  "sets": "BLACK MAGIC, MELT",
+  "power": "40 (MPow)",
+  "mp": "12",
+  "range": "4",
+  "elem": "Fire",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Firaga",
+  "sets": "BLACK MAGIC, MELT",
+  "power": "50 (MPow)",
+  "mp": "24",
+  "range": "4",
+  "elem": "Fire",
+  "area": "r1/v3",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Thunder",
+  "sets": "BLACK MAGIC, RED MAGIC, SCORCH",
+  "power": "30 (MPow)",
+  "mp": "6",
+  "range": "4",
+  "elem": "Lightning",
+  "area": "r1/v1",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Thundara",
+  "sets": "BLACK MAGIC, SCORCH",
+  "power": "40 (MPow)",
+  "mp": "12",
+  "range": "4",
+  "elem": "Lightning",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Thundaga",
+  "sets": "BLACK MAGIC, MAGESTORM (Mateus), SCORCH",
+  "power": "50 (MPow)",
+  "mp": "24",
+  "range": "4",
+  "elem": "Lightning",
+  "area": "r1/v3",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Blizzard",
+  "sets": "BLACK MAGIC, RED MAGIC, CHILL",
+  "power": "30 (MPow)",
+  "mp": "6",
+  "range": "4",
+  "elem": "Ice",
+  "area": "r1/v1",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Blizzara",
+  "sets": "BLACK MAGIC, CHILL",
+  "power": "40 (MPow)",
+  "mp": "12",
+  "range": "4",
+  "elem": "Ice",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Blizzaga",
+  "sets": "BLACK MAGIC, CHILL",
+  "power": "50 (MPow)",
+  "mp": "24",
+  "range": "4",
+  "elem": "Ice",
+  "area": "r1/v3",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Sleep",
+  "sets": "RED MAGIC",
+  "power": "---",
+  "mp": "10",
+  "range": "4",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "SType,   Default, Inflict Sleep"
+  ]
+ },
+ {
+  "name": "Doublecast",
+  "sets": "RED MAGIC",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "r2/v0",
+  "effects": []
+ },
+ {
+  "name": "Quicken",
+  "sets": "TIME MAGIC",
+  "power": "---",
+  "mp": "24",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Inflict Quicken"
+  ]
+ },
+ {
+  "name": "Slow",
+  "sets": "TIME MAGIC, MAGESTORM (Famfrit)",
+  "power": "---",
+  "mp": "12",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "SType,   Default, Inflict Slow"
+  ]
+ },
+ {
+  "name": "Reflect",
+  "sets": "TIME MAGIC",
+  "power": "---",
+  "mp": "8",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Inflict Reflect"
+  ]
+ },
+ {
+  "name": "Stop",
+  "sets": "TIME MAGIC",
+  "power": "---",
+  "mp": "24",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "SType,   Default, Inflict Stop"
+  ]
+ },
+ {
+  "name": "Quarter",
+  "sets": "TIME MAGIC, RUNE",
+  "power": "---",
+  "mp": "10",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, [Target's HP / 4] Damage"
+  ]
+ },
+ {
+  "name": "Demi",
+  "sets": "TIME MAGIC, RUNE, MAGESTORM (Famfrit)",
+  "power": "---",
+  "mp": "24",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, [(Target's HP + 1) / 2] Damage"
+  ]
+ },
+ {
+  "name": "Silence",
+  "sets": "TIME MAGIC, SACRED TECH",
+  "power": "---",
+  "mp": "8",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "SType,   Default, Inflict Silence"
+  ]
+ },
+ {
+  "name": "Haste",
+  "sets": "TIME MAGIC, SACRED TECH",
+  "power": "---",
+  "mp": "24",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Inflict Haste"
+  ]
+ },
+ {
+  "name": "Prominence",
+  "sets": "PHANTASM SKILL",
+  "power": "20 (MPow)",
+  "mp": "32",
+  "range": "Infinite",
+  "elem": "Fire",
+  "area": "Infinite",
+  "effects": [
+   "AType,     Enemy, 100% Damage"
+  ]
+ },
+ {
+  "name": "Tempest",
+  "sets": "PHANTASM SKILL",
+  "power": "17 (MPow)",
+  "mp": "32",
+  "range": "Infinite",
+  "elem": "Lightning",
+  "area": "Infinite",
+  "effects": [
+   "AType,     Enemy, 100% Damage"
+  ]
+ },
+ {
+  "name": "Freezeblink",
+  "sets": "PHANTASM SKILL",
+  "power": "20 (MPow)",
+  "mp": "32",
+  "range": "Infinite",
+  "elem": "Ice",
+  "area": "Infinite",
+  "effects": [
+   "AType,     Enemy, 100% Damage"
+  ]
+ },
+ {
+  "name": "Star Cross",
+  "sets": "PHANTASM SKILL, MAGESTORM (Mateus)",
+  "power": "17 (MPow)",
+  "mp": "32",
+  "range": "Infinite",
+  "elem": "Holy",
+  "area": "Infinite",
+  "effects": [
+   "AType,     Enemy, 100% Damage"
+  ]
+ },
+ {
+  "name": "Stardust",
+  "sets": "PHANTASM SKILL",
+  "power": "20 (MPow)",
+  "mp": "32",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "AType,     Enemy, 100% Damage"
+  ]
+ },
+ {
+  "name": "Deluge",
+  "sets": "PHANTASM SKILL",
+  "power": "17 (MPow)",
+  "mp": "32",
+  "range": "Infinite",
+  "elem": "Water",
+  "area": "Infinite",
+  "effects": [
+   "AType,     Enemy, 100% Damage"
+  ]
+ },
+ {
+  "name": "Soil Evidence",
+  "sets": "PHANTASM SKILL",
+  "power": "17 (MPow)",
+  "mp": "32",
+  "range": "Infinite",
+  "elem": "Earth",
+  "area": "Infinite",
+  "effects": [
+   "AType,     Enemy, 100% Damage"
+  ]
+ },
+ {
+  "name": "Wild Tornado",
+  "sets": "PHANTASM SKILL",
+  "power": "17 (MPow)",
+  "mp": "32",
+  "range": "Infinite",
+  "elem": "Wind",
+  "area": "Infinite",
+  "effects": [
+   "AType,     Enemy, 100% Damage"
+  ]
+ },
+ {
+  "name": "Fire Whip",
+  "sets": "SPIRIT MAGIC",
+  "power": "30 (MPow)",
+  "mp": "12",
+  "range": "4",
+  "elem": "Fire",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Disable"
+  ]
+ },
+ {
+  "name": "Earth Heal",
+  "sets": "SPIRIT MAGIC",
+  "power": "40 (MPow)",
+  "mp": "12",
+  "range": "4",
+  "elem": "Earth",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, 100% Heal"
+  ]
+ },
+ {
+  "name": "White Flame",
+  "sets": "SPIRIT MAGIC",
+  "power": "40 (MPow)",
+  "mp": "24",
+  "range": "3",
+  "elem": "Fire",
+  "area": "r1/v2",
+  "effects": [
+   "100%H,   Default, 100% Heal"
+  ]
+ },
+ {
+  "name": "Shining Air",
+  "sets": "SPIRIT MAGIC",
+  "power": "30 (MPow)",
+  "mp": "12",
+  "range": "4",
+  "elem": "Wind",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Blind"
+  ]
+ },
+ {
+  "name": "Evil Gaze",
+  "sets": "SPIRIT MAGIC",
+  "power": "30 (MPow)",
+  "mp": "12",
+  "range": "4",
+  "elem": "Dark",
+  "area": "One Unit",
+  "effects": [
+   "100%H,    Undead, 100% Heal",
+   "AType, NonUndead, 100% Damage",
+   "SType, NonUndead, Eff2Dep: Inflict Confuse"
+  ]
+ },
+ {
+  "name": "Heavy Dust",
+  "sets": "SPIRIT MAGIC",
+  "power": "30 (MPow)",
+  "mp": "12",
+  "range": "4",
+  "elem": "Earth",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Immobilize"
+  ]
+ },
+ {
+  "name": "Sliprain",
+  "sets": "SPIRIT MAGIC",
+  "power": "30 (MPow)",
+  "mp": "12",
+  "range": "4",
+  "elem": "Water",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Slow"
+  ]
+ },
+ {
+  "name": "Elementalshift",
+  "sets": "SPIRIT MAGIC",
+  "power": "---",
+  "mp": "6",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Elementalshift Effect"
+  ]
+ },
+ {
+  "name": "Astra",
+  "sets": "ALCHEMY SKILL, SACRED TECH, HERMETICS",
+  "power": "---",
+  "mp": "8",
+  "range": "4",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "100%H,   Default, Inflict Astra"
+  ]
+ },
+ {
+  "name": "Rasp",
+  "sets": "ALCHEMY SKILL, SACRED TECH",
+  "power": "60 (MPow)",
+  "mp": "24",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v1",
+  "effects": [
+   "AType,   Default, 100% Damage to MP, capped to Target's MP"
+  ]
+ },
+ {
+  "name": "Death",
+  "sets": "ALCHEMY SKILL",
+  "power": "---",
+  "mp": "36",
+  "range": "3",
+  "elem": "Dark",
+  "area": "One Unit",
+  "effects": [
+   "100%H,    Undead, Heal to full HP",
+   "SType, NonUndead, Inflict KO"
+  ]
+ },
+ {
+  "name": "Meteor",
+  "sets": "ALCHEMY SKILL",
+  "power": "50 (MPow)",
+  "mp": "40",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Flare",
+  "sets": "ALCHEMY SKILL",
+  "power": "65 (MPow)",
+  "mp": "36",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Poison",
+  "sets": "ALCHEMY SKILL, RED MAGIC",
+  "power": "---",
+  "mp": "10",
+  "range": "4",
+  "elem": "Dark",
+  "area": "r1/v2",
+  "effects": [
+   "SType,   Default, Inflict Poison"
+  ]
+ },
+ {
+  "name": "Toad",
+  "sets": "ALCHEMY SKILL",
+  "power": "---",
+  "mp": "36",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Frog"
+  ]
+ },
+ {
+  "name": "Unicorn",
+  "sets": "SUMMON MAGIC",
+  "power": "40 (MPow)",
+  "mp": "12",
+  "range": "4",
+  "elem": "Holy",
+  "area": "r2/v2",
+  "effects": [
+   "100%H, NonUndead, 100% Heal",
+   "100%H, NonUndead, Esuna",
+   "AType,    Undead, 100% Damage"
+  ]
+ },
+ {
+  "name": "Ifrit",
+  "sets": "SUMMON MAGIC",
+  "power": "40 (MPow)",
+  "mp": "18",
+  "range": "4",
+  "elem": "Fire",
+  "area": "r2/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Ramuh",
+  "sets": "SUMMON MAGIC",
+  "power": "40 (MPow)",
+  "mp": "18",
+  "range": "4",
+  "elem": "Lightning",
+  "area": "r2/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Shiva",
+  "sets": "SUMMON MAGIC",
+  "power": "40 (MPow)",
+  "mp": "18",
+  "range": "4",
+  "elem": "Ice",
+  "area": "r2/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Kirin",
+  "sets": "SUMMON MAGIC",
+  "power": "---",
+  "mp": "24",
+  "range": "4",
+  "elem": "---",
+  "area": "r2/v2",
+  "effects": [
+   "100%H, NonUndead, Inflict Regen"
+  ]
+ },
+ {
+  "name": "Carbuncle",
+  "sets": "SUMMON MAGIC",
+  "power": "---",
+  "mp": "12",
+  "range": "4",
+  "elem": "---",
+  "area": "r2/v2",
+  "effects": [
+   "100%H,   Default, Inflict Reflect"
+  ]
+ },
+ {
+  "name": "Phoenix",
+  "sets": "SUMMON MAGIC",
+  "power": "---",
+  "mp": "24",
+  "range": "4",
+  "elem": "Holy",
+  "area": "r2/v2",
+  "effects": [
+   "100%H, KOed Unit, Revive to full HP",
+   "100%H,    Undead, (Target's Max HP) Damage"
+  ]
+ },
+ {
+  "name": "Madeen",
+  "sets": "SUMMON MAGIC",
+  "power": "52 (MPow)",
+  "mp": "36",
+  "range": "4",
+  "elem": "Holy",
+  "area": "r2/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "First Aid",
+  "sets": "BATTLE TECH",
+  "power": "25 (MPow)",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, 100% Heal",
+   "100%H,   Default, Esuna"
+  ]
+ },
+ {
+  "name": "Powerbreak",
+  "sets": "BATTLE TECH",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict WAtk DOWN"
+  ]
+ },
+ {
+  "name": "Mindbreak",
+  "sets": "BATTLE TECH",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict MPow DOWN"
+  ]
+ },
+ {
+  "name": "Magicbreak",
+  "sets": "BATTLE TECH",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage to MP, capped to Target's MP"
+  ]
+ },
+ {
+  "name": "Speedbreak",
+  "sets": "BATTLE TECH",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, Inflict Speed DOWN"
+  ]
+ },
+ {
+  "name": "Mug",
+  "sets": "BATTLE TECH (Human)",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,     Enemy, Mug Effect",
+   "100%H,     Enemy, Eff1Dep: 100% Damage"
+  ]
+ },
+ {
+  "name": "Provoke",
+  "sets": "BATTLE TECH (Human)",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,     Enemy, Inflict Berserk"
+  ]
+ },
+ {
+  "name": "Sensor",
+  "sets": "BATTLE TECH (Human)",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,     Enemy, Detect Hidden Items"
+  ]
+ },
+ {
+  "name": "Body Slam",
+  "sets": "BATTLE TECH (Warrior)",
+  "power": "45 (WAtk)",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "100%H,      Self, Eff1Dep: [Eff1 Damage / 4] Damage"
+  ]
+ },
+ {
+  "name": "Greased Bolt",
+  "sets": "BATTLE TECH (Warrior)",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Downsize",
+  "sets": "BATTLE TECH (Warrior)",
+  "power": "---",
+  "mp": "24",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, [(Target's HP + 1) / 2] Damage"
+  ]
+ },
+ {
+  "name": "Nurse",
+  "sets": "CHIVALRY",
+  "power": "30 (MPow)",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "100%H,   Default, 100% Heal",
+   "100%H,   Default, Esuna"
+  ]
+ },
+ {
+  "name": "Cover",
+  "sets": "CHIVALRY",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,            Cover Effect"
+  ]
+ },
+ {
+  "name": "Subdue",
+  "sets": "CHIVALRY",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, Rand{2..12} Damage"
+  ]
+ },
+ {
+  "name": "Parley",
+  "sets": "CHIVALRY",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,            Parley Effect"
+  ]
+ },
+ {
+  "name": "Saint Cross",
+  "sets": "CHIVALRY",
+  "power": "35 (WAtk)",
+  "mp": "24",
+  "range": "Self",
+  "elem": "Holy",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Holy Blade",
+  "sets": "CHIVALRY",
+  "power": "As Weapon",
+  "mp": "32",
+  "range": "As Weapon",
+  "elem": "Holy",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 200% Damage"
+  ]
+ },
+ {
+  "name": "Defense",
+  "sets": "CHIVALRY, DEFEND",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Inflict Defense"
+  ]
+ },
+ {
+  "name": "Drop Weapon",
+  "sets": "CHIVALRY, DEFEND",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,     Enemy, Drop Weapon"
+  ]
+ },
+ {
+  "name": "Tremor",
+  "sets": "DEFEND",
+  "power": "30 (WAtk)",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "100%H,   Default, Eff1Dep: Knockback"
+  ]
+ },
+ {
+  "name": "Hibernate",
+  "sets": "DEFEND",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Hibernate Effect"
+  ]
+ },
+ {
+  "name": "Mow Down",
+  "sets": "DEFEND",
+  "power": "40 (WAtk)",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "100%H,      Self, Inflict Speed DOWN"
+  ]
+ },
+ {
+  "name": "Aura",
+  "sets": "DEFEND",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H, NonUndead, Inflict Auto-Life",
+   "100%H, NonUndead, Inflict Regen"
+  ]
+ },
+ {
+  "name": "Expert Guard",
+  "sets": "DEFEND",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Inflict Expert Guard"
+  ]
+ },
+ {
+  "name": "Meltdown",
+  "sets": "DEFEND",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "AType,   NotSelf, (Caster's HP) Damage",
+   "100%H,      Self, Caster's HP Damage"
+  ]
+ },
+ {
+  "name": "Whirlwind",
+  "sets": "MONK TECH",
+  "power": "25 (WAtk)",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Earth Render",
+  "sets": "MONK TECH",
+  "power": "34 (WAtk)",
+  "mp": "---",
+  "range": "Line",
+  "elem": "Earth",
+  "area": "Infinite",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Chakra",
+  "sets": "MONK TECH",
+  "power": "35 (MPow)",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, 100% Heal",
+   "100%H,   Default, Esuna"
+  ]
+ },
+ {
+  "name": "Revive",
+  "sets": "MONK TECH",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H, KOed Unit, Revive to 25% HP"
+  ]
+ },
+ {
+  "name": "Exorcise",
+  "sets": "MONK TECH",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "Holy",
+  "area": "One Unit",
+  "effects": [
+   "SType,    Undead, Remove Unit, 0.5x Hit Rate"
+  ]
+ },
+ {
+  "name": "Holy Sign",
+  "sets": "MONK TECH",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Dispel"
+  ]
+ },
+ {
+  "name": "Air Render",
+  "sets": "FIGHTER TECH, MONK TECH",
+  "power": "45 (WAtk)",
+  "mp": "---",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Far Fist",
+  "sets": "FIGHTER TECH, MONK TECH",
+  "power": "35 (WAtk)",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Air Blast",
+  "sets": "FIGHTER TECH",
+  "power": "35 (WAtk)",
+  "mp": "---",
+  "range": "Cone",
+  "elem": "Wind",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Backdraft",
+  "sets": "FIGHTER TECH",
+  "power": "60 (WAtk)",
+  "mp": "---",
+  "range": "1",
+  "elem": "Fire",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "100%H,      Self, [Eff1 Damage / 4] Damage"
+  ]
+ },
+ {
+  "name": "Rush",
+  "sets": "FIGHTER TECH, SPELLBLADE TECH",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "100%H,   Default, Eff1Dep: Knockback"
+  ]
+ },
+ {
+  "name": "Wild Swing",
+  "sets": "FIGHTER TECH, SPELLBLADE TECH",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "Self",
+  "elem": "As Weapon",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Beatdown",
+  "sets": "FIGHTER TECH, SPELLBLADE TECH",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 200% Damage, 0.5x Hit Rate"
+  ]
+ },
+ {
+  "name": "Blitz",
+  "sets": "FIGHTER TECH, SPELLBLADE TECH",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 50% Damage, 2.0x Hit Rate"
+  ]
+ },
+ {
+  "name": "Fire Sword",
+  "sets": "SPELLBLADE TECH",
+  "power": "54 (WAtk)",
+  "mp": "10",
+  "range": "1",
+  "elem": "Fire",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Bolt Sword",
+  "sets": "SPELLBLADE TECH",
+  "power": "54 (WAtk)",
+  "mp": "10",
+  "range": "1",
+  "elem": "Lightning",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Ice Sword",
+  "sets": "SPELLBLADE TECH",
+  "power": "54 (WAtk)",
+  "mp": "10",
+  "range": "1",
+  "elem": "Ice",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Ultima Sword",
+  "sets": "SPELLBLADE TECH",
+  "power": "As Weapon",
+  "mp": "60",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 300% Damage"
+  ]
+ },
+ {
+  "name": "Warcry",
+  "sets": "SACRED TECH",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "AType,   Default, Inflict Speed DOWN"
+  ]
+ },
+ {
+  "name": "Cheer",
+  "sets": "SACRED TECH",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Inflict Boost"
+  ]
+ },
+ {
+  "name": "Soul Sphere",
+  "sets": "SACRED TECH, MAGESTORM (Adrammelech)",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "4",
+  "elem": "As Weapon",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage to MP, capped to Target's MP"
+  ]
+ },
+ {
+  "name": "Lifebreak",
+  "sets": "SACRED TECH",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "Dark",
+  "area": "One Unit",
+  "effects": [
+   "AType, NonUndead, (Caster's Max HP - Caster's HP) Damage",
+   "100%H,    Undead, Heal (Caster's Max HP - Caster's HP) Damage"
+  ]
+ },
+ {
+  "name": "Jump",
+  "sets": "DRAGON TECH",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "4",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Lancet",
+  "sets": "DRAGON TECH",
+  "power": "35 (WAtk)",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage, capped to Target's Max HP",
+   "100%H,      Self, Eff1Dep: Heal Eff1 Damage"
+  ]
+ },
+ {
+  "name": "Wyrmtamer",
+  "sets": "DRAGON TECH",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,    Dragon, Parley Effect"
+  ]
+ },
+ {
+  "name": "Fire Breath",
+  "sets": "DRAGON TECH, DRAGONBLAZE",
+  "power": "40 (WAtk)",
+  "mp": "---",
+  "range": "Cone",
+  "elem": "Fire",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Bolt Breath",
+  "sets": "DRAGON TECH, DRAGONBOLT",
+  "power": "40 (WAtk)",
+  "mp": "---",
+  "range": "Cone",
+  "elem": "Lightning",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Ice Breath",
+  "sets": "DRAGON TECH, ICEWYRM",
+  "power": "40 (WAtk)",
+  "mp": "---",
+  "range": "Cone",
+  "elem": "Ice",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Wyrmkiller",
+  "sets": "DRAGON TECH",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType, NonDragon, 100% Damage",
+   "AType,    Dragon, 200% Damage"
+  ]
+ },
+ {
+  "name": "Bangaa Cry",
+  "sets": "DRAGON TECH",
+  "power": "45 (WAtk)",
+  "mp": "---",
+  "range": "Cone",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Mog Attack",
+  "sets": "CHARGE",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "100%H,   Default, Eff1Dep: Knockback"
+  ]
+ },
+ {
+  "name": "Mog Guard",
+  "sets": "CHARGE",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Inflict Defense"
+  ]
+ },
+ {
+  "name": "Mog Lance",
+  "sets": "CHARGE",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "3",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Mog Rush",
+  "sets": "CHARGE",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 200% Damage, 0.5x Hit Rate"
+  ]
+ },
+ {
+  "name": "Mog Shield",
+  "sets": "CHARGE",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Inflict Astra"
+  ]
+ },
+ {
+  "name": "Mog Peek",
+  "sets": "CHARGE",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,     Enemy, Detect Hidden Items"
+  ]
+ },
+ {
+  "name": "Mog Aid",
+  "sets": "CHARGE",
+  "power": "35 (MPow)",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, 100% Heal",
+   "100%H,   Default, Esuna"
+  ]
+ },
+ {
+  "name": "Ultima Charge",
+  "sets": "CHARGE",
+  "power": "As Weapon",
+  "mp": "60",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 300% Damage"
+  ]
+ },
+ {
+  "name": "Swarmstrike",
+  "sets": "LUNGE TECH",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 50% Damage",
+   "SType,   Default, Eff1Dep: Inflict Poison"
+  ]
+ },
+ {
+  "name": "Shadowstick",
+  "sets": "LUNGE TECH",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, Inflict Speed DOWN"
+  ]
+ },
+ {
+  "name": "Checkmate",
+  "sets": "LUNGE TECH",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType, NonUndead, Inflict Doom"
+  ]
+ },
+ {
+  "name": "Featherblow",
+  "sets": "LUNGE TECH",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 50% Damage, 2.0x Hit Rate"
+  ]
+ },
+ {
+  "name": "Swallowtail",
+  "sets": "LUNGE TECH",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "Self",
+  "elem": "As Weapon",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Manastrike",
+  "sets": "LUNGE TECH",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage to MP, capped to Target's MP"
+  ]
+ },
+ {
+  "name": "Piercethrough",
+  "sets": "LUNGE TECH",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "Line",
+  "elem": "As Weapon",
+  "area": "r2/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Nighthawk",
+  "sets": "LUNGE TECH",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "4",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Throw",
+  "sets": "NINJA SKILL",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, Throw Effect"
+  ]
+ },
+ {
+  "name": "Wood Veil",
+  "sets": "NINJA SKILL",
+  "power": "15 (MPow)",
+  "mp": "4",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Immobilize"
+  ]
+ },
+ {
+  "name": "Fire Veil",
+  "sets": "NINJA SKILL",
+  "power": "15 (MPow)",
+  "mp": "4",
+  "range": "4",
+  "elem": "Fire",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Confusion"
+  ]
+ },
+ {
+  "name": "Earth Veil",
+  "sets": "NINJA SKILL",
+  "power": "15 (MPow)",
+  "mp": "4",
+  "range": "4",
+  "elem": "Earth",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Slow",
+   "100%H,   Default, Eff1Dep: Delay Unit"
+  ]
+ },
+ {
+  "name": "Metal Veil",
+  "sets": "NINJA SKILL",
+  "power": "15 (MPow)",
+  "mp": "4",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Blind"
+  ]
+ },
+ {
+  "name": "Water Veil",
+  "sets": "NINJA SKILL",
+  "power": "15 (MPow)",
+  "mp": "4",
+  "range": "4",
+  "elem": "Water",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Silence"
+  ]
+ },
+ {
+  "name": "Unspell",
+  "sets": "NINJA SKILL",
+  "power": "---",
+  "mp": "4",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Dispel"
+  ]
+ },
+ {
+  "name": "Oblivion",
+  "sets": "NINJA SKILL, CORNER",
+  "power": "---",
+  "mp": "24",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Addle"
+  ]
+ },
+ {
+  "name": "Shadowbind",
+  "sets": "CORNER",
+  "power": "---",
+  "mp": "12",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Stop"
+  ]
+ },
+ {
+  "name": "Last Breath",
+  "sets": "CORNER",
+  "power": "---",
+  "mp": "32",
+  "range": "1",
+  "elem": "Dark",
+  "area": "One Unit",
+  "effects": [
+   "100%H,    Undead, Heal to full HP",
+   "SType, NonUndead, Inflict KO"
+  ]
+ },
+ {
+  "name": "Aphonia",
+  "sets": "CORNER",
+  "power": "---",
+  "mp": "12",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Silence"
+  ]
+ },
+ {
+  "name": "Nightmare",
+  "sets": "CORNER",
+  "power": "---",
+  "mp": "18",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType, NonUndead, Inflict Doom",
+   "SType,   Default, Inflict Sleep"
+  ]
+ },
+ {
+  "name": "Ague",
+  "sets": "CORNER",
+  "power": "---",
+  "mp": "12",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Slow"
+  ]
+ },
+ {
+  "name": "Rockseal",
+  "sets": "CORNER",
+  "power": "---",
+  "mp": "32",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Petrify"
+  ]
+ },
+ {
+  "name": "Ultima Masher",
+  "sets": "CORNER",
+  "power": "As Weapon",
+  "mp": "60",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 300% Damage"
+  ]
+ },
+ {
+  "name": "Steal: Armor",
+  "sets": "STEAL",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,     Enemy, Steal Armor"
+  ]
+ },
+ {
+  "name": "Steal: Shield",
+  "sets": "STEAL",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,     Enemy, Steal Shield"
+  ]
+ },
+ {
+  "name": "Steal: Access.",
+  "sets": "STEAL",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,     Enemy, Steal Accessory"
+  ]
+ },
+ {
+  "name": "Steal: Helm",
+  "sets": "STEAL",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,     Enemy, Steal Helm"
+  ]
+ },
+ {
+  "name": "Steal: Weapon",
+  "sets": "STEAL",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,     Enemy, Steal Weapon"
+  ]
+ },
+ {
+  "name": "Steal: Gil",
+  "sets": "STEAL",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,     Enemy, Steal Gil Effect"
+  ]
+ },
+ {
+  "name": "Steal: EXP",
+  "sets": "STEAL",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,     Enemy, Steal EXP"
+  ]
+ },
+ {
+  "name": "Steal: JP",
+  "sets": "STEAL",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,     Enemy, Steal JP"
+  ]
+ },
+ {
+  "name": "Steal: Ability",
+  "sets": "STEAL",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,     Enemy, Steal Ability, 0.25x Hit Rate"
+  ]
+ },
+ {
+  "name": "Boost",
+  "sets": "AIM",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Inflict Boost"
+  ]
+ },
+ {
+  "name": "Aim: Legs",
+  "sets": "AIM",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Immobilize"
+  ]
+ },
+ {
+  "name": "Aim: Arm",
+  "sets": "AIM",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Disable"
+  ]
+ },
+ {
+  "name": "Cupid",
+  "sets": "AIM",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,     Enemy, Inflict Charm"
+  ]
+ },
+ {
+  "name": "Burial",
+  "sets": "AIM",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,    Undead, Remove Unit, 0.5x Hit Rate"
+  ]
+ },
+ {
+  "name": "Take Aim",
+  "sets": "AIM",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, 50% Damage"
+  ]
+ },
+ {
+  "name": "Faster",
+  "sets": "AIM",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Blackout",
+  "sets": "AIM",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Blind"
+  ]
+ },
+ {
+  "name": "Sonic Boom",
+  "sets": "HUNT",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "4",
+  "elem": "As Weapon",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Oust",
+  "sets": "HUNT",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,    Animal, Parley Effect"
+  ]
+ },
+ {
+  "name": "Advice",
+  "sets": "HUNT",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Inflict Advice"
+  ]
+ },
+ {
+  "name": "Aim: Vitals",
+  "sets": "HUNT",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,   Default, Aim: Vitals Effect"
+  ]
+ },
+ {
+  "name": "Hunting",
+  "sets": "HUNT",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 50% Damage"
+  ]
+ },
+ {
+  "name": "Addle",
+  "sets": "HUNT",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,    Animal, Inflict Addle"
+  ]
+ },
+ {
+  "name": "Ultima Shot",
+  "sets": "HUNT",
+  "power": "As Weapon",
+  "mp": "60",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 300% Damage"
+  ]
+ },
+ {
+  "name": "Sidewinder",
+  "sets": "HUNT",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType, NonAnimal, 100% Damage",
+   "AType,    Animal, 200% Damage"
+  ]
+ },
+ {
+  "name": "Capture",
+  "sets": "HUNT",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,    Animal, Capture Effect"
+  ]
+ },
+ {
+  "name": "Goblin",
+  "sets": "CONTROL",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,            Control Effect"
+  ]
+ },
+ {
+  "name": "Flan",
+  "sets": "CONTROL",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,            Control Effect"
+  ]
+ },
+ {
+  "name": "Bomb",
+  "sets": "CONTROL",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,            Control Effect"
+  ]
+ },
+ {
+  "name": "Dragon",
+  "sets": "CONTROL",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,            Control Effect"
+  ]
+ },
+ {
+  "name": "Lamia",
+  "sets": "CONTROL",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,            Control Effect"
+  ]
+ },
+ {
+  "name": "Bug",
+  "sets": "CONTROL",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,            Control Effect"
+  ]
+ },
+ {
+  "name": "Tonberry",
+  "sets": "CONTROL",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,            Control Effect"
+  ]
+ },
+ {
+  "name": "Panther",
+  "sets": "CONTROL",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,            Control Effect"
+  ]
+ },
+ {
+  "name": "Malboro",
+  "sets": "CONTROL",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,            Control Effect"
+  ]
+ },
+ {
+  "name": "Floateye",
+  "sets": "CONTROL",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,            Control Effect"
+  ]
+ },
+ {
+  "name": "Undead",
+  "sets": "CONTROL",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,            Control Effect"
+  ]
+ },
+ {
+  "name": "Fairy",
+  "sets": "CONTROL",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,            Control Effect"
+  ]
+ },
+ {
+  "name": "Rockbeast",
+  "sets": "CONTROL",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,            Control Effect"
+  ]
+ },
+ {
+  "name": "Goblin",
+  "sets": "MORPH",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Morph Effect"
+  ]
+ },
+ {
+  "name": "Flan",
+  "sets": "MORPH",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Morph Effect"
+  ]
+ },
+ {
+  "name": "Bomb",
+  "sets": "MORPH",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Morph Effect"
+  ]
+ },
+ {
+  "name": "Dragon",
+  "sets": "MORPH",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Morph Effect"
+  ]
+ },
+ {
+  "name": "Lamia",
+  "sets": "MORPH",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Morph Effect"
+  ]
+ },
+ {
+  "name": "Bug",
+  "sets": "MORPH",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Morph Effect"
+  ]
+ },
+ {
+  "name": "Panther",
+  "sets": "MORPH",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Morph Effect"
+  ]
+ },
+ {
+  "name": "Malboro",
+  "sets": "MORPH",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Morph Effect"
+  ]
+ },
+ {
+  "name": "Floateye",
+  "sets": "MORPH",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Morph Effect"
+  ]
+ },
+ {
+  "name": "Hurl",
+  "sets": "STUNT",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, Hurl Effect"
+  ]
+ },
+ {
+  "name": "Ring",
+  "sets": "STUNT",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Stop"
+  ]
+ },
+ {
+  "name": "Firebomb",
+  "sets": "STUNT",
+  "power": "30 (WAtk)",
+  "mp": "---",
+  "range": "4",
+  "elem": "Fire",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Berserk"
+  ]
+ },
+ {
+  "name": "Ball",
+  "sets": "STUNT",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Confusion"
+  ]
+ },
+ {
+  "name": "Dagger",
+  "sets": "STUNT",
+  "power": "35 (WAtk)",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Disable"
+  ]
+ },
+ {
+  "name": "Smile",
+  "sets": "STUNT",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Inflict Quicken"
+  ]
+ },
+ {
+  "name": "Gil Toss",
+  "sets": "STUNT",
+  "power": "---",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,      Self, Lose 30 Gil",
+   "AType,   Default, 30 Damage"
+  ]
+ },
+ {
+  "name": "Beso Toxico",
+  "sets": "SHARPSHOOT",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Poison"
+  ]
+ },
+ {
+  "name": "Death Sickle",
+  "sets": "SHARPSHOOT",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType, NonUndead, Inflict Doom"
+  ]
+ },
+ {
+  "name": "Conceal",
+  "sets": "SHARPSHOOT",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Inflict Conceal"
+  ]
+ },
+ {
+  "name": "Doom Archer",
+  "sets": "SHARPSHOOT",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Doom Archer Effect"
+  ]
+ },
+ {
+  "name": "Doubleshot",
+  "sets": "SHARPSHOOT",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 50% Damage",
+   "AType,   Default, 50% Damage"
+  ]
+ },
+ {
+  "name": "Aim: Armor",
+  "sets": "SHARPSHOOT",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, Break Armor Effect"
+  ]
+ },
+ {
+  "name": "Aim: Weapon",
+  "sets": "SHARPSHOOT",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,   Default, Break Weapon Effect"
+  ]
+ },
+ {
+  "name": "Aim: Wallet",
+  "sets": "SHARPSHOOT",
+  "power": "---",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,     Enemy, Aim: Wallet Effect"
+  ]
+ },
+ {
+  "name": "Sheep Count",
+  "sets": "CALL",
+  "power": "---",
+  "mp": "8",
+  "range": "4",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "SType,   Default, Inflict Sleep"
+  ]
+ },
+ {
+  "name": "100% Wool",
+  "sets": "CALL",
+  "power": "---",
+  "mp": "8",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,   Default, Inflict Shell",
+   "100%H,   Default, Inflict Protect"
+  ]
+ },
+ {
+  "name": "Cuisine",
+  "sets": "CALL",
+  "power": "---",
+  "mp": "32",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Heal to full HP"
+  ]
+ },
+ {
+  "name": "Tail Wag",
+  "sets": "CALL",
+  "power": "---",
+  "mp": "8",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,     Enemy, Inflict Charm"
+  ]
+ },
+ {
+  "name": "Chocobo Rush",
+  "sets": "CALL",
+  "power": "45 (WAtk)",
+  "mp": "12",
+  "range": "Dbl-Line",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "AType,   NotSelf, 100% Damage"
+  ]
+ },
+ {
+  "name": "Frogsong",
+  "sets": "CALL",
+  "power": "---",
+  "mp": "18",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Frog"
+  ]
+ },
+ {
+  "name": "Friend",
+  "sets": "CALL",
+  "power": "---",
+  "mp": "12",
+  "range": "4",
+  "elem": "---",
+  "area": "r2/v2",
+  "effects": [
+   "---,            Friend Effect"
+  ]
+ },
+ {
+  "name": "Catnip",
+  "sets": "CALL",
+  "power": "---",
+  "mp": "12",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Berserk"
+  ]
+ },
+ {
+  "name": "Fireshot",
+  "sets": "GUNMANSHIP",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "Fire",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Boltshot",
+  "sets": "GUNMANSHIP",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "Lightning",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Iceshot",
+  "sets": "GUNMANSHIP",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "Ice",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Confushot",
+  "sets": "GUNMANSHIP",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Confusion"
+  ]
+ },
+ {
+  "name": "Charmshot",
+  "sets": "GUNMANSHIP",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,     Enemy, Eff1Dep: Inflict Charm"
+  ]
+ },
+ {
+  "name": "Blindshot",
+  "sets": "GUNMANSHIP",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Blind"
+  ]
+ },
+ {
+  "name": "Silenshot",
+  "sets": "GUNMANSHIP",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Silence"
+  ]
+ },
+ {
+  "name": "Stopshot",
+  "sets": "GUNMANSHIP",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Stop"
+  ]
+ },
+ {
+  "name": "Red Spring",
+  "sets": "PANDORA",
+  "power": "---",
+  "mp": "12",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "100%H,    Gadget, Inflict Haste"
+  ]
+ },
+ {
+  "name": "Blue Screw",
+  "sets": "PANDORA",
+  "power": "---",
+  "mp": "12",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "100%H,    Gadget, Dispel"
+  ]
+ },
+ {
+  "name": "Green Gear",
+  "sets": "PANDORA",
+  "power": "---",
+  "mp": "12",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "SType,    Gadget, Inflict Poison"
+  ]
+ },
+ {
+  "name": "Silver Disc",
+  "sets": "PANDORA",
+  "power": "---",
+  "mp": "12",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "SType,    Gadget, Inflict Blind"
+  ]
+ },
+ {
+  "name": "Gold Battery",
+  "sets": "PANDORA",
+  "power": "40 (MPow)",
+  "mp": "12",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "100%H,    Gadget, 100% Heal"
+  ]
+ },
+ {
+  "name": "Black Ingot",
+  "sets": "PANDORA",
+  "power": "---",
+  "mp": "12",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "SType,    Gadget, Non-Undead: Inflict Doom"
+  ]
+ },
+ {
+  "name": "Chroma Gem",
+  "sets": "PANDORA",
+  "power": "---",
+  "mp": "12",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "SType,    Gadget, Inflict Sleep"
+  ]
+ },
+ {
+  "name": "Yellow Spring",
+  "sets": "PANDORA",
+  "power": "---",
+  "mp": "12",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "100%H,    Gadget, Inflict Shell",
+   "100%H,    Gadget, Inflict Protect"
+  ]
+ },
+ {
+  "name": "Potion",
+  "sets": "ITEM",
+  "power": "40 (MPow)",
+  "mp": "---",
+  "range": "1",
+  "elem": "Holy",
+  "area": "One Unit",
+  "effects": [
+   "100%H, NonUndead, 100% Heal",
+   "AType,    Undead, 100% Damage"
+  ]
+ },
+ {
+  "name": "Hi-Potion",
+  "sets": "ITEM",
+  "power": "60 (MPow)",
+  "mp": "---",
+  "range": "1",
+  "elem": "Holy",
+  "area": "One Unit",
+  "effects": [
+   "100%H, NonUndead, 100% Heal",
+   "AType,    Undead, 100% Damage"
+  ]
+ },
+ {
+  "name": "X-Potion",
+  "sets": "ITEM",
+  "power": "80 (MPow)",
+  "mp": "---",
+  "range": "1",
+  "elem": "Holy",
+  "area": "One Unit",
+  "effects": [
+   "100%H, NonUndead, 100% Heal",
+   "AType,    Undead, 100% Damage"
+  ]
+ },
+ {
+  "name": "Ether",
+  "sets": "ITEM",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Heal 80 MP"
+  ]
+ },
+ {
+  "name": "Elixir",
+  "sets": "ITEM",
+  "power": "100 (MPow)",
+  "mp": "---",
+  "range": "1",
+  "elem": "Holy",
+  "area": "One Unit",
+  "effects": [
+   "100%H, NonUndead, Heal to full HP",
+   "100%H, NonUndead, Heal to full MP",
+   "AType,    Undead, 100% Damage"
+  ]
+ },
+ {
+  "name": "Phoenix Down",
+  "sets": "ITEM",
+  "power": "90 (MPow)",
+  "mp": "---",
+  "range": "1",
+  "elem": "Holy",
+  "area": "One Unit",
+  "effects": [
+   "100%H, KOed Unit, Revive to 25% HP",
+   "AType,    Undead, 100% Damage"
+  ]
+ },
+ {
+  "name": "Echo Screen",
+  "sets": "ITEM",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Remove Silence"
+  ]
+ },
+ {
+  "name": "Maiden Kiss",
+  "sets": "ITEM",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Remove Frog"
+  ]
+ },
+ {
+  "name": "Soft",
+  "sets": "ITEM",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Remove Petrify"
+  ]
+ },
+ {
+  "name": "Holy Water",
+  "sets": "ITEM",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Remove Zombie"
+  ]
+ },
+ {
+  "name": "Antidote",
+  "sets": "ITEM",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Remove Poison"
+  ]
+ },
+ {
+  "name": "Eye Drops",
+  "sets": "ITEM",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Remove Blind"
+  ]
+ },
+ {
+  "name": "Bandage",
+  "sets": "ITEM",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Remove Immobilize",
+   "100%H,   Default, Remove Disable"
+  ]
+ },
+ {
+  "name": "Cureall",
+  "sets": "ITEM",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Cureall Effect"
+  ]
+ },
+ {
+  "name": "Draw Weapon",
+  "sets": "ITEM",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "Self",
+  "effects": [
+   "100%H,      Self, Draw Weapon"
+  ]
+ },
+ {
+  "name": "Goblin Punch",
+  "sets": "PUNCH, BLUE MAGIC",
+  "power": "30 (WAtk)",
+  "mp": "8",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, Goblin Punch Effect"
+  ]
+ },
+ {
+  "name": "Magic Hammer",
+  "sets": "HIT, BLUE MAGIC",
+  "power": "38 (WAtk)",
+  "mp": "8",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage to MP, capped to Target's MP"
+  ]
+ },
+ {
+  "name": "Mutilate",
+  "sets": "HIT",
+  "power": "---",
+  "mp": "18",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, Mutilate Effect",
+   "100%H,      Self, Eff1Dep: Heal Eff1 Damage"
+  ]
+ },
+ {
+  "name": "Acid",
+  "sets": "MELT, SCORCH, CHILL, BLUE MAGIC",
+  "power": "---",
+  "mp": "12",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "---,   Default, Acid Effect"
+  ]
+ },
+ {
+  "name": "Sacrifice",
+  "sets": "MELT, SCORCH, CHILL",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Heal to full HP",
+   "100%H,   Default, Esuna",
+   "100%H,      Self, Max HP Damage"
+  ]
+ },
+ {
+  "name": "Blowup",
+  "sets": "BLAZE, BOOM!, BLUE MAGIC",
+  "power": "15 (MPow)",
+  "mp": "2",
+  "range": "Self",
+  "elem": "---",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "AType,   Default, 400% Damage",
+   "100%H,      Self, Max HP Damage"
+  ]
+ },
+ {
+  "name": "Flame Attack",
+  "sets": "BLAZE",
+  "power": "40 (MPow)",
+  "mp": "---",
+  "range": "3",
+  "elem": "Fire",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Chill",
+  "sets": "BOOM!",
+  "power": "40 (MPow)",
+  "mp": "---",
+  "range": "Self",
+  "elem": "Ice",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "100%H,   Default, 100% Damage",
+   "100%H,      Self, 100% Damage"
+  ]
+ },
+ {
+  "name": "Mighty Guard",
+  "sets": "ICEWYRM, BLUE MAGIC",
+  "power": "---",
+  "mp": "8",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Inflict MRes UP",
+   "100%H,   Default, Inflict WDef UP"
+  ]
+ },
+ {
+  "name": "Guard-Off",
+  "sets": "DRAGONBLAZE, BLUE MAGIC",
+  "power": "---",
+  "mp": "10",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict WDef DOWN/MRes DOWN"
+  ]
+ },
+ {
+  "name": "Dragon Force",
+  "sets": "DRAGONBOLT, BLUE MAGIC",
+  "power": "---",
+  "mp": "12",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Inflict WAtk UP/WDef UP/MPow UP/MRes UP"
+  ]
+ },
+ {
+  "name": "Night",
+  "sets": "SONG, BLUE MAGIC",
+  "power": "---",
+  "mp": "24",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "SType,   NotSelf, Inflict Sleep"
+  ]
+ },
+ {
+  "name": "Twister",
+  "sets": "POISON FANG, BLUE MAGIC",
+  "power": "---",
+  "mp": "20",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, [(Target's HP + 1) / 2] Damage"
+  ]
+ },
+ {
+  "name": "Hand Slap",
+  "sets": "SONG",
+  "power": "45 (WAtk)",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "100%H,   Default, Eff1Dep: Delay Unit"
+  ]
+ },
+ {
+  "name": "Poison Frog",
+  "sets": "SONG, POISON FANG",
+  "power": "---",
+  "mp": "---",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Poison",
+   "SType,   Default, Eff1Dep: Inflict Frog"
+  ]
+ },
+ {
+  "name": "Kiss",
+  "sets": "POISON FANG",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType, NonUndead, Inflict Doom",
+   "SType,     Enemy, Eff1Dep: Inflict Charm"
+  ]
+ },
+ {
+  "name": "LV3 Def-less",
+  "sets": "SANDSTORM, ADHERE, BLUE MAGIC",
+  "power": "---",
+  "mp": "12",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "100%H, LvlDivBy3, Inflict WDef DOWN",
+   "100%H, LvlDivBy3, Inflict MRes DOWN"
+  ]
+ },
+ {
+  "name": "Sandstorm",
+  "sets": "SANDSTORM",
+  "power": "40 (WAtk)",
+  "mp": "---",
+  "range": "Self",
+  "elem": "Earth",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Blind"
+  ]
+ },
+ {
+  "name": "LV5 Death",
+  "sets": "ADHERE",
+  "power": "---",
+  "mp": "24",
+  "range": "3",
+  "elem": "Dark",
+  "area": "r1/v2",
+  "effects": [
+   "100%H, NonUndead, LvlDivBy5: Inflict KO",
+   "100%H,    Undead, LvlDivBy5: Heal to full HP"
+  ]
+ },
+ {
+  "name": "Suffocate",
+  "sets": "ADHERE",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, Delay Unit"
+  ]
+ },
+ {
+  "name": "Resonate",
+  "sets": "DEBILITATE, CRUSH",
+  "power": "---",
+  "mp": "20",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "100%H,  EqpSword, Inflict Disable"
+  ]
+ },
+ {
+  "name": "Limit Glove",
+  "sets": "CRUSH",
+  "power": "---",
+  "mp": "4",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Limit Glove Effect"
+  ]
+ },
+ {
+  "name": "Matra Magic",
+  "sets": "DEBILITATE, BLUE MAGIC",
+  "power": "---",
+  "mp": "24",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, Matra Magic Effect"
+  ]
+ },
+ {
+  "name": "Munch",
+  "sets": "CRUSH",
+  "power": "47 (WAtk)",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,    Animal, 100% Damage",
+   "---, NonAnimal, Break Weapon Effect"
+  ]
+ },
+ {
+  "name": "Knife",
+  "sets": "GRUDGE, MALICE",
+  "power": "---",
+  "mp": "8",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, [(Target's HP + 1) * 0.9] Damage"
+  ]
+ },
+ {
+  "name": "Karma",
+  "sets": "GRUDGE",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, (Target's Kills * 10) Damage"
+  ]
+ },
+ {
+  "name": "Voodoo",
+  "sets": "MALICE",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, 999 Damage"
+  ]
+ },
+ {
+  "name": "Poison Claw",
+  "sets": "RAKE, BLUE MAGIC",
+  "power": "30 (WAtk)",
+  "mp": "8",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Poison"
+  ]
+ },
+ {
+  "name": "Hastebreak",
+  "sets": "SCRATCH, BLUE MAGIC",
+  "power": "---",
+  "mp": "12",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Hastebreak Effect"
+  ]
+ },
+ {
+  "name": "Rend",
+  "sets": "RAKE",
+  "power": "35 (WAtk)",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Blaster",
+  "sets": "SCRATCH",
+  "power": "---",
+  "mp": "---",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Petrify"
+  ]
+ },
+ {
+  "name": "Bad Breath",
+  "sets": "STENCH, REEK, BLUE MAGIC",
+  "power": "---",
+  "mp": "20",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Bad Breath Effect"
+  ]
+ },
+ {
+  "name": "Goo",
+  "sets": "STENCH",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Immobilize"
+  ]
+ },
+ {
+  "name": "Soundwave",
+  "sets": "REEK",
+  "power": "---",
+  "mp": "---",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "100%H,   Default, Soundwave Effect"
+  ]
+ },
+ {
+  "name": "Stare",
+  "sets": "GAZE",
+  "power": "---",
+  "mp": "12",
+  "range": "Cone",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "100%H,   Default, Eye2Eye: Inflict Confusion"
+  ]
+ },
+ {
+  "name": "Roulette",
+  "sets": "GLARE",
+  "power": "---",
+  "mp": "20",
+  "range": "Infinite",
+  "elem": "Dark",
+  "area": "Infinite",
+  "effects": [
+   "100%H, NonUndead, Inflict KO",
+   "100%H,    Undead, Heal to full HP"
+  ]
+ },
+ {
+  "name": "Devil Gaze",
+  "sets": "GAZE",
+  "power": "---",
+  "mp": "---",
+  "range": "Cone",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "100%H,   Default, Eye2Eye: Inflict Blind",
+   "SType,   Default, Eff1Dep: Inflict Silence"
+  ]
+ },
+ {
+  "name": "Circle",
+  "sets": "GLARE",
+  "power": "---",
+  "mp": "---",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict WAtk DOWN",
+   "100%H,   Default, Eff1Dep: Inflict MPow DOWN"
+  ]
+ },
+ {
+  "name": "Drain Touch",
+  "sets": "ROT, BLUE MAGIC",
+  "power": "20 (WAtk)",
+  "mp": "10",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage, capped to Target's Max HP",
+   "100%H,      Self, Eff1Dep: Heal Eff1 Damage"
+  ]
+ },
+ {
+  "name": "LV? S-Flare",
+  "sets": "ILLUDE",
+  "power": "55 (WAtk)",
+  "mp": "30",
+  "range": "Infinite",
+  "elem": "Dark",
+  "area": "Infinite",
+  "effects": [
+   "100%H, NonUndead, SameLvDigit: 100% Damage",
+   "100%H,    Undead, SameLvDigit: 100% Heal"
+  ]
+ },
+ {
+  "name": "Miasma",
+  "sets": "ILLUDE",
+  "power": "20 (WAtk)",
+  "mp": "---",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Poison"
+  ]
+ },
+ {
+  "name": "Zombify",
+  "sets": "ILLUDE",
+  "power": "45 (WAtk)",
+  "mp": "---",
+  "range": "1",
+  "elem": "Dark",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Zombie"
+  ]
+ },
+ {
+  "name": "White Wind",
+  "sets": "TRICK, BLUE MAGIC",
+  "power": "---",
+  "mp": "12",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "100%H,   Default, Heal (Caster's HP) Damage"
+  ]
+ },
+ {
+  "name": "Angel Whisper",
+  "sets": "FLUORESCE, BLUE MAGIC",
+  "power": "30 (MPow)",
+  "mp": "24",
+  "range": "3",
+  "elem": "Holy",
+  "area": "One Unit",
+  "effects": [
+   "100%H, NonUndead, 100% Heal",
+   "100%H, NonUndead, Inflict Auto-Life",
+   "AType,    Undead, 100% Damage"
+  ]
+ },
+ {
+  "name": "Meteorite",
+  "sets": "TRICK",
+  "power": "50 (MPow)",
+  "mp": "22",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "LV?D Holy",
+  "sets": "FLUORESCE",
+  "power": "65 (MPow)",
+  "mp": "32",
+  "range": "Infinite",
+  "elem": "Holy",
+  "area": "Infinite",
+  "effects": [
+   "100%H, SmeLvlDay, 100% Damage"
+  ]
+ },
+ {
+  "name": "Adrammalech",
+  "sets": "TOTEMA",
+  "power": "85 (WAtk)",
+  "mp": "---",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "100%H,     Enemy, 100% Damage"
+  ]
+ },
+ {
+  "name": "Mateus",
+  "sets": "TOTEMA",
+  "power": "85 (WAtk)",
+  "mp": "---",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "100%H,     Enemy, 100% Damage"
+  ]
+ },
+ {
+  "name": "Ultima",
+  "sets": "TOTEMA",
+  "power": "85 (MPow)",
+  "mp": "---",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "100%H,     Enemy, 100% Damage to MP"
+  ]
+ },
+ {
+  "name": "Exodus",
+  "sets": "TOTEMA",
+  "power": "85 (MPow)",
+  "mp": "---",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "100%H,     Enemy, 100% Damage to MP"
+  ]
+ },
+ {
+  "name": "Famfrit",
+  "sets": "TOTEMA",
+  "power": "85 (MPow)",
+  "mp": "---",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "100%H,     Enemy, 100% Damage"
+  ]
+ },
+ {
+  "name": "Explode",
+  "sets": "RUNE",
+  "power": "40 (MPow)",
+  "mp": "24",
+  "range": "3",
+  "elem": "Fire",
+  "area": "r1/v1",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Stillness",
+  "sets": "RUNE",
+  "power": "---",
+  "mp": "24",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "SType,   Default, Inflict Stop"
+  ]
+ },
+ {
+  "name": "Azoth",
+  "sets": "HERMETICS",
+  "power": "---",
+  "mp": "12",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "SType,     Enemy, Inflict Sleep"
+  ]
+ },
+ {
+  "name": "Omega",
+  "sets": "DARK MAGIC, WICCA",
+  "power": "As Weapon",
+  "mp": "10",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 200% Damage"
+  ]
+ },
+ {
+  "name": "Abyss",
+  "sets": "DARK MAGIC",
+  "power": "48 (MPow)",
+  "mp": "12",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v1",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Poison"
+  ]
+ },
+ {
+  "name": "Life Render",
+  "sets": "FLAIR",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType, NonUndead, Eff1Dep: Inflict Doom"
+  ]
+ },
+ {
+  "name": "Heart Render",
+  "sets": "FLAIR",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage to MP, capped to Target's MP"
+  ]
+ },
+ {
+  "name": "Ripcircle",
+  "sets": "FLAIR",
+  "power": "45 (WAtk)",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Furycircle",
+  "sets": "FLAIR",
+  "power": "50 (WAtk)",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "100%H,   Default, Eff1Dep: Knockback"
+  ]
+ },
+ {
+  "name": "Lawshift",
+  "sets": "GENESIS",
+  "power": "---",
+  "mp": "---",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "100%H,   Default, Change Laws"
+  ]
+ },
+ {
+  "name": "Amber Gleam",
+  "sets": "GENESIS",
+  "power": "---",
+  "mp": "---",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "100%H,   Default, Dispel"
+  ]
+ },
+ {
+  "name": "Alpha",
+  "sets": "WICCA",
+  "power": "99 (WAtk)",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Descent",
+  "sets": "WICCA",
+  "power": "---",
+  "mp": "---",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "AType,     Enemy, 100% Damage"
+  ]
+ },
+ {
+  "name": "Magi",
+  "sets": "WICCA",
+  "power": "50 (MPow)",
+  "mp": "---",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "AType,     Enemy, 100% Damage"
+  ]
+ },
+ {
+  "name": "Spellbind",
+  "sets": "EXPULSE (Mateus)",
+  "power": "50 (WAtk)",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "SType,   Default, Eff1Dep: Inflict Slow",
+   "100%H,   Default, Eff1Dep: Delay Unit"
+  ]
+ },
+ {
+  "name": "Breath of God",
+  "sets": "EXPULSE (Famfrit/Adrammelech/Mateus)",
+  "power": "40 (WAtk)",
+  "mp": "---",
+  "range": "4",
+  "elem": "---",
+  "area": "r1/v2",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Lightspeed",
+  "sets": "EXPULSE (Famfrit/Adrammelech)",
+  "power": "45 (WAtk)",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Firestream",
+  "sets": "EXPULSE (Adrammelech)",
+  "power": "35 (WAtk)",
+  "mp": "---",
+  "range": "Line",
+  "elem": "Fire",
+  "area": "Infinite",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Howl of Rage",
+  "sets": "EXPULSE (Adrammelech)",
+  "power": "---",
+  "mp": "---",
+  "range": "Self",
+  "elem": "---",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "AType,   Default, Inflict Speed DOWN"
+  ]
+ },
+ {
+  "name": "Presence",
+  "sets": "EXPULSE (Famfrit)",
+  "power": "50 (WAtk)",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "100%H,   Default, Eff1Dep: Knockback"
+  ]
+ },
+ {
+  "name": "Logos",
+  "sets": "EXPULSE (Ultima Crystal)",
+  "power": "---",
+  "mp": "---",
+  "range": "3",
+  "elem": "---",
+  "area": "r1/v0",
+  "effects": [
+   "SType,   Default, Inflict WAtk DOWN",
+   "100%H,   Default, Eff1Dep: Inflict MPow DOWN",
+   "SType,     Enemy, Inflict Charm"
+  ]
+ },
+ {
+  "name": "Abate",
+  "sets": "ADVANCED LAW",
+  "power": "---",
+  "mp": "32",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "100%H,     Judge, Stop Judge"
+  ]
+ },
+ {
+  "name": "Judge Sword",
+  "sets": "ADVANCED LAW",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "100%H,   Default, Eff1Dep: Steal 2 JP"
+  ]
+ },
+ {
+  "name": "Bind",
+  "sets": "ADVANCED LAW",
+  "power": "---",
+  "mp": "16",
+  "range": "3",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "SType,   Default, Inflict Disable/Immobilize"
+  ]
+ },
+ {
+  "name": "JP Gift",
+  "sets": "ADVANCED LAW",
+  "power": "---",
+  "mp": "---",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Give JP"
+  ]
+ },
+ {
+  "name": "Yellow Clip",
+  "sets": "ADVANCED LAW",
+  "power": "---",
+  "mp": "8",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Remove Yellow Card"
+  ]
+ },
+ {
+  "name": "Judge Sword",
+  "sets": "JUDGEMENT",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "As Weapon",
+  "elem": "As Weapon",
+  "area": "One Unit",
+  "effects": [
+   "AType,   Default, 100% Damage",
+   "100%H,   Default, Eff1Dep: Steal 2 JP"
+  ]
+ },
+ {
+  "name": "Yellow Card",
+  "sets": "JUDGEMENT",
+  "power": "---",
+  "mp": "20",
+  "range": "1",
+  "elem": "---",
+  "area": "One Unit",
+  "effects": [
+   "100%H,   Default, Add Yellow Card"
+  ]
+ },
+ {
+  "name": "Palaistra",
+  "sets": "JUDGEMENT",
+  "power": "As Weapon",
+  "mp": "---",
+  "range": "Self",
+  "elem": "As Weapon",
+  "area": "r1/v2 (Not Self)",
+  "effects": [
+   "AType,   Default, 100% Damage"
+  ]
+ },
+ {
+  "name": "Blank Card",
+  "sets": "BLANK CARD",
+  "power": "---",
+  "mp": "---",
+  "range": "Infinite",
+  "elem": "---",
+  "area": "Infinite",
+  "effects": [
+   "100%H,   Default, Change Laws"
+  ]
+ }
+]
