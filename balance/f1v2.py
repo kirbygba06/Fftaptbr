@@ -13,5 +13,8 @@ def fit(scn0, iters=7, n=1400, levels=(10, 25, 45), mods=False):
     tuned = [k[j['id']] for j in scn0['jobs'] if j['name'] not in UNTUNED]; m = sum(tuned) / len(tuned)
     return {i: (round(v / m, 3) if True else v) for i, v in k.items()}
 if __name__ == '__main__':
-    mods = len(sys.argv) > 1 and sys.argv[1] == 'mods'
-    scn0 = sim.load(); k = fit(scn0, mods=mods); json.dump({str(a): b for a, b in k.items()}, open('f1v3_k.json' if mods else 'f1v2_k.json', 'w'))
+    arg = sys.argv[1] if len(sys.argv) > 1 else ''
+    SHOTS = ['Confushot', 'Charmshot', 'Blindshot', 'Silenshot', 'Stopshot']
+    mods = True if arg == 'mods' else ({**{s: 6 for s in SHOTS}, 'Cupid': 8} if arg == 'v4' else False)
+    scn0 = sim.load(); k = fit(scn0, mods=mods, iters=8)
+    json.dump({str(a): b for a, b in k.items()}, open({'mods': 'f1v3_k.json', 'v4': 'f1v4_k.json'}.get(arg, 'f1v2_k.json'), 'w'))

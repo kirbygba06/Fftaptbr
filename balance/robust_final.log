@@ -1,0 +1,13 @@
+| suposição do simulador | original | pacote completo |
+|---|---|---|
+| padrão | 29–70% (σ 0.113, 17 fora de 40–60%) | 36–64% (σ 0.069, 10 fora) |
+| status duram metade | 30–70% (σ 0.111, 20 fora de 40–60%) | 33–64% (σ 0.065, 3 fora) |
+| status duram o dobro | 31–79% (σ 0.114, 17 fora de 40–60%) | 34–65% (σ 0.068, 6 fora) |
+| IA valoriza status ×0,5 | 31–76% (σ 0.122, 22 fora de 40–60%) | 32–68% (σ 0.081, 8 fora) |
+| IA valoriza status ×1,5 | 29–69% (σ 0.113, 19 fora de 40–60%) | 37–64% (σ 0.062, 5 fora) |
+| fogo amigo 0 | 31–75% (σ 0.113, 18 fora de 40–60%) | 37–68% (σ 0.068, 5 fora) |
+| fogo amigo 0,5 | 30–69% (σ 0.114, 20 fora de 40–60%) | 35–64% (σ 0.067, 6 fora) |
+| mover pesa mais no alcance | 30–78% (σ 0.109, 13 fora de 40–60%) | 33–63% (σ 0.068, 7 fora) |
+| imunidade a status dobrada | 29–72% (σ 0.116, 19 fora de 40–60%) | 31–64% (σ 0.067, 6 fora) |
+| precisão registrada (modo B) | 29–73% (σ 0.110, 17 fora de 40–60%) | 36–62% (σ 0.058, 3 fora) |
+| times de 4 | 31–68% (σ 0.095, 12 fora de 40–60%) | 35–64% (σ 0.058, 5 fora) |

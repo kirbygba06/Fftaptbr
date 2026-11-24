@@ -15,18 +15,20 @@ CAPSTONE = {'Ninja', 'Red Mage', 'Assassin', 'Hunter', 'Gladiator', 'Sage', 'Mog
 def target(name):
     if name == 'Time Mage': return 0.45
     return 0.48 if name in CAPSTONE else 0.50
-def build(scn0, k=None, spd=(0.7, 0.5), eva=0.6, shape=True, gearmod=True, mp_caster=0.7, mods=False):
+def build(scn0, k=None, spd=(0.7, 0.5), eva=0.6, shape=True, gearmod=True, mp_caster=0.7, mods=False, wdef=2.0, atk_scale=1.0):
     scn = copy.deepcopy(scn0); k = k or {}
-    if mods:
+    if isinstance(mods, dict): scn['mods'] = dict(mods)
+    elif mods:
         import sim2; scn['mods'] = sim2.price_mods()
     if gearmod:
         import f1_items as fi
-        scn['items'] = fi.items_f1(scn['items']); scn['abil'] = fi.abil_f1(scn['abil'])
+        scn['items'] = fi.items_f1(scn['items'], wdef=wdef); scn['abil'] = fi.abil_f1(scn['abil'])
     for j in scn['jobs']:
         r = ROLE.get(j['name'], 'atacante'); sh = SHAPE[r] if shape else (1,) * 5
         kk = k.get(j['id'], 1.0)
         for key, gk, m in (('hp', 'g_hp', sh[0]), ('atk', 'g_atk', sh[1]), ('dfn', 'g_def', sh[2]), ('pow', 'g_pow', sh[3]), ('res', 'g_res', sh[4])):
-            j[gk] = min(25.5, round(j[gk] * m * kk, 1)); j[key] = min(255 if key in ('hp', 'dfn', 'res') else 4095, round(j[key] * kk))
+            sc_ = atk_scale if key in ('atk', 'pow') else 1.0
+            j[gk] = min(25.5, round(j[gk] * m * kk * sc_, 1)); j[key] = min(255 if key in ('hp', 'dfn', 'res') else 4095, round(j[key] * kk * sc_))
         if r in ('mago',): j['g_mp'] = round(j['g_mp'] * mp_caster, 1); j['mp'] = round(j['mp'] * (0.5 + 0.5 * mp_caster))
         j['spd'] = round(100 + spd[0] * (j['spd'] - 100)); j['g_spd'] = round(1.2 + spd[1] * (j['g_spd'] - 1.2), 1)
         j['eva'] = round(50 + eva * (j['eva'] - 50))
