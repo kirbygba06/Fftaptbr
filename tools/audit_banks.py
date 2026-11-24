@@ -43,5 +43,6 @@ for A, o in scan_banks(rom, lo, hi):
         except Exception: continue
         tt = re.sub(r'\{[^}]*\}', '', t1)
         if t1 == t2 and re.search('[A-Za-z]{2,}', tt) and 'dummy' not in tt.lower(): un.append((i, t1[:70].replace('\n', '/')))
-    if un: tot += len(un); print(hex(A), '->', hex(newA), len(o), len(un), un[:8])
+    un = [u for u in un if not u[1].startswith('{8a ff}') and not u[1].startswith('{11 00}')]
+    if un: tot += len(un); print(hex(A), '->', hex(newA), len(o), len(un), un[:8] if len(sys.argv) < 5 else [u[0] for u in un])
 print('total', tot)

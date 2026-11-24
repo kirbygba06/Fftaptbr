@@ -7,6 +7,7 @@ Como strings comprimidas podem apontar para dentro do banco, o banco original é
 INTEIRO para o espaço livre e as traduções são ANEXADAS no fim; só a tabela de offsets e os
 ponteiros do código (palavras de 32 bits com o endereço do banco) são alterados."""
 import struct
+import os
 import banks
 from ffta_lz import decompress
 from dialogue_translations import DIALOGUE
@@ -173,8 +174,14 @@ def build(rom, code01):
     _o2 = banks.parse_bank(0x54BB58); _e2 = _o2[1:] + [_o2[-1] + 400]
     RAW[0x54BB58] = items2(lambda i: __import__('textbanks').to_markup(get_string(rom, 0x54BB58, _o2, _e2, i)[1], code01)[0],
                            lambda l: line_px(rom, code01, _re_mod.sub(r'\{[^}]*\}', '', l)))
-    raw_banks = set(RAW)
+    raw_idx = {bk: set(tb) for bk, tb in RAW.items()}
     for bk, tb in RAW.items(): plan[bk] = tb
+    import importlib, glob as _glob
+    for _mod in sorted(_glob.glob(os.path.join(os.path.dirname(__file__), 'dialogue_raw2*.py'))):
+        _m = importlib.import_module(os.path.splitext(os.path.basename(_mod))[0])
+        for bk, tb in _m.RAW2.items():
+            raw_idx.setdefault(bk, set()).update(tb)
+            plan[bk] = {**plan.get(bk, {}), **tb}
     for bank, trans in plan.items():
         o = banks.parse_bank(bank)
         nxt = next(s for s in starts if s > bank)
@@ -191,7 +198,7 @@ def build(rom, code01):
                     elif line[k] in (0x40, 0x81): px += 4 if line[k:k + 2] == b'\x40\x73' else 0; k += 2
                     else: break
                 cap = max(cap, px) if px < 400 else cap
-        if bank in (0x4FE5D4, 0x5094B8, 0x534D9C, 0x529514, 0x54382C):    # banco grande: offsets u16 estouram se o original for mantido inteiro; recompacta
+        if bank in (0x4FE5D4, 0x5094B8, 0x534D9C, 0x529514, 0x54382C, 0x513A8C):    # banco grande: offsets u16 estouram se o original for mantido inteiro; recompacta
             _new = bytearray(data[:min(o)])
             for _i in range(len(o)):
                 if len(_new) % 2: _new += b'\0'
@@ -202,9 +209,11 @@ def build(rom, code01):
             s, e = o[idx], ends[idx]
             hdr_i, body, comp = get_string(rom, bank, o, ends, idx)
             hdr = struct.pack('<H', hdr_i & ~2 if comp else hdr_i)
-            if bank in raw_banks:
+            if idx in raw_idx.get(bank, ()):
                 from textbanks import to_markup, from_markup
                 from story import markup_px
+                from story import trim_last as _tl
+                body = _tl(body)
                 _, sfx = to_markup(body, code01)
                 _otxt, _ = to_markup(body, code01)
                 if text.count('\n') > _otxt.count('\n'): report.append('%X[%d]: %d linhas > %d originais' % (bank, idx, text.count('\n') + 1, _otxt.count('\n') + 1))
