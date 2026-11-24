@@ -124,9 +124,13 @@ def _split_lines(raw):
     return re.split(b'\x40\x6e|\x40\x70\x40\x63', raw)
 
 
+import re as _re_mod
+_re_split = _re_mod.split
+
+
 def build(rom, code01):
     banks.rom = bytes(rom)
-    starts = sorted({a for a, _, _ in banks.scan(0x4F9000, 0x54F000)})
+    starts = sorted({a for a, _, _ in banks.scan(0x4F9000, 0x553000)})
     recs, cursor, report = {}, FREE, []
     plan = dict(DIALOGUE)
     plan[0x521A20] = auto_effects(rom, code01)
@@ -148,6 +152,9 @@ def build(rom, code01):
         if _pt: _tab[_i] = _pt
     plan[0x534D9C] = auto_effects(rom, code01, 0x534D9C, table=_tab)
     plan[0x54382C] = auto_effects(rom, code01, 0x54382C, ruler=pen)
+    from dialogue_raw import RAW
+    raw_banks = set(RAW)
+    for bk, tb in RAW.items(): plan[bk] = tb
     for bank, trans in plan.items():
         o = banks.parse_bank(bank)
         nxt = next(s for s in starts if s > bank)
@@ -168,6 +175,17 @@ def build(rom, code01):
             s, e = o[idx], ends[idx]
             hdr_i, body, comp = get_string(rom, bank, o, ends, idx)
             hdr = struct.pack('<H', hdr_i & ~2 if comp else hdr_i)
+            if bank in raw_banks:
+                from textbanks import to_markup, from_markup
+                from story import markup_px
+                _, sfx = to_markup(body, code01)
+                new = hdr + from_markup(text, code01, sfx)
+                if len(data) % 2: data += b'\0'
+                off = len(data); assert off < 0xFFFF
+                data += new; struct.pack_into('<H', data, 2 * idx, off)
+                for ln in _re_split('[\n\f]', text):
+                    if markup_px(rom, code01, ln) > cap: report.append('%X[%d]: linha %dpx > %dpx: %s' % (bank, idx, markup_px(rom, code01, ln), cap, ln))
+                continue
             toks = split_tokens(body)
             last = max(k for k, t in enumerate(toks) if t[0] == 0x80)
             suffix = body[toks[last][2] + 2:]
