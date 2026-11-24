@@ -182,6 +182,17 @@ def build(rom, code01):
         for bk, tb in _m.RAW2.items():
             raw_idx.setdefault(bk, set()).update(tb)
             plan[bk] = {**plan.get(bk, {}), **tb}
+    from dialogue_laws import pen2
+    from textbanks import to_markup as _tmk
+    _ol = banks.parse_bank(0x54382C); _el = _ol[1:] + [_ol[-1] + 300]
+    _laws = {}
+    for _i in range(len(_ol)):
+        if _i in plan.get(0x54382C, {}): continue
+        _t = _tmk(get_string(rom, 0x54382C, _ol, _el, _i)[1], code01)[0]
+        _r = pen2(_t) if _t else None
+        if _r: _laws[_i] = _r
+    raw_idx.setdefault(0x54382C, set()).update(_laws)
+    plan[0x54382C] = {**plan.get(0x54382C, {}), **_laws}
     for bank, trans in plan.items():
         o = banks.parse_bank(bank)
         nxt = next(s for s in starts if s > bank)
