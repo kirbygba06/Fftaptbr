@@ -18,8 +18,8 @@ FLAVOR = [
  'Sabre feito de minério\nde mithril refinado.', 'Sabre com guarda-mão.\nUsado pela guarda do palácio.', 'Lâmina divina que não\nsuporta noviços.',
  'Espada simples e\nprática.', 'Lâmina negra que encarna\na devastação da guerra.', 'Espada usada por cavaleiros\nde um rei lendário.',
  'Espada feita para\nencerrar batalhas.', 'Espada digna de um\nnobre cavaleiro.', 'Espada sagrada. Orações\nestão gravadas na lâmina.',
- 'Espada feita como prova\ndo poder de um líder.', 'Só os mais fiéis cavaleiros\npodem empunhar esta espada.', 'Espada de cavaleiro de\nmithril, feita com esmero.',
- 'Versão aprimorada da\nExcalibur. Muito afiada.', 'Espada de cavaleiro feita\ncomo a Ragnarok, mas melhor.', 'Esta espada lendária\ndormiu por anos. Agora vive...',
+ 'Espada feita como prova\ndo poder de um líder.', 'Só os cavaleiros mais fiéis\nempunham esta espada.', 'Espada de cavaleiro de\nmithril, feita com esmero.',
+ 'Versão aprimorada da\nExcalibur. Muito afiada.', 'Espada de cavaleiro à\nRagnarok, mas melhor.', 'Esta espada lendária dormiu\npor anos. Agora vive...',
  'Espadão pesado, mas\nbem equilibrado.', 'Técnicas antigas foram\nusadas nesta espada.', 'Estilhaços de diamante\ndeixam a lâmina afiadíssima.',
  'Esta espada é reta e\npesada como barra de ferro.', 'Espada feita em honra\naos bravos guerreiros.', 'Espada poderosa com\nlâmina em forma de cruz.',
  'Só mestres espadachins\npodem empunhá-la.', 'Espada de nobres. Símbolo\nde coragem e bondade.', 'Esta espada foi presente\nde uma fada da neve.',
@@ -36,8 +36,8 @@ FLAVOR = [
  'Espada de lâmina carmesim\nbrilhante e flamejante.', 'Espada de estocada com\nlâmina ondulada.', 'Espada de estocada com\nbela guarda de renda.',
  'Espada feita para lembrar\num redemoinho.', 'Espada batizada com a\nalegria da vitória.', 'Esta espada já foi usada\npara caçar magos renegados.',
  'Espada feita para manter\na razão em batalha.', 'Espada com pomo\nem forma de Y.', 'Espada com uma lâmina\nextra no pomo.',
- 'Espada que muda de cor\nquando balançada.', 'Espada de lâmina de\nmithril fina e temperada.', 'Florete reluzente. 26ª peça\ndo ferreiro Pemier.',
- 'Florete rubro que, dizem,\nprende um demônio na lâmina.', 'Florete rubro capaz de\ncortar a mão do destino.', 'Chamada espada-vento\npelo golpe amplo.',
+ 'Espada que muda de cor\nquando balançada.', 'Espada de lâmina de\nmithril fina e temperada.', 'Florete reluzente. 26a peça\ndo ferreiro Pemier.',
+ 'Florete rubro que, dizem,\nprende um demônio nela.', 'Florete rubro capaz de\ncortar a mão do destino.', 'Chamada espada-vento\npelo golpe amplo.',
  'Esta espada ninja serve\npara muitos fins.', 'Orvalho sobe na lâmina\npara lavar o sangue.', 'Espada flamejante que\nguia o dono à batalha.',
  'Espada exímia que corta\num elmo de ferro.', 'Espada que, dizem, soa\nao ser embainhada.', 'Lâmina tosca, mas\nmortalmente afiada.',
  'Espada tão bela que\né pena usá-la.', 'Lâmina divina tirada da\ncauda de um dragão maligno.', 'Lâmina de guerra feita\nem terra estrangeira.',
@@ -81,12 +81,12 @@ FLAVOR = [
  'Soqueira com garras\nafiadas de mithril.', 'Tempestades podem começar\ncom um golpe destas.', 'Soqueira tão leve\nque se esquece dela.',
  'Alma marrom e turva.\nSolta por goblins.', 'Alma mole e borrachuda.\nSolta por flans.', 'Alma de fogo vacilante.\nSolta por bombas.',
  'Alma como olho de dragão.\nSolta por dragões.', 'Bela alma aquosa.\nSolta por lâmias.', 'Alma como casca de árvore.\nSolta por insetos.',
- 'Alma vermelha vívida.\nSolta por panteras.', 'Alma verde pegajosa.\nSolta por malboros.', 'Alma de ahriman. Tão\nprofunda que parece sem fim.',
+ 'Alma vermelha vívida.\nSolta por panteras.', 'Alma verde pegajosa.\nSolta por malboros.', 'Alma de ahriman. Tão\nfunda que não tem fim.',
  'Mithril moldado\nmagicamente em alma.', 'Uma aura quente cerca\nesta alma benévola.', 'Esta alma uiva e rosna\ncomo se estivesse viva.',
  'Esta arma de fogo simples\né fácil de usar e limpar.', 'Esta arma usa balas\nespeciais arredondadas.', 'Esta arma tem cano longo\npara mais precisão.',
  'Este rifle longo derruba\num alvo em segundos.', 'Arma feita com técnicas\nantigas de engenheiros.', 'Arma lindamente trabalhada.\nObra de arte mortal.',
  'Arma de grosso calibre\ncom poder tremendo.', 'Esta famosa arma, dizem,\nsempre acerta o alvo.', 'Esta arma foi usada\nnum assassinato.',
- 'Arma com cano de mithril.', 'Rifle pesado, mas potente.\nPreciso e fácil de mirar.', 'Arma perdida de outrora, usada\npara invocar bestas fabulosas.',
+ 'Arma com cano de mithril.', 'Rifle pesado, mas potente.\nPreciso e fácil de mirar.', 'Arma perdida, usada para\ninvocar bestas fabulosas.',
  'Escudo simples de\ncobre trabalhado.', 'Ataques parecem escorregar\ndeste escudo redondo.', 'Escudo de opala com\nbrilho branco reluzente.',
  'Este escudo mágico emana\numa fina aura fria.', 'Símbolos mágicos de fogo\ncobrem este escudo.', 'Escudo sagrado usado contra\num terrível inimigo.',
  'Escudo de terra estrangeira.\nParte de um conjunto.', 'Escudo carregado pelos\ncavaleiros dos céus.', 'Escudo de mithril dedicado\naos quatro deuses shijin.',
@@ -140,10 +140,10 @@ ELEM = {'Fire': 'Fogo', 'Water': 'Água', 'Earth': 'Terra', 'Wind': 'Vento', 'Li
 STAT = {'Petrify': 'Pedra', 'Doom': 'Morte', 'Slow': 'Lentidão', 'Confusion': 'Confusão', 'Confuse': 'Confusão', 'Poison': 'Veneno', 'KO': 'KO',
         'Charm': 'Encanto', 'Blind': 'Cegueira', 'Silence': 'Silêncio', 'Berserk': 'Fúria', 'Sleep': 'Sono', 'Stop': 'Parar', 'Zombie': 'Zumbi',
         'Frog': 'Sapo', 'Immobilize': 'Imobilizar', 'Disable': 'Incapacitar'}
-BASE = {'Sword': ('Espada', 'f'), 'Holy Sword': ('Espada Sagrada', 'f'), 'Blade': ('Lâmina', 'f'), 'Saber': ('Sabre', 'm'), 'Knightsword': ('Espada de Cavaleiro', 'f'),
+BASE = {'Sword': ('Espada', 'f'), 'Holy Sword': ('Espada Sagrada', 'f'), 'Blade': ('Lâmina', 'f'), 'Saber': ('Sabre', 'm'), 'Knightsword': ('Esp. Cav.', 'f'),
         'Greatsword': ('Espadão', 'm'), 'Broadsword': ('Montante', 'm'), 'Knife': ('Faca', 'f'), 'Rapier': ('Florete', 'm'), 'Katana': ('Katana', 'f'),
-        'Staff': ('Cajado', 'm'), 'Rod': ('Bastão', 'm'), 'Mace': ('Maça', 'f'), 'Bow': ('Arco', 'm'), 'Greatbow': ('Arco Grande', 'm'), 'Spear': ('Lança', 'f'),
-        'Instrument': ('Instrumento', 'm'), 'Knuckles': ('Soqueira', 'f'), 'Soul': ('Alma', 'f'), 'Gun': ('Arma de Fogo', 'f'), 'Shield': ('Escudo', 'm'),
+        'Staff': ('Cajado', 'm'), 'Rod': ('Bastão', 'm'), 'Mace': ('Maça', 'f'), 'Bow': ('Arco', 'm'), 'Greatbow': ('Arcão', 'm'), 'Spear': ('Lança', 'f'),
+        'Instrument': ('Instr.', 'm'), 'Knuckles': ('Soqueira', 'f'), 'Soul': ('Alma', 'f'), 'Gun': ('Arma de Fogo', 'f'), 'Shield': ('Escudo', 'm'),
         'Helmet': ('Elmo', 'm'), 'Ribbon': ('Fita', 'f'), 'Hat': ('Chapéu', 'm'), 'Armor': ('Armadura', 'f'), 'Clothing': ('Roupa', 'f'), 'Robe': ('Manto', 'm'),
         'Shoes': ('Calçado', 'm'), 'Armlets': ('Braçadeira', 'f'), 'Accessory': ('Acessório', 'm'), 'Wind Sword': ('Espada do Vento', 'f')}
 ADJ = {'Fire': ('de Fogo', 'de Fogo'), 'Water': ('de Água', 'de Água'), 'Earth': ('de Terra', 'de Terra'), 'Wind': ('de Vento', 'de Vento'),
@@ -190,6 +190,9 @@ def item_rule(idx, txt):
         res = []
         for ln in pg.split('\n'):
             t = _tr_line(ln) if ln.strip() else ''
+            if t is None and '/' in ln:
+                ps = [_tr_line(x) for x in ln.split('/')]
+                if all(x is not None for x in ps): t = '/'.join(ps)
             if t is None: return None
             res.append(t)
         out.append('\n'.join(res))

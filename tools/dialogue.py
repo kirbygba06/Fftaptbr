@@ -191,7 +191,7 @@ def build(rom, code01):
                     elif line[k] in (0x40, 0x81): px += 4 if line[k:k + 2] == b'\x40\x73' else 0; k += 2
                     else: break
                 cap = max(cap, px) if px < 400 else cap
-        if bank in (0x4FE5D4, 0x5094B8):    # banco grande: offsets u16 estouram se o original for mantido inteiro; recompacta
+        if bank in (0x4FE5D4, 0x5094B8, 0x534D9C, 0x529514, 0x54382C):    # banco grande: offsets u16 estouram se o original for mantido inteiro; recompacta
             _new = bytearray(data[:min(o)])
             for _i in range(len(o)):
                 if len(_new) % 2: _new += b'\0'
