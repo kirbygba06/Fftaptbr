@@ -9,10 +9,11 @@ here = os.path.dirname(__file__)
 GUIDE = json.load(open(os.path.join(here, 'abilities.json')))
 KIT = json.load(open(os.path.join(here, 'class_abilities.json')))
 norm = lambda s: re.sub(r'[^a-z0-9]', '', s.lower())
-AI = dict(LAMBDA=0.15, SLEEP_V=2.0)          # parâmetros da IA do simulador (NÃO são dados da ROM)
+AI = dict(LAMBDA=0.15, SLEEP_V=2.0, HASTE_V=1.0)          # parâmetros da IA do simulador (NÃO são dados da ROM)
 OBS_HIT = {'Rockseal': 0.60, 'Charmshot': 0.95, 'Cupid': 0.80, 'Checkmate': 0.60, 'Death Sickle': 0.60}   # precisão registrada (comunidade) vs humano nv25 sem equipamento
 IMMSET = {'Frog', 'Stop', 'Disable', 'Immobilize', 'Berserk', 'Blind', 'Confusion', 'Confuse', 'Doom', 'Sleep', 'Petrify', 'KO', 'Slow', 'Silence', 'Poison', 'Addle', 'Charm'}
-P = dict(HASTE=2.0, DS2=1.0, OBS=0, IMM={10: 0.0, 25: 0.10, 45: 0.25}, SV=1.0, DURM=1.0, POISON=0.10, REACH_MOV=0.07, FACE=(0.5, 0.3, 0.2), AOE_X=1.0, FF=0.25)     # parâmetros de sensibilidade
+GAP = [0]   # distância entre as frentes das equipes (modelo de mapa); 0 = sem restrição de alcance
+P = dict(MAP=0, P_LARGE=0.25, SMALL=(4, 7), LARGE=(10, 13), HASTE=2.0, DS2=1.0, OBS=0, IMM={10: 0.0, 25: 0.10, 45: 0.25}, SV=1.0, DURM=1.0, POISON=0.10, REACH_MOV=0.07, FACE=(0.5, 0.3, 0.2), AOE_X=1.0, FF=0.25)     # parâmetros de sensibilidade
 # CONFIRMADO (teste comunitário nível 25): Stop 3, Silence 3, Slow 3, Haste 3, Doom 3, Petrify até curar. Charm e Sleep terminam ao receber dano (duração natural: suposição).
 # SUPOSIÇÃO: Confusion, Poison (turnos e %), Sleep/Charm natural, Blind, Berserk, Disable, Immobilize, buffs.
 DUR = {'Stop': 3, 'Sleep': 4, 'Petrify': 99, 'Charm': 4, 'Confusion': 4, 'Confuse': 4, 'Berserk': 4, 'Blind': 4, 'Silence': 3, 'Disable': 4, 'Addle': 4, 'Immobilize': 4, 'Slow': 3,
@@ -22,11 +23,11 @@ HARM = {'Stop', 'Sleep', 'Petrify', 'Charm', 'Confusion', 'Confuse', 'Berserk', 
         'WAtk DOWN', 'MPow DOWN', 'WDef DOWN', 'MRes DOWN', 'KO'}
 RANGE_W = {'Archer': 5, 'Hunter': 4, 'Sniper': 5, 'Gunner': 4, 'Assassin': 4, 'Juggler': 3, 'Dragoon': 2, 'Fencer': 2, 'Gadgeteer': 3}
 import collections
-STATS = dict(use=collections.Counter(), acts=collections.Counter(), att=collections.Counter(), succ=collections.Counter(), impact=collections.defaultdict(float), ev=collections.defaultdict(float), evn=collections.Counter(), mp=collections.defaultdict(float), mpn=collections.Counter(), denied=collections.defaultdict(float), uses_ab=collections.Counter())
+STATS = dict(use=collections.Counter(), acts=collections.Counter(), att=collections.Counter(), succ=collections.Counter(), impact=collections.defaultdict(float), moves=collections.Counter(), hgain=collections.defaultdict(float), hcast=collections.Counter(), evall=collections.defaultdict(float), evalln=collections.Counter(), best=collections.Counter(), ev=collections.defaultdict(float), evn=collections.Counter(), mp=collections.defaultdict(float), mpn=collections.Counter(), denied=collections.defaultdict(float), uses_ab=collections.Counter())
 def reset_stats():
     for k in STATS: STATS[k].clear()
 class Ab:
-    __slots__ = ('name', 'basis', 'power', 'mp', 'rng', 'area', 'eff', 'ap', 'type', 'cls', 'ranged_w')
+    __slots__ = ('harm', 'name', 'basis', 'power', 'mp', 'rng', 'area', 'eff', 'ap', 'type', 'cls', 'ranged_w')
 def parse_effect(s):
     parts = [p.strip() for p in s.split(',', 2)]
     if len(parts) < 3: return None
@@ -69,11 +70,12 @@ def build_catalog():
     return cat
 CAT = build_catalog()
 DISABLE = set()
+APMOD = {}   # nome da habilidade -> AP alterado (teste de progressão)
 def kit_for(cls_name, cap):
     A, Sup = [], []
     for k in KIT:
         if norm(k['cls']) != norm(cls_name): continue
-        if k['ap'] > cap: continue
+        if APMOD.get(k['name'], k['ap']) > cap: continue
         if k['type'] == 'A' and norm(k['name']) in CAT and k['name'] not in DISABLE: A.append(CAT[norm(k['name'])])
         elif k['type'] == 'S': Sup.append(k['name'])
     return A, Sup
@@ -155,7 +157,22 @@ def hit_s(u, t, rng, names, abname=None):
     if u['s'] == 'Concentrate': sr -= 20
     if u['s'] == 'Turbo MP': sr -= 10
     return (100 - max(0, min(100, sr))) / 100
-def reach(u, a):
+def is_harm(a):
+    h = getattr(a, 'harm', None)
+    if h is None:
+        h = any(e['kind'] in ('dmg', 'hpfrac', 'flat', 'mpdmg', 'delay', 'dispel') or (e['kind'] == 'status' and any(n in HARM for n in e['names'])) for e in a.eff)
+        a.harm = h
+    return h
+def eff_range(u, a):
+    r = a.rng
+    if r == 'Infinite': return 99
+    if r == 'Self' and 'Not Self' not in a.area: return 99
+    if r == 'Self': return 1
+    return u['wr'] if r == 'As Weapon' else (3 if r in ('Cone', 'Line', 'Dbl-Line') else int(r) if r.isdigit() else 1)
+def reach(u, a, gate=None):
+    if P['MAP'] and GAP[0] > 0 and (is_harm(a) if gate is None else gate):
+        mv = 0 if has(u, 'Immobilize') else u['mov']
+        if GAP[0] > mv + eff_range(u, a): return 0.0
     r = a.rng; mov = u['mov']
     if r == 'Infinite': return 1.0
     if r == 'Self' and 'Not Self' not in a.area: return 1.0
@@ -204,7 +221,7 @@ def status_value(u, t, name, ally_dps, foe_dps_total, nallies):
     if name == 'Frog': return td * D * 0.9
     if name in ('WAtk DOWN', 'MPow DOWN', 'WDef DOWN', 'MRes DOWN'): return td * D * 0.1
     # benéficos (t = aliado)
-    if name == 'Haste': return td * D * 1.0
+    if name == 'Haste': return td * D * 1.0 * AI['HASTE_V']
     if name == 'Quicken': return td * 1.0
     if name == 'Expert Guard': return 0.9 * foe_dps_total * 1.2 / max(1, nallies) * D
     if name in ('Protect', 'Shell', 'Defense'): return 0.2 * foe_dps_total / max(1, nallies) * D
@@ -232,7 +249,7 @@ def allowed(u, a):
     return u['mp'] >= mp
 def score_ability(u, a, own, foes, rng):
     """melhor (valor, alvo) para a habilidade a; valor em PV equivalentes."""
-    r = reach(u, a)
+    r = reach(u, a, gate=is_harm(a))
     live_f = [f for f in foes if f['hp'] > 0 and not has(f, 'Petrify')]; live_a = [x for x in own if x['hp'] > 0]; dead_a = [x for x in own if x['hp'] <= 0 and not has(x, 'Petrify')]
     if not live_f: return 0, None
     ftot = sum(f.get('dps', 100) for f in live_f)
@@ -315,6 +332,7 @@ def do_effects(u, t, a, own, foes, rng, e1ok):
                 harm = nm in HARM
                 if (harm and t in own and t is not u) or ((not harm) and t in foes): continue
                 SRC[0] = a.name; add_status(t, nm, rng)
+                if nm == 'Haste': STATS['hcast'][a.name] += 1
                 if nm == 'Petrify': STATS['denied'][a.name] += t.get('dps', 100) * 6
         elif kind == 'esuna': clear_debuffs(t)
         elif kind == 'dispel':
@@ -336,7 +354,9 @@ def pick_action(u, own, foes, rng):
     for a in cands:
         v, t = score_ability(u, a, own, foes, rng)
         v -= AI['LAMBDA'] * a.mp
+        STATS['evall'][(u['name'], a.name)] += v; STATS['evalln'][(u['name'], a.name)] += 1
         if v > best[0]: best = (v, a, t)
+    if best[1] is not None: STATS['best'][(u['name'], best[1].name)] += 1
     return best
 def take_turn(u, own, foes, rng):
     st = u['st']
@@ -349,6 +369,7 @@ def take_turn(u, own, foes, rng):
     if u['hp'] <= 0:
         if u['st'].get('Auto-Life'): u['hp'] = u['maxhp'] * 0.25; u['st'].clear()
         else: return
+    if has(u, 'Haste'): STATS['hgain'][u.get('src', {}).get('Haste') or '?'] += 0.5 * u.get('dps', 100)
     skip = has(u, 'Stop') or has(u, 'Sleep') or has(u, 'Petrify')
     for _n in ('Stop', 'Sleep', 'Charm', 'Confusion'):
         if has(u, _n): STATS['denied'][u.get('src', {}).get(_n) or '?'] += u.get('dps', 100) * (1.0 if _n != 'Confusion' else 0.7)
@@ -370,6 +391,13 @@ def take_turn(u, own, foes, rng):
             STATS['use'][(u['name'], u['lvl'], a.name)] += 1; STATS['acts'][(u['name'], u['lvl'])] += 1; STATS['ev'][a.name] += v; STATS['evn'][a.name] += 1
             n = 2 if (u['s'] == 'Double Sword' and a is FIGHT) else 1
             casts = 2 if (u['s'] == 'Doublecast' and a.mp > 0) else 1
+            if P['MAP'] and GAP[0] > 0 and is_harm(a) and reach(u, a) == 0.0:
+                GAP[0] = max(0, GAP[0] - u['mov']); STATS['moves'][u['name']] += 1
+                for _k in list(st):
+                    if _k not in ('Petrify', 'Auto-Life', 'Doom'):
+                        st[_k] -= 1
+                        if st[_k] <= 0: del st[_k]
+                return
             for _ in range(max(n, casts)):
                 u['dmgmult'] = P['DS2'] if (n == 2 and _ == 1) else 1.0
                 if t is None or (t['hp'] <= 0 and not any(e['kind'] == 'revive' for e in a.eff)): break
@@ -382,6 +410,7 @@ def take_turn(u, own, foes, rng):
                     if a.mp:
                         _c = a.mp * (2 if u['s'] == 'Turbo MP' else 0.5 if u['s'] == 'Half MP' else 1); u['mp'] -= _c; u['mpsp'] = u.get('mpsp', 0) + _c
                     for tt in targets: do_effects(u, tt, a, own, foes, rng, True)
+                    if P['MAP'] and GAP[0] > 0 and is_harm(a): GAP[0] = min(GAP[0], max(1, eff_range(u, a) if eff_range(u, a) < 99 else 1))
                     u['casts'] = u.get('casts', 0) + (1 if a.mp else 0)
                 if casts == 2 and _ == 0:
                     v, a2, t2 = pick_action(u, own, foes, rng)
@@ -398,6 +427,9 @@ def battle(A, B, rng, maxturn=400):
     return r
 def _battle(A, B, rng, maxturn=400):
     units = A + B; order = {id(u): i for i, u in enumerate(units)}
+    if P['MAP']:
+        lo, hi = P['LARGE'] if random.random() < P['P_LARGE'] else P['SMALL']; GAP[0] = random.randint(lo, hi)
+    else: GAP[0] = 0
     for u in units: u['cnt'] = 0; u['st'] = {}
     for team, foes in ((A, B), (B, A)):
         for u in team: u['dps'] = max(40.0, est_dps(u, foes))

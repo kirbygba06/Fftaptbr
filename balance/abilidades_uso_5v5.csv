@@ -1,0 +1,598 @@
+classe,nivel,habilidade,valor_medio_quando_disponivel,valor_%_do_melhor_da_classe,escolhida_%_das_vezes_disponivel,vezes_disponivel
+Alchemist,10,Fight,6.9,18,13.3,9601
+Alchemist,10,Poison,38.5,100,91.0,9144
+Alchemist,10,Rasp,-3.6,-9,0.0,9094
+Alchemist,25,Astra,32.3,38,2.9,10136
+Alchemist,25,Fight,16.2,19,5.8,10628
+Alchemist,25,Poison,79.5,94,47.4,10130
+Alchemist,25,Rasp,-3.6,-4,0.0,10095
+Alchemist,25,Toad,85.0,100,48.9,10063
+Alchemist,45,Astra,101.1,37,1.9,6114
+Alchemist,45,Death,275.0,100,66.8,6094
+Alchemist,45,Fight,26.0,9,9.4,6744
+Alchemist,45,Flare,196.5,71,13.1,6094
+Alchemist,45,Meteor,205.1,75,16.4,6093
+Alchemist,45,Poison,123.6,45,0.3,6111
+Alchemist,45,Rasp,-3.6,-1,0.0,6100
+Alchemist,45,Toad,164.4,60,1.8,6094
+Animist,10,Catnip,16.1,22,0.0,11357
+Animist,10,Fight,15.9,22,63.8,31194
+Animist,10,Sheep Count,72.7,100,99.4,11357
+Animist,25,100% Wool,60.5,59,5.5,12702
+Animist,25,Catnip,15.9,15,0.0,12608
+Animist,25,Fight,35.4,34,44.3,22129
+Animist,25,Frogsong,103.3,100,77.7,11486
+Animist,25,Sheep Count,82.3,80,11.7,12702
+Animist,25,Tail Wag,78.5,76,9.6,12702
+Animist,45,100% Wool,103.3,57,4.7,16166
+Animist,45,Catnip,23.4,13,0.0,15879
+Animist,45,Chocobo Rush,180.8,100,39.4,15879
+Animist,45,Cuisine,100.3,56,12.9,14706
+Animist,45,Fight,58.5,32,21.7,20368
+Animist,45,Friend,-1.8,-1,0.0,15879
+Animist,45,Frogsong,177.7,98,37.7,15550
+Animist,45,Sheep Count,131.5,73,1.9,16166
+Animist,45,Tail Wag,134.2,74,5.3,16166
+Archer,10,Boost,22.7,66,36.0,50630
+Archer,10,Fight,34.6,100,64.5,51477
+Archer,25,Aim: Arm,59.2,59,2.2,44634
+Archer,25,Aim: Legs,36.5,36,0.1,44634
+Archer,25,Blackout,34.5,34,0.0,44634
+Archer,25,Boost,56.1,56,3.8,44634
+Archer,25,Cupid,100.3,100,86.1,44634
+Archer,25,Fight,46.7,47,9.5,45489
+Archer,45,Aim: Arm,137.3,59,7.1,43539
+Archer,45,Aim: Legs,89.8,39,0.6,43539
+Archer,45,Blackout,77.9,34,0.3,43539
+Archer,45,Boost,88.3,38,5.1,43539
+Archer,45,Burial,0.0,0,0.0,43539
+Archer,45,Cupid,231.2,100,76.5,43539
+Archer,45,Faster,112.2,49,0.8,43539
+Archer,45,Fight,112.0,48,8.9,44266
+Archer,45,Take Aim,60.2,26,2.2,43539
+Assassin,10,Fight,26.3,100,97.5,28533
+Assassin,25,Ague,24.6,45,1.9,24557
+Assassin,25,Aphonia,23.0,42,3.8,24557
+Assassin,25,Fight,55.3,100,47.2,25306
+Assassin,25,Shadowbind,47.8,87,45.8,24557
+Assassin,45,Ague,36.6,14,0.0,19747
+Assassin,45,Aphonia,39.4,15,0.0,19747
+Assassin,45,Fight,98.5,37,27.7,21355
+Assassin,45,Last Breath,189.6,71,8.9,19207
+Assassin,45,Nightmare,160.3,60,1.8,19747
+Assassin,45,Oblivion,61.7,23,0.0,19207
+Assassin,45,Rockseal,265.7,100,66.2,19207
+Assassin,45,Shadowbind,84.4,32,0.0,19747
+Beastmaster,10,Fight,19.2,100,99.4,31492
+Beastmaster,25,Bomb,0.0,0,0.0,21026
+Beastmaster,25,Bug,0.0,0,0.0,21026
+Beastmaster,25,Dragon,0.0,0,0.0,21026
+Beastmaster,25,Fairy,0.0,0,0.0,21026
+Beastmaster,25,Fight,39.4,100,98.7,21616
+Beastmaster,25,Flan,0.0,0,0.0,21026
+Beastmaster,25,Floateye,0.0,0,0.0,21026
+Beastmaster,25,Goblin,0.0,0,0.0,21026
+Beastmaster,25,Lamia,0.0,0,0.0,21026
+Beastmaster,25,Malboro,0.0,0,0.0,21026
+Beastmaster,25,Panther,0.0,0,0.0,21026
+Beastmaster,25,Rockbeast,0.0,0,0.0,21026
+Beastmaster,25,Tonberry,0.0,0,0.0,21026
+Beastmaster,25,Undead,0.0,0,0.0,21026
+Beastmaster,45,Bomb,0.0,0,0.0,20565
+Beastmaster,45,Bug,0.0,0,0.0,20565
+Beastmaster,45,Dragon,0.0,0,0.0,20565
+Beastmaster,45,Fairy,0.0,0,0.0,20565
+Beastmaster,45,Fight,71.5,100,98.6,20973
+Beastmaster,45,Flan,0.0,0,0.0,20565
+Beastmaster,45,Floateye,0.0,0,0.0,20565
+Beastmaster,45,Goblin,0.0,0,0.0,20565
+Beastmaster,45,Lamia,0.0,0,0.0,20565
+Beastmaster,45,Malboro,0.0,0,0.0,20565
+Beastmaster,45,Panther,0.0,0,0.0,20565
+Beastmaster,45,Rockbeast,0.0,0,0.0,20565
+Beastmaster,45,Tonberry,0.0,0,0.0,20565
+Beastmaster,45,Undead,0.0,0,0.0,20565
+Bishop,10,Fight,10.3,100,100.0,8816
+Bishop,25,Aero,61.0,28,0.6,8348
+Bishop,25,Break,219.3,100,93.5,8213
+Bishop,25,Cura,104.8,48,6.7,8348
+Bishop,25,Dispel,-1.8,-1,0.0,8348
+Bishop,25,Fight,21.1,10,9.1,9175
+Bishop,25,Water,60.9,28,0.7,8348
+Bishop,45,Aero,93.8,25,1.2,7840
+Bishop,45,Barrier,86.7,24,0.4,7843
+Bishop,45,Break,368.3,100,79.0,7838
+Bishop,45,Cura,165.9,45,13.1,7843
+Bishop,45,Dispel,-1.8,0,0.0,7840
+Bishop,45,Fight,39.3,11,5.3,8277
+Bishop,45,Holy,135.9,37,4.8,7835
+Bishop,45,Judge,-0.9,0,0.0,7843
+Bishop,45,Water,94.2,26,1.5,7840
+Black Mage,10,Blizzard,36.6,100,30.3,30265
+Black Mage,10,Fight,7.6,21,4.5,31671
+Black Mage,10,Fire,36.5,100,36.9,30265
+Black Mage,10,Thunder,36.6,100,32.7,30265
+Black Mage,25,Blizzara,82.8,100,27.4,26949
+Black Mage,25,Blizzard,62.4,75,2.4,26976
+Black Mage,25,Fight,15.2,18,7.2,29083
+Black Mage,25,Fira,82.7,100,33.9,26949
+Black Mage,25,Fire,62.5,75,3.4,26976
+Black Mage,25,Thundara,82.7,100,30.1,26949
+Black Mage,25,Thunder,62.4,75,2.6,26976
+Black Mage,45,Blizzaga,158.7,100,26.0,26726
+Black Mage,45,Blizzara,128.5,81,3.0,26800
+Black Mage,45,Blizzard,96.1,61,1.0,26827
+Black Mage,45,Fight,27.5,17,6.7,28743
+Black Mage,45,Fira,128.4,81,3.7,26800
+Black Mage,45,Firaga,158.9,100,31.8,26726
+Black Mage,45,Fire,96.0,60,1.5,26827
+Black Mage,45,Thundaga,158.7,100,28.3,26726
+Black Mage,45,Thundara,128.6,81,3.5,26800
+Black Mage,45,Thunder,96.3,61,1.2,26827
+Blue Mage,10,Fight,17.0,100,99.8,28973
+Blue Mage,25,Fight,35.7,100,99.5,20704
+Blue Mage,45,Fight,62.0,100,99.0,20035
+Defender,10,Fight,17.8,63,13.5,24932
+Defender,10,Hibernate,0.0,0,0.0,24211
+Defender,10,Tremor,28.5,100,89.0,24211
+Defender,25,Defense,23.0,20,0.4,14129
+Defender,25,Drop Weapon,0.0,0,0.0,14129
+Defender,25,Fight,36.2,32,7.8,15304
+Defender,25,Hibernate,0.0,0,0.0,14129
+Defender,25,Meltdown,0.0,0,0.0,14129
+Defender,25,Mow Down,114.8,100,99.3,14129
+Defender,25,Tremor,48.2,42,0.1,14129
+Defender,45,Aura,96.7,56,20.1,35740
+Defender,45,Defense,72.5,42,1.8,35740
+Defender,45,Drop Weapon,0.0,0,0.0,35740
+Defender,45,Expert Guard,172.0,100,29.7,35740
+Defender,45,Fight,57.0,33,2.6,36647
+Defender,45,Hibernate,0.0,0,0.0,35740
+Defender,45,Meltdown,0.0,0,0.0,35740
+Defender,45,Mow Down,170.3,99,48.2,35740
+Defender,45,Tremor,57.2,33,0.0,35740
+Dragoon,10,Fight,23.3,79,18.1,25620
+Dragoon,10,Jump,29.4,100,84.1,24877
+Dragoon,25,Bangaa Cry,103.4,100,88.3,11589
+Dragoon,25,Fight,46.2,45,9.2,12568
+Dragoon,25,Jump,61.0,59,9.4,11589
+Dragoon,25,Wyrmtamer,0.0,0,0.0,11589
+Dragoon,45,Bangaa Cry,151.1,100,47.4,13471
+Dragoon,45,Bolt Breath,134.8,89,14.5,13471
+Dragoon,45,Fight,86.9,58,6.1,14249
+Dragoon,45,Fire Breath,134.6,89,15.6,13471
+Dragoon,45,Ice Breath,134.8,89,13.0,13471
+Dragoon,45,Jump,111.6,74,7.4,13471
+Dragoon,45,Lancet,0.0,0,0.0,13471
+Dragoon,45,Wyrmkiller,88.1,58,0.5,13471
+Dragoon,45,Wyrmtamer,0.0,0,0.0,13471
+Elementalist,10,Fight,12.6,15,50.7,21392
+Elementalist,10,Fire Whip,84.5,100,99.0,10555
+Elementalist,10,White Flame,25.6,30,0.6,8259
+Elementalist,25,Earth Heal,50.8,46,0.3,15861
+Elementalist,25,Fight,25.9,23,13.7,18383
+Elementalist,25,Fire Whip,111.4,100,64.8,15861
+Elementalist,25,Heavy Dust,89.2,80,8.6,15861
+Elementalist,25,Shining Air,82.7,74,8.0,15861
+Elementalist,25,Sliprain,87.4,78,6.2,15861
+Elementalist,25,White Flame,68.3,61,12.0,15221
+Elementalist,45,Earth Heal,83.4,30,0.0,16494
+Elementalist,45,Elementalshift,-0.9,0,0.0,16619
+Elementalist,45,Evil Gaze,281.7,100,79.6,16494
+Elementalist,45,Fight,49.5,18,2.3,16886
+Elementalist,45,Fire Whip,212.4,75,14.1,16494
+Elementalist,45,Heavy Dust,159.9,57,0.8,16494
+Elementalist,45,Shining Air,145.7,52,1.1,16494
+Elementalist,45,Sliprain,157.6,56,0.8,16494
+Elementalist,45,White Flame,113.2,40,3.1,16459
+Fencer,10,Fight,21.5,60,20.6,32154
+Fencer,10,Swarmstrike,35.8,100,78.9,31781
+Fencer,25,Featherblow,0.0,0,0.0,20964
+Fencer,25,Fight,43.0,54,3.1,21353
+Fencer,25,Nighthawk,51.6,64,4.9,20964
+Fencer,25,Piercethrough,75.2,94,31.2,20964
+Fencer,25,Shadowstick,37.8,47,1.6,20964
+Fencer,25,Swarmstrike,80.0,100,60.1,20964
+Fencer,45,Checkmate,131.7,96,39.9,21371
+Fencer,45,Featherblow,0.0,0,0.0,21371
+Fencer,45,Fight,75.9,56,3.1,21854
+Fencer,45,Manastrike,0.0,0,0.0,21371
+Fencer,45,Nighthawk,89.8,66,3.5,21371
+Fencer,45,Piercethrough,130.4,95,21.8,21371
+Fencer,45,Shadowstick,77.5,57,3.9,21371
+Fencer,45,Swallowtail,86.6,63,0.6,21371
+Fencer,45,Swarmstrike,136.7,100,28.0,21371
+Fighter,10,Fight,20.7,100,62.1,25542
+Fighter,10,Rush,20.7,100,38.2,25003
+Fighter,25,Air Render,79.6,91,31.0,12299
+Fighter,25,Beatdown,0.0,0,0.0,12299
+Fighter,25,Blitz,0.0,0,0.0,12299
+Fighter,25,Far Fist,87.0,100,65.0,12299
+Fighter,25,Fight,41.2,47,8.2,13278
+Fighter,25,Rush,42.8,49,0.5,12299
+Fighter,25,Wild Swing,55.9,64,1.9,12299
+Fighter,45,Air Blast,120.1,95,18.2,12487
+Fighter,45,Air Render,119.2,95,16.2,12487
+Fighter,45,Backdraft,124.6,99,27.7,12487
+Fighter,45,Beatdown,0.0,0,0.0,12487
+Fighter,45,Blitz,0.0,0,0.0,12487
+Fighter,45,Far Fist,126.0,100,32.7,12487
+Fighter,45,Fight,77.7,62,7.4,13379
+Fighter,45,Rush,79.5,63,0.6,12487
+Fighter,45,Wild Swing,103.7,82,3.0,12487
+Gadgeteer,10,Fight,19.9,100,100.0,28619
+Gadgeteer,25,Black Ingot,-1.8,-4,0.0,18014
+Gadgeteer,25,Blue Screw,-1.8,-4,0.0,18014
+Gadgeteer,25,Chroma Gem,-1.8,-4,0.0,18014
+Gadgeteer,25,Fight,42.3,100,99.9,18445
+Gadgeteer,25,Gold Battery,-1.8,-4,0.0,18014
+Gadgeteer,25,Green Gear,-1.8,-4,0.0,18014
+Gadgeteer,25,Red Spring,-1.8,-4,0.0,18014
+Gadgeteer,25,Silver Disc,-1.8,-4,0.0,18014
+Gadgeteer,25,Yellow Spring,-1.8,-4,0.0,18014
+Gadgeteer,45,Black Ingot,-1.8,-2,0.0,16956
+Gadgeteer,45,Blue Screw,-1.8,-2,0.0,16956
+Gadgeteer,45,Chroma Gem,-1.8,-2,0.0,16956
+Gadgeteer,45,Fight,75.1,100,99.9,17411
+Gadgeteer,45,Gold Battery,-1.8,-2,0.0,16956
+Gadgeteer,45,Green Gear,-1.8,-2,0.0,16956
+Gadgeteer,45,Red Spring,-1.8,-2,0.0,16956
+Gadgeteer,45,Silver Disc,-1.8,-2,0.0,16956
+Gadgeteer,45,Yellow Spring,-1.8,-2,0.0,16956
+Gladiator,10,Fight,21.7,100,63.7,27417
+Gladiator,10,Rush,21.6,100,37.2,26789
+Gladiator,25,Beatdown,0.0,0,0.0,11738
+Gladiator,25,Blitz,0.0,0,0.0,11738
+Gladiator,25,Bolt Sword,74.0,100,24.5,11440
+Gladiator,25,Fight,41.7,56,12.9,12875
+Gladiator,25,Fire Sword,74.0,100,39.1,11440
+Gladiator,25,Ice Sword,74.2,100,18.2,11440
+Gladiator,25,Rush,43.6,59,2.9,11738
+Gladiator,25,Wild Swing,56.9,77,12.4,11738
+Gladiator,45,Beatdown,0.0,0,0.0,13508
+Gladiator,45,Blitz,0.0,0,0.0,13508
+Gladiator,45,Bolt Sword,111.3,100,19.3,13277
+Gladiator,45,Fight,79.0,71,12.3,14338
+Gladiator,45,Fire Sword,111.2,100,27.8,13277
+Gladiator,45,Ice Sword,111.2,100,14.0,13277
+Gladiator,45,Rush,79.8,72,4.5,13508
+Gladiator,45,Wild Swing,104.1,94,27.9,13508
+Gunner,10,Blindshot,41.1,100,87.3,34639
+Gunner,10,Boltshot,17.2,42,2.4,34639
+Gunner,10,Fight,17.2,42,6.6,35002
+Gunner,10,Fireshot,17.2,42,3.3,34639
+Gunner,10,Iceshot,17.2,42,1.5,34639
+Gunner,25,Blindshot,69.7,60,12.7,20384
+Gunner,25,Boltshot,37.0,32,0.3,20384
+Gunner,25,Confushot,115.6,100,71.3,20384
+Gunner,25,Fight,36.7,32,2.3,20701
+Gunner,25,Fireshot,37.1,32,0.4,20384
+Gunner,25,Iceshot,37.1,32,0.1,20384
+Gunner,25,Silenshot,78.0,68,14.4,20384
+Gunner,45,Blindshot,165.4,45,0.3,22312
+Gunner,45,Boltshot,81.0,22,0.0,22312
+Gunner,45,Charmshot,370.3,100,81.7,22312
+Gunner,45,Confushot,302.4,82,13.3,22312
+Gunner,45,Fight,81.0,22,0.7,22459
+Gunner,45,Fireshot,81.0,22,0.0,22312
+Gunner,45,Iceshot,81.1,22,0.0,22312
+Gunner,45,Silenshot,187.9,51,0.2,22312
+Gunner,45,Stopshot,313.5,85,4.4,22312
+Hunter,10,Advice,11.6,45,13.1,26817
+Hunter,10,Fight,26.0,100,87.1,27260
+Hunter,25,Addle,0.0,0,0.0,19735
+Hunter,25,Advice,15.2,21,2.5,19735
+Hunter,25,Capture,0.0,0,0.0,19735
+Hunter,25,Fight,53.9,75,17.4,20171
+Hunter,25,Oust,0.0,0,0.0,19735
+Hunter,25,Sonic Boom,71.5,100,82.0,19735
+Hunter,45,Addle,0.0,0,0.0,16685
+Hunter,45,Advice,36.1,21,4.4,16685
+Hunter,45,Aim: Vitals,0.0,0,0.0,16685
+Hunter,45,Capture,0.0,0,0.0,16685
+Hunter,45,Fight,131.9,76,18.0,17235
+Hunter,45,Hunting,69.1,40,1.7,16685
+Hunter,45,Oust,0.0,0,0.0,16685
+Hunter,45,Sidewinder,132.4,77,7.9,16685
+Hunter,45,Sonic Boom,172.8,100,70.8,16685
+Illusionist,10,Fight,7.2,16,25.6,12535
+Illusionist,10,Freezeblink,44.5,100,46.2,9321
+Illusionist,10,Prominence,44.6,100,47.7,9321
+Illusionist,10,Tempest,36.8,83,6.2,9321
+Illusionist,25,Fight,15.1,20,8.0,13521
+Illusionist,25,Freezeblink,77.0,100,40.2,12445
+Illusionist,25,Prominence,77.1,100,43.4,12445
+Illusionist,25,Soil Evidence,64.8,84,5.3,12445
+Illusionist,25,Tempest,64.6,84,5.5,12445
+Illusionist,25,Wild Tornado,64.8,84,5.5,12445
+Illusionist,45,Deluge,99.0,85,3.0,15744
+Illusionist,45,Fight,25.9,22,3.5,16305
+Illusionist,45,Freezeblink,116.8,100,27.5,15744
+Illusionist,45,Prominence,116.7,100,29.7,15744
+Illusionist,45,Soil Evidence,98.9,85,2.9,15744
+Illusionist,45,Star Cross,98.8,84,3.2,15744
+Illusionist,45,Stardust,116.9,100,27.0,15744
+Illusionist,45,Tempest,98.9,85,3.8,15744
+Illusionist,45,Wild Tornado,99.1,85,3.0,15744
+Juggler,10,Fight,21.6,100,24.0,30671
+Juggler,10,Gil Toss,21.2,98,77.1,29994
+Juggler,10,Hurl,0.0,0,0.0,29994
+Juggler,25,Ball,70.7,100,48.2,23178
+Juggler,25,Fight,48.2,68,17.9,23790
+Juggler,25,Gil Toss,24.5,35,0.6,23178
+Juggler,25,Hurl,0.0,0,0.0,23178
+Juggler,25,Ring,70.1,99,34.1,23178
+Juggler,45,Ball,130.9,69,12.1,22747
+Juggler,45,Dagger,190.7,100,60.2,22747
+Juggler,45,Fight,86.5,45,3.7,23173
+Juggler,45,Firebomb,117.6,62,6.1,22747
+Juggler,45,Gil Toss,23.3,12,0.0,22747
+Juggler,45,Hurl,0.0,0,0.0,22747
+Juggler,45,Ring,133.3,70,8.7,22747
+Juggler,45,Smile,108.2,57,10.9,22747
+Mog Knight,10,Fight,17.6,100,63.4,29722
+Mog Knight,10,Mog Attack,17.6,100,37.3,29096
+Mog Knight,25,Fight,36.1,76,12.6,19801
+Mog Knight,25,Mog Attack,36.5,76,7.3,19194
+Mog Knight,25,Mog Guard,22.9,48,6.2,19194
+Mog Knight,25,Mog Lance,47.8,100,76.7,19194
+Mog Knight,25,Mog Rush,0.0,0,0.0,19194
+Mog Knight,45,Fight,56.3,76,9.8,22825
+Mog Knight,45,Mog Aid,23.7,32,9.7,22298
+Mog Knight,45,Mog Attack,56.4,77,5.9,22303
+Mog Knight,45,Mog Guard,36.0,49,8.4,22303
+Mog Knight,45,Mog Lance,73.6,100,57.9,22303
+Mog Knight,45,Mog Peek,0.0,0,0.0,22303
+Mog Knight,45,Mog Rush,0.0,0,0.0,22303
+Mog Knight,45,Mog Shield,37.6,51,10.4,22303
+Morpher,10,Fight,12.8,100,96.8,23040
+Morpher,25,Bomb,0.0,0,0.0,18182
+Morpher,25,Bug,0.0,0,0.0,18182
+Morpher,25,Dragon,0.0,0,0.0,18182
+Morpher,25,Fight,27.8,100,96.6,18719
+Morpher,25,Flan,0.0,0,0.0,18182
+Morpher,25,Floateye,0.0,0,0.0,18182
+Morpher,25,Goblin,0.0,0,0.0,18182
+Morpher,25,Lamia,0.0,0,0.0,18182
+Morpher,25,Malboro,0.0,0,0.0,18182
+Morpher,25,Panther,0.0,0,0.0,18182
+Morpher,45,Bomb,0.0,0,0.0,20134
+Morpher,45,Bug,0.0,0,0.0,20134
+Morpher,45,Dragon,0.0,0,0.0,20134
+Morpher,45,Fight,48.8,100,97.2,20429
+Morpher,45,Flan,0.0,0,0.0,20134
+Morpher,45,Floateye,0.0,0,0.0,20134
+Morpher,45,Goblin,0.0,0,0.0,20134
+Morpher,45,Lamia,0.0,0,0.0,20134
+Morpher,45,Malboro,0.0,0,0.0,20134
+Morpher,45,Panther,0.0,0,0.0,20134
+Ninja,10,Fight,17.6,100,95.0,29951
+Ninja,10,Throw,0.0,0,0.0,29626
+Ninja,25,Earth Veil,74.1,76,12.5,25008
+Ninja,25,Fight,38.7,40,5.5,25749
+Ninja,25,Fire Veil,98.0,100,62.8,25008
+Ninja,25,Metal Veil,60.3,62,4.1,25008
+Ninja,25,Throw,0.0,0,0.0,25383
+Ninja,25,Water Veil,63.3,65,9.7,25008
+Ninja,25,Wood Veil,64.2,66,6.0,25008
+Ninja,45,Earth Veil,141.8,74,13.3,24289
+Ninja,45,Fight,72.1,38,4.7,24743
+Ninja,45,Fire Veil,190.7,100,59.8,24289
+Ninja,45,Metal Veil,108.1,57,4.2,24289
+Ninja,45,Oblivion,75.2,39,0.7,24123
+Ninja,45,Throw,0.0,0,0.0,24446
+Ninja,45,Unspell,-0.6,0,0.0,24289
+Ninja,45,Water Veil,119.5,63,10.6,24289
+Ninja,45,Wood Veil,120.5,63,5.9,24289
+Paladin,10,Fight,14.7,100,51.4,39558
+Paladin,10,Nurse,12.8,87,49.4,38895
+Paladin,25,Cover,0.0,0,0.0,21756
+Paladin,25,Defense,19.0,62,15.4,21756
+Paladin,25,Drop Weapon,0.0,0,0.0,21756
+Paladin,25,Fight,30.5,100,57.4,22310
+Paladin,25,Nurse,21.8,71,28.3,21732
+Paladin,25,Parley,0.0,0,0.0,21756
+Paladin,25,Subdue,0.0,0,0.0,21756
+Paladin,45,Cover,0.0,0,0.0,24548
+Paladin,45,Defense,34.2,30,17.0,24548
+Paladin,45,Drop Weapon,0.0,0,0.0,24548
+Paladin,45,Fight,42.0,37,35.3,25441
+Paladin,45,Holy Blade,114.0,100,70.1,9220
+Paladin,45,Nurse,38.6,34,19.4,24546
+Paladin,45,Parley,0.0,0,0.0,24548
+Paladin,45,Saint Cross,65.8,58,10.1,10192
+Paladin,45,Subdue,0.0,0,0.0,24548
+Red Mage,10,Blizzard,34.7,84,5.0,14597
+Red Mage,10,Cure,37.5,90,40.4,14597
+Red Mage,10,Fight,14.1,34,37.4,23220
+Red Mage,10,Fire,34.7,84,6.3,14597
+Red Mage,10,Poison,41.5,100,45.5,13469
+Red Mage,10,Thunder,34.7,84,5.8,14597
+Red Mage,25,Blizzard,59.1,71,3.5,16710
+Red Mage,25,Cure,75.4,90,35.9,16710
+Red Mage,25,Fight,28.5,34,10.5,18639
+Red Mage,25,Fire,59.2,71,4.9,16710
+Red Mage,25,Poison,83.4,100,32.8,16513
+Red Mage,25,Sleep,80.5,96,19.3,16513
+Red Mage,25,Thunder,59.1,71,3.9,16710
+Red Mage,45,Barrier,106.2,76,5.2,17500
+Red Mage,45,Blizzard,126.1,90,5.1,17549
+Red Mage,45,Cure,138.0,99,38.3,17549
+Red Mage,45,Fight,51.0,36,7.0,18859
+Red Mage,45,Fire,126.1,90,7.6,17549
+Red Mage,45,Poison,125.5,90,12.8,17500
+Red Mage,45,Sleep,140.0,100,24.8,17500
+Red Mage,45,Thunder,126.1,90,6.3,17549
+Sage,10,Blind,24.2,100,78.2,20286
+Sage,10,Drain,-1.8,-7,0.0,20286
+Sage,10,Fight,15.2,63,31.4,23122
+Sage,25,Aero,75.1,100,44.0,11247
+Sage,25,Blind,31.8,42,1.4,11247
+Sage,25,Drain,-1.8,-2,0.0,11247
+Sage,25,Fight,31.0,41,7.4,12056
+Sage,25,Water,75.0,100,53.8,11247
+Sage,45,Aero,116.3,38,0.9,9930
+Sage,45,Bio,305.9,100,53.6,9930
+Sage,45,Blind,56.8,19,0.1,9930
+Sage,45,Drain,-1.8,-1,0.0,9930
+Sage,45,Fight,57.0,19,8.5,10848
+Sage,45,Giga Flare,215.2,70,9.0,9919
+Sage,45,Raise,264.0,86,35.2,9925
+Sage,45,Water,116.0,38,1.1,9930
+Sniper,10,Conceal,13.0,44,8.0,25669
+Sniper,10,Fight,29.3,100,92.1,25975
+Sniper,25,Aim: Wallet,0.0,0,0.0,18160
+Sniper,25,Beso Toxico,125.0,100,91.0,18160
+Sniper,25,Conceal,18.0,14,1.1,18160
+Sniper,25,Fight,60.4,48,11.2,18824
+Sniper,45,Aim: Armor,0.0,0,0.0,17243
+Sniper,45,Aim: Wallet,0.0,0,0.0,17243
+Sniper,45,Aim: Weapon,0.0,0,0.0,17243
+Sniper,45,Beso Toxico,220.6,100,65.4,17243
+Sniper,45,Conceal,34.8,16,2.1,17243
+Sniper,45,Death Sickle,164.0,74,20.8,17243
+Sniper,45,Doom Archer,0.0,0,0.0,17243
+Sniper,45,Doubleshot,111.4,51,7.7,17243
+Sniper,45,Fight,112.8,51,6.4,17679
+Soldier,10,Fight,19.4,100,83.6,35162
+Soldier,10,First Aid,10.1,52,16.5,34564
+Soldier,25,Fight,39.5,100,56.3,22483
+Soldier,25,First Aid,17.2,44,8.4,21801
+Soldier,25,Magicbreak,0.0,0,0.0,21812
+Soldier,25,Mindbreak,9.2,23,0.0,21812
+Soldier,25,Powerbreak,9.3,23,0.0,21812
+Soldier,25,Speedbreak,33.6,85,36.4,21812
+Soldier,45,Fight,66.8,73,3.7,21888
+Soldier,45,First Aid,24.9,27,4.7,21209
+Soldier,45,Magicbreak,0.0,0,0.0,21222
+Soldier,45,Mindbreak,18.9,21,0.0,21222
+Soldier,45,Mug,91.2,100,58.1,21222
+Soldier,45,Powerbreak,18.9,21,0.0,21222
+Soldier,45,Provoke,23.4,26,0.4,21222
+Soldier,45,Sensor,0.0,0,0.0,21222
+Soldier,45,Speedbreak,68.9,76,35.5,21222
+Summoner,10,Fight,8.6,100,100.0,6879
+Summoner,25,Fight,17.2,11,14.6,7557
+Summoner,25,Ifrit,124.4,79,8.8,6434
+Summoner,25,Kirin,156.6,100,47.4,6406
+Summoner,25,Ramuh,125.1,80,8.5,6434
+Summoner,25,Shiva,124.5,79,7.4,6434
+Summoner,25,Unicorn,133.5,85,28.2,6469
+Summoner,45,Carbuncle,109.5,40,0.5,6877
+Summoner,45,Fight,30.5,11,6.7,7369
+Summoner,45,Ifrit,190.9,70,3.3,6876
+Summoner,45,Kirin,272.2,100,40.5,6876
+Summoner,45,Madeen,244.7,90,16.9,6872
+Summoner,45,Phoenix,70.7,26,9.2,6876
+Summoner,45,Ramuh,189.9,70,2.9,6876
+Summoner,45,Shiva,190.7,70,2.4,6876
+Summoner,45,Unicorn,244.2,90,24.3,6877
+Templar,10,Cheer,22.5,79,37.1,23176
+Templar,10,Fight,28.6,100,63.9,23792
+Templar,10,Rasp,-3.6,-13,0.0,23176
+Templar,25,Astra,32.0,26,0.0,11143
+Templar,25,Cheer,49.8,41,13.6,16063
+Templar,25,Fight,40.7,33,21.2,16520
+Templar,25,Haste,122.9,100,97.3,10908
+Templar,25,Rasp,-3.6,-3,0.0,10908
+Templar,25,Silence,46.7,38,1.9,11143
+Templar,45,Astra,73.1,27,0.7,13679
+Templar,45,Cheer,135.7,50,10.1,13856
+Templar,45,Fight,96.2,36,14.6,14520
+Templar,45,Haste,270.1,100,91.1,11557
+Templar,45,Lifebreak,0.0,0,0.0,13856
+Templar,45,Rasp,-3.6,-1,0.0,11557
+Templar,45,Silence,64.2,24,2.2,13679
+Templar,45,Soul Sphere,0.0,0,0.0,13856
+Templar,45,Warcry,81.3,30,0.5,13856
+Thief,10,Fight,14.3,100,96.9,69420
+Thief,10,Steal: EXP,0.0,0,0.0,68814
+Thief,10,Steal: Gil,0.0,0,0.0,68814
+Thief,10,Steal: Helm,0.0,0,0.0,68814
+Thief,25,Fight,29.6,100,95.2,50559
+Thief,25,Steal: Armor,0.0,0,0.0,49647
+Thief,25,Steal: EXP,0.0,0,0.0,49647
+Thief,25,Steal: Gil,0.0,0,0.0,49647
+Thief,25,Steal: Helm,0.0,0,0.0,49647
+Thief,25,Steal: JP,0.0,0,0.0,49647
+Thief,25,Steal: Shield,0.0,0,0.0,49647
+Thief,45,Fight,51.1,100,95.6,53609
+Thief,45,Steal: Ability,0.0,0,0.0,53150
+Thief,45,Steal: Access.,0.0,0,0.0,53150
+Thief,45,Steal: Armor,0.0,0,0.0,53150
+Thief,45,Steal: EXP,0.0,0,0.0,53150
+Thief,45,Steal: Gil,0.0,0,0.0,53150
+Thief,45,Steal: Helm,0.0,0,0.0,53150
+Thief,45,Steal: JP,0.0,0,0.0,53150
+Thief,45,Steal: Shield,0.0,0,0.0,53150
+Thief,45,Steal: Weapon,0.0,0,0.0,53150
+Time Mage,10,Fight,6.2,100,99.3,18813
+Time Mage,25,Fight,12.6,10,19.4,22406
+Time Mage,25,Haste,125.4,100,98.3,17218
+Time Mage,25,Quarter,30.8,25,0.6,18104
+Time Mage,25,Silence,50.5,40,3.4,18129
+Time Mage,25,Slow,43.1,34,2.3,18098
+Time Mage,45,Demi,100.7,39,0.5,21812
+Time Mage,45,Fight,21.9,8,11.7,25055
+Time Mage,45,Haste,259.8,100,78.0,21812
+Time Mage,45,Quarter,50.3,19,0.2,22130
+Time Mage,45,Quicken,94.0,36,0.2,21812
+Time Mage,45,Reflect,37.8,15,0.4,22149
+Time Mage,45,Silence,77.9,30,2.2,22149
+Time Mage,45,Slow,81.6,31,1.0,22128
+Time Mage,45,Stop,172.6,66,18.8,21812
+Warrior,10,Fight,20.8,100,80.6,31812
+Warrior,10,First Aid,12.7,61,19.7,31258
+Warrior,25,Fight,42.1,100,62.4,19933
+Warrior,25,First Aid,22.0,52,11.0,19181
+Warrior,25,Magicbreak,0.0,0,0.0,19196
+Warrior,25,Mindbreak,9.3,22,0.0,19196
+Warrior,25,Powerbreak,9.3,22,0.0,19196
+Warrior,25,Speedbreak,33.9,81,27.9,19196
+Warrior,45,Body Slam,90.4,100,27.9,16640
+Warrior,45,Downsize,74.7,83,24.2,14549
+Warrior,45,Fight,76.1,84,17.4,17389
+Warrior,45,First Aid,35.2,39,7.1,16640
+Warrior,45,Greased Bolt,76.8,85,7.0,16640
+Warrior,45,Magicbreak,0.0,0,0.0,16640
+Warrior,45,Mindbreak,19.0,21,0.0,16640
+Warrior,45,Powerbreak,19.0,21,0.0,16640
+Warrior,45,Speedbreak,69.4,77,23.0,16640
+White Mage,10,Cure,31.7,100,81.1,75976
+White Mage,10,Fight,6.5,21,24.0,83490
+White Mage,25,Auto-Life,63.0,72,16.1,54068
+White Mage,25,Cura,87.8,100,32.4,54528
+White Mage,25,Cure,70.6,80,6.3,54860
+White Mage,25,Esuna,55.6,63,19.1,53909
+White Mage,25,Fight,14.1,16,7.2,58767
+White Mage,25,Life,42.5,48,20.2,54528
+White Mage,25,Protect,49.8,57,0.8,54860
+White Mage,25,Shell,49.2,56,5.4,54860
+White Mage,45,Auto-Life,136.0,74,18.9,53496
+White Mage,45,Cura,177.0,97,14.2,54742
+White Mage,45,Curaga,182.9,100,11.6,53496
+White Mage,45,Cure,152.9,84,14.5,55858
+White Mage,45,Esuna,152.3,83,24.7,53083
+White Mage,45,Fight,27.9,15,19.8,69185
+White Mage,45,Full-Life,80.0,44,13.7,52598
+White Mage,45,Life,62.6,34,0.5,54742
+White Mage,45,Protect,92.4,51,0.6,55858
+White Mage,45,Shell,91.6,50,4.1,55858
+White Monk,10,Fight,17.2,77,14.7,28798
+White Monk,10,Whirlwind,22.3,100,85.2,28443
+White Monk,25,Air Render,65.1,70,16.0,15651
+White Monk,25,Chakra,24.5,26,7.8,15648
+White Monk,25,Earth Render,92.8,100,60.2,15651
+White Monk,25,Far Fist,70.3,76,14.1,15651
+White Monk,25,Fight,34.5,37,4.5,16312
+White Monk,25,Holy Sign,0.0,0,0.0,15651
+White Monk,25,Whirlwind,37.5,40,0.4,15651
+White Monk,45,Air Render,94.1,71,14.1,19657
+White Monk,45,Chakra,34.8,26,3.9,19644
+White Monk,45,Earth Render,131.8,100,39.7,19657
+White Monk,45,Exorcise,0.0,0,0.0,19657
+White Monk,45,Far Fist,99.9,76,9.2,19657
+White Monk,45,Fight,63.1,48,3.1,20053
+White Monk,45,Holy Sign,0.0,0,0.0,19657
+White Monk,45,Revive,111.9,85,30.8,19657
+White Monk,45,Whirlwind,52.7,40,0.2,19657
