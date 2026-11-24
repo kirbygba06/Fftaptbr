@@ -1,7 +1,7 @@
 # Análise de balanceamento – status
 
 ## Verificado nos números da ROM
-1. **Itens: 375**, dos quais **~100 têm preço de compra 0** (só aparecem como saque/recompensa; não existem em loja).
+1. **Itens: 375**, dos quais **225 têm preço de compra 0** (só aparecem como saque/recompensa; não existem em loja).
 2. **Preço de venda ≠ metade da compra em 10 itens**: Estreledge, Tiptaptwo, Masamune, Princess Rod, Hunt Bow, Seventh Heaven,
    Temple Cloth, Bracers, Star Armlet e Elixir valem 15.000–40.000 na compra mas **vendem por 500**.
    (Elixir: compra 20.000, venda 500.) Itens comuns vendem por metade do preço.
