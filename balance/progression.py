@@ -11,7 +11,10 @@ S1 = ['Buster Sword', 'Shadow Blade', 'Sun Blade', 'Atmos Blade', 'Samson Sword'
       'Pure Staff', 'Bless Staff', 'Firewheel Rod', 'Thunder Rod', 'Sleet Rod', 'Terre Rod', 'Silver Bow', 'Javelin', 'Kaiser Knuckles', 'Sick Knuckles', 'Dream Claws', 'Silver Cannon', 'Conch Shell', 'Earth Bell', 'Black Quena', 'Satyr Flute']
 S2 = ['Burglar Sword', 'Flametongue', 'Air Blade', 'Icebrand', 'Kwigon Blade', 'Ogun Blade', 'Defender', 'Striborg', 'Predator', 'Lohengrin', 'Kris Knife', 'Khukuri', 'Kard', 'Rondell Dagger', 'Mage Masher',
       'Kikuichimonji', "Heaven's Cloud", 'Cure Staff', 'Garnet Staff', 'Force Rod', 'Nail Bow', 'Twin Bow', 'Gae Bolg', 'Dragon Whisker']
-ST1 = {norm(x) for x in S1}; ST2 = {norm(x) for x in S2}
+S0 = ['Shortsword', 'Silver Sword', 'Sweep Blade', 'Barong', 'Falchion', 'Jack Knife', 'Scramasax', 'Jambiya', 'Stinger', 'Fleuret', 'Scarlette', 'White Staff', 'Guard Staff', 'Judge Staff', 'Rod',
+      'Longbow', 'Char Bow', 'Thorn Bow', 'Demon Bell', 'Glass Bell', 'War Trumpet', 'Hard Knuckles', 'Rising Sun', 'Aiot Gun']
+ST0 = {norm(x) for x in S0}; ST1 = {norm(x) for x in S1}; ST2 = {norm(x) for x in S2}
+BATT_MULT = 1.0
 BATTLES = {10: 12, 25: 40, 45: 90, 50: 100}          # SUPOSIÇÃO: batalhas jogadas ao chegar no nível
 STAGE_AT = {0: 0, 1: 10, 2: 20, 3: 35}                 # batalhas para o estoque 0 (inicial), 1, 2 e 3 (depois: lojas maiores e saque)
 _items = {norm(t['name']): t for t in sim.load()['items']}
@@ -20,10 +23,9 @@ def stage_of(item):
     for part in re.split(r'[/,]', item):
         n = norm(part)
         if not n: continue
+        if n in ST0: return 0
         if n in ST1: return 1
         if n in ST2: return 2
-        t = _items.get(n)
-        if t is not None: return 0 if (t['buy'] and t['buy'] <= 1200) else 3
     return 3
 _cache = {}
 def kit_prog(cls_name, level, ap_per_battle=40, apmod=None, cat=None):
@@ -55,3 +57,46 @@ if __name__ == '__main__':
         for lv in (10, 25, 45):
             for ap in (15, 40, 80):
                 A, Sp = kit_prog(cn, lv, ap); print(cn, lv, 'AP/batalha', ap, len(A), A[:9])
+
+# ---------- pré-requisitos de classe (A-abilities de outras classes), por raça ----------
+INIT = {1: ['Soldier', 'Thief', 'Archer', 'White Mage', 'Black Mage'], 2: ['Warrior', 'White Monk'], 3: ['White Mage', 'Black Mage', 'Beastmaster'], 4: ['Fencer', 'White Mage', 'Archer'], 5: ['Thief', 'Black Mage', 'Animist']}
+PREREQ = {
+ 1: {'Fighter': [('Soldier', 2)], 'Paladin': [('Soldier', 2)], 'Ninja': [('Thief', 2)], 'Hunter': [('Archer', 2)], 'Blue Mage': [('White Mage', 1), ('Black Mage', 1)], 'Illusionist': [('White Mage', 3), ('Black Mage', 5)]},
+ 2: {'Bishop': [('White Monk', 2)], 'Templar': [('White Monk', 2)], 'Dragoon': [('Warrior', 2)], 'Defender': [('Warrior', 2)], 'Gladiator': [('Warrior', 2)]},
+ 3: {'Time Mage': [('Black Mage', 5)], 'Illusionist': [('White Mage', 3), ('Black Mage', 5)], 'Alchemist': [('White Mage', 3), ('Black Mage', 5)], 'Sage': [('White Mage', 3), ('Beastmaster', 2)], 'Morpher': [('Beastmaster', 5)]},
+ 4: {'Red Mage': [('Fencer', 1)], 'Elementalist': [('Fencer', 1), ('White Mage', 1)], 'Sniper': [('Archer', 2)], 'Summoner': [('White Mage', 2), ('Elementalist', 2)], 'Assassin': [('Elementalist', 2), ('Sniper', 1)]},
+ 5: {'Time Mage': [('Black Mage', 5)], 'Gunner': [('Animist', 1)], 'Mog Knight': [('Animist', 1)], 'Juggler': [('Thief', 2)], 'Gadgeteer': [('Thief', 2)]}}
+def _pool(cls, battles, apmod, kinds=('A',)):
+    out = []
+    for i, k in enumerate(KIT):
+        if norm(k['cls']) != norm(cls) or k['type'] not in kinds: continue
+        if battles < STAGE_AT[stage_of(k['item'])]: continue
+        out.append((apmod.get(k['name'], k['ap']), i, k))
+    out.sort(key=lambda x: (x[0], x[1])); return out
+_cache2 = {}
+def plan(race, cls, level, ap_per_battle=40, apmod=None, battles=None):
+    """Retorna dict(feasible, cost, kit_A, kit_S, prereq): custo para liberar a classe + habilidades próprias com o AP que sobra."""
+    apmod = apmod or {}; b = battles if battles else int(round((BATTLES.get(level) or int(round(level * 1.9))) * BATT_MULT))
+    key = (race, cls, b, ap_per_battle, tuple(sorted(apmod.items())))
+    if key in _cache2: return _cache2[key]
+    budget = b * ap_per_battle; learned = {}; cost = [0]; ok = [True]
+    def unlock(c, seen=()):
+        if c in seen: return
+        for pc, n in PREREQ.get(race, {}).get(c, []):
+            unlock(pc, seen + (c,))
+            have = learned.setdefault(pc, [])
+            pool = [x for x in _pool(pc, b, apmod) if x[2]['name'] not in have]
+            need = n - len(have)
+            if need > len(pool): ok[0] = False; return
+            for cst, i, k in pool[:max(0, need)]: have.append(k['name']); cost[0] += cst
+    if cls not in INIT.get(race, []): unlock(cls)
+    res = dict(feasible=ok[0] and cost[0] <= budget, cost=cost[0], kit_A=[], kit_S=[], prereq=dict(learned))
+    if res['feasible']:
+        left = budget - cost[0]; A, S = [], []
+        for cst, i, k in sorted(_pool(cls, b, apmod, ('A', 'S')), key=lambda x: (x[0], x[1])):
+            if cst <= left: left -= cst; (A if k['type'] == 'A' else S).append(k['name'])
+        res['kit_A'] = A; res['kit_S'] = S
+        pre = PREREQ.get(race, {}).get(cls, [])
+        if pre:   # conjunto secundário: a classe de pré-requisito com mais habilidades aprendidas (somente as dominadas)
+            pc = max(pre, key=lambda x: x[1])[0]; res['kit_A'] = A + [a for a in learned.get(pc, []) if a not in A]
+    _cache2[key] = res; return res

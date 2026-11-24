@@ -91,7 +91,12 @@ def mk(j, level, g, abil, cfg=None, scenario_mp=None):
     u['wep'] = g['wep'][t] * (0.8 if rob else 1.0); u['dfn'] += g['mage_def'][t] if rob else g['phys_def'][t]; u['rs'] += g['mage_res'][t] if rob else g['phys_res'][t]; u['pw'] += g['rod_pow'][t] if rob else 0
     u['imm'] = random.random() < P['IMM'].get(level, 0.25 if level > 25 else 0.10 if level > 12 else 0.0)
     u['maxhp'] = u['hp']; u['mp0'] = u['mp']; u['cnt'] = 0; u['st'] = {}; u['wr'] = RANGE_W.get(j['name'], 1)
-    if P.get('PROG'):
+    if P.get('PROG') == 2:
+        import progression
+        _pl = progression.plan(j['race'], j['name'], level, P['APB'], APMOD, P.get('BATT'))
+        _n = _pl['kit_A'] if P.get('SEC', 1) else [x for x in _pl['kit_A'] if x not in sum(_pl['prereq'].values(), [])]
+        Sup = _pl['kit_S']; A = [CAT[norm(x)] for x in _n if norm(x) in CAT and x not in DISABLE]
+    elif P.get('PROG'):
         import progression
         _n, Sup = progression.kit_prog(j['name'], level, P['APB'], APMOD)
         A = [CAT[norm(x)] for x in _n if norm(x) in CAT and x not in DISABLE]

@@ -45,27 +45,36 @@ def undo_ctx(saved):
     sim2.APMOD.clear(); sim2.DISABLE.clear()
 DUR0 = dict(sim2.DUR)
 PROG_ON = int(os.environ.get('PROG', '0')); APB = int(os.environ.get('APB', '40'))
+if os.environ.get('BATTX'):
+    import progression; progression.BATT_MULT = float(os.environ['BATTX'])
+def feasible(j, lv):
+    if PROG_ON != 2: return True
+    import progression
+    return progression.plan(j['race'], j['name'], lv, APB, sim2.APMOD)['feasible']
 def setp():
     sim2.DUR.clear(); sim2.DUR.update(DUR0)
+    sim2.P['SEC'] = int(os.environ.get('SEC', '1'))
     sim2.P.update(dict(PROG=PROG_ON, APB=APB, MAP=1, HASTE=2.0, DS2=1.0, NO_DS=0, NO_DC=0, OBS=0, DURM=1.0, SV=1.0, FF=0.25)); sim2.DUR['Charm'] = 4
 SIZE = 5
 def team_task(a):
     label, spec, lv, n, seed = a; setp(); sim2.DUR.update(spec.get('dur') or {}); sim2.reset_stats(); s = spec_build(spec); saved = apply_ctx(s, spec)
     g = sim.gear(s['items']); rng = random.Random(seed); random.seed(seed + 7); ids = [j['id'] for j in s['jobs']]; pos = {i: k for k, i in enumerate(ids)}
     X = np.zeros((n, len(ids)), dtype=np.int8); y = np.zeros(n); acts = []; JB = {j['id']: j for j in s['jobs']}
+    pool = [i for i in ids if feasible(JB[i], lv)]
     for b in range(n):
-        ta = rng.sample(ids, SIZE); tb = rng.sample(ids, SIZE)
+        ta = rng.sample(pool, SIZE); tb = rng.sample(pool, SIZE)
         A = [sim2.mk(JB[i], lv, g, s['abil']) for i in ta]; B = [sim2.mk(JB[i], lv, g, s['abil']) for i in tb]
         r, ac = sim2.battle(A, B, rng); y[b] = r; acts.append(ac)
         for i in ta: X[b, pos[i]] += 1
         for i in tb: X[b, pos[i]] -= 1
     undo_ctx(saved); st = sim2.STATS
-    return dict(label=label, lv=lv, X=X, y=y, acts=S.mean(acts), ids=ids, use={f'{k[0]}|{k[2]}': v for k, v in st['use'].items()}, evall={f'{k[0]}|{k[1]}': v for k, v in st['evall'].items()},
+    return dict(label=label, lv=lv, X=X, y=y, acts=S.mean(acts), ids=ids, pool=pool, use={f'{k[0]}|{k[2]}': v for k, v in st['use'].items()}, evall={f'{k[0]}|{k[1]}': v for k, v in st['evall'].items()},
                 evalln={f'{k[0]}|{k[1]}': v for k, v in st['evalln'].items()}, best={f'{k[0]}|{k[1]}': v for k, v in st['best'].items()}, n_act={f'{k[0]}': v for k, v in st['acts'].items()},
                 moves=dict(st['moves']), mp={f'{c}': st['mp'][(c, l)] / max(1, st['mpn'][(c, l)]) for (c, l) in st['mp']})
 def strat_task(a):
-    label, spec, j_id, lv, n, seed = a; setp(); sim2.DUR.update(spec.get('dur') or {}); sim2.reset_stats(); s = spec_build(spec); saved = apply_ctx(s, spec)
-    g = sim.gear(s['items']); rng = random.Random(seed); random.seed(seed + 7); JB = {j['id']: j for j in s['jobs']}; ids = [i for i in JB if i != j_id]; w = 0; ac = []
+    label, spec, j_id, lv, n, seed = a; setp(); sim2.P['SEC'] = spec.get('sec', 1); sim2.DUR.update(spec.get('dur') or {}); sim2.reset_stats(); s = spec_build(spec); saved = apply_ctx(s, spec)
+    g = sim.gear(s['items']); rng = random.Random(seed); random.seed(seed + 7); JB = {j['id']: j for j in s['jobs']}; ids = [i for i in JB if i != j_id and feasible(JB[i], lv)]; w = 0; ac = []
+    if not feasible(JB[j_id], lv): undo_ctx(saved); return dict(label=label, cls=f"{JB[j_id]['name']}/{JB[j_id]['race']}", j=j_id, lv=lv, win=None, acts=0, mp=0, top=[], moves=0)
     for _ in range(n):
         o = rng.sample(ids, 2 * SIZE - 1)
         A = [sim2.mk(JB[j_id], lv, g, s['abil'])] + [sim2.mk(JB[i], lv, g, s['abil']) for i in o[:SIZE - 1]]; B = [sim2.mk(JB[i], lv, g, s['abil']) for i in o[SIZE - 1:]]
@@ -90,7 +99,7 @@ def run_team(label, spec, n_total, seed):
         rs = [r for r in R if r['lv'] == lv]; X = np.concatenate([r['X'] for r in rs]); y = np.concatenate([r['y'] for r in rs])
         b, se, b0 = logit(X, y); ids = rs[0]['ids']
         agg = lambda key: collections.Counter({k: sum(r[key].get(k, 0) for r in rs) for r in rs for k in r[key]})
-        out[lv] = dict(coef={str(i): float(b[k]) for k, i in enumerate(ids)}, se={str(i): float(se[k]) for k, i in enumerate(ids)}, acts=S.mean(r['acts'] for r in rs), n=len(y),
+        out[lv] = dict(avail=[str(i) for i in rs[0]['pool']], coef={str(i): float(b[k]) for k, i in enumerate(ids)}, se={str(i): float(se[k]) for k, i in enumerate(ids)}, acts=S.mean(r['acts'] for r in rs), n=len(y),
                        use=dict(agg('use')), evall=dict(agg('evall')), evalln=dict(agg('evalln')), best=dict(agg('best')), n_act=dict(agg('n_act')), moves=dict(agg('moves')),
                        mp={k: S.mean(r['mp'].get(k, 0) for r in rs) for k in rs[0]['mp']})
     json.dump(out, open(f'exp3_team_{label}.json', 'w'), ensure_ascii=False); print('team', label, 'feito', flush=True)
