@@ -159,3 +159,63 @@ RAW = {
   29: 'Algo brilhante numa sacola.\nCompre para inspecionar.',
  },
 }
+
+# --- encontros: falas e opções ---
+RAW.update({
+ 0x51C390: {
+  32: 'Talvez seja melhor\ndeixá-los ir.', 33: 'Deixe 3.000 gils e\nvou pegar leve\ncom você.', 35: 'É sua chance de\ndesistir!',
+  36: 'É preciso coragem\npara admitir a derrota.', 37: 'Nós vamos vencer!', 38: '{40 21 03}Fuja, se\nquiser, kupo.',
+  39: 'Quer mithril? Troco\num pouco por\n10.000 gils!', 40: 'Eh heh heh, me pegou.\nMe solta por\n2.000 gils?',
+  41: 'Estamos limpos! Tome,\nleve esta pele de\nchocobo e vá.', 42: 'Trocar antilei por\nsua cauda de fênix?\nUm dos nossos caiu.',
+  44: '(Ritz está aflita.\nQuem disse que a\nrosa azul acalma?)', 45: 'Quer uma pele? Vendo\numa por 3.000 gils.',
+  46: 'Ah, se eu tivesse um\ndoce gostoso, gelado\ncomo neve caída.', 47: 'Saia da frente! Preciso\nvingar minha família!',
+  48: 'O quê? Levo a carta\nonde ela devia ir!', 49: 'Decidiu entrar no\nClã Baham? O título\ndo seu clã muda!',
+ },
+ 0x51CA44: {
+  32: 'Tente não ser\npego de novo!', 33: 'Viu? É só entregar\no dinheiro, e não\nhá problema!', 35: 'O quê, vão fugir\nmesmo? Essses\ncaras são fraccos...',
+  36: 'Decisão sábia.\nPodem torcer pela\nnossa vitória.', 37: 'Hmph, vamos deixar\nvocês livres\ndesta vez.', 38: '{40 21 01}Ufa, kupo! Achei\nque nos venceria.',
+  39: 'Obrigado! Vou usar\nisto para financiar\nminha pesquisa.', 40: 'Não achou nada.\nEsqueça tudo isso!', 41: 'Aqui a pele que\nprometi. Agora vá\nembora.',
+  42: 'Ufa, obrigado. Com a\nlei contra nós,\nprecisamos de todos!', 44: 'Para mim? Que cheiro\nbom! Já me sinto bem\nmelhor.\fTome, isto é para\nvocê. Vamos fazer o\nque viemos fazer!',
+  45: 'He heh heh. Valeu,\nparceiro.', 46: 'Obrigado!\nTome, isto é seu.', 47: 'Aaah! Sooocorro!',
+  48: 'O quê? Dar a cartta\npara você? Pense\nde novo, humano.', 49: 'Certo! De agora em\ndiante o Clã {40 25 03}\né parte do clã!',
+ },
+ 0x51D160: {
+  33: 'Hã? Sem gil?\nQue pena, sem\nnegócio!', 39: 'Você não tem gil\nsuficiente! Nada\né de graça, amigo.', 42: 'Parece que você\nnão tem. Tudo bem,\nnos viramos.',
+  44: '(Hmm... não tenho.\nAcho que teremos\nque lutar.)', 45: 'Ah é? Não pense\nque vou deixar você\nsair assim.', 46: 'Que pena.\nVocê é péssimo.',
+ },
+ 0x51D4DC: {
+  32: 'Soltar{40 63}Capturar', 33: 'Pagar{40 63}Prender', 35: 'Ceder{40 63}Lutar', 36: 'Ceder{40 63}Lutar',
+  37: 'Ceder{40 63}Lutar', 38: 'Ceder{40 63}Lutar', 39: 'Negócio{40 63}Só leve', 40: 'Aceitar{40 63}Recusar',
+  41: 'Aceitar{40 63}Recusar', 42: 'Trocar{40 63}Exigir', 44: 'Dar flor{40 63}Voltar', 45: 'Aceitar{40 63}Recusar',
+  46: 'Isto?{40 63}Sem doce!', 47: 'Sair{40 63}Detê-lo', 48: 'Explicar{40 63}Pegar', 49: 'Juntar{40 63}Lutar',
+ },
+})
+
+
+# --- tela de missão (0x51BDC8): rótulos com deslocamentos de pixel; recalcula o deslocamento pelo novo tamanho ---
+import re as _re
+LABELS = [
+ ('Joined{40 3e 03}mission{40 3e 04}success', 'Missões{40 3e 03}ganhas'), ('To Clear:', 'Objetivo:'), ('To Clear{40 3e 02}:', 'Objetivo{40 3e 02}:'),
+ ('Reward:', 'Prêmio:'), ('Req.Items:', 'Itens:'), ('Req.Skills{40 3e 04}', 'Habil.'), ('Req.Jobs{40 3e 07}', 'Classes'),
+ ('Fee', 'Taxa'), ('Dispatch', 'Envio'), ('Items', 'Itens'), ('Available for: ', 'Prazo: '), ('days', 'dias'),
+ ('Clan Points', 'Pontos'), ('Freed Areas', 'Áreas'), ('Missions', 'Missões'), ('Not Yet Freed!', 'Ainda Presa!'), ('Freed!', 'Livre!'),
+ ('Under Attack!', 'Sob Ataque!'), ('Joined Battle', 'Batalhas'), ('Success', 'Sucesso'), ('Failure', 'Falha'), ('Record', 'Recorde'),
+ ('Wins', 'Vitórias'), ('Losses', 'Derrotas'), ('Engage Location:', 'Local do Combate:'), ('Weapon Atk:', 'Atq. Arma:'),
+ ('Magic Pow{40 3e 06}:', 'Poder Mág.:'), ('To win:', 'Vencer:'), ('You lose if:', 'Derrota se:'), ("All units KO'd OR", 'Todos KO OU'),
+ ("All units KO'd.", 'Todos KO.'), (' imprisoned.', ' preso.'), (" KO'd", ' KO'), ('Lv.', 'Nv.'),
+]
+
+
+def labels_51bdc8(rom, code01, px, get_markup):
+    out = {}
+    for idx in (1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 13, 15, 16):
+        t = get_markup(idx); store = []
+        for en, pt in LABELS:
+            def sub(mo, en=en, pt=pt):
+                store.append(pt + '{40 3e %02x}' % max(0, int(mo.group(1), 16) + px(en) - px(pt)))
+                return '\x01%d\x02' % (len(store) - 1)
+            t = _re.sub(_re.escape(en) + r'\{40 3e ([0-9a-f]{2})\}', sub, t)
+            if en in t:
+                store.append(pt); t = t.replace(en, '\x01%d\x02' % (len(store) - 1))
+        out[idx] = _re.sub('\x01(\\d+)\x02', lambda m: store[int(m.group(1))], t)
+    return out

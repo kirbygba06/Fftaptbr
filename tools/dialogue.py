@@ -156,6 +156,12 @@ def build(rom, code01):
     from dialogue_quests import fit
     from story import markup_px as _mpx
     RAW[0x4FE5D4] = fit(rom, code01, _mpx)
+    from dialogue_raw import labels_51bdc8
+    _ob = banks.parse_bank(0x51BDC8); _oe = _ob[1:] + [_ob[-1] + 400]
+    def _gm(i):
+        from textbanks import to_markup as _tm
+        return _tm(get_string(rom, 0x51BDC8, _ob, _oe, i)[1], code01)[0]
+    RAW[0x51BDC8] = labels_51bdc8(rom, code01, lambda l: line_px(rom, code01, _re_mod.sub(r'\{[^}]*\}', '', l)), _gm)
     raw_banks = set(RAW)
     for bk, tb in RAW.items(): plan[bk] = tb
     for bank, trans in plan.items():
