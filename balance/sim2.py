@@ -9,13 +9,22 @@ here = os.path.dirname(__file__)
 GUIDE = json.load(open(os.path.join(here, 'abilities.json')))
 KIT = json.load(open(os.path.join(here, 'class_abilities.json')))
 norm = lambda s: re.sub(r'[^a-z0-9]', '', s.lower())
-P = dict(SV=1.0, DURM=1.0, POISON=0.10, REACH_MOV=0.07, FACE=(0.5, 0.3, 0.2), AOE_X=1.0, FF=0.25)     # parâmetros de sensibilidade
-DUR = {'Stop': 3, 'Sleep': 3, 'Petrify': 99, 'Charm': 4, 'Confusion': 4, 'Confuse': 4, 'Berserk': 4, 'Blind': 4, 'Silence': 4, 'Disable': 4, 'Addle': 4, 'Immobilize': 4, 'Slow': 4,
-       'Speed DOWN': 4, 'Poison': 5, 'Doom': 3, 'Frog': 4, 'Haste': 4, 'Quicken': 1, 'Protect': 4, 'Shell': 4, 'Defense': 3, 'Regen': 5, 'Reflect': 4, 'Boost': 3, 'Auto-Life': 99, 'Astra': 4,
+AI = dict(LAMBDA=0.15, SLEEP_V=2.0)          # parâmetros da IA do simulador (NÃO são dados da ROM)
+OBS_HIT = {'Rockseal': 0.60, 'Charmshot': 0.95, 'Cupid': 0.80, 'Checkmate': 0.60, 'Death Sickle': 0.60}   # precisão registrada (comunidade) vs humano nv25 sem equipamento
+IMMSET = {'Frog', 'Stop', 'Disable', 'Immobilize', 'Berserk', 'Blind', 'Confusion', 'Confuse', 'Doom', 'Sleep', 'Petrify', 'KO', 'Slow', 'Silence', 'Poison', 'Addle', 'Charm'}
+P = dict(OBS=0, IMM={10: 0.0, 25: 0.10, 45: 0.25}, SV=1.0, DURM=1.0, POISON=0.10, REACH_MOV=0.07, FACE=(0.5, 0.3, 0.2), AOE_X=1.0, FF=0.25)     # parâmetros de sensibilidade
+# CONFIRMADO (teste comunitário nível 25): Stop 3, Silence 3, Slow 3, Haste 3, Doom 3, Petrify até curar. Charm e Sleep terminam ao receber dano (duração natural: suposição).
+# SUPOSIÇÃO: Confusion, Poison (turnos e %), Sleep/Charm natural, Blind, Berserk, Disable, Immobilize, buffs.
+DUR = {'Stop': 3, 'Sleep': 4, 'Petrify': 99, 'Charm': 4, 'Confusion': 4, 'Confuse': 4, 'Berserk': 4, 'Blind': 4, 'Silence': 3, 'Disable': 4, 'Addle': 4, 'Immobilize': 4, 'Slow': 3,
+       'Speed DOWN': 3, 'Poison': 5, 'Doom': 3, 'Frog': 4, 'Haste': 3, 'Expert Guard': 2, 'Quicken': 1, 'Protect': 4, 'Shell': 4, 'Defense': 3, 'Regen': 5, 'Reflect': 4, 'Boost': 3, 'Auto-Life': 99, 'Astra': 4,
        'WAtk DOWN': 4, 'MPow DOWN': 4, 'WDef DOWN': 4, 'MRes DOWN': 4, 'WAtk UP': 4, 'WDef UP': 4, 'MPow UP': 4, 'MRes UP': 4, 'Advice': 4, 'Conceal': 4}
 HARM = {'Stop', 'Sleep', 'Petrify', 'Charm', 'Confusion', 'Confuse', 'Berserk', 'Blind', 'Silence', 'Disable', 'Addle', 'Immobilize', 'Slow', 'Speed DOWN', 'Poison', 'Doom', 'Frog',
         'WAtk DOWN', 'MPow DOWN', 'WDef DOWN', 'MRes DOWN', 'KO'}
 RANGE_W = {'Archer': 5, 'Hunter': 4, 'Sniper': 5, 'Gunner': 4, 'Assassin': 4, 'Juggler': 3, 'Dragoon': 2, 'Fencer': 2, 'Gadgeteer': 3}
+import collections
+STATS = dict(use=collections.Counter(), acts=collections.Counter(), att=collections.Counter(), succ=collections.Counter(), impact=collections.defaultdict(float), denied=collections.defaultdict(float), uses_ab=collections.Counter())
+def reset_stats():
+    for k in STATS: STATS[k].clear()
 class Ab:
     __slots__ = ('name', 'basis', 'power', 'mp', 'rng', 'area', 'eff', 'ap', 'type', 'cls', 'ranged_w')
 def parse_effect(s):
@@ -59,12 +68,13 @@ def build_catalog():
         a.rng = g['range']; a.area = g['area']; a.eff = [x for x in (parse_effect(e) for e in g['effects']) if x and x['tgt'] not in ('Undead', 'Monster', 'Animal', 'Dragon', 'Gadget', 'EqpSword')]; cat.setdefault(norm(a.name), a)
     return cat
 CAT = build_catalog()
+DISABLE = set()
 def kit_for(cls_name, cap):
     A, Sup = [], []
     for k in KIT:
         if norm(k['cls']) != norm(cls_name): continue
         if k['ap'] > cap: continue
-        if k['type'] == 'A' and norm(k['name']) in CAT: A.append(CAT[norm(k['name'])])
+        if k['type'] == 'A' and norm(k['name']) in CAT and k['name'] not in DISABLE: A.append(CAT[norm(k['name'])])
         elif k['type'] == 'S': Sup.append(k['name'])
     return A, Sup
 FIGHT = Ab(); FIGHT.name = 'Fight'; FIGHT.basis = 'W'; FIGHT.power = None; FIGHT.mp = 0; FIGHT.rng = 'As Weapon'; FIGHT.area = 'One Unit'; FIGHT.eff = [dict(hit='AType', tgt='Enemy', dep=False, kind='dmg', m=1.0)]
@@ -77,6 +87,7 @@ def mk(j, level, g, abil, cfg=None, scenario_mp=None):
     u = dict(name=j['name'], id=j['id'], lvl=level, prof=prof, hp=L(j['hp'], j['g_hp']), mp=L(j['mp'], j['g_mp']), spd=L(j['spd'], j['g_spd']), atk=L(j['atk'], j['g_atk']),
              dfn=L(j['dfn'], j['g_def']), pw=L(j['pow'], j['g_pow']), rs=L(j['res'], j['g_res']), eva=j['eva'] + (0 if rob else g['phys_eva'][t]), mov=j['mov'], sres=j['sres'] or 50)
     u['wep'] = g['wep'][t] * (0.8 if rob else 1.0); u['dfn'] += g['mage_def'][t] if rob else g['phys_def'][t]; u['rs'] += g['mage_res'][t] if rob else g['phys_res'][t]; u['pw'] += g['rod_pow'][t] if rob else 0
+    u['imm'] = random.random() < P['IMM'].get(level, 0.25 if level > 25 else 0.10 if level > 12 else 0.0)
     u['maxhp'] = u['hp']; u['mp0'] = u['mp']; u['cnt'] = 0; u['st'] = {}; u['wr'] = RANGE_W.get(j['name'], 1)
     A, Sup = kit_for(j['name'], cap_for(level))
     u['abs'] = [FIGHT] + A; u['sup'] = [s for s in SUPPORT_PRIO if s in Sup]; u['s'] = u['sup'][0] if u['sup'] else None
@@ -129,7 +140,11 @@ def hit_a(u, t, rng):
     if u['s'] == 'Concentrate': ev -= 50
     if u['s'] == 'Turbo MP': ev -= 15
     return (100 - max(5, min(95, ev))) / 100
-def hit_s(u, t, rng, names):
+def hit_s(u, t, rng, names, abname=None):
+    if t.get('imm') and any(n in IMMSET for n in names): return 0.0
+    if P['OBS'] and abname in OBS_HIT and not has(t, 'Astra'):
+        f = rng.random(); fp = P['FACE']; sh = 0 if f < fp[0] else 0.10 if f < fp[0] + fp[1] else 0.20
+        return max(0.0, min(1.0, OBS_HIT[abname] - sh))
     if has(t, 'Stop') or has(t, 'Sleep') or has(t, 'Petrify'): return 1.0
     if t['s'] == 'Immunity' and any(n in ('Frog', 'Blind', 'Confusion', 'Confuse', 'Sleep', 'Petrify', 'Silence', 'Poison') for n in names): return 0.0
     if has(t, 'Astra'): return 0.0
@@ -152,6 +167,7 @@ def extra_targets(a):
     if 'Not Self' in ar: return 1.0
     return 0.0
 # ---------- status ----------
+SRC = [None]
 def add_status(u, name, rng, sleep_ok=True):
     if has(u, 'Petrify') or u['hp'] <= 0: return
     d = int(round(DUR.get(name, 4) * P['DURM']))
@@ -161,14 +177,14 @@ def add_status(u, name, rng, sleep_ok=True):
     if name == 'Confuse': name = 'Confusion'
     if name == 'Haste' and has(u, 'Slow'): del u['st']['Slow']; return
     if name == 'Slow' and has(u, 'Haste'): del u['st']['Haste']; return
-    u['st'][name] = max(1, d)
+    u['st'][name] = max(1, d); u.setdefault('src', {})[name] = SRC[0]
 def clear_debuffs(u):
     for k in list(u['st']):
         if k in HARM and k != 'Doom' or k == 'Doom': u['st'].pop(k, None)
 def status_value(u, t, name, ally_dps, foe_dps_total, nallies):
     D = DUR.get(name, 4) * P['DURM']; td = max(1.0, t.get('dps', 100.0)); mage = t['prof'] in (sim.MAGE, sim.HEAL, sim.UTIL)
     if name in ('Stop',): return td * min(D, 3) * 0.9
-    if name == 'Sleep': return td * 2.0
+    if name == 'Sleep': return td * AI['SLEEP_V']
     if name == 'Petrify': return td * 8 + t['hp'] * 0.2
     if name in ('Charm',): return td * D * 0.9
     if name in ('Confusion', 'Confuse'): return td * D * 0.7
@@ -186,13 +202,14 @@ def status_value(u, t, name, ally_dps, foe_dps_total, nallies):
     # benéficos (t = aliado)
     if name == 'Haste': return td * D * 1.0
     if name == 'Quicken': return td * 1.0
+    if name == 'Expert Guard': return 0.9 * foe_dps_total * 1.2 / max(1, nallies) * D
     if name in ('Protect', 'Shell', 'Defense'): return 0.2 * foe_dps_total / max(1, nallies) * D
     if name == 'Regen': return t['maxhp'] * 0.1 * D * 0.8
     if name in ('Boost',): return td * 0.5 * D
     if name == 'Auto-Life': return td * 1.5
     if name in ('WAtk UP', 'MPow UP', 'WDef UP', 'MRes UP', 'Advice', 'Reflect', 'Astra', 'Conceal'): return td * D * 0.1
     return 0.0
-BEN = {'Haste', 'Quicken', 'Protect', 'Shell', 'Defense', 'Regen', 'Boost', 'Auto-Life', 'WAtk UP', 'MPow UP', 'WDef UP', 'MRes UP', 'Advice', 'Reflect', 'Astra', 'Conceal'}
+BEN = {'Expert Guard', 'Haste', 'Quicken', 'Protect', 'Shell', 'Defense', 'Regen', 'Boost', 'Auto-Life', 'WAtk UP', 'MPow UP', 'WDef UP', 'MRes UP', 'Advice', 'Reflect', 'Astra', 'Conceal'}
 def est_dps(u, foes):
     ad = S.mean(f['dfn'] for f in foes); ar = S.mean(f['rs'] for f in foes); best = 0
     for a in u['abs']:
@@ -244,7 +261,7 @@ def score_ability(u, a, own, foes, rng):
                     harm = nm in HARM
                     if harm and t in own and t is not u: continue
                     if not harm and t in foes: continue
-                    hit = hit_s(u, t, rng, e['names']) if (e['hit'] == 'SType') else (e1 if e['dep'] else (hit_a(u, t, rng) if e['hit'] == 'AType' else 1.0))
+                    hit = hit_s(u, t, rng, e['names'], a.name) if (e['hit'] == 'SType' and (not e['dep'] or (P['OBS'] and a.name in OBS_HIT))) else (e1 if e['dep'] else (hit_a(u, t, rng) if e['hit'] == 'AType' else 1.0))
                     if e['hit'] not in ('AType', 'SType') and not e['dep']:
                         m = re.match(r'(\d+)%', e['hit']); hit = int(m.group(1)) / 100 if m else 1.0
                     if nm in t['st']: continue
@@ -263,22 +280,29 @@ def do_effects(u, t, a, own, foes, rng, e1ok):
     for e in a.eff:
         kind = e['kind']; h = e['hit']
         if kind == 'noop': continue
-        hit = hit_a(u, t, rng) if h == 'AType' else (hit_s(u, t, rng, e.get('names', [])) if h == 'SType' else 1.0)
+        hit = hit_a(u, t, rng) if h == 'AType' else (hit_s(u, t, rng, e.get('names', []), a.name) if h == 'SType' else 1.0)
         if h not in ('AType', 'SType'):
             m = re.match(r'(\d+)%', h); hit = int(m.group(1)) / 100 if m else 1.0
-        if e['dep']: success = ok
+        if e['dep'] and not (P['OBS'] and a.name in OBS_HIT and kind == 'status'): success = ok
         else: success = rng.random() < hit
+        if kind == 'status' and (not e['dep'] or (P['OBS'] and a.name in OBS_HIT)):
+            STATS['att'][a.name] += 1; STATS['succ'][a.name] += 1 if success else 0
+        elif kind == 'status' and ok:
+            STATS['att'][a.name] += 1; STATS['succ'][a.name] += 1
         if first: ok = success; first = False
         if not success: continue
         if kind == 'dmg' and a.basis:
             dm = base_dmg(u, t, a, e) * rng.uniform(.9, 1.1)
             if a.basis == 'W' and has(t, 'Sleep'): t['st'].pop('Sleep', None)
-            t['hp'] -= dm
-            if has(t, 'Sleep'): t['st'].pop('Sleep', None)
-        elif kind == 'hpfrac': t['hp'] -= (t['maxhp'] if e.get('mx') else t['hp']) * e['m']
+            if has(t, 'Expert Guard'): dm = 0
+            t['hp'] -= dm; STATS['impact'][a.name] += min(dm, max(0, t['hp'] + dm)) * (1 if t in foes else -1)
+            for _s in ('Sleep', 'Charm'): t['st'].pop(_s, None)
+        elif kind == 'hpfrac':
+            _d = 0 if has(t, 'Expert Guard') else (t['maxhp'] if e.get('mx') else t['hp']) * e['m']; t['hp'] -= _d; STATS['impact'][a.name] += _d
         elif kind == 'flat': t['hp'] -= e['v']
         elif kind == 'mpdmg': t['mp'] = max(0, t['mp'] - base_dmg(u, t, a, e))
-        elif kind == 'heal': t['hp'] = min(t['maxhp'], t['hp'] + base_dmg(u, t, a, e) * rng.uniform(.9, 1.1))
+        elif kind == 'heal':
+            _h = min(t['maxhp'] - t['hp'], base_dmg(u, t, a, e) * rng.uniform(.9, 1.1)); t['hp'] += _h; STATS['impact'][a.name] += _h
         elif kind == 'healfull': t['hp'] = t['maxhp']
         elif kind == 'revive':
             if t['hp'] <= 0 and not has(t, 'Petrify'): t['hp'] = t['maxhp'] * e['m']; t['st'].clear()
@@ -286,7 +310,8 @@ def do_effects(u, t, a, own, foes, rng, e1ok):
             for nm in e['names']:
                 harm = nm in HARM
                 if (harm and t in own and t is not u) or ((not harm) and t in foes): continue
-                add_status(t, nm, rng)
+                SRC[0] = a.name; add_status(t, nm, rng)
+                if nm == 'Petrify': STATS['denied'][a.name] += t.get('dps', 100) * 6
         elif kind == 'esuna': clear_debuffs(t)
         elif kind == 'dispel':
             for k_ in list(t['st']):
@@ -299,7 +324,7 @@ def pick_action(u, own, foes, rng):
     cands = [a for a in u['abs'] if allowed(u, a)]
     for a in cands:
         v, t = score_ability(u, a, own, foes, rng)
-        v -= 0.15 * a.mp
+        v -= AI['LAMBDA'] * a.mp
         if v > best[0]: best = (v, a, t)
     return best
 def take_turn(u, own, foes, rng):
@@ -314,10 +339,15 @@ def take_turn(u, own, foes, rng):
         if u['st'].get('Auto-Life'): u['hp'] = u['maxhp'] * 0.25; u['st'].clear()
         else: return
     skip = has(u, 'Stop') or has(u, 'Sleep') or has(u, 'Petrify')
+    for _n in ('Stop', 'Sleep', 'Charm', 'Confusion'):
+        if has(u, _n): STATS['denied'][u.get('src', {}).get(_n) or '?'] += u.get('dps', 100) * (1.0 if _n != 'Confusion' else 0.7)
     live_f = [f for f in foes if f['hp'] > 0 and not has(f, 'Petrify')]
     if not live_f: return
     if not skip:
-        if has(u, 'Confusion') or has(u, 'Charm'):
+        if has(u, 'Charm'):
+            pool = [x for x in own if x['hp'] > 0 and x is not u] or [u]; tg = rng.choice(pool); a = FIGHT
+            if rng.random() < reach(u, a): do_effects(u, tg, a, own, foes, rng, True)
+        elif has(u, 'Confusion'):
             tg = rng.choice([x for x in own + foes if x['hp'] > 0]); a = FIGHT
             do_effects(u, tg, a, own, foes, rng, True)
         elif has(u, 'Berserk'):
@@ -326,6 +356,7 @@ def take_turn(u, own, foes, rng):
         else:
             v, a, t = pick_action(u, own, foes, rng)
             if a is None: a, t = FIGHT, min(live_f, key=lambda f: f['hp'])
+            STATS['use'][(u['name'], u['lvl'], a.name)] += 1; STATS['acts'][(u['name'], u['lvl'])] += 1
             n = 2 if (u['s'] == 'Double Sword' and a is FIGHT) else 1
             casts = 2 if (u['s'] == 'Doublecast' and a.mp > 0) else 1
             for _ in range(max(n, casts)):
@@ -382,11 +413,13 @@ def price_mods():
         if need and a.mp < need: mods[a.name] = need
     return mods
 def run(scn, levels=(10, 25, 45), n=1500, seed=1, size=3, jobs=None):
-    mods = scn.get('mods') or {}; saved = {}
+    mods = scn.get('mods') or {}; saved = {}; DISABLE.clear(); DISABLE.update(scn.get('disable', ()))
+    random.seed(seed + 7)
     for a in CAT.values():
         if a.name in mods: saved[a.name] = a.mp; a.mp = mods[a.name]
     try: return _run(scn, levels, n, seed, size, jobs)
     finally:
+        DISABLE.clear()
         for a in CAT.values():
             if a.name in saved: a.mp = saved[a.name]
 def _run(scn, levels, n, seed, size, jobs):
