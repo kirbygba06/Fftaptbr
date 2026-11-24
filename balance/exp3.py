@@ -10,28 +10,38 @@ AB = {**{s: 6 for s in ('Confushot', 'Charmshot', 'Blindshot', 'Silenshot', 'Sto
 PHANT = ['Prominence', 'Tempest', 'Freezeblink', 'Star Cross', 'Stardust', 'Deluge', 'Soil Evidence', 'Wild Tornado']
 def jj(name, race=None): return [j['id'] for j in J if j['name'] == name and (race is None or j['race'] == race)]
 SLOW = [i for n_ in ('Illusionist', 'Templar', 'Sage', 'Bishop', 'Summoner') for i in jj(n_)]
+FINAL_MODS = {**{n: {'power': 30} for n in PHANT}, 'Haste': {'area': 'r1/v2'}}
+FINAL_AP = {'Unicorn': 100, 'Cura': 100}
 def spec_build(spec):
     base = spec.get('base', 'orig')
-    s = dict(scn0) if base == 'orig' else f1.build(scn0, k5, mods=AB, atk_scale=1.12)
+    if base == 'orig': s = dict(scn0)
+    else:
+        k = dict(k5)
+        for i, f in (spec.get('kscale') or {}).items(): k[i] = k5[i] * f
+        s = f1.build(scn0, k, mods=AB, atk_scale=1.12)
+        if base == 'final': s['mods'] = {**(s.get('mods') or {}), **FINAL_MODS}; spec = dict(spec, ap={**FINAL_AP, **(spec.get('ap') or {})})
     s['jobs'] = copy.deepcopy(s['jobs'])
     for jid_, ch in (spec.get('jobmods') or {}).items():
         for j in s['jobs']:
             if j['id'] == jid_:
                 for k_, v in ch.items(): j[k_] = (j[k_] + v[1] if v[0] == '+' else j[k_] * v[1]) if isinstance(v, tuple) else v
     s['mods'] = {**(s.get('mods') or {}), **(spec.get('mods') or {})}
+    s['_ap'] = spec.get('ap') or {}
     return s
 def apply_ctx(s, spec):
     saved = {}
     for a in sim2.CAT.values():
         if a.name in s['mods']:
-            m = s['mods'][a.name]; saved[a.name] = (a.mp, a.power, a.area)
-            if isinstance(m, dict): a.mp = m.get('mp', a.mp); a.power = m.get('power', a.power); a.area = m.get('area', a.area)
+            m = s['mods'][a.name]; saved[a.name] = (a.mp, a.power, a.area, a.eff)
+            if isinstance(m, dict):
+                a.mp = m.get('mp', a.mp); a.power = m.get('power', a.power); a.area = m.get('area', a.area)
+                if 'eff' in m: a.eff = [x for x in (sim2.parse_effect(e) for e in m['eff']) if x]
             else: a.mp = m
-    sim2.APMOD.clear(); sim2.APMOD.update(spec.get('ap') or {}); sim2.DISABLE.clear(); sim2.DISABLE.update(spec.get('disable') or ())
+    sim2.APMOD.clear(); sim2.APMOD.update(s.get('_ap') or spec.get('ap') or {}); sim2.DISABLE.clear(); sim2.DISABLE.update(spec.get('disable') or ())
     return saved
 def undo_ctx(saved):
     for a in sim2.CAT.values():
-        if a.name in saved: a.mp, a.power, a.area = saved[a.name]
+        if a.name in saved: a.mp, a.power, a.area, a.eff = saved[a.name]
     sim2.APMOD.clear(); sim2.DISABLE.clear()
 DUR0 = dict(sim2.DUR)
 def setp():
