@@ -16,6 +16,12 @@ def markup_px(rom, code01, line):
     return line_px(rom, code01, line)
 
 
+def trim_last(body):
+    """A última entrada de um banco pode ser seguida por dados alheios; corta no primeiro 40 63 00 00."""
+    i = bytes(body).find(b'\x40\x63\x00\x00')
+    return body[:i + 4] if 0 <= i < len(body) - 4 and len(body) > 400 else body
+
+
 def build(rom, code01, translations):
     recs, cursor, report, done = {}, FREE_STORY, [], {}
     u32 = lambda a: struct.unpack_from('<I', rom, a)[0]
@@ -31,11 +37,11 @@ def build(rom, code01, translations):
         # cap de largura: maior linha inglesa do banco
         cap = 0
         for i in range(len(o)):
-            _, body, comp = get_string(rom, A, o, ends, i)
+            _, body, comp = get_string(rom, A, o, ends, i); body = trim_last(body)
             txt, _s = to_markup(body, code01)
             for ln in re.split('[\n\f]', txt): cap = max(cap, markup_px(rom, code01, ln)) if len(ln) < 60 else cap
         for idx, text in sorted(tr.items()):
-            hdr_i, body, comp = get_string(rom, A, o, ends, idx)
+            hdr_i, body, comp = get_string(rom, A, o, ends, idx); body = trim_last(body)
             _, suffix = to_markup(body, code01)
             new_hdr = hdr_i & ~2 if comp else hdr_i
             maxlines = max(1, (new_hdr >> 4) & 0xF)

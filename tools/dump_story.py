@@ -5,7 +5,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 import build_patch as b
 from textbanks import parse_table, to_markup
 from dialogue import get_string
-from story import P_EN
+from story import P_EN, trim_last
 rom = open(sys.argv[1], 'rb').read()
 u32 = lambda a: struct.unpack_from('<I', rom, a)[0]
 ks = [int(sys.argv[2])] if len(sys.argv) > 2 else range((u32(P_EN + 4) - 4) // 4)
@@ -18,7 +18,7 @@ for k in ks:
     ends = o[1:] + [nxt - A]
     print('### banco', k, hex(A), len(o), 'entradas')
     for i in range(len(o)):
-        hdr, body, comp = get_string(rom, A, o, ends, i)
+        hdr, body, comp = get_string(rom, A, o, ends, i); body = trim_last(body)
         txt, _ = to_markup(body, b.code01)
         if txt.strip() and 'dummy' not in txt:
             print('%d[%d] L%d %s' % (k, i, (hdr >> 4) & 15, txt.replace('\n', '/').replace('\f', ' ¶ ')))
