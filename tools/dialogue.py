@@ -136,6 +136,8 @@ def build(rom, code01):
     plan[0x521A20] = auto_effects(rom, code01)
     from dialogue_desc import DESC, pen
     from dialogue_misc import MISC
+    from dialogue_classdesc import CD
+    MISC[0x540368] = {**MISC[0x540368], **CD}
     for bk, tb in MISC.items():
         plan[bk] = auto_effects(rom, code01, bk, table=tb)
         assert len(plan[bk]) == len(tb), '%X: %s' % (bk, sorted(set(tb) - set(plan[bk])))
