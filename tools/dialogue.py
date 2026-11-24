@@ -162,6 +162,9 @@ def build(rom, code01):
         from textbanks import to_markup as _tm
         return _tm(get_string(rom, 0x51BDC8, _ob, _oe, i)[1], code01)[0]
     RAW[0x51BDC8] = labels_51bdc8(rom, code01, lambda l: line_px(rom, code01, _re_mod.sub(r'\{[^}]*\}', '', l)), _gm)
+    import os as _os
+    for _b in _os.environ.get('SKIP_BANKS', '').split(','):
+        if _b: RAW.pop(int(_b, 16), None); plan.pop(int(_b, 16), None)
     raw_banks = set(RAW)
     for bk, tb in RAW.items(): plan[bk] = tb
     for bank, trans in plan.items():
