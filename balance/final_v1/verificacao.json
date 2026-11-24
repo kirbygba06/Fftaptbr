@@ -1,0 +1,23 @@
+{
+ "variante": "F3",
+ "registros": {
+  "bal20_classes": 76,
+  "bal21_itens": 180,
+  "bal22_habilidades": 47,
+  "bal23_magias": 9
+ },
+ "bytes": {
+  "bal20_classes": 748,
+  "bal21_itens": 992,
+  "bal22_habilidades": 517,
+  "bal23_magias": 99
+ },
+ "classes": 42,
+ "itens": 176,
+ "habilidades": 47,
+ "magias": 9,
+ "divergencias": 0,
+ "sobreposicoes": 0,
+ "fora_da_tabela": [],
+ "reversao_identica": true
+}
