@@ -8,7 +8,7 @@ from textbanks import parse_table, to_markup, from_markup
 from dialogue import get_string, line_px
 
 P_EN = 0xBB064C
-FREE_STORY = 0xF40000
+FREE_STORY = 0xF58000
 
 
 def markup_px(rom, code01, line):
@@ -22,8 +22,8 @@ def trim_last(body):
     return body[:i + 4] if 0 <= i < len(body) - 4 and len(body) > 400 else body
 
 
-def build(rom, code01, translations):
-    recs, cursor, report, done = {}, FREE_STORY, [], {}
+def build(rom, code01, translations, base=FREE_STORY):
+    recs, cursor, report, done = {}, base, [], {}
     u32 = lambda a: struct.unpack_from('<I', rom, a)[0]
     for k, tr in sorted(translations.items()):
         ent = P_EN + 4 * (k + 1)
@@ -32,6 +32,7 @@ def build(rom, code01, translations):
             recs[ent] = struct.pack('<I', done[A] - P_EN); continue
         nxt = P_EN + u32(ent + 4) if u32(ent + 4) > u32(ent) else P_EN + u32(P_EN)
         o = parse_table(rom, A)
+        if nxt - A > 0x6000: nxt = min(nxt, A + max(o) + 0x800)   # não copiar o lixo/vizinhos até o próximo banco
         ends = o[1:] + [nxt - A]
         data = bytearray(rom[A:nxt])
         # cap de largura: maior linha inglesa do banco
@@ -56,6 +57,7 @@ def build(rom, code01, translations):
             data += struct.pack('<H', new_hdr) + from_markup(text, code01, suffix)
             struct.pack_into('<H', data, 2 * idx, off)
         cursor = (cursor + 3) & ~3
+        if cursor < 0xFE0000 <= cursor + len(data): cursor = 0xFEB000    # pula o trecho do texto/menu; usa o fim da ROM
         recs[ent] = struct.pack('<I', cursor - P_EN)
         done[A] = cursor
         recs[cursor] = bytes(data)

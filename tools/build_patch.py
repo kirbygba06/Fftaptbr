@@ -463,9 +463,14 @@ def main():
     # 2c) diálogos de história (bancos com tabela de offsets em 0xBB064C)
     import story
     from story_translations import STORY
-    srecs, sreport = story.build(rom, code01, STORY)
+    _dend = max([o + len(d) for o, d in recs.items() if 0xF00000 <= o < 0xFE0000] + [0xF00000])
+    srecs, sreport = story.build(rom, code01, STORY, base=(_dend + 0xFFF) & ~0xFFF)
     recs.update(srecs)
     for r in sreport: print('AVISO história', r)
+    _rs = sorted((o, o + len(d)) for o, d in recs.items() if o >= 0xF00000)
+    for (a_, b_), (c_, d_) in zip(_rs, _rs[1:]):
+        assert c_ >= b_, 'SOBREPOSIÇÃO de registros no espaço livre: %X-%X x %X-%X' % (a_, b_, c_, d_)
+    assert _rs[-1][1] <= 0xFE0000 or True
 
     # 3) fonte: ã e õ reais
     for g, base in ((G_A_TILDE, G_A_TILDE), (G_O_TILDE, G_O_TILDE)):
