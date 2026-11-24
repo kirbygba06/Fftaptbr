@@ -13,8 +13,8 @@ def jobs():
         el = u32(a + 0x12); names = ['Fogo', 'Vento', 'Terra', 'Água', 'Gelo', 'Raio', 'Sagrado', 'Trevas']
         res = {n: (el >> (3 + 3 * k)) & 7 for k, n in enumerate(names)}
         out.append(dict(id=i, name=NAMES(u16(a)), race=r[4], hp=r[0x17], mp=r[0x18], spd=r[0x19],
-                        atk=((r[0x1B] & 0xF) << 8) | r[0x1A], dfn=((r[0x1C] & 0xF) << 4) | (r[0x1B] >> 4),
-                        pow=((r[0x1E] & 0xF) << 8) | r[0x1D], res=((r[0x1F] & 0xF) << 4) | (r[0x1E] >> 4),
+                        atk=((r[0x1B] & 0xF) << 8) | r[0x1A], dfn=(r[0x1C] << 4) | (r[0x1B] >> 4),
+                        pow=((r[0x1E] & 0xF) << 8) | r[0x1D], res=(r[0x1F] << 4) | (r[0x1E] >> 4),
                         g_hp=r[0x20] / 10, g_mp=r[0x21] / 10, g_spd=r[0x22] / 10, g_atk=r[0x23] / 10, g_def=r[0x24] / 10,
                         g_pow=r[0x25] / 10, g_res=r[0x26] / 10, mov=r[0x28], jmp=r[0x29], eva=r[0x2A], sres=r[0x16],
                         equip=u32(0x51D0F4 + 4 * r[0x2D]) if False else r[0x2D], elem=res, raw=r.hex(' ')))

@@ -14,7 +14,7 @@ Projeto separado da tradução. Lê os números da ROM **original** (AFXP) e ana
 
 ### Classe (0x34)
 `+0` id do nome · `+4` raça · `+0x16` resistência a status · `+0x17` HP base · `+0x18` MP · `+0x19` Velocidade ·
-`+0x1A` 3 bytes: ATK (12 bits) e DEF (12 bits) · `+0x1D` 3 bytes: Poder Mágico e Res. Mágica ·
+`+0x1A` 3 bytes: ATK (12 bits: b1&0xF, b0) e DEF (12 bits: b2, b1>>4) · `+0x1D` 3 bytes: Poder Mágico e Res. Mágica (mesmo layout) ·
 `+0x20..0x26` crescimento ×10 (HP, MP, Vel, ATK, DEF, PM, RM) · `+0x28` Mov · `+0x29` Jump · `+0x2A` Evade ·
 `+0x12` u32 elementos (3 bits cada: 0 fraco, 1 normal, 2 anula, 3 absorve, 4 resiste) · `+0x2D` índice de equipamento permitido.
 
@@ -36,3 +36,7 @@ Projeto separado da tradução. Lê os números da ROM **original** (AFXP) e ana
 - `ANALISE.md` análise de balanceamento
 
 **Tudo acima é editável por IPS no lugar** (mesmos tamanhos de tabela), sem gastar espaço livre da ROM.
+
+## Simulação e F1 (rebalanceamento só com dados)
+`sim.py` (simulador 3×3), `f1.py` (forma por papel + ajuste de orçamento), `f1_items.py` (armas, armadura, preços), `robust.py`, `metrics.py`, `f1_export.py`.
+Leia `F1.md`. Saídas: `f1_classes.csv`, `f1_itens.csv`, `robust_result.md`, `metrics_result.md`.
