@@ -205,7 +205,7 @@ SHORT = {'Conselho de Turismo de Ivalice': 'Turismo de Ivalice', 'Escritório de
          'Comitê do Torneio de Magos': 'Torneio de Magos', 'Palácio de Bervenia e Juízes': 'Palácio e Juízes'}
 
 
-def fit(rom, code01, px, limit=147):
+def fit(rom, code01, px, limit=147, Q=Q):
     """Encurta assinaturas (depois de {40 3e 10}) que passam do limite: troca por forma curta ou só o nome."""
     out, rep = {}, []
     for k, t in Q.items():

@@ -156,6 +156,8 @@ def build(rom, code01):
     from dialogue_quests import fit
     from story import markup_px as _mpx
     RAW[0x4FE5D4] = fit(rom, code01, _mpx)
+    from dialogue_quests2 import Q2
+    RAW[0x5094B8] = fit(rom, code01, _mpx, Q=Q2)
     from dialogue_raw import labels_51bdc8
     _ob = banks.parse_bank(0x51BDC8); _oe = _ob[1:] + [_ob[-1] + 400]
     def _gm(i):
@@ -165,6 +167,10 @@ def build(rom, code01):
     import os as _os
     for _b in _os.environ.get('SKIP_BANKS', '').split(','):
         if _b: RAW.pop(int(_b, 16), None); plan.pop(int(_b, 16), None)
+    from dialogue_items2 import items2
+    _o2 = banks.parse_bank(0x54BB58); _e2 = _o2[1:] + [_o2[-1] + 400]
+    RAW[0x54BB58] = items2(lambda i: __import__('textbanks').to_markup(get_string(rom, 0x54BB58, _o2, _e2, i)[1], code01)[0],
+                           lambda l: line_px(rom, code01, _re_mod.sub(r'\{[^}]*\}', '', l)))
     raw_banks = set(RAW)
     for bk, tb in RAW.items(): plan[bk] = tb
     for bank, trans in plan.items():
@@ -183,7 +189,7 @@ def build(rom, code01):
                     elif line[k] in (0x40, 0x81): px += 4 if line[k:k + 2] == b'\x40\x73' else 0; k += 2
                     else: break
                 cap = max(cap, px) if px < 400 else cap
-        if bank in (0x4FE5D4,):    # banco grande: offsets u16 estouram se o original for mantido inteiro; recompacta
+        if bank in (0x4FE5D4, 0x5094B8):    # banco grande: offsets u16 estouram se o original for mantido inteiro; recompacta
             _new = bytearray(data[:min(o)])
             for _i in range(len(o)):
                 if len(_new) % 2: _new += b'\0'
