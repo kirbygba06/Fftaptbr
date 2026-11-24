@@ -12,7 +12,7 @@ norm = lambda s: re.sub(r'[^a-z0-9]', '', s.lower())
 AI = dict(LAMBDA=0.15, SLEEP_V=2.0)          # parâmetros da IA do simulador (NÃO são dados da ROM)
 OBS_HIT = {'Rockseal': 0.60, 'Charmshot': 0.95, 'Cupid': 0.80, 'Checkmate': 0.60, 'Death Sickle': 0.60}   # precisão registrada (comunidade) vs humano nv25 sem equipamento
 IMMSET = {'Frog', 'Stop', 'Disable', 'Immobilize', 'Berserk', 'Blind', 'Confusion', 'Confuse', 'Doom', 'Sleep', 'Petrify', 'KO', 'Slow', 'Silence', 'Poison', 'Addle', 'Charm'}
-P = dict(OBS=0, IMM={10: 0.0, 25: 0.10, 45: 0.25}, SV=1.0, DURM=1.0, POISON=0.10, REACH_MOV=0.07, FACE=(0.5, 0.3, 0.2), AOE_X=1.0, FF=0.25)     # parâmetros de sensibilidade
+P = dict(HASTE=2.0, DS2=1.0, OBS=0, IMM={10: 0.0, 25: 0.10, 45: 0.25}, SV=1.0, DURM=1.0, POISON=0.10, REACH_MOV=0.07, FACE=(0.5, 0.3, 0.2), AOE_X=1.0, FF=0.25)     # parâmetros de sensibilidade
 # CONFIRMADO (teste comunitário nível 25): Stop 3, Silence 3, Slow 3, Haste 3, Doom 3, Petrify até curar. Charm e Sleep terminam ao receber dano (duração natural: suposição).
 # SUPOSIÇÃO: Confusion, Poison (turnos e %), Sleep/Charm natural, Blind, Berserk, Disable, Immobilize, buffs.
 DUR = {'Stop': 3, 'Sleep': 4, 'Petrify': 99, 'Charm': 4, 'Confusion': 4, 'Confuse': 4, 'Berserk': 4, 'Blind': 4, 'Silence': 3, 'Disable': 4, 'Addle': 4, 'Immobilize': 4, 'Slow': 3,
@@ -22,7 +22,7 @@ HARM = {'Stop', 'Sleep', 'Petrify', 'Charm', 'Confusion', 'Confuse', 'Berserk', 
         'WAtk DOWN', 'MPow DOWN', 'WDef DOWN', 'MRes DOWN', 'KO'}
 RANGE_W = {'Archer': 5, 'Hunter': 4, 'Sniper': 5, 'Gunner': 4, 'Assassin': 4, 'Juggler': 3, 'Dragoon': 2, 'Fencer': 2, 'Gadgeteer': 3}
 import collections
-STATS = dict(use=collections.Counter(), acts=collections.Counter(), att=collections.Counter(), succ=collections.Counter(), impact=collections.defaultdict(float), denied=collections.defaultdict(float), uses_ab=collections.Counter())
+STATS = dict(use=collections.Counter(), acts=collections.Counter(), att=collections.Counter(), succ=collections.Counter(), impact=collections.defaultdict(float), ev=collections.defaultdict(float), evn=collections.Counter(), mp=collections.defaultdict(float), mpn=collections.Counter(), denied=collections.defaultdict(float), uses_ab=collections.Counter())
 def reset_stats():
     for k in STATS: STATS[k].clear()
 class Ab:
@@ -91,7 +91,9 @@ def mk(j, level, g, abil, cfg=None, scenario_mp=None):
     u['maxhp'] = u['hp']; u['mp0'] = u['mp']; u['cnt'] = 0; u['st'] = {}; u['wr'] = RANGE_W.get(j['name'], 1)
     A, Sup = kit_for(j['name'], cap_for(level))
     u['abs'] = [FIGHT] + A; u['sup'] = [s for s in SUPPORT_PRIO if s in Sup]; u['s'] = u['sup'][0] if u['sup'] else None
-    if 'Double Sword' in Sup and level > 45: u['s'] = 'Double Sword'
+    if P.get('NO_DS'): u['sup'] = [x for x in u['sup'] if x != 'Double Sword']; u['s'] = u['sup'][0] if u['sup'] else None
+    if P.get('NO_DC'): u['sup'] = [x for x in u['sup'] if x != 'Doublecast']; u['s'] = u['sup'][0] if u['sup'] else None
+    if 'Double Sword' in u['sup'] and level > 45: u['s'] = 'Double Sword'
     return u
 # ---------- fórmulas ----------
 def has(u, s): return s in u['st']
@@ -129,7 +131,7 @@ def base_dmg(u, t, a, e):
     p = power_of(u, a, phys)
     att = attv(u, phys)
     if a.mp > 0 and u['s'] == 'Turbo MP': att *= 332 / 256
-    return max(1.0, att - defv(t, phys) / 2) * p / 100 * e.get('m', 1.0)
+    return max(1.0, att - defv(t, phys) / 2) * p / 100 * e.get('m', 1.0) * u.get('dmgmult', 1.0)
 def hit_a(u, t, rng):
     if has(t, 'Stop') or has(t, 'Sleep') or has(t, 'Petrify'): return 1.0
     ev = max(0, min(100, t['eva'])); f = rng.random(); fp = P['FACE']
@@ -155,7 +157,9 @@ def hit_s(u, t, rng, names, abname=None):
     return (100 - max(0, min(100, sr))) / 100
 def reach(u, a):
     r = a.rng; mov = u['mov']
-    if r in ('Self', 'Infinite'): return 1.0
+    if r == 'Infinite': return 1.0
+    if r == 'Self' and 'Not Self' not in a.area: return 1.0
+    if r == 'Self': r = '1'
     R = u['wr'] if r == 'As Weapon' else (3 if r in ('Cone', 'Line', 'Dbl-Line') else int(r) if r.isdigit() else 1)
     mv = 0 if has(u, 'Immobilize') else mov
     return max(0.2, min(0.98, 0.45 + P['REACH_MOV'] * mv * 1.0 + 0.10 * (R - 1) - (0.0 if mv else 0.25)))
@@ -235,7 +239,7 @@ def score_ability(u, a, own, foes, rng):
     ex = extra_targets(a); best = (0.0, None)
     harmful = any(e['kind'] in ('dmg', 'hpfrac', 'flat', 'mpdmg') or (e['kind'] == 'status' and any(n in HARM for n in e['names'])) or e['kind'] in ('delay', 'dispel') for e in a.eff)
     cands = live_f if harmful else (dead_a if any(e['kind'] == 'revive' for e in a.eff) else live_a)
-    if a.area == 'Self' or a.rng == 'Self': cands = [u]
+    if (a.area == 'Self' or a.rng == 'Self') and not harmful: cands = [u]
     if not cands: return 0, None
     vals = []
     for t in cands:
@@ -319,9 +323,16 @@ def do_effects(u, t, a, own, foes, rng, e1ok):
         elif kind == 'delay': t['cnt'] = 0
     if t['hp'] <= 0 and t['st'].get('Auto-Life'):
         t['hp'] = t['maxhp'] * 0.25; t['st'].clear()
+FORCE = {}   # id da classe -> nome da habilidade usada sempre que possível (medida de valor por ação)
 def pick_action(u, own, foes, rng):
     best = (0.0, None, None)
     cands = [a for a in u['abs'] if allowed(u, a)]
+    fa = FORCE.get(u['id'])
+    if fa:
+        for a in cands:
+            if a.name == fa:
+                v, t = score_ability(u, a, own, foes, rng)
+                if t is not None: return (v, a, t)
     for a in cands:
         v, t = score_ability(u, a, own, foes, rng)
         v -= AI['LAMBDA'] * a.mp
@@ -356,10 +367,11 @@ def take_turn(u, own, foes, rng):
         else:
             v, a, t = pick_action(u, own, foes, rng)
             if a is None: a, t = FIGHT, min(live_f, key=lambda f: f['hp'])
-            STATS['use'][(u['name'], u['lvl'], a.name)] += 1; STATS['acts'][(u['name'], u['lvl'])] += 1
+            STATS['use'][(u['name'], u['lvl'], a.name)] += 1; STATS['acts'][(u['name'], u['lvl'])] += 1; STATS['ev'][a.name] += v; STATS['evn'][a.name] += 1
             n = 2 if (u['s'] == 'Double Sword' and a is FIGHT) else 1
             casts = 2 if (u['s'] == 'Doublecast' and a.mp > 0) else 1
             for _ in range(max(n, casts)):
+                u['dmgmult'] = P['DS2'] if (n == 2 and _ == 1) else 1.0
                 if t is None or (t['hp'] <= 0 and not any(e['kind'] == 'revive' for e in a.eff)): break
                 if rng.random() < reach(u, a):
                     targets = [t]
@@ -367,18 +379,24 @@ def take_turn(u, own, foes, rng):
                     if ex > 0:
                         pool = [x for x in (foes if t in foes else own) if x is not t and (x['hp'] > 0 or any(e['kind'] == 'revive' for e in a.eff))]
                         rng.shuffle(pool); targets += pool[:int(ex) + (1 if rng.random() < ex - int(ex) else 0)]
-                    if a.mp: u['mp'] -= a.mp * (2 if u['s'] == 'Turbo MP' else 0.5 if u['s'] == 'Half MP' else 1)
+                    if a.mp:
+                        _c = a.mp * (2 if u['s'] == 'Turbo MP' else 0.5 if u['s'] == 'Half MP' else 1); u['mp'] -= _c; u['mpsp'] = u.get('mpsp', 0) + _c
                     for tt in targets: do_effects(u, tt, a, own, foes, rng, True)
                     u['casts'] = u.get('casts', 0) + (1 if a.mp else 0)
                 if casts == 2 and _ == 0:
                     v, a2, t2 = pick_action(u, own, foes, rng)
                     if a2 is None or not a2.mp: break
                     a, t = a2, t2
+    u['dmgmult'] = 1.0
     for k in list(st):
         if k in ('Petrify', 'Auto-Life', 'Doom'): continue
         st[k] -= 1
         if st[k] <= 0: del st[k]
 def battle(A, B, rng, maxturn=400):
+    r = _battle(A, B, rng, maxturn)
+    for u in A + B: STATS['mp'][(u['name'], u['lvl'])] += u.get('mpsp', 0); STATS['mpn'][(u['name'], u['lvl'])] += 1
+    return r
+def _battle(A, B, rng, maxturn=400):
     units = A + B; order = {id(u): i for i, u in enumerate(units)}
     for u in units: u['cnt'] = 0; u['st'] = {}
     for team, foes in ((A, B), (B, A)):
@@ -387,7 +405,7 @@ def battle(A, B, rng, maxturn=400):
     for _ in range(maxturn * 40):
         for u in units:
             if u['hp'] > 0 and not has(u, 'Petrify'):
-                sp = u['spd'] * (2 if has(u, 'Haste') else 0.5 if has(u, 'Slow') else 1.0); u['cnt'] += sp
+                sp = u['spd'] * (P['HASTE'] if has(u, 'Haste') else 0.5 if has(u, 'Slow') else 1.0); u['cnt'] += sp
         ready = sorted([u for u in units if u['hp'] > 0 and u['cnt'] >= 1000], key=lambda u: (-u['cnt'], order[id(u)]))
         for u in ready:
             if u['hp'] <= 0: continue
@@ -416,12 +434,15 @@ def run(scn, levels=(10, 25, 45), n=1500, seed=1, size=3, jobs=None):
     mods = scn.get('mods') or {}; saved = {}; DISABLE.clear(); DISABLE.update(scn.get('disable', ()))
     random.seed(seed + 7)
     for a in CAT.values():
-        if a.name in mods: saved[a.name] = a.mp; a.mp = mods[a.name]
+        if a.name in mods:
+            m = mods[a.name]; saved[a.name] = (a.mp, a.power)
+            if isinstance(m, dict): a.mp = m.get('mp', a.mp); a.power = m.get('power', a.power)
+            else: a.mp = m
     try: return _run(scn, levels, n, seed, size, jobs)
     finally:
         DISABLE.clear()
         for a in CAT.values():
-            if a.name in saved: a.mp = saved[a.name]
+            if a.name in saved: a.mp, a.power = saved[a.name]
 def _run(scn, levels, n, seed, size, jobs):
     rng = random.Random(seed); g = sim.gear(scn['items']); J = jobs or scn['jobs']; res = {}; pace = {}
     for lv in levels:
