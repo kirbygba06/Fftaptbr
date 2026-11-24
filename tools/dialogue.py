@@ -139,6 +139,14 @@ def build(rom, code01):
     plan[0x513A8C] = auto_effects(rom, code01, 0x513A8C, table={k: reflow(v, code01, rom) for k, v in NEWS.items()})
     assert len(plan[0x513A8C]) == len(NEWS), sorted(set(NEWS) - set(plan[0x513A8C]))
     plan[0x529514] = auto_effects(rom, code01, 0x529514, table=DESC)
+    from dialogue_items import item_rule
+    _o = banks.parse_bank(0x534D9C); _ends = _o[1:] + [len(rom[0x534D9C:0x534D9C + _o[-1] + 0x80])]
+    _tab = {}
+    for _i in range(len(_o)):
+        _t = decode_text(get_string(rom, 0x534D9C, _o, _ends, _i)[1], code01)
+        _pt = item_rule(_i, _t) if _t is not None else None
+        if _pt: _tab[_i] = _pt
+    plan[0x534D9C] = auto_effects(rom, code01, 0x534D9C, table=_tab)
     plan[0x54382C] = auto_effects(rom, code01, 0x54382C, ruler=pen)
     for bank, trans in plan.items():
         o = banks.parse_bank(bank)
