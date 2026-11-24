@@ -1,0 +1,1269 @@
+{
+ "Alchemist|10": {
+  "win": 0.406,
+  "share": {
+   "Poison": 0.744,
+   "Fight": 0.256
+  },
+  "unused": [
+   "Rasp"
+  ]
+ },
+ "Alchemist|25": {
+  "win": 0.397,
+  "share": {
+   "Toad": 0.441,
+   "Poison": 0.416,
+   "Fight": 0.136,
+   "Astra": 0.007
+  },
+  "unused": [
+   "Rasp"
+  ]
+ },
+ "Alchemist|45": {
+  "win": 0.48,
+  "share": {
+   "Death": 0.676,
+   "Fight": 0.16,
+   "Flare": 0.074,
+   "Meteor": 0.067,
+   "Toad": 0.015,
+   "Astra": 0.004,
+   "Poison": 0.004
+  },
+  "unused": [
+   "Rasp"
+  ]
+ },
+ "Animist|10": {
+  "win": 0.514,
+  "share": {
+   "Fight": 0.661,
+   "Sheep Count": 0.338,
+   "Catnip": 0.001
+  },
+  "unused": []
+ },
+ "Animist|25": {
+  "win": 0.566,
+  "share": {
+   "Fight": 0.488,
+   "Frogsong": 0.337,
+   "Tail Wag": 0.08,
+   "Sheep Count": 0.077,
+   "100% Wool": 0.019
+  },
+  "unused": [
+   "Catnip"
+  ]
+ },
+ "Animist|45": {
+  "win": 0.569,
+  "share": {
+   "Fight": 0.415,
+   "Frogsong": 0.303,
+   "Chocobo Rush": 0.134,
+   "Tail Wag": 0.058,
+   "Cuisine": 0.041,
+   "Sheep Count": 0.027,
+   "100% Wool": 0.021
+  },
+  "unused": [
+   "Friend",
+   "Catnip"
+  ]
+ },
+ "Archer|10": {
+  "win": 0.605,
+  "share": {
+   "Fight": 0.648,
+   "Boost": 0.352
+  },
+  "unused": []
+ },
+ "Archer|25": {
+  "win": 0.606,
+  "share": {
+   "Cupid": 0.673,
+   "Fight": 0.161,
+   "Boost": 0.097,
+   "Aim: Arm": 0.064,
+   "Aim: Legs": 0.004,
+   "Blackout": 0.002
+  },
+  "unused": []
+ },
+ "Archer|45": {
+  "win": 0.677,
+  "share": {
+   "Cupid": 0.564,
+   "Aim: Arm": 0.175,
+   "Fight": 0.101,
+   "Boost": 0.069,
+   "Take Aim": 0.038,
+   "Aim: Legs": 0.027,
+   "Blackout": 0.017,
+   "Faster": 0.008
+  },
+  "unused": [
+   "Burial"
+  ]
+ },
+ "Assassin|10": {
+  "win": 0.598,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": []
+ },
+ "Assassin|25": {
+  "win": 0.608,
+  "share": {
+   "Fight": 0.414,
+   "Shadowbind": 0.392,
+   "Aphonia": 0.148,
+   "Ague": 0.046
+  },
+  "unused": []
+ },
+ "Assassin|45": {
+  "win": 0.744,
+  "share": {
+   "Rockseal": 0.734,
+   "Last Breath": 0.125,
+   "Fight": 0.118,
+   "Nightmare": 0.023
+  },
+  "unused": [
+   "Shadowbind",
+   "Aphonia",
+   "Ague",
+   "Oblivion"
+  ]
+ },
+ "Beastmaster|10": {
+  "win": 0.551,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": []
+ },
+ "Beastmaster|25": {
+  "win": 0.448,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": [
+   "Goblin",
+   "Flan",
+   "Bomb",
+   "Dragon",
+   "Lamia",
+   "Bug",
+   "Tonberry",
+   "Panther",
+   "Malboro",
+   "Floateye",
+   "Undead",
+   "Fairy",
+   "Rockbeast"
+  ]
+ },
+ "Beastmaster|45": {
+  "win": 0.453,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": [
+   "Goblin",
+   "Flan",
+   "Bomb",
+   "Dragon",
+   "Lamia",
+   "Bug",
+   "Tonberry",
+   "Panther",
+   "Malboro",
+   "Floateye",
+   "Undead",
+   "Fairy",
+   "Rockbeast"
+  ]
+ },
+ "Bishop|10": {
+  "win": 0.229,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": []
+ },
+ "Bishop|25": {
+  "win": 0.571,
+  "share": {
+   "Break": 0.818,
+   "Fight": 0.149,
+   "Cura": 0.03,
+   "Water": 0.003
+  },
+  "unused": [
+   "Dispel",
+   "Aero"
+  ]
+ },
+ "Bishop|45": {
+  "win": 0.454,
+  "share": {
+   "Break": 0.822,
+   "Fight": 0.071,
+   "Cura": 0.059,
+   "Holy": 0.024,
+   "Water": 0.012,
+   "Aero": 0.007,
+   "Barrier": 0.005
+  },
+  "unused": [
+   "Dispel",
+   "Judge"
+  ]
+ },
+ "Black Mage|10": {
+  "win": 0.463,
+  "share": {
+   "Fire": 0.364,
+   "Thunder": 0.299,
+   "Blizzard": 0.274,
+   "Fight": 0.063
+  },
+  "unused": []
+ },
+ "Black Mage|25": {
+  "win": 0.417,
+  "share": {
+   "Fira": 0.312,
+   "Thundara": 0.27,
+   "Blizzara": 0.223,
+   "Fight": 0.114,
+   "Fire": 0.032,
+   "Thunder": 0.025,
+   "Blizzard": 0.023
+  },
+  "unused": []
+ },
+ "Black Mage|45": {
+  "win": 0.419,
+  "share": {
+   "Fight": 0.327,
+   "Firaga": 0.225,
+   "Thundaga": 0.187,
+   "Blizzaga": 0.156,
+   "Blizzara": 0.027,
+   "Fira": 0.026,
+   "Thundara": 0.023,
+   "Fire": 0.012,
+   "Thunder": 0.01,
+   "Blizzard": 0.008
+  },
+  "unused": []
+ },
+ "Blue Mage|10": {
+  "win": 0.458,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": []
+ },
+ "Blue Mage|25": {
+  "win": 0.418,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": []
+ },
+ "Blue Mage|45": {
+  "win": 0.367,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": []
+ },
+ "Defender|10": {
+  "win": 0.434,
+  "share": {
+   "Fight": 0.998,
+   "Tremor": 0.002
+  },
+  "unused": [
+   "Hibernate"
+  ]
+ },
+ "Defender|25": {
+  "win": 0.27,
+  "share": {
+   "Mow Down": 0.697,
+   "Fight": 0.23,
+   "Defense": 0.073
+  },
+  "unused": [
+   "Tremor",
+   "Meltdown",
+   "Drop Weapon",
+   "Hibernate"
+  ]
+ },
+ "Defender|45": {
+  "win": 0.347,
+  "share": {
+   "Mow Down": 0.634,
+   "Aura": 0.271,
+   "Defense": 0.08,
+   "Fight": 0.015
+  },
+  "unused": [
+   "Tremor",
+   "Meltdown",
+   "Drop Weapon",
+   "Hibernate",
+   "Expert Guard"
+  ]
+ },
+ "Dragoon|10": {
+  "win": 0.65,
+  "share": {
+   "Jump": 0.787,
+   "Fight": 0.213
+  },
+  "unused": []
+ },
+ "Dragoon|25": {
+  "win": 0.675,
+  "share": {
+   "Bangaa Cry": 0.806,
+   "Jump": 0.098,
+   "Fight": 0.097
+  },
+  "unused": [
+   "Wyrmtamer"
+  ]
+ },
+ "Dragoon|45": {
+  "win": 0.509,
+  "share": {
+   "Bangaa Cry": 0.463,
+   "Fire Breath": 0.156,
+   "Bolt Breath": 0.131,
+   "Ice Breath": 0.096,
+   "Jump": 0.081,
+   "Fight": 0.068,
+   "Wyrmkiller": 0.004
+  },
+  "unused": [
+   "Lancet",
+   "Wyrmtamer"
+  ]
+ },
+ "Elementalist|10": {
+  "win": 0.567,
+  "share": {
+   "Fight": 0.521,
+   "Fire Whip": 0.474,
+   "White Flame": 0.006
+  },
+  "unused": []
+ },
+ "Elementalist|25": {
+  "win": 0.517,
+  "share": {
+   "Fire Whip": 0.36,
+   "Fight": 0.29,
+   "Sliprain": 0.158,
+   "White Flame": 0.107,
+   "Heavy Dust": 0.043,
+   "Shining Air": 0.036,
+   "Earth Heal": 0.006
+  },
+  "unused": []
+ },
+ "Elementalist|45": {
+  "win": 0.461,
+  "share": {
+   "Evil Gaze": 0.611,
+   "Fight": 0.231,
+   "Fire Whip": 0.082,
+   "White Flame": 0.04,
+   "Sliprain": 0.024,
+   "Heavy Dust": 0.011,
+   "Shining Air": 0.002,
+   "Earth Heal": 0.001
+  },
+  "unused": [
+   "Elementalshift"
+  ]
+ },
+ "Fencer|10": {
+  "win": 0.689,
+  "share": {
+   "Swarmstrike": 0.734,
+   "Fight": 0.266
+  },
+  "unused": []
+ },
+ "Fencer|25": {
+  "win": 0.544,
+  "share": {
+   "Swarmstrike": 0.461,
+   "Piercethrough": 0.332,
+   "Shadowstick": 0.121,
+   "Nighthawk": 0.048,
+   "Fight": 0.039
+  },
+  "unused": [
+   "Featherblow"
+  ]
+ },
+ "Fencer|45": {
+  "win": 0.565,
+  "share": {
+   "Checkmate": 0.42,
+   "Shadowstick": 0.242,
+   "Swarmstrike": 0.184,
+   "Piercethrough": 0.113,
+   "Nighthawk": 0.025,
+   "Fight": 0.016
+  },
+  "unused": [
+   "Featherblow",
+   "Swallowtail",
+   "Manastrike"
+  ]
+ },
+ "Fighter|10": {
+  "win": 0.502,
+  "share": {
+   "Fight": 0.643,
+   "Rush": 0.357
+  },
+  "unused": []
+ },
+ "Fighter|25": {
+  "win": 0.658,
+  "share": {
+   "Far Fist": 0.561,
+   "Air Render": 0.345,
+   "Fight": 0.084,
+   "Rush": 0.011
+  },
+  "unused": [
+   "Wild Swing",
+   "Beatdown",
+   "Blitz"
+  ]
+ },
+ "Fighter|45": {
+  "win": 0.469,
+  "share": {
+   "Backdraft": 0.353,
+   "Far Fist": 0.255,
+   "Air Render": 0.186,
+   "Air Blast": 0.134,
+   "Fight": 0.06,
+   "Rush": 0.013
+  },
+  "unused": [
+   "Wild Swing",
+   "Beatdown",
+   "Blitz"
+  ]
+ },
+ "Gadgeteer|10": {
+  "win": 0.481,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": []
+ },
+ "Gadgeteer|25": {
+  "win": 0.41,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": [
+   "Red Spring",
+   "Blue Screw",
+   "Green Gear",
+   "Silver Disc",
+   "Gold Battery",
+   "Black Ingot",
+   "Chroma Gem",
+   "Yellow Spring"
+  ]
+ },
+ "Gadgeteer|45": {
+  "win": 0.386,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": [
+   "Red Spring",
+   "Blue Screw",
+   "Green Gear",
+   "Silver Disc",
+   "Gold Battery",
+   "Black Ingot",
+   "Chroma Gem",
+   "Yellow Spring"
+  ]
+ },
+ "Gladiator|10": {
+  "win": 0.536,
+  "share": {
+   "Fight": 0.654,
+   "Rush": 0.346
+  },
+  "unused": []
+ },
+ "Gladiator|25": {
+  "win": 0.619,
+  "share": {
+   "Fire Sword": 0.37,
+   "Bolt Sword": 0.224,
+   "Fight": 0.193,
+   "Ice Sword": 0.158,
+   "Rush": 0.056
+  },
+  "unused": [
+   "Wild Swing",
+   "Beatdown",
+   "Blitz"
+  ]
+ },
+ "Gladiator|45": {
+  "win": 0.516,
+  "share": {
+   "Fire Sword": 0.357,
+   "Fight": 0.21,
+   "Bolt Sword": 0.197,
+   "Ice Sword": 0.162,
+   "Rush": 0.074
+  },
+  "unused": [
+   "Wild Swing",
+   "Beatdown",
+   "Blitz"
+  ]
+ },
+ "Gunner|10": {
+  "win": 0.724,
+  "share": {
+   "Blindshot": 0.812,
+   "Fight": 0.099,
+   "Fireshot": 0.044,
+   "Boltshot": 0.026,
+   "Iceshot": 0.019
+  },
+  "unused": []
+ },
+ "Gunner|25": {
+  "win": 0.688,
+  "share": {
+   "Confushot": 0.559,
+   "Silenshot": 0.23,
+   "Blindshot": 0.14,
+   "Fight": 0.048,
+   "Fireshot": 0.013,
+   "Boltshot": 0.008,
+   "Iceshot": 0.002
+  },
+  "unused": []
+ },
+ "Gunner|45": {
+  "win": 0.685,
+  "share": {
+   "Charmshot": 0.517,
+   "Confushot": 0.197,
+   "Stopshot": 0.152,
+   "Silenshot": 0.097,
+   "Blindshot": 0.034,
+   "Fight": 0.003
+  },
+  "unused": [
+   "Fireshot",
+   "Boltshot",
+   "Iceshot"
+  ]
+ },
+ "Hunter|10": {
+  "win": 0.643,
+  "share": {
+   "Fight": 0.882,
+   "Advice": 0.118
+  },
+  "unused": []
+ },
+ "Hunter|25": {
+  "win": 0.57,
+  "share": {
+   "Sonic Boom": 0.745,
+   "Fight": 0.245,
+   "Advice": 0.01
+  },
+  "unused": [
+   "Oust",
+   "Addle",
+   "Capture"
+  ]
+ },
+ "Hunter|45": {
+  "win": 0.647,
+  "share": {
+   "Sonic Boom": 0.582,
+   "Fight": 0.244,
+   "Sidewinder": 0.12,
+   "Advice": 0.039,
+   "Hunting": 0.015
+  },
+  "unused": [
+   "Oust",
+   "Aim: Vitals",
+   "Addle",
+   "Capture"
+  ]
+ },
+ "Illusionist|10": {
+  "win": 0.389,
+  "share": {
+   "Fight": 0.329,
+   "Prominence": 0.319,
+   "Freezeblink": 0.3,
+   "Tempest": 0.051
+  },
+  "unused": []
+ },
+ "Illusionist|25": {
+  "win": 0.331,
+  "share": {
+   "Prominence": 0.337,
+   "Freezeblink": 0.297,
+   "Fight": 0.215,
+   "Wild Tornado": 0.053,
+   "Tempest": 0.051,
+   "Soil Evidence": 0.047
+  },
+  "unused": []
+ },
+ "Illusionist|45": {
+  "win": 0.321,
+  "share": {
+   "Fight": 0.291,
+   "Prominence": 0.222,
+   "Freezeblink": 0.192,
+   "Stardust": 0.173,
+   "Tempest": 0.033,
+   "Star Cross": 0.025,
+   "Deluge": 0.023,
+   "Soil Evidence": 0.021,
+   "Wild Tornado": 0.02
+  },
+  "unused": []
+ },
+ "Juggler|10": {
+  "win": 0.688,
+  "share": {
+   "Gil Toss": 0.726,
+   "Fight": 0.274
+  },
+  "unused": [
+   "Hurl"
+  ]
+ },
+ "Juggler|25": {
+  "win": 0.651,
+  "share": {
+   "Ball": 0.468,
+   "Ring": 0.366,
+   "Fight": 0.165,
+   "Gil Toss": 0.002
+  },
+  "unused": [
+   "Hurl"
+  ]
+ },
+ "Juggler|45": {
+  "win": 0.502,
+  "share": {
+   "Dagger": 0.401,
+   "Ball": 0.24,
+   "Ring": 0.207,
+   "Smile": 0.077,
+   "Firebomb": 0.049,
+   "Fight": 0.026
+  },
+  "unused": [
+   "Hurl",
+   "Gil Toss"
+  ]
+ },
+ "Mog Knight|10": {
+  "win": 0.422,
+  "share": {
+   "Fight": 0.637,
+   "Mog Attack": 0.363
+  },
+  "unused": []
+ },
+ "Mog Knight|25": {
+  "win": 0.412,
+  "share": {
+   "Mog Lance": 0.692,
+   "Fight": 0.141,
+   "Mog Attack": 0.085,
+   "Mog Guard": 0.082
+  },
+  "unused": [
+   "Mog Rush"
+  ]
+ },
+ "Mog Knight|45": {
+  "win": 0.382,
+  "share": {
+   "Mog Lance": 0.456,
+   "Mog Guard": 0.147,
+   "Mog Shield": 0.144,
+   "Mog Aid": 0.117,
+   "Fight": 0.08,
+   "Mog Attack": 0.055
+  },
+  "unused": [
+   "Mog Rush",
+   "Mog Peek"
+  ]
+ },
+ "Morpher|10": {
+  "win": 0.41,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": []
+ },
+ "Morpher|25": {
+  "win": 0.367,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": [
+   "Goblin",
+   "Flan",
+   "Bomb",
+   "Dragon",
+   "Lamia",
+   "Bug",
+   "Panther",
+   "Malboro",
+   "Floateye"
+  ]
+ },
+ "Morpher|45": {
+  "win": 0.343,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": [
+   "Goblin",
+   "Flan",
+   "Bomb",
+   "Dragon",
+   "Lamia",
+   "Bug",
+   "Panther",
+   "Malboro",
+   "Floateye"
+  ]
+ },
+ "Ninja|10": {
+  "win": 0.458,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": [
+   "Throw"
+  ]
+ },
+ "Ninja|25": {
+  "win": 0.735,
+  "share": {
+   "Fire Veil": 0.438,
+   "Earth Veil": 0.191,
+   "Water Veil": 0.165,
+   "Fight": 0.091,
+   "Wood Veil": 0.063,
+   "Metal Veil": 0.052
+  },
+  "unused": [
+   "Throw"
+  ]
+ },
+ "Ninja|45": {
+  "win": 0.747,
+  "share": {
+   "Fire Veil": 0.36,
+   "Fight": 0.211,
+   "Earth Veil": 0.182,
+   "Water Veil": 0.133,
+   "Wood Veil": 0.051,
+   "Metal Veil": 0.036,
+   "Oblivion": 0.027
+  },
+  "unused": [
+   "Throw",
+   "Unspell"
+  ]
+ },
+ "Paladin|10": {
+  "win": 0.636,
+  "share": {
+   "Fight": 0.507,
+   "Nurse": 0.493
+  },
+  "unused": []
+ },
+ "Paladin|25": {
+  "win": 0.443,
+  "share": {
+   "Fight": 0.505,
+   "Nurse": 0.319,
+   "Defense": 0.176
+  },
+  "unused": [
+   "Cover",
+   "Subdue",
+   "Drop Weapon",
+   "Parley"
+  ]
+ },
+ "Paladin|45": {
+  "win": 0.518,
+  "share": {
+   "Fight": 0.45,
+   "Defense": 0.247,
+   "Holy Blade": 0.163,
+   "Nurse": 0.14
+  },
+  "unused": [
+   "Cover",
+   "Subdue",
+   "Drop Weapon",
+   "Parley",
+   "Saint Cross"
+  ]
+ },
+ "Red Mage|10": {
+  "win": 0.605,
+  "share": {
+   "Fight": 0.409,
+   "Poison": 0.247,
+   "Cure": 0.195,
+   "Thunder": 0.052,
+   "Fire": 0.049,
+   "Blizzard": 0.047
+  },
+  "unused": []
+ },
+ "Red Mage|25": {
+  "win": 0.51,
+  "share": {
+   "Poison": 0.273,
+   "Fight": 0.231,
+   "Sleep": 0.212,
+   "Cure": 0.194,
+   "Fire": 0.039,
+   "Blizzard": 0.026,
+   "Thunder": 0.025
+  },
+  "unused": []
+ },
+ "Red Mage|45": {
+  "win": 0.498,
+  "share": {
+   "Sleep": 0.269,
+   "Poison": 0.198,
+   "Cure": 0.192,
+   "Fight": 0.16,
+   "Fire": 0.066,
+   "Barrier": 0.04,
+   "Thunder": 0.04,
+   "Blizzard": 0.035
+  },
+  "unused": []
+ },
+ "Sage|10": {
+  "win": 0.425,
+  "share": {
+   "Blind": 0.559,
+   "Fight": 0.441
+  },
+  "unused": [
+   "Drain"
+  ]
+ },
+ "Sage|25": {
+  "win": 0.492,
+  "share": {
+   "Water": 0.471,
+   "Aero": 0.38,
+   "Fight": 0.131,
+   "Blind": 0.017
+  },
+  "unused": [
+   "Drain"
+  ]
+ },
+ "Sage|45": {
+  "win": 0.642,
+  "share": {
+   "Bio": 0.535,
+   "Giga Flare": 0.161,
+   "Raise": 0.152,
+   "Fight": 0.129,
+   "Water": 0.018,
+   "Aero": 0.005
+  },
+  "unused": [
+   "Drain",
+   "Blind"
+  ]
+ },
+ "Sniper|10": {
+  "win": 0.626,
+  "share": {
+   "Fight": 0.902,
+   "Conceal": 0.098
+  },
+  "unused": []
+ },
+ "Sniper|25": {
+  "win": 0.613,
+  "share": {
+   "Beso Toxico": 0.838,
+   "Fight": 0.16,
+   "Conceal": 0.002
+  },
+  "unused": [
+   "Aim: Wallet"
+  ]
+ },
+ "Sniper|45": {
+  "win": 0.608,
+  "share": {
+   "Death Sickle": 0.483,
+   "Beso Toxico": 0.39,
+   "Fight": 0.067,
+   "Doubleshot": 0.057,
+   "Conceal": 0.003
+  },
+  "unused": [
+   "Doom Archer",
+   "Aim: Armor",
+   "Aim: Weapon",
+   "Aim: Wallet"
+  ]
+ },
+ "Soldier|10": {
+  "win": 0.519,
+  "share": {
+   "Fight": 0.825,
+   "First Aid": 0.175
+  },
+  "unused": []
+ },
+ "Soldier|25": {
+  "win": 0.418,
+  "share": {
+   "Speedbreak": 0.694,
+   "Fight": 0.254,
+   "First Aid": 0.052
+  },
+  "unused": [
+   "Powerbreak",
+   "Mindbreak",
+   "Magicbreak"
+  ]
+ },
+ "Soldier|45": {
+  "win": 0.416,
+  "share": {
+   "Speedbreak": 0.517,
+   "Mug": 0.414,
+   "First Aid": 0.042,
+   "Fight": 0.026,
+   "Provoke": 0.001
+  },
+  "unused": [
+   "Powerbreak",
+   "Mindbreak",
+   "Magicbreak",
+   "Sensor"
+  ]
+ },
+ "Summoner|10": {
+  "win": 0.225,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": []
+ },
+ "Summoner|25": {
+  "win": 0.463,
+  "share": {
+   "Kirin": 0.325,
+   "Fight": 0.164,
+   "Ifrit": 0.16,
+   "Unicorn": 0.13,
+   "Ramuh": 0.124,
+   "Shiva": 0.098
+  },
+  "unused": []
+ },
+ "Summoner|45": {
+  "win": 0.482,
+  "share": {
+   "Fight": 0.258,
+   "Kirin": 0.244,
+   "Madeen": 0.203,
+   "Unicorn": 0.143,
+   "Ifrit": 0.053,
+   "Ramuh": 0.037,
+   "Shiva": 0.028,
+   "Phoenix": 0.026,
+   "Carbuncle": 0.008
+  },
+  "unused": []
+ },
+ "Templar|10": {
+  "win": 0.48,
+  "share": {
+   "Fight": 0.64,
+   "Cheer": 0.36
+  },
+  "unused": [
+   "Rasp"
+  ]
+ },
+ "Templar|25": {
+  "win": 0.391,
+  "share": {
+   "Haste": 0.507,
+   "Fight": 0.279,
+   "Cheer": 0.179,
+   "Silence": 0.033,
+   "Astra": 0.002
+  },
+  "unused": [
+   "Rasp"
+  ]
+ },
+ "Templar|45": {
+  "win": 0.445,
+  "share": {
+   "Haste": 0.417,
+   "Cheer": 0.216,
+   "Fight": 0.209,
+   "Warcry": 0.129,
+   "Silence": 0.029
+  },
+  "unused": [
+   "Astra",
+   "Rasp",
+   "Soul Sphere",
+   "Lifebreak"
+  ]
+ },
+ "Thief|10": {
+  "win": 0.448,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": [
+   "Steal: Helm",
+   "Steal: Gil",
+   "Steal: EXP"
+  ]
+ },
+ "Thief|25": {
+  "win": 0.394,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": [
+   "Steal: Armor",
+   "Steal: Shield",
+   "Steal: Helm",
+   "Steal: Gil",
+   "Steal: EXP",
+   "Steal: JP"
+  ]
+ },
+ "Thief|45": {
+  "win": 0.397,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": [
+   "Steal: Armor",
+   "Steal: Shield",
+   "Steal: Access.",
+   "Steal: Helm",
+   "Steal: Weapon",
+   "Steal: Gil",
+   "Steal: EXP",
+   "Steal: JP",
+   "Steal: Ability"
+  ]
+ },
+ "Time Mage|10": {
+  "win": 0.217,
+  "share": {
+   "Fight": 1.0
+  },
+  "unused": []
+ },
+ "Time Mage|25": {
+  "win": 0.371,
+  "share": {
+   "Haste": 0.594,
+   "Fight": 0.31,
+   "Slow": 0.045,
+   "Silence": 0.045,
+   "Quarter": 0.005
+  },
+  "unused": []
+ },
+ "Time Mage|45": {
+  "win": 0.406,
+  "share": {
+   "Haste": 0.501,
+   "Fight": 0.272,
+   "Stop": 0.139,
+   "Silence": 0.039,
+   "Slow": 0.032,
+   "Demi": 0.013,
+   "Quicken": 0.004,
+   "Quarter": 0.0
+  },
+  "unused": [
+   "Reflect"
+  ]
+ },
+ "Warrior|10": {
+  "win": 0.598,
+  "share": {
+   "Fight": 0.753,
+   "First Aid": 0.247
+  },
+  "unused": []
+ },
+ "Warrior|25": {
+  "win": 0.43,
+  "share": {
+   "Speedbreak": 0.594,
+   "Fight": 0.316,
+   "First Aid": 0.09
+  },
+  "unused": [
+   "Powerbreak",
+   "Mindbreak",
+   "Magicbreak"
+  ]
+ },
+ "Warrior|45": {
+  "win": 0.401,
+  "share": {
+   "Speedbreak": 0.523,
+   "Body Slam": 0.152,
+   "Downsize": 0.123,
+   "Fight": 0.094,
+   "First Aid": 0.057,
+   "Greased Bolt": 0.052
+  },
+  "unused": [
+   "Powerbreak",
+   "Mindbreak",
+   "Magicbreak"
+  ]
+ },
+ "White Mage|10": {
+  "win": 0.591,
+  "share": {
+   "Cure": 0.642,
+   "Fight": 0.358
+  },
+  "unused": []
+ },
+ "White Mage|25": {
+  "win": 0.58,
+  "share": {
+   "Cura": 0.265,
+   "Fight": 0.204,
+   "Auto-Life": 0.132,
+   "Esuna": 0.115,
+   "Shell": 0.105,
+   "Cure": 0.067,
+   "Protect": 0.058,
+   "Life": 0.054
+  },
+  "unused": []
+ },
+ "White Mage|45": {
+  "win": 0.631,
+  "share": {
+   "Fight": 0.402,
+   "Esuna": 0.131,
+   "Cure": 0.106,
+   "Auto-Life": 0.1,
+   "Cura": 0.076,
+   "Shell": 0.073,
+   "Curaga": 0.047,
+   "Protect": 0.038,
+   "Full-Life": 0.026,
+   "Life": 0.001
+  },
+  "unused": []
+ },
+ "White Monk|10": {
+  "win": 0.454,
+  "share": {
+   "Fight": 0.996,
+   "Whirlwind": 0.004
+  },
+  "unused": []
+ },
+ "White Monk|25": {
+  "win": 0.694,
+  "share": {
+   "Earth Render": 0.367,
+   "Air Render": 0.216,
+   "Far Fist": 0.196,
+   "Chakra": 0.158,
+   "Fight": 0.062
+  },
+  "unused": [
+   "Whirlwind",
+   "Holy Sign"
+  ]
+ },
+ "White Monk|45": {
+  "win": 0.601,
+  "share": {
+   "Air Render": 0.291,
+   "Earth Render": 0.283,
+   "Far Fist": 0.171,
+   "Revive": 0.147,
+   "Chakra": 0.077,
+   "Fight": 0.031
+  },
+  "unused": [
+   "Whirlwind",
+   "Exorcise",
+   "Holy Sign"
+  ]
+ }
+}

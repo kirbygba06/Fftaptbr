@@ -15,8 +15,10 @@ CAPSTONE = {'Ninja', 'Red Mage', 'Assassin', 'Hunter', 'Gladiator', 'Sage', 'Mog
 def target(name):
     if name == 'Time Mage': return 0.45
     return 0.48 if name in CAPSTONE else 0.50
-def build(scn0, k=None, spd=(0.7, 0.5), eva=0.6, shape=True, gearmod=True, mp_caster=0.7):
+def build(scn0, k=None, spd=(0.7, 0.5), eva=0.6, shape=True, gearmod=True, mp_caster=0.7, mods=False):
     scn = copy.deepcopy(scn0); k = k or {}
+    if mods:
+        import sim2; scn['mods'] = sim2.price_mods()
     if gearmod:
         import f1_items as fi
         scn['items'] = fi.items_f1(scn['items']); scn['abil'] = fi.abil_f1(scn['abil'])
