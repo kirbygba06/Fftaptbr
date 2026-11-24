@@ -1,0 +1,13 @@
+id,nome,poder,mp,poder_novo,mp_novo
+1,Cure,40,6,40,6
+2,Cura,60,10,65,14
+3,Curaga,80,16,95,28
+23,Fire,30,6,30,6
+24,Fira,40,12,50,14
+25,Firaga,50,24,80,30
+26,Thunder,30,6,30,6
+27,Thundara,40,12,50,14
+28,Thundaga,50,24,80,30
+29,Blizzard,30,6,30,6
+30,Blizzara,40,12,50,14
+31,Blizzaga,50,24,80,30
