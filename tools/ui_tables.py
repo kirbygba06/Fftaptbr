@@ -131,7 +131,19 @@ MISSIONS.update({10: 'Despertar', 39: 'Espadas Gêm.', 49: 'Prof. Apuros', 55: '
  308: 'Canção Bardo', 309: 'Louco p/ Armas', 311: 'Chapéu Garota', 313: 'Armad. Negra', 366: 'Errante Negro'})
 MISSIONS.update({309: 'Louco Armas', 378: 'Deixado Atrás', 388: 'Sem Armas', 390: 'Imunidade', 392: 'Sem Leitura'})
 NAMES.update({55: 'Cav. Negro', 59: 'Caixa Mist.', 61: 'Máq. Mágica'})
-TABLES = [(0x728F38, UI), (0x728684, CLANS), (0x729484, TITLES), (0x729C74, NEWS), (0x72C3F8, MISSIONS), (0x725C40, NAMES), (0x720D44, MENU)]
+LAWS.update({698: 'Estado', 718: 'Pal. Bervenia', 719: 'Cyril', 724: 'Bosque Nubs', 730: 'Bosque Koring', 732: 'Campo Aisen', 736: 'Bosque Salika',
+             739: 'Campo Ozmon', 742: 'Bosque Materi'})
+MISSIONS.update({56: 'Carne & Osso', 140: 'Protesto', 180: 'Cem Olhos', 300: 'Lâmina & Casco', 312: 'Armad. & Casco',
+                 317: 'Preocupação', 322: 'No Palácio', 323: 'Cadê o Mewt?', 324: 'Encontro Doned'})
+CLANS.update({35: 'Força Amarela', 36: 'Gênios Azuis', 37: 'Coelhos Pardos', 38: 'Kupos Brancos'})
+MISSIONS.update({107: 'Força Amarela', 108: 'Gênios Azuis', 109: 'Coelhos Pardos', 110: 'Kupos Brancos', 260: 'Campo Aisen', 278: 'Campo Ozmon'})
+NEWS.update({7: 'Leis: História'})
+MENU.update({16: 'Clã'})
+# tabelas de 5 ponteiros (inglês, francês, alemão, italiano, espanhol) usadas direto pelo código; só a entrada 0 (inglês) muda
+CODE5 = {0x39526C: 'Clã suspenso:', 0x3952B4: 'dias', 0x395330: 'Batalha(s)', 0x395378: 'Taxa', 0x3953C8: 'Nível', 0x395420: 'Cartas',
+         0x395470: 'Nível'}
+TABLES = [(0x728F38, UI), (0x728684, CLANS), (0x729484, TITLES), (0x729C74, NEWS), (0x72C3F8, MISSIONS), (0x725C40, NAMES), (0x720D44, MENU),
+          (0x724C34, LAWS)] + [(a, {0: t}) for a, t in CODE5.items()]
 
 import re as _re
 _STEPS = [(r'^(O|A|Os|As) ', ''), (r' (de|da|do|dos|das) ', ' '), (r'^Libertem ', 'Livre '), (r'^Ajude ', 'Ajuda '), (r'^Procura-se ', 'Busca '),

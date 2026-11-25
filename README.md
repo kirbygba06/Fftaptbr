@@ -103,3 +103,13 @@ O gerador usa a mesma técnica da história (copia o banco, anexa as traduções
 bancos em `0xDA0000+` (espaço livre; `0xF00000–0xFE0000` está quase cheio). Traduzidas: 1.173 falas (bancos 2–12 e 16); os demais
 bancos só têm entradas vazias. Formato dos arquivos: `banco[índice] texto`, `/` = quebra de linha, ` ¶ ` = nova página.
 `python3 tools/dump_battle.py ROM.gba [banco]` exporta o inglês.
+
+### Pendências achadas na auditoria geral
+- Corrigido: as traduções de leis/categorias/status/locais/luas (tabela de nomes 655–752) nunca entravam no patch porque `ui_tables.py`
+  redefinia `TABLES` mais abaixo sem `LAWS`. Também entraram 15 nomes de missão, 4 clãs, 1 manchete, `Clã` no menu e as 7 tabelas de
+  5 idiomas usadas direto pelo código (`0x39526C–0x395480`: "Clan activity suspended:", "days", "Battle(s)", "Rate", "Rank", "Cards").
+- **Gráficos com texto em inglês (não traduzidos):** blocos de tiles comprimidos (mesmo LZ dos textos, `ffta_lz`) no trecho inglês
+  `0x430000–0x442000`, escolhidos pelo idioma em tabelas de 5 ponteiros (ex.: `0x395574`). Contêm "FORBIDDEN/RECOMMEND", "CLAN FUNDS",
+  "DAYS", "Engage?", "Mission: / Engage with:", "MISSION CLEARED", "RANK", "Suspended", "ATTENTION", rótulos do status
+  (Move, Jump, Evade, Weapon Atk, Magic Pow, Speed, Action, Support, Combo, Lv, Exp) e botões (START, ITEM LIST, CHANGE, SORT).
+  Visão geral: `reference/graficos_ingles/blocos_lz_ingles.png`. Há ainda contêineres `41 37` (formato não decodificado).
