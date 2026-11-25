@@ -1,0 +1,223 @@
+10[1] Quem...é você?
+10[2] Quem é você?/Resto das Asas Vermelhas?
+10[3] Quem é você?
+10[4] Quem é você?/É um ex-membro das/Asas Vermelhas?
+10[5] Quem...é você?
+10[6] {40 21 02}Quem é, kupo?/Você grita/"suspeito", kupo!
+10[8] Vou forjar uma/lâmina sombria. Me/deem esses materiais.
+10[24] Ah, então ouviram/o boato sobre a/espada, é? ¶ Eu forjo uma/...mas só depois/de me vencerem!
+10[25] Precisamos da sua/espada... Lá vai!
+10[26] Pelas armas/lendárias!
+10[27] Você vai implorar/pra ser o nosso/ferreiro!
+10[28] Vamos derrotá-lo/só por causa das/suas armas!
+10[29] Você vai querer/forjar coisas pra/gente, pode crer!
+10[30] {40 21 03}Sem problema!/Não perdemos pra/ninguém, kupo!
+10[32] Vocês são dignos./Vou forjar a espada/mais poderosa.
+10[48] Clientes, é?/Leram meu aviso/sobre as condições?
+10[49] Sim. Vamos te vencer/pela sua lâmina/encantada!
+10[50] Queremos sua lâmina/encantada pra nossa/coleção!
+10[51] Lemos, sim. Vamos,/vamos acabar/logo com isso!
+10[52] Desafiamos você/pela lâmina/encantada!
+10[53] Queremos essa sua/lâmina encantada!/Vamos!
+10[54] {40 21 01}Queremos essa sua/lâmina encantada,/kupo! Vamos!
+10[56] Vocês me venceram.../E por isso, vou/forjar a lâmina. ¶ Mas saibam: é uma/lâmina amaldiçoada./Usem com cuidado.
+10[73] É a nossa chance--/Vamos capturá-los!
+10[74] Tomara que eles/não mordam/muito forte!
+10[75] Hora de capturar/uns monsstros!
+10[76] Não nos deixam/escolha--temos que/capturá-los.
+10[77] Vamos capturá-los!/O tratador deles/está esperando!
+10[78] {40 21 03}Acho que vamos ter/que capturá-los,/kupo!
+10[81] Ufa! Agora eles/voltam pra fazenda/de monstros.
+10[82] Ufa! Agora eles/voltam pra fazenda/de monstros.
+10[83] Isso deve deixá-los/quietoss por um/tempo!
+10[84] Eles voltarão à/fazenda de monstros/agora. Caso encerrado.
+10[85] O tratador/deve ficar feliz/agora!
+10[86] {40 21 03}Eles vão ficar no/lugar deles, kupo!
+10[96] Talvez poupemos suas/vidas se entregarem/o seu gil!
+10[97] Não vão levar nem/nosso gil nem nossas/vidas, ladrão!
+10[98] Olha, estamos/acostumados com/emboscada. Desculpe.
+10[99] Acha que essa/emboscada funciona?/Pense de novo!
+10[100] Só covardes usam/ataques surpresa./Que lástima.
+10[101] Seu ataque surpresa/não vai funcionar/aqui!
+10[102] {40 21 03}Ninguém leva nosso/dinheiro, kupo!/Tire as mãos!
+10[104] Aaargh.../Vocês...me pegaram...
+10[105] Vencemos! Expulsamos/os bandidos!
+10[106] Vencemos! Expulsamos/os bandidos!
+10[107] Fomos nóss que/poupamos as/ssuas vidas!
+10[108] Não toleramos/tal comportamento/criminoso!
+10[109] Pegamos eles! Tomara/que tenham sido/os últimos...
+10[110] {40 21 03}É bom eles/se comportarem,/kupo.
+10[121] Por que estão indo/para Baguba? Temos/que detê-los!
+10[122] Não queremos que/destruam Baguba.../Vamos detê-los!
+10[123] Vamoss detê-los/aqui, antes que/cheguem a Baguba!
+10[124] Por que ir a Baguba?/Por ora, acho que/devemos detê-los!
+10[125] O que há em Baguba?/Acho que detê-los/vem primeiro!
+10[126] {40 21 03}Vamos detê-los/antes que destruam/Baguba, kupo!
+10[129] Detivemos por ora,/mas deve haver/um jeito melhor...
+10[130] Isso não vai/funcionar da próxima/vez que acontecer...
+10[131] Não vamos conseguir/detê-los da próxima/vez... Hmm.
+10[132] Devemos investigar/o assunto antes que/aconteça de novo.
+10[133] Detivemos eles desta/vez, mas...
+10[134] {40 21 01}Derrotamos eles!/Isso nos torna/matadores de dragão!
+10[144] Vocês vão se arrepender!
+10[145] Não vamos, não!
+10[146] Vocês não são nada/se anularmos seus/ataques físicos!
+10[147] Sua força e a/nossa força:/qual é melhor?
+10[148] Vamos ensinar que/não se vence só/com força bruta.
+10[149] Quem vai cair/são vocês!
+10[150] {40 21 03}Não julgamos a/força pela/aparência, kupo!
+10[152] Ainda posso.../lutar.../{81 09}desaba{81 09}
+10[153] Vencemos!/Uma vitória/pra nós!
+10[154] Fim de jogo!/Uma vitória/pra nós.
+10[155] Fim de jogo!/Uma vitória/pra nóss.
+10[156] Vencemos nossa/primeira partida/do torneio.
+10[157] Isso! Muito bem!/É a nossa primeira/vitória!
+10[158] {40 21 01}Vencemos, kupo!/Uma vitória pra/nós, kupo!
+10[168] Nossa força mágica/vai deixar vocês/no chão!
+10[169] Então usam magia.../Vamos anular seus/poderes mágicos!
+10[170] Sele a magia deles/e isso vai ser/moleza.
+10[171] Vamos vencê-los/antes que usem/a magia!
+10[172] Uma boa/oportunidade de/estudar outras magias.
+10[173] Um bando de magos?/Então basta/anular a magia!
+10[174] {40 21 03}Vamos anular a/magia deles, kupo!
+10[176] O-o que deu.../errado...?
+10[177] Vencemos! Será que/vencemos o próximo/adversário também?
+10[178] A palavra mágica/é: equilíbrio.
+10[179] A palavra mágica/é: equilíbrio.
+10[180] Vitória! Venceremos/o próximo/adversário também.
+10[181] Eba! Vencemos!/Agora vamos pro/próximo adversário!
+10[182] {40 21 04}Não deviam confiar/tanto na magia,/kupo!
+10[192] Clã {40 25 03}!/Vamos lutar de/forma justa!
+10[193] Vocês são os antigos/campeões... Aceitamos/o desafio!
+10[194] Que honra!/Vamos nessa!
+10[195] Viva a batalha/justa! Messmo assim/a gente vence.
+10[196] Parecem confiantes,/mas nós também não/vamos perder.
+10[197] Que honra!/Mas não vamos/perder pra vocês!
+10[198] {40 21 01}Nada de truques,/kupo!
+10[200] Vocês nos venceram.../Mas isso não faz/de vocês campeões!
+10[201] Muito bem! Talvez/possamos ir atrás/do campeonato!
+10[202] Vencemos os antigos/campeões, então/talvez...?
+10[203] Acho que já vejo/o troféu do/campeonato!
+10[204] Vencer os antigos/campeões nos dá/confiança.
+10[205] Demais! Vamos atrás/do campeonato!
+10[206] {40 21 03}Uau, vencemos!/Contra os antigos/campeões, kupo!
+10[216] {40 21 03}K-Kupo..../Nós não vamos,/ah, p-perder, kupo!
+10[217] Esta é a última/partida. Vamos/vencer esta!
+10[218] A partida final!/Vamos pegá-los,/pessoal!
+10[219] Não vamos pegar/leve. Lá/vamos nós!
+10[220] Esta é a última/partida. Devemos/vencer.
+10[221] Esta é a última/partida, e não/vamos perder!
+10[222] {40 21 03}É a última/partida, kupo!/Vamos vencer, kupo!
+10[224] {40 21 01}Ai! Ui!/Vocês exageraram,/kupo!
+10[225] Enfim! Isso quer/dizer que vamos/pra final?
+10[226] Ufa. Agora somos/finalistas, né?
+10[227] Vencemos de novo./Isso deve noss levar/à final.
+10[228] Mais uma vitória./Quem nos enfrentará/na partida final?
+10[229] Isso! Tomara que/isso nos leve/à final...
+10[230] {40 21 03}Tomara que isso/nos leve à partida/final, kupo!
+11[0] O-o que é isso!?/O que vocês acham/que estão fazendo?
+11[1] Precisamos de mithril--/mesmo que tenhamos/que lutar com você!
+11[2] Precisamos de mithril./Não é nada.../pessoal.
+11[3] Não temos dinheiro/pra comprar mithril/...então aqui esstamos!
+11[4] Peço desculpas, mas/precisamos muito/de mithril.
+11[5] Precisamos mesmo de/mithril! Desculpe!
+11[6] {40 21 03}Precisamos de/mithril! Desculpe, kupo!
+11[8] Mas fui eu quem/achou o veio de/mithril...!
+11[9] Pegamos o mithril,/mas isso não parece/certo...
+11[10] Não parece muito/certo, mas pelo menos/pegamos o mithril...
+11[11] Mithril! Isso!/Ele acha outro veio,/tenho certeza.
+11[12] O mithril foi/obtido por meios/justos.
+11[13] Pegamos o mithril/de que precisamos, mas...
+11[14] {40 21 04}Kupopo.../Pegamos o mithril/que faltava, mas...
+11[24] Se me dessem o dinheiro,/teriam salvado/a vida, tolos!
+11[25] Tolos!/Podiam ter salvado/a própria vida!
+11[26] Não queremos dinheiro!/Só devolva a/matéria!
+11[27] Entregue a matéria,/e talvez a gente/poupe uns ossos!
+11[28] Devolva o que você/roubou, ladrão.
+11[29] Não tem como fugir!/Entregue a/matéria, verme!
+11[30] {40 21 01}Só devolva a/matéria, kupo!
+11[32] Ah, droga, seria/o nosso furo!
+11[33] Recuperamos a/matéria. Vamos/voltar depressa!
+11[34] Roubar não faz/disso o SEU furo,/ladrão.
+11[35] Vá arrumar seu/próprio furo, vagabundo!
+11[36] Devemos devolver/a matéria ao/legítimo dono.
+11[37] Recuperamos!/Vamos voltar/rápido!
+11[38] {40 21 03}Aprenda a conseguir/seus próprios furos,/kupo!
+11[48] Quem são vocês, afinal?/Eu juro, não/tenho nada!
+11[49] Então o que se mexe/dentro da caixa?/É um monstro, não é!
+11[50] Temos provas do seu/contrabando! Desista/e venha conosco!
+11[51] Então posso/investigar a sua/caixa, né?
+11[52] Então o que se mexe/dentro da caixa?/É um monstro, não é!
+11[53] Pare de mentir! Sabemos/que contrabandeia/monstros.
+11[54] {40 21 02}Kupopo!/Então o que se mexe/dentro da caixa?
+11[56] Então...não deu/pra enganar vocês...
+11[57] Esse deve ser o/fim do contrabando/de monstros!
+11[58] Não acredito que/alguém cairia nesse/truque velho!
+11[59] Toloss. Tudo em/você é/ssusspeito.
+11[60] Pusemos um fim/ao contrabando/de monstros.
+11[61] Claro que não!/Que insulto!
+11[62] {40 21 02}Claro que não, kupo!/Você era suspeito/demais, kupo!
+11[72] Vocês não vão levar/isso! Precisamos dela/pra abolir as leis!
+11[73] Mas suas ações/radicais não vão/ajudar em nada!
+11[74] Eu sei, mas também/precisamos de antileis.
+11[75] Podemos usá-la/melhor do que/vocês.
+11[76] Abolir as leis/não é a solução/que devemos buscar.
+11[77] Mas precisamos dessa/antilei! Desculpe!
+11[78] {40 21 03}Não se preocupe,/vamos usá-la bem,/kupo!
+11[80] Livres até o/fim! A liberdade/jamais morrerá!
+11[81] Deve haver outra/solução...
+11[82] Pegamos a antilei!/Nada a temer/nas batalhas!
+11[83] Pegamos a antilei!/Estou pronto pra/qualquer inimigo!
+11[84] Rebelar-se contra/a corte não pode/ser a única solução...
+11[85] Muito bem! Agora/podemos lutar sem/nenhuma preocupação.
+11[86] {40 21 03}Não gosto da ideia/de me rebelar contra/a corte, kupo.
+11[144] Tolos! Sabem por/quanto essas peles/podem ser vendidas?
+11[145] Isso não é desculpa/pra caçar animais/ameaçados!
+11[146] Os tolos são vocês,/por violar a/lei!
+11[147] Gosto de dinheiro,/mas não do de/gente como vocêss!
+11[148] Essa não é a/questão. Todo mal/deve ser punido.
+11[149] Isso não é/desculpa pra caça/ilegal! Verme!
+11[150] {40 21 01}Essa não é a/questão, kupo!/Caça ilegal é crime!
+11[152] Maldição! Eu podia/ganhar tanto com/essas peles...!
+11[153] Devia saber:/trapaça só leva/à prisão.
+11[154] Devia ter achado/outro jeito de/ficar rico!
+11[155] Você usaria sua/riqueza do jeito/errado, de qualquer jeito.
+11[156] Arrependa-se do seu/negócio na/prisão!
+11[157] Escute só você!/Que patético!
+11[158] {40 21 04}Repense sua vida/na prisão, kupo!
+11[168] Hmpf, vocês não são/legais! Não gosto/de vocês!
+11[169] O quê? Não fizemos/nada de errado!
+11[170] Não fizemos nada/de errado! Lá vamos/nós, acho.
+11[171] Uma fada nos/dessafiando? Isso é/interessante...
+11[172] Uma fada nos/desafia? Isso é/muito interessante.
+11[173] Mas não fizemos/nada de errado!
+11[174] {40 21 03}Não fizemos nada/de errado, kupo! Isso/é ridículo, kupo!
+11[176] Aaaagh!
+11[177] Não entendo as/fadas de jeito nenhum...
+11[178] Sinto MESMO que/implicamos com a fada./Puxa.
+11[179] Qual é o doce/gelado que a/fada queria?
+11[180] Essas fadas/caprichosas!
+11[181] Da próxima vez dou/sorvete pra ela./Deve resolver!
+11[182] {40 21 04}Eu simplesmente não/entendo as fadas,/kupo...
+11[192] Vocês são da/igreja, não são!?/Para o submundo!
+11[193] Não! Só quero/impedir você de/cometer um crime!
+11[194] Ele está furioso.../Uma batalha deve/acalmá-lo, tomara!
+11[195] Vingança só vai/te levar pra prisão!
+11[196] Uma batalha é o/único jeito de/acalmá-lo?
+11[197] Não! Só queremos/te impedir!
+11[198] {40 21 03}Temos que lutar pra/acalmá-lo, kupo!
+11[200] Eu...queria vingar/minha família...
+11[216] Ei! Roubar/cartass é/contra a lei!
+11[217] Não estamos/roubando! Por que/não escuta?
+11[218] Não estamos/roubando! Por que/não escuta?
+11[219] Entendo. Hora/de usar "todos/os meios"!
+11[220] Pela última vez:/viemos a pedido/do separador de cartas.
+11[221] Por que não/escuta? Pediram/pra gente fazer isso!
+11[222] {40 21 03}É uma missão,/kupo. Vamos ter/que lutar, kupo!
+11[224] Eu...vou denunciar/isso às/autoridades...
+11[225] Que bom que leva/o trabalho a sério,/mas...
+11[226] Comece a escutar/o que dizem!
+11[227] Comece a esscutar/o que dizem!
+11[228] Vamos juntos./O separador vai/explicar pra você.
+11[229] Teimoso, teimoso!/Mas não é uma/qualidade ruim.
+11[230] {40 21 03}Você é teimoso,/kupo! Precisamos/resolver isso, kupo.

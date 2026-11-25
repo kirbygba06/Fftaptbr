@@ -1,0 +1,209 @@
+8[24] Eu sou Kraken,/Falgabird da água. ¶ Vou vingar/Marilith!
+8[25] Um Falgabird.../das Asas Vermelhas!?
+8[26] Falgabird!/Então não existe/só a Marilith!
+8[27] Outro Falgabird,/é? Sem problema./Venha nos pegar!
+8[28] Falgabird! Então/você coopera com as/Asas Vermelhas!
+8[29] Falgabird! E ainda/amigo das Asas/Vermelhas!
+8[30] {40 21 01}Falgabird!/E esse também/parece forte, kupo!
+8[32] Marilith...vou me/juntar a você...
+8[33] Quantos mais/desses será que/existem...?
+8[34] Algo me diz que/esse não era o/último Falgabird.
+8[35] Algo me diz que/esse não era o/último Falgabird.
+8[36] Vencemos, mas/temo que isso/não acabou.
+8[37] Quantos Falgabirds/será que ainda/existem por aí?
+8[38] {40 21 03}Foi difícil, kupo!/Claro que o Falgabird/tinha amigos.
+8[48] Eu sou Tiamat, Falgabird/do Vento! Preparem-se/para a ruína!
+8[49] O Falgabird do/vento! Ih!
+8[50] Falgabird! Estamos/prontos pra você!
+8[51] Quem devia se/preparar é você,/Falgabird!
+8[52] Ah, outro Falgabird,/desta vez/do vento.
+8[53] Um Falgabird do vento!
+8[54] {40 21 03}Falgabird do vento,/kupo! Essas Asas não/param nunca, kupo!
+8[56] Vocês são fortes...Espero/desafiá-los de novo/algum dia.
+8[57] Agora, quem será/que lidera esses/Falgabirds?
+8[58] Esses Falgabirds/são adversários/e tanto...
+8[59] Essess Falgabirdss/são adverssários/e tanto...
+8[60] Deve haver um líder/em algum lugar que/controla os Falgabirds...
+8[61] Quem será o líder/das Asas Vermelhas?
+8[62] {40 21 04}Ufa, vencemos, kupo!/Tomara que fosse/o último, kupo!
+8[72] Eu sou Lich, Falgabird/da terra! Vou apodrecer/vocês vivos!
+8[73] Está...está morto!/Mas se mexe!
+8[74] O Falgabird da/terra, é? Pode/vir!
+8[75] O Falgabird da terra,/é? Vá com calma/com a gente...
+8[76] Quem diria que um/dos Falgabirds seria/um morto-vivo!
+8[77] Esse Falgabird da terra/é um pouco diferente/dos irmãos dele.
+8[78] {40 21 01}Falgabird da terra,/kupo! Vou fazer você/descansar, kupo!
+8[80] Nããão! I-impossível!/Eu não posso morrer!
+8[81] O Falgabird da terra/e o Selo da Terra... ¶ Acho que vejo/uma ligação.
+8[82] Aquilo com certeza/não era humano...
+8[83] O Selo da Terra.../Isso parece útil/de algum jeito...
+8[84] O Falgabird da terra/e o Selo da Terra... ¶ Creio que há/uma ligação aqui.
+8[85] Esse foi difícil!/Acho que tem de tudo/nas Asas Vermelhas.
+8[86] {40 21 03}Foi difícil, kupo!/Mas pegamos o Selo/da Terra!
+8[96] Primeiro acharam o Clã/Borzoi, e agora/acharam a gente... ¶ Muito bem.../pena que tudo/acaba aqui!
+8[97] Vamos vencer de novo!/Todos estão do/nosso lado!
+8[98] Vamos fazer mais/do que achar vocês!/Preparem-se!
+8[99] Veja como você se/sai contra a/Pedra Espiritual!
+8[100] Sua magia é inútil/contra quem porta/a Pedra Espiritual!
+8[101] Não dá pra perder/com a Pedra Espiritual/do nosso lado!
+8[102] {40 21 03}Sua magia é inútil,/kupo! A Pedra Espiritual/está com a gente!
+8[104] A Pedra Espiritual.../Como vocês sabiam...?/Aaaahh....
+8[105] Fim das Asas/Vermelhas. Adeus,/Grissom!
+8[106] Lembre quem foi que/te derrotou:/o Clã {40 25 03}!
+8[107] Adeus, Asass/Vermelhass! Enfim,/paz!
+8[108] Volte para as/trevas de onde/veio.
+8[109] Adeus, Asas/Vermelhas!
+8[110] {40 21 03}Adeus, Asas/Vermelhas, kupo!/Ufa! Kupopo!
+8[120] O Clã Borzoi/nunca morre. Vamos/renascer... ¶ Depois de vencer/vocês!
+8[121] Restos do Clã Borzoi?/Eles nunca/desistem?
+8[122] O Clã Borzoi não/aprendeu a lição?
+8[123] Vencemos as Asass/Vermelhas e vocês/acham que nos vencem?
+8[124] Restos do Clã Borzoi?/Achei que já teriam/aprendido.
+8[125] Restos do Clã Borzoi?/Não chegaram um/pouco tarde?
+8[126] {40 21 02}Clã Borzoi?/Achei que já tínhamos/cuidado de vocês, kupo!
+8[128] Clã Borzoi para sempre!!
+8[129] Enfim Muscadet/terá paz e/sossego.
+8[130] Bom, espero mesmo que/esse tenha sido o fim.
+8[131] Enfim teremos/paz e sossego em/Musscadet.
+8[132] Espero que esta seja/a última vez que/vemos o Clã Borzoi.
+8[133] Enfim, paz e/sossego para/Muscadet!
+8[134] {40 21 03}Ufa, kupo!/O Clã Borzoi não é/brincadeira.
+8[145] Um monstro de longe.../Será pior do que/os daqui?
+8[146] Ouvi dizer que monstros/de outras terras lutam/de outro jeito...
+8[147] Um monstro estrangeiro?/E daí? Eu luto/com qualquer coisa!
+8[148] Um monstro estrangeiro.../Que belo presente as/Asas Vermelhas deixaram.
+8[149] Um monstro de longe.../Será pior do que/os daqui?
+8[150] {40 21 03}Monstro de fora, kupo!/Achei que tínhamos/acabado com as Asas...
+8[153] E eu achando que Grissom/era o fim das Asas/Vermelhas.
+8[154] Acho que monstros de/fora morrem igual aos/daqui de Ivalice.
+8[155] Desculpe bater num/amigo esscamosso, mas/trabalho é trabalho.
+8[156] Quando a sombra das/Asas Vermelhas deixará/Ivalice de vez?
+8[157] Acho que monstros de/fora morrem igual aos/daqui de Ivalice.
+8[158] {40 21 03}Ainda bem que não/entrou na cidade!
+8[169] Melhor tirar essa/coisa daqui,/rápido!
+8[170] Agora tartarugas! Quantos/monstros essas Asas/Vermelhas trouxeram!?
+8[171] Nenhuma tartaruga ataca/as cidades de Ivalice/comigo por perto!
+8[172] Adamantoise! E eu/achando que não/restava nenhuma!
+8[173] Quantos monstros/essas Asas Vermelhas/trouxeram, afinal?
+8[174] {40 21 03}Fique longe das/nossas cidades, kupo!
+8[177] Espero que essa/tenha sido a última...
+8[178] Cobras, tartarugas.../O que vem agora?
+8[179] Mais uma e a cidade/estaria em/sérios apuros!
+8[180] Até espécies "extintas"/podem causar um grande/estrago, pelo visto.
+8[181] Foi por pouco! Mas/protegemos a cidade.
+8[182] {40 21 03}Foi por pouco, kupo!/Ainda bem que/chegamos a tempo!
+8[193] Plantas, é... As/Asas Vermelhas também/trouxeram isso?
+8[194] Plantas.../E eu achando que/já tinha visto de tudo.
+8[195] Monsstros plantas?/Essass Asass Vermelhass/não paravam!
+8[196] O-Ochu! Outra fera/rara, logo depois/do adamantoise!
+8[197] Plantas, é? Eu sempre/adorei jardinagem...
+8[198] {40 21 02}Problema com planta,/kupo? As Asas também/trouxeram isso?
+8[201] Cobras, tartarugas,/plantas. Feras de fora/de todo tipo!
+8[202] Cobras, tartarugas,/plantas. Agora vêm/os lagartos?
+8[203] Essess monsstross de/fora não ssão motivo/de preocupação.
+8[204] Uma lâmia rainha, um ochu/e um adamantoise./Que fascinante!
+8[205] Espero que as plantas/daqui não comecem/a agir assim.
+8[206] {40 21 03}Odeio malboros,/kupo. Nem quando não/se chamam malboros.
+8[217] O que...o que é aquilo!?/Sinto algo/muito, muito estranho!
+8[218] É outro monstro de/longe? Por que estou/tremendo assim?
+8[219] Hum...tenho um mau/pressentimento. É/precisso cuidado.
+8[220] É a escuridão viva!/Não é um monstro/qualquer!
+8[221] Tenho um mau/pressentimento disso!
+8[222] {40 21 03}Ih! Esse me deixou/preocupado, kupo!
+8[225] A escuridão some.../E com ela, o fim das/Asas Vermelhas!
+8[226] A escuridão sumiu./E as Asas Vermelhas,/exceto o Gukko.
+8[227] Fim das Asass/Vermelhass!
+8[228] A escuridão some.../e com ela, o último/dos monstros de fora. ¶ Agora, descobrir/para onde Gukko/foi.
+8[229] A escuridão sumiu.../Tenho pena desses/monstros que trouxeram.
+8[230] {40 21 04}Acabou, kupo!/Cansei desses/monstros estranhos!
+9[0] Aprendi uns truques/além-mar... ¶ Agora estou mais/forte do que nunca! As/trevas vão prevalecer!
+9[1] Gukko! Então voltou/com o poder das/trevas, é?
+9[2] Então voltou,/Gukko! Desta vez/cuidamos de você!
+9[3] Gukko! Voltou bem/na hora de eu/te vencer!
+9[4] Gukko! Você tem o/poder das trevas,/é o que diz? ¶ Receio que não/vai aproveitá-lo/por muito tempo.
+9[5] Gukko! Então você não/aprendeu a lição/da última vez!
+9[6] {40 21 01}Gukko! Você voltou,/kupo! Não aprendeu/a lição, kupo?
+9[8] Não!!! Não posso perder.../Não possoooo....
+9[9] Gukko. Nada de bom/pode vir das/trevas.
+9[10] Nada vai apagar/a luz de Ivalice,/muito menos você!
+9[11] De volta às trevas,/Gukko. Nunca mais/venha a Ivalice!
+9[12] De volta às trevas,/e nunca mais volte/a Ivalice.
+9[13] Tchau, tchau, Gukko./De volta às trevas/com você.
+9[14] {40 21 01}Conseguimos, kupo! Adeus/Clã Borzoi e Asas/Vermelhas, kupo!
+9[24] QUEM OUSA PERTURBAR/MEU SONO...?
+9[25] Ogma!/Temos que vencê-lo/de algum jeito!
+9[26] Desculpe perturbar/seu descanso só pra/te derrubar de novo...
+9[27] Ogma! Então você/exisste mesmo!
+9[28] O Dragão do Mundo,/Ogma! Então a lenda/era verdade!
+9[29] Ogma! Uau, você/não é só um conto/de fadas!
+9[30] {40 21 01}É o Ogma mesmo,/kupo! Ih, kupo!
+9[32] WWWOOOORRRRRR./AGORA VOU...VOLTAR/A DORMIR...
+9[72] Sabem quantos clãs/sofreram por causa/de vocês!? ¶ Quando um clã toma/todo o poder, um ditador/não está longe! ¶ Vamos derrotá-los/pelos amigos caídos/e...pela liberdade!
+9[73] Quem é ditador!?/Por que não podemos/ser todos amigos?
+9[74] As únicas pessoas/que suspeitariam/disso de nós... ¶ São as que querem/mesmo tomar o poder!
+9[75] Cuidado com quem você/acussa, camarada!
+9[76] Isto é muito/surpreendente! ¶ Somos sempre/corteses com os/outros clãs.
+9[77] Não queremos/atrapalhar vocês!/Vamos ser amigos!
+9[78] {40 21 03}Qual é a sua, kupo?/Por que não podemos/ser amigos, kupo?
+9[80] Podem ter nos vencido,/mas não vencerão/todos os clãs! ¶ Alguém tomará/nosso lugar! Curtam/seu breve reinado!
+9[81] Reinado...ditador.../Quem disse que/temos interesse?
+9[82] Espero mesmo que/nenhum outro clã seja/tão equivocado quanto vocês!
+9[83] Podiam tentar ajudar/as pessoas antes de/descontar na gente...
+9[84] Por que não podemos/simplesmente ser amigos?
+9[85] Ditadores...reinados.../Quem disse que/queremos isso?
+9[86] {40 21 03}Acho que você tem/uma imaginação muito/fértil, kupo!
+9[96] Uaháháhá! Então são/os espadachins/mais fortes!? ¶ Enfrento todos/vocês!
+9[97] Lá vamos nós!
+9[98] Muito bem,/lá vamos nós!
+9[99] Pode ser durão lá/de onde vem, mas/aqui não, ssenhor!
+9[100] Muito bem,/prepare-se!
+9[101] Você pode ser forte,/mas vamos dar o máximo!
+9[102] {40 21 03}Ah, é? Prepare-se,/kupo! Lá vamos nós!
+9[104] Sua força é real./Dou-lhes esta espada/em sua honra.
+9[120] Nããão! Ninguém pode/me ver assim/e viver!
+9[121] A noiva virou/um monstro!?/Ou será...?
+9[122] Discordo!
+9[123] Vi sim você!/Monsstro!
+9[124] Uma lilith! Só sua/espécie esconderia/a forma pra casar!
+9[125] Viemos salvar/aquele pobre rapaz/de você!
+9[126] {40 21 03}Eu vejo você, kupo!/Mas não pretendo/morrer tão cedo!
+9[128] Ssss....!/Eu...odeiooo vocêsss!
+9[145] Nunca vi/tanto flan!
+9[146] Olhem quantos/flans! Isso é uma/infestação!
+9[147] Olhem quantos flans!/Isso é mesmo uma/infesstação!
+9[148] É a primeira vez/que ouço falar de/flans em bando...
+9[149] Uau! Olhem quantos/flans! Isso vai/virar uma meleca...
+9[150] {40 21 01}Quantos flans, kupo!/Isso vai ser um/serviço nojento, kupo!
+9[153] Melhor avisar os/outros clãs pra isso/nunca mais acontecer!
+9[154] Ora, ora. Ainda bem que/acabou, mas o que/será que causou isso?
+9[155] Nunca mais voltem,/monstros gosmentos!
+9[156] Terei que/investigar a causa/desta infestação.
+9[157] Ufa. Vamos avisar os/outros clãs pra isso/não se repetir!
+9[158] {40 21 03}Bom, acabou,/kupo! Devíamos avisar/os outros clãs.
+9[169] Aquele deve ser/o monstro. Desculpe,/mas você tem que ir.
+9[170] Deve ser ele! Desculpe/mandar você de volta/logo que chegou.
+9[171] Crianças aprontam/cada uma. Dessculpe/por isso...
+9[172] O monstro não fez/nada de errado, mas/devemos expulsá-lo.
+9[173] Desculpe, sabemos/que você não fez/nada de errado.
+9[174] {40 21 03}Desculpe, monstro. Sei/que não é culpa sua,/kupo!
+9[177] Queria que houvesse/outro jeito...
+9[178] Bom, teremos que/garantir que o garoto/seja castigado.
+9[179] O garoto que começou/tudo isso deve ser/castigado.
+9[180] Ele deve estudar/muito para que isso/nunca se repita.
+9[181] Desculpe mesmo/expulsar você logo/que chegou.
+9[182] {40 21 03}Nem acredito que/ensinam invocação/na escola, kupo!
+9[193] Saia daí, Carrot!
+9[194] Carrot? Carrot?/Saia daí!
+9[195] Ela vai sair se/usarmos um pouco de/persuassão dolorossa.
+9[196] Carrot? Por favor,/saia daí?
+9[197] Carrot? Saia/daí!
+9[198] {40 21 01}Vamos ter que tirar/você à força, kupo!
+9[200] ...Urr?
+9[216] Então vieram/nos enfrentar!
+9[217] Sinto desapontar,/mas nós vamos/vencer!
+9[218] Estamos prontos pra/enfrentar vocês!
+9[219] Aceitamos o seu/desafio! E sseremos/os vencedoress!
+9[220] Não vamos perder!/Viemos de longe/demais pra isso!
+9[221] Então se preparem/pra tudo o que/temos!
+9[222] {40 21 01}Vamos derrubar vocês,/kupo! Preparem-se!
+9[224] Seu clã é bom.../Aceitem estes tabi/como sinal de respeito.

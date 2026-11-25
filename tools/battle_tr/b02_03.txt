@@ -1,0 +1,140 @@
+2[168] Quem são vocês?/Ei! Eu paguei por/aquela comida, sério!
+2[169] Dolce! Somos o Clã/{40 25 03} e/viemos te prender.
+2[170] Clã {40 25 03}!/Venha conosco/quieta, Dolce!
+2[171] Clã {40 25 03}!/Dessa você não/esscapa!
+2[172] Clã {40 25 03}./Viemos te levar,/conforme o pedido.
+2[173] Clã {40 25 03}./Espero que esteja/pronta pra prisão.
+2[174] {40 21 03}Clã {40 25 03}!/Acabou a comida/de graça, kupo!
+2[176] Não! Eu não/quero ser presa!
+2[192] {40 21 03}Caçadores, kupo!/Vamos dar no pé!
+2[193] Não vão escapar,/Irmãos Gabbana!
+2[194] Somos o/Clã {40 25 03}, ¶ e viemos prender/vocês, Irmãos Gabbana!
+2[195] Somos o/Clã {40 25 03}! ¶ Vocês não esscapam,/Irmãoss Gabbana!
+2[196] Somos o/Clã {40 25 03}! ¶ Vocês não vão/escapar, Irmãos Gabbana!
+2[197] Desta vez vocês/não escapam, Irmãos/Gabbana!
+2[198] {40 21 01}Somos o/Clã {40 25 03}, ¶ {40 21 03}kupo! Desta vez/vocês não escapam!
+2[200] {40 21 04}Definitivamente/não foi nosso dia/de sorte, kupo.
+2[216] Caçadores? Eu vi/vocês chegando.../com meu terceiro olho!
+2[217] Somos o/Clã {40 25 03}, ¶ e você vem/conosco, Diaghilev!
+2[218] Somos o/Clã {40 25 03}! ¶ Fim da linha,/Diaghilev!
+2[219] Somos o/Clã {40 25 03}! ¶ Venha quieto e/não vai doer, Diaghilev.
+2[220] Somos o/Clã {40 25 03}. ¶ Pode se gabar do/seu olho na prisão.
+2[221] Somos o/Clã {40 25 03}. ¶ Acabou pra você,/Diaghilev!
+2[222] {40 21 01}Tá bom, kupo!/Então por que não/fugiu antes!?
+2[224] Unh...he he./Parece que meu/destino era a prisão...
+3[0] Caçadores, é?/Vieram de longe.../para nada!
+3[1] Sabemos o que você/anda fazendo,/Kanan "Rei do Pântano"!
+3[2] Kanan, Rei do Pântano!/Atacando os aldeões,/não tem vergonha?
+3[3] Você caiu muito/dessde seuss diass de/guarda, "Rei do Pântano"!
+3[4] Por que você ataca/os moradores, Kanan,/Rei do Pântano?
+3[5] Kanan, Rei do Pântano!/Você não virou guarda/pra ajudar as pessoas!?
+3[6] {40 21 01}Kanan, "Rei do Pântano"!/Você vai pra/prisão, kupo!
+3[8] Fiz escolhas ruins/na vida... não fiz?/Estou acabado.
+3[24] Não pensei que alguém/me seguiria até aqui!/Tome Golpe Ultima!
+3[25] Eu nem queria vir,/mas temos que fazer/isso. {81 09}glup{81 09}
+3[26] Típico de assassino,/se esconder dos juízes/numa jagd!
+3[27] Jagd ou não, a/jusstiça vai ser/feita, ssafado!
+3[28] Não importa estarmos/numa jagd, pois eu/prevejo nossa vitória.
+3[29] E você acha que/viemos aqui/despreparados?
+3[30] {40 21 01}Golpe Ultima, kupo?/Já ouvi boatos/sobre isso, kupo! Ai!
+3[32] Unggh...he he./Pelo menos caí/lutando...
+3[48] Vieram descobrir por/que me chamam de/"Duque Sombrio Lodion"?
+3[49] Duque Sombrio ou não,/você vem conosco!
+3[50] Sabemos quem você é,/e não temos medo!/Temos um serviço.
+3[51] Ah, conte, por favor!/Esstou MUITO curiosso/pra ssaber. Nojento.
+3[52] O "Duque Sombrio",/é? Teremos cuidado/ao prendê-lo.
+3[53] Você não me assusta!/Bom, na verdade,/assusta. Mas vamos vencer!
+3[54] {40 21 02}D-Duque Sombrio? Kupopo!/Mas acho que temos/que fazer o serviço, kupo.
+3[56] Como pude falhar!?/Trevas, recebam-me/em seu seio...
+3[72] Hã? O quê? Nós não/roubamos rubi nenhum!
+3[73] Acabou o jogo!/Sabemos que são/culpados. Devolvam!
+3[74] Quem falou em rubi?/A consciência/pesou, foi?
+3[75] Então vamoss olhar/ass suass bolsass...
+3[76] É mesmo? Aliás,/como sabiam que/viemos atrás de VOCÊS?
+3[77] Vocês foram pegos/no flagra. Devolvam/esse rubi!
+3[78] {40 21 02}Eu não disse nada,/kupo! Você disse "rubi"!/Está com ele, kupo!
+3[80] Grr.../Vocês são duros.
+3[81] Agora vamos levar/esse rubi de volta!
+3[82] Então estava com/vocês! Devolvam o rubi.
+3[83] Vou levar esse/rubi de volta.
+3[84] Hmm. Pode ser./Devolvam o rubi/imediatamente.
+3[85] Devolve esse rubi/agora, camarada!
+3[86] {40 21 03}Ufa, kupo!/Parece que vamos/recuperar o rubi!
+3[97] O demônio de braço/vermelho pode ter/sumido daqui, ¶ mas tem monstros/de sobra pra tomar/o lugar dele!
+3[98] Então é esta a/floresta onde Gaol/lutou com o demônio. ¶ Acho que também/devemos fazer/a nossa parte!
+3[99] Esta é a floressta/onde Gaol lutou com/a fera de braço vermelho! ¶ E nóss vamos lutar/com monsstros no/messmo lugar!
+3[100] Ah, a floresta da/lenda de Gaol. Que/ele olhe por nós.
+3[101] Esta é a floresta/da lenda de Gaol./Vamos honrá-lo!
+3[102] {40 21 03}A floresta de Gaol,/kupo! Temos que ser/heróis também, kupo!
+3[105] Um herói... Será que/um dia vou ser um/herói assim?
+3[106] Herói Gaol, olhe por/nós para seguirmos/o caminho certo!
+3[107] Um herói.../Temos muito/trabalho pela frente.
+3[108] Só a força não faz/um herói. É preciso/viver com retidão.
+3[109] Uma heroína...acho/que um dia eu posso/ser uma heroína...
+3[110] {40 21 03}Gaol se aventurou com/um moogle, kupo! Todo/moogle sabe disso!
+3[121] O campo de batalha/de Aisen... Aqui/lutaram os 13 cavaleiros.
+3[122] O campo de batalha/de Aisen... Aqui/lutaram os 13 cavaleiros.
+3[123] Aqui lutaram os 13/cavaleiross. Nada mal/pra uma batalha!
+3[124] O campo de batalha/de Aisen... Aqui/lutaram os 13 cavaleiros.
+3[125] Uau! O campo onde/lutaram os 13./Que lugar!
+3[126] {40 21 03}O campo de Aisen,/kupo! Vou lutar como/um cavaleiro, kupo!
+3[129] Os cavaleiros se/reuniram aqui... Queria/ter visto isso.
+3[130] Não há mais ninguém/como os 13 cavaleiros./Eram heróis de verdade.
+3[131] Quantoss hoje podem/se chamar de verdadeiross/"cavaleiross"?
+3[132] Os cavaleiros se/reuniram aqui. Um/lugar histórico.
+3[133] Os cavaleiros se/reuniram aqui. Deviam/ser muito legais!
+3[134] {40 21 03}Um dia eu também/vou ser herói, kupo!
+3[144] {81 09}ssss{81 09}/Nunca vou te/perdoar! Portador da dor!
+3[145] Magiwyrm Gerland!/Achei que Gaol/tinha te derrotado!
+3[146] Magiwyrm Gerland!/Então voltou.../E mal-humorado!
+3[147] Magiwyrm Gerland!/Voltou bem na hora/de lutar com a gente!
+3[148] Magiwyrm Gerland!?/O rancor te trouxe/de volta?
+3[149] Magiwyrm Gerland!?/E-eu achei que Gaol/tinha te derrotado!
+3[150] {40 21 03}Magiwyrm Gerland!?/Mas você devia/estar morto, kupo!
+3[152] {81 09}sssss{81 09}/Gaaaaaoaoorr!
+3[153] Gaol...derrotamos/o seu inimigo.
+3[154] Se Gaol não o tivesse/ferido, estaríamos/perdidos.
+3[155] Teria sido fácil com/as espadass gêmeas/Ayvuir...
+3[156] O magiwyrm morreu/e não vai mais voltar.
+3[157] Herói Gaol...vencemos/o seu inimigo./Descanse em paz.
+3[158] {40 21 03}Gaol! Conseguimos, kupo!/Derrotamos o/magiwyrm, kupo!
+3[168] Gaol... Você vai morrer!/Evelyn é minha,/só minha!
+3[169] O fantasma do senhor!?/Ele acha que sou Gaol! ¶ O herói Gaol não/existe mais, mas eu/lutarei no lugar dele!
+3[170] O Senhor de Salika,/ou o fantasma dele./Gaol o derrotou mesmo.
+3[171] O fantassma do/ssenhor!? ¶ Vou ter que/terminar o que Gaol/começou!
+3[172] O fantasma do/Senhor de Salika... ¶ Quantos anos você/deve ter vagado.
+3[173] O fantasma do senhor!?/Bom, Gaol não está./Eu luto com você!
+3[174] {40 21 03}O fantasma do senhor!?/Sem Gaol, é com/a gente, kupo!
+3[176] Sim... Agora me lembro./Ele veio até mim,/espadas erguidas... ¶ E então, aquelas/espadas gêmeas.../guh...gwaaaaarrgh!
+3[177] Esta é uma das/espadas gêmeas./O Ayvuir Vermelho!
+3[178] O Ayvuir Vermelho.../uma das espadas que/o mataram.
+3[179] O Ayvuir Vermelho que/matou o senhor. ¶ Há quanto tempo/esstá aqui esperando?
+3[180] É o Ayvuir Vermelho!/Onde estará a/espada gêmea?
+3[181] Ayvuir Vermelho...venci/o antigo inimigo/de seus mestres!
+3[182] {40 21 03}Kupo! O lendário/Ayvuir Vermelho, kupo!
+3[192] {40 21 03}Quem são vocês, kupo!/Como ousam profanar/o túmulo de Lini, kupo!
+3[193] O túmulo da/valente Lini... ¶ Sinto que algo/me chamou para/este lugar.
+3[194] Viemos honrar/a memória de Gaol!/Deixe-nos passar!
+3[195] Vim pela esspada/de Gaol! Provarei/meu valor com prazer!
+3[196] Este é o túmulo/da valente Lini?/Posso examiná-lo?
+3[197] Eu...não sei o que/é. Sinto que fui/chamada aqui!
+3[198] {40 21 03}O túmulo de Lini, kupo!/Vou provar que sou/digno de vir aqui!
+3[200] {40 21 03}Vocês provaram ser/dignos de visitar/o túmulo, kupo.
+3[201] A alma de Lini e/o Ayvuir Azul me/escolheram?
+3[202] O Ayvuir Azul.../A alma de Lini deve/ter gostado de nós.
+3[203] O Ayvuir Azul.../Valente Lini! Herói Gaol!/Honro seus nomes!
+3[204] Valente Lini...honramos/a sua memória./Descanse em paz.
+3[205] O Ayvuir Azul.../A alma de Lini deve/ter nos favorecido.
+3[206] {40 21 03}Valente Lini.../Vamos cuidar bem/da espada, kupo!
+3[217] Olhem quantas/formigaleões! Deve/ser o ninho delas!
+3[218] Olhem quantas/formigaleões...passar/não vai ser fácil.
+3[219] Olhem quantass/formigaleõess.../Hora de exterminar.
+3[220] Olhem quantas/formigaleões! Deve/ser o ninho delas!
+3[221] Olhem quantas/formigaleões! Deve/ser o ninho delas!
+3[222] {40 21 03}Olhem quantas/formigaleões! É o/ninho delas, kupo!
+3[225] Será que a vila dos/moogles fica adiante?
+3[226] Enfim acabamos/com elas. O que/será que vem adiante?
+3[227] Enfim acabamoss/com elass. O que/vem adiante?
+3[228] Será que a vila dos/moogles fica adiante?
+3[229] Enfim acabamos com/elas! O que será que/vem adiante?
+3[230] {40 21 03}Conseguimos, kupo! Agora/vamos achar a lendária/vila de Lini!

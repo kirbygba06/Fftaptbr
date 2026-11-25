@@ -2014,3 +2014,5 @@ STORY[39] = STORY[35]
 STORY[40] = STORY[35]
 STORY[42] = STORY[35]
 for _k in (53, 55, 56, 57, 58, 59, 61): STORY[_k] = STORY[35]
+
+STORY.setdefault(31, {})[7] = 'Hã...!?'

@@ -95,3 +95,11 @@ O gerador copia o banco para `0xF40000+`, anexa as strings traduzidas (sem compr
 Confirmado no jogo (mGBA): o buffer de texto da primeira cena mostrou "Ah, cara! Por que sempre caio no time fraco?…".
 Escala do trabalho: ~2.160 falas (~200 mil caracteres) nos bancos 0–52; traduzido até agora: todos os bancos de história (0 a 61; os bancos 35, 39, 40, 42, 53, 55–59 e 61 são o mesmo texto e o 60 não é texto).
 `python3 tools/dump_story.py ROM.gba [banco]` exporta o inglês em marcação (`/` = quebra, `¶` = página, `{40 25 00}` = variável).
+
+### Falas de missão (`tools/battle.py`, `tools/battle_translations.py`, `tools/battle_tr/*.txt`, `tools/dump_battle.py`)
+As falas de início e fim de cada missão ("Olhem quantas bombas!...") **não** estão nos bancos de história: a entrada do banco 60
+da tabela P (`P+0x30018`) é uma sub-tabela de 26 offsets (u32, relativos a P) para 26 bancos de 240 strings (`0xBE06CC–0xC0732C`).
+O gerador usa a mesma técnica da história (copia o banco, anexa as traduções sem compressão, troca só o offset da sub-tabela) e grava os
+bancos em `0xDA0000+` (espaço livre; `0xF00000–0xFE0000` está quase cheio). Traduzidas: 1.173 falas (bancos 2–12 e 16); os demais
+bancos só têm entradas vazias. Formato dos arquivos: `banco[índice] texto`, `/` = quebra de linha, ` ¶ ` = nova página.
+`python3 tools/dump_battle.py ROM.gba [banco]` exporta o inglês.

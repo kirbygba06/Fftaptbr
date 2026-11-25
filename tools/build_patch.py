@@ -467,6 +467,14 @@ def main():
     srecs, sreport = story.build(rom, code01, STORY, base=(_dend + 0xFFF) & ~0xFFF)
     recs.update(srecs)
     for r in sreport: print('AVISO história', r)
+
+    # 2d) falas de missão (início/fim de batalha): sub-tabela do banco 60 da tabela P; bancos vão para 0xDA0000 (livre)
+    import battle
+    from battle_translations import BATTLE
+    brecs, breport = battle.build(rom, code01, BATTLE, base=0xDA0000)
+    assert max(o + len(d) for o, d in brecs.items() if o >= 0xDA0000) < 0xF00000
+    recs.update(brecs)
+    for r in breport: print('AVISO missão', r)
     _rs = sorted((o, o + len(d)) for o, d in recs.items() if o >= 0xF00000)
     for (a_, b_), (c_, d_) in zip(_rs, _rs[1:]):
         assert c_ >= b_, 'SOBREPOSIÇÃO de registros no espaço livre: %X-%X x %X-%X' % (a_, b_, c_, d_)

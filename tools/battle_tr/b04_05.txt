@@ -1,0 +1,234 @@
+4[1] Olhem quantas bombas!/Elas vão queimar/a cidade inteira!
+4[2] Este lugar está/cheio de bombas. Só/resta acabar com elas.
+4[3] Hora do esquadrão/anti-fogo! Vamoss/limpar essass bombass!
+4[4] Tantas bombas vão/causar um grande/prejuízo à cidade.
+4[5] Olhem só essas/bombas! Temos que/detê-las, rápido!
+4[6] {40 21 02}Kupo! Nunca vi tantas/bombas assim, kupo!/Apaguem elas, kupo!
+4[9] Ufa. Ainda bem que/paramos antes de se/espalhar pelas ruas...
+4[10] Fogo apagado!/Ainda bem que não se/espalhou pelas ruas.
+4[11] Bom, enfim acabou./Ainda bem que pegamoss/antess de esspalhar.
+4[12] Acabou./Felizmente, o fogo/não se espalhou.
+4[13] Ufa, que bom que/acabou--e antes de o/fogo se espalhar!
+4[14] {40 21 02}Conseguimos, kupo!/Paramos o fogo antes/de se espalhar...
+4[25] Esse jeito de andar.../Espere, você é o/assassino!
+4[26] O que faz aqui/a esta hora?/Espere...o assassino!
+4[27] Só um assassino/andaria assim...
+4[28] Pela aparência e/pelo andar, deduzo/que é o assassino!
+4[29] Esse jeito de andar.../Espere, você é o/assassino!?
+4[30] {40 21 02}O que faz na rua/tão tarde, kupo?/Procurando vítimas!?
+4[33] O resto fica/com os juízes.
+4[34] Foi pego e ainda/não diz nada?/Que medo...
+4[35] Pegamos você!/O resto fica com/os juízess.
+4[36] Ainda calado?/Na prisão você vai/falar, aposto.
+4[37] Bom, acabou./Deixo o resto/com os juízes.
+4[38] {40 21 02}Bom, enfim acabou,/kupo. Os juízes vão/cuidar de você.
+4[49] Vamos vencer essa!
+4[50] Essa a gente vence,/sem problema!
+4[51] Depois de hoje,/ninguém esquece o/Clã {40 25 03}!
+4[52] Venceremos.
+4[53] De jeito nenhum/vamos perder essa!
+4[54] {40 21 01}Kupopo!/Estou pronto pra/vencer o torneio, kupo!
+4[57] Conseguimos!/A plateia nos ama!
+4[58] He he, nada mal./Somos os vencedores!
+4[59] He he, isso!/Tem cheiro de.../vitória!
+4[60] Conseguimos!/O Clã {40 25 03}/ficará famoso.
+4[61] Eba!/A plateia está/olhando pra gente?
+4[62] {40 21 01}Conseguimos, kupo!/Vencemos o torneio!
+4[73] Um torneio de magos/é o lugar ideal pra/testar nossa magia!
+4[74] Torneio de magos?/Essa a gente vence!
+4[75] Um torneio de magoss?/Só nos resta dar/o nosso melhor...
+4[76] Uma ótima chance/de testar nosso/talento! Vamos!
+4[77] Um torneio de magos!/Mal posso esperar/pra participar!
+4[78] {40 21 03}Torneio de magos, kupo!/Boa chance de testar/nossa magia, kupo!
+4[81] Conseguimos!/Nossa magia arrasa!
+4[82] Nada mal, nada mal./Um torneio de magos/vencido.
+4[83] Talvez essa magia/não sseja tão difícil/afinal...
+4[84] Vencemos! Nossa magia/provou o seu valor.
+4[85] Vencemos!/Viva o Clã/{40 25 03}!
+4[86] {40 21 01}Vencemos, kupo!/Um bom dia pra magia/dos moogles, kupo!
+4[97] Hum...eu prefiro lutar/em terra firme do que/na água...
+4[98] Torneio de natação?/Bom, vamos ter que/acompanhar.
+4[99] Torneio de natação?/Deixa comigo!
+4[100] Nadar não é problema,/desde que possamos/usar magia.
+4[101] Torneio de natação?/Eu adoro água!
+4[102] {40 21 04}Natação, kupo?/Não me dou bem com/água, kupo...
+4[105] Conseguimos!/Vencemos!
+4[106] Demais!/Vencemos!
+4[107] Nada mal!/Vencemos!
+4[108] Vitória!/Prevalecemos!
+4[109] Isso!/Vencemos!
+4[110] {40 21 03}Muito bem, kupo!/Vencemos!
+4[120] Enfim, a final!/Estamos prontos/pra enfrentar vocês.
+4[121] Desculpe, mas não/vamos perder/essa!
+4[122] Se preparem melhor!/Viemos de longe demais/pra perder agora!
+4[123] Também estamos/prontos, amigo! E/somos durões.
+4[124] Que ambos sigamos/as regras do jogo/limpo. Boa sorte!
+4[125] Viemos de longe/demais pra perder!
+4[126] {40 21 03}Viemos de longe demais/pra perder, kupo!
+4[128] P-perdemos.../Acho que isso faz/de vocês os campeões!
+4[145] Temos que tirar/esses monstros/daqui...
+4[146] Fiquem longe dessas/crianças, seus/monstros nojentos!
+4[147] Monsstross selvagenss.../temos que mantê-los/longe das criançass!
+4[148] Monstros desprezíveis!/Devemos afastá-los/das crianças!
+4[149] Temos que tirar/esses monstros daqui,/e rápido...
+4[150] {40 21 03}Monstros, kupo!/Mantenham eles longe/das crianças, kupo!
+4[153] Agora deve estar/seguro. ¶ Já é hora de/levarmos as crianças/de volta pra casa.
+4[154] Agora deve estar/seguro. ¶ Certo, acabou a/brincadeira! Vamos/voltar pra cidade.
+4[155] Agora deve esstar/sseguro. ¶ Já é hora de/levarmoss as criançass/de volta pra casa.
+4[156] Agora deve estar/seguro. ¶ A brincadeira acabou,/crianças. Vamos/para casa.
+4[157] Agora deve estar/seguro. ¶ Ei! Acabou a brincadeira!/Vamos voltar!
+4[158] {40 21 03}Agora deve estar/seguro. Acabou a/brincadeira, kupo!
+4[168] Hum...acabou o gelo./Este experimento/terminou. ¶ Quem são vocês!?/Não tolero/interferências!
+4[169] Pare já com esses/experimentos! ¶ Ninguém consegue/passar com você/bloqueando o caminho!
+4[170] Então esse clima/estranho é culpa/sua! ¶ Você já causou/problemas demais,/senhor!
+4[171] Seuss experimentoss/esstão causando a neve!/Pare agora messmo!
+4[172] Então você é a causa/desse clima anormal!/Pare imediatamente!
+4[173] Pare já com esses/experimentos! ¶ Ninguém consegue/passar com você/bloqueando o caminho!
+4[174] {40 21 01}Eu gosto de neve, kupo,/mas você está/causando problemas!
+4[176] Nnnn, ngah!/Meu experimento!/Nãããão...
+4[177] Se tivesse pedido/permissão, talvez/tudo ficasse bem!
+4[178] É isso que dá/não pensar nos/outros!
+4[179] Essa neve toda está/me dando frio!/Grrrr...
+4[180] Seus experimentos/parecem fascinantes... ¶ Mas você deve/sempre considerar/os efeitos deles!
+4[181] Teve gente que/gostou da neve... ¶ Mas você devia/ter pedido permissão!
+4[182] {40 21 03}Você devia fazer neve/num lugar mais/seguro, kupo. ¶ {40 21 03}As crianças iam/adorar, kupo./Eu também!
+4[193] Professor Auggie,/está bem? Vamos/te ajudar!
+4[194] Professor Auggie,/está bem? Viemos/te ajudar!
+4[195] Lá esstá ele./Aguente firme./Vamoss ajudar!
+4[196] Professor Auggie?/Somos o Clã {40 25 03}./Viemos ajudar.
+4[197] Professor Auggie?/Viemos te/ajudar!
+4[198] {40 21 02}Professor Auggie,/kupo? Somos o Clã/{40 25 03}, kupo! ¶ {40 21 03}Viemos te/ajudar, kupo!
+4[201] Todos estão/preocupados. Vamos/voltar logo.
+4[202] Por que pesquisar/no meio de uma/nevasca?
+4[203] Nguuh. Que frio./Vamoss pra casa,/Professsor...
+4[204] Seus alunos estão/preocupados, Professor!/Vamos para casa!
+4[205] A gente vai pegar/um resfriado aqui./Vamos pra casa.
+4[206] {40 21 03}Foi por pouco, kupo./Você ia virar/picolé, kupo!
+4[217] Acho que ela quer/garras de bomba pra/receita dela.
+4[218] Se pegarmos garras/de bomba, vai ficar/bem picante!
+4[219] Garrass de bomba/sseriam o ingrediente/perfeito.
+4[220] Garras de bomba/seriam o ingrediente/perfeito.
+4[221] Precisamos de garras/de bomba pra receita!/Vamos tentar!
+4[222] {40 21 03}Vamos pegar garras/de bomba, kupo. Elas/são picantes, kupo.
+4[225] Já temos tudo o/que precisamos. Vamos/levar pra Rolana.
+4[226] Pegamos os/ingredientes! Isso/vai ficar bom!
+4[227] Rolana vai fazer/maravilhas com/tanto tempero!
+4[228] É tudo o que/precisamos. Vamos/levar para Rolana.
+4[229] Pegamos os/ingredientes! Isso/vai ficar bom!
+4[230] {40 21 01}É tudo o que precisamos,/kupo! Vamos levar/e comer, kupo!
+5[25] Tem monstros!/Melhor achar o anel,/e rápido!
+5[26] Tem monstros!/Melhor achar o anel,/e rápido!
+5[27] É melhor essess/monsstross não/entrarem no caminho...
+5[28] Ai, monstros!/Devemos achar o anel/o quanto antes.
+5[29] Monstros! Melhor/cuidar deles antes/de procurar o anel.
+5[30] {40 21 01}Monstros, kupo!/Melhor cuidar deles/primeiro, kupo!
+5[33] Onde será que/está o anel...? ¶ ..../Ahá! Aqui está!
+5[34] Tenho que achar/o anel... ¶ ..../Aqui está!
+5[35] Tenho que achar/o anel... ¶ ..../Ah! Aqui esstá!
+5[36] Devemos achar/o anel. ¶ ..../Ah, aqui está!
+5[37] Tenho que achar/o anel... ¶ ..../Aqui está!
+5[38] {40 21 03}Tenho que achar/o anel, kupo... ¶ ..../{40 21 01}Kupopo! Aqui está!
+5[48] Eu estive observando!/Como ousam atrapalhar/os meus planos!?
+5[49] Então você é o/criminoso! Agora não/vai escapar!
+5[50] Então você é o/criminoso! Agora não/vai escapar!
+5[51] Então você é o/criminosso! Agora/não vai esscapar!
+5[52] Então você é o/criminoso! Agora não/vai escapar!
+5[53] Então você é o/criminoso! Agora não/vai escapar!
+5[54] {40 21 03}Então você é o/criminoso! Agora não/vai escapar, kupo!
+5[56] Vocês...tomem/cuidado...sempre/estarei observando!
+5[57] Observe à vontade./Não temos nada/a esconder!
+5[58] Só observando?/E daí?
+5[59] Observe à vontade./O resto de nóss vai/trabalhar.
+5[60] Então também vamos/ficar de olho em você./Para seu bem.
+5[61] Vamos vigiar você/tanto que não vai/conseguir!
+5[62] {40 21 03}Pegamos o olho de/ahriman, kupo. Acabou/a espionagem!
+5[73] O oásis fica logo/adiante. Só temos/que passar por aqui.
+5[74] O oásis fica adiante./Só temos que passar/por esses monstros.
+5[75] Monsstross... Eles/não vão ssair da/frente, né?
+5[76] O oásis está perto./Mas antes devemos/passar por aqui.
+5[77] O oásis fica adiante./Só temos que passar/por esses monstros.
+5[78] {40 21 03}O oásis está perto,/kupo! Temos que passar/por esses monstros!
+5[81] ...!/Tem uma nascente!/O oásis!
+5[82] O oásis fica logo/ali! Vamos!
+5[83] ...! Tem uma/nasscente ali!/Achamos o oássiss!
+5[84] Se continuarmos,/logo chegaremos/ao oásis.
+5[85] Tem uma nascente ali!/Achamos o oásis!
+5[86] {40 21 01}Tem uma nascente/ali, kupo! Achamos/o oásis, kupo!
+5[97] O que será que/deixou esses monstros/tão agitados...?
+5[98] Esses monstros estão/agitados! Normalmente/não são assim.
+5[99] Não sei por que estão/tão agitadoss, mas/eu encaro!
+5[100] Detecto muita/agressividade nesses/monstros...estranho.
+5[101] Esses monstros querem/matar! Normalmente/não são assim...
+5[102] {40 21 04}Querem matar, kupo!/Não é normal/aqui, kupo!
+5[105] Tem algo errado/com a montanha./O que será?
+5[106] A montanha está/perturbada.../Vamos achar a causa.
+5[107] Essess monsstross/pareciam com medo/de alguma coissa...
+5[108] Esses monstros/tinham medo de algo./O que será?
+5[109] Tem algo errado/com a montanha./O que será?
+5[110] {40 21 03}Pareciam com medo/de algo, kupo./Vamos investigar!
+5[120] Aquele juiz--ack!/Fomos desafiados!/Vamos fugir!
+5[121] Somos o Clã/{40 25 03}, e/vocês não vão sair!
+5[122] O Clã {40 25 03}/veio garantir que/vocês não fujam!
+5[123] O Clã {40 25 03}/esstá aqui. Tentem/fugir!
+5[124] Não há lugar para/onde possam fugir/que não achemos.
+5[125] O Clã {40 25 03}/veio garantir que/vocês não fujam!
+5[126] {40 21 04}Clã {40 25 03}/aqui, kupo! Vocês/não vão escapar!
+5[128] Droga! E a gente/estava ganhando/um bom dinheiro...
+5[129] Caça ilegal é crime!
+5[130] Desculpe, mas vamos/confiscar esses/lucros...
+5[131] Vocês esstavam/pedindo pra cair./Aguentem.
+5[132] Estamos aqui para/que gente como vocês/seja presa e julgada.
+5[133] Quem faz coisa/errada acaba/sendo punido!
+5[134] {40 21 04}Vamos levar esses/lucros, kupo!
+5[145] Monstros!/Para trás, Leanan.
+5[146] Ah, monstros!/É melhor recuar,/senhorita cantora.
+5[147] Monsstross! Logo/a gente dá conta/delss, sssenhora.
+5[148] Monstros./Cuidado, Leanan.
+5[149] Monstros! É melhor/esperar lá atrás,/Leanan.
+5[150] {40 21 03}Monstros, kupo!/Cuidado, Leanan!
+5[153] Leanan, agora está/tudo bem. ¶ Vamos, sua amiga/está te esperando.
+5[154] Desculpe por isso,/Leanan. Você está bem? ¶ Vamos depressa,/sua amiga deve estar/esperando.
+5[155] Isso acabou./Não precisa ter/medo com a gente aqui!
+5[156] Acabou. ¶ Vamos seguir/em frente. Sua amiga/nos espera.
+5[157] Ufa. Ainda bem que/acabou! ¶ Vamos indo./Sua amiga deve estar/esperando!
+5[158] {40 21 03}Acabou, kupo!/Vamos antes que/venham mais!
+5[169] Onde será que/Temil plantou/aquelas flores?
+5[170] Por que esse garoto/foi plantar as flores/logo aqui?
+5[171] As flores de Temil... ¶ Vamoss achá-las./Onde será que/estão?
+5[172] Onde será que Temil/plantou as/flores dele?
+5[173] Vamos logo achar/as flores que/Temil plantou.
+5[174] {40 21 04}Onde será que estão/as flores de Temil,/kupo?
+5[177] Aqui estão!/Vamos levá-las/pra casa!
+5[178] Aqui estão!/Vamos levá-las/pra casa!
+5[179] Ahá. Esstas são/as flores. Vamoss/levar algumas.
+5[180] Ah, aqui estão./Vamos levá-las/até Temil.
+5[181] As flores! Vamos/levá-las de volta/agora mesmo.
+5[182] {40 21 01}Aqui estão, kupo!/Essas só podem ser/as flores de Temil!
+5[192] Este é o nosso/território. ¶ Se vieram atrás de/âmbar, deram/azar.
+5[193] Precisamos do âmbar/por um bom motivo!/Não vamos embora!
+5[194] Primeira vez que ouço/que aqui tem dono! ¶ Vamos levar/esse âmbar.
+5[195] Seu território? Espero/que esteja pronto/pra defendê-lo!
+5[196] Esta terra não/pertence a clã algum./Não vamos sair.
+5[197] Precisamos muito/do âmbar. Desculpe,/mas não vamos sair!
+5[198] {40 21 03}Precisamos de âmbar,/kupo! E aqui não é/território de ninguém!
+5[200] Grr... E a gente/tinha todo esse/âmbar só pra nós!
+5[201] Bom, pegamos o/âmbar de que/precisávamos. ¶ Que tipo de/antilei será que/Ezel vai fazer?
+5[202] Pegamos o âmbar!/Quero ver logo/a nova antilei!
+5[203] Pegamos o âmbar/de que precisávamos./Vamoss levar a Ezel.
+5[204] O âmbar é nosso./Que tipo de antilei/Ezel planeja?
+5[205] Pegamos o âmbar!/Quero ver logo/a nova antilei!
+5[206] {40 21 03}O âmbar é nosso,/kupo! Imagina só,/uma nova antilei!
+5[216] Emergência! Aquele/Julian está fugindo/de novo!
+5[217] Fomos descobertos!/Acho que vamos ter/que lutar...
+5[218] Fomos descobertos!/Só nos resta/lutar agora.
+5[219] Nos descobriram./Hora de lutar!
+5[220] Fomos descobertos?/Então suponho que/devemos lutar.
+5[221] Nos descobriram!/Acho que vamos ter/que lutar!
+5[222] {40 21 02}Nos acharam, kupo!/Hora de lutar!
+5[224] Vocês...acham que/podem...sair impunes/disso!?
+5[225] (Desde que Julian/volte mesmo...)
+5[226] (Julian, por favor,/volte como disse!)
+5[227] (Julian, é melhor voltar,/ou vamos ficar/muito bravos...)
+5[228] (Confiamos em você,/Julian, mas volte/como prometeu!)
+5[229] (Espero que Julian/volte mesmo...)
+5[230] {40 21 04}(Confiamos em você,/Julian...kupo!)

@@ -1,0 +1,209 @@
+6[1] Então é aqui que/acharam as moedas/antigas...
+6[2] Será que ainda/tem moedas de ouro/por aqui?
+6[3] Posso ficar com as/moedass que achar,/né?
+6[4] Examinar este lugar/certamente será/emocionante!
+6[5] Será que ainda/restam moedas/por aqui?
+6[6] {40 21 03}As ruínas antigas,/kupo! Vou voltar/rico, kupo!
+6[9] Um interruptor.../A porta está/abrindo!
+6[10] Entendi. Este botão/abre a porta para o/interior das ruínas.
+6[11] Um interruptor.../A porta esstá/abrindo!
+6[12] Hm. O botão abriu/a porta que leva/mais para dentro...
+6[13] Isso! Um botão!/Estou pronta pra/explorar de verdade!
+6[14] {40 21 03}Kupo! Um botão!/Vamos pegar aquele/tesouro!
+6[24] Vieram por este/caderno, foi? ¶ Então brinquem/com o flan que/eu criei!
+6[25] Um...monstro saído/de um caderno!?
+6[26] Você vai pagar por/roubar de criancinhas!
+6[27] Roubar de/criancinhass? Verme!
+6[28] Magia que dá vida/a desenhos?/Fascinante!
+6[29] Ei, não se rouba de/criancinhas!/Verme!
+6[30] {40 21 03}É o flan mais sem/graça que eu já vi,/kupo!
+6[32] Grr... Se eu/fosse um artista/melhor...
+6[33] Recuperamos o/caderno. Vamos/pra casa.
+6[34] Ainda bem que não é!
+6[35] E eu digo: lute/com as própriass/mãoss!
+6[36] Recuperamos o/caderno e agora/vamos devolvê-lo.
+6[37] Muito bem,/recuperamos o caderno!
+6[38] {40 21 03}Kupopo! Vencemos!/Ainda bem que a arte/dele é ruim!
+6[48] {40 21 02}A Banda Bardo não/passa de um bando/de fracotes, kupo!
+6[49] Diga isso depois/de nos vencer!
+6[50] Somos? Então diga/isso depois de/nos vencer!
+6[51] Tá, tá. Você também/não impresssiona/muito, garoto.
+6[52] Você não vai dizer/isso depois/da batalha!
+6[53] Tá, tá./Podemos começar/a batalha, por favor?
+6[54] {40 21 01}Que tal se olhar/no espelho,/kupo!
+6[56] {40 21 04}Kupopo...me pegaram./Chefe, deixo eles/com você...kupo.
+6[57] Isso!/A Banda Bardo venceu!
+6[58] Não levem essas/guerras de clã longe/demais. Não ajuda!
+6[59] Que desperdício/do meu precioso/tempo...
+6[60] A Banda Bardo vence!
+6[61] Isso!/A Banda Bardo venceu!
+6[62] {40 21 03}Eba! Vencemos!/Viva a Banda/Bardo, kupo!
+6[72] Atropelamento? Não,/não sei nada/sobre isso.
+6[73] Sei que sabe! Isso/não vai ficar/impune!
+6[74] Sua aeronave tem/um arranhão muito/suspeito!
+6[75] Olha, camarada,/temos provass. Você/vai pagar!
+6[76] Está disposto a/contestar todas as/provas que temos?
+6[77] Sabemos que foi você!/Admita logo!
+6[78] {40 21 02}Sua aeronave está/arranhada, kupo!/Sei que foi você!
+6[80] D-desculpe.../Eu não queria fugir/depois do acidente...
+6[81] Peça desculpas a/Nono. E nunca mais/faça isso.
+6[82] Pedir desculpas não/vai ajudar da próxima/vez, camarada.
+6[83] Peça desculpas/mais rápido e ninguém/se machuca.
+6[84] Caso encerrado./Agora vamos levá-lo/até Nono.
+6[85] Caso encerrado!/Vamos levar esse/cara até Nono.
+6[86] {40 21 04}Pegamos ele, kupo!/Ele pode pedir/desculpas a Nono!
+6[97] Lâmias! Serão elas/que estão comendo/os sapos?
+6[98] Lâmias! Então são/vocês que comem/os sapos!
+6[99] Lâmiass...Comam o/que quiserem, mas/parem de atacar gente!
+6[100] Então as lâmias caçam/tanto as pessoas/quanto os sapos!
+6[101] Lâmias.../Então elas comem/sapos mesmo!
+6[102] {40 21 03}Kupo! Tenho que dizer/às lâmias para não/atacar pessoas!
+6[105] Hm? As lâmias/deixaram algo...
+6[106] O que é isso? As/lâmias deixaram/algo pra trás.
+6[107] Isso é um...livro?/Não ssabia que lâmiass/sabiam ler.
+6[108] Oh? É um livro que/as lâmias deixaram?
+6[109] Ei, as lâmias/deixaram um livro!
+6[110] {40 21 02}Kupo? As lâmias/deixaram um livro!
+6[121] Professor Auggie,/onde você está?
+6[122] Um professor sumido.../Onde ele estará?
+6[123] Ei, professor, pode/sair agora! A gente/não morde!
+6[124] Sumir sem deixar/rastro é impossível./Hmm...
+6[125] Tanta gente/sumindo! Que coisa/bizarra.
+6[126] {40 21 04}Não tem ninguém aqui,/kupo! Ooh, que/arrepio, kupo...
+6[128] Olááá!/Estou aqui!/Socorro!
+6[129] !!/Vem de trás/da estátua!
+6[130] Parece um botão.../da sala secreta,/aposto!
+6[131] Esste deve ser o/botão. E o professor/deve esstar perto!
+6[132] Esta estátua deve/ser o botão!
+6[133] Isso! Este deve ser/o botão!
+6[134] {40 21 02}Kupo, é um botão?/Professor Auggie,/estamos indo, kupo!
+6[144] He, então alguém/teve coragem de/chegar até aqui.
+6[145] Entendi... Temos/que vencer pra entrar/nesta jagd!
+6[146] Isso é o que eu/chamo de festa de/boas-vindas!
+6[147] Temos muito mais/do que vocês./Vamos nessa!
+6[148] Uma batalha como/boas-vindas? Que/falta de requinte.
+6[149] Puxa, valeu./Cadê meus presentes/de boas-vindas?
+6[150] {40 21 02}Kupo! Exijo chá/e bolo depois que/vencermos, kupo!
+6[152] Conseguiram,/forasteiros. Bem-vindos/à Jagd Helje.
+6[153] Outra jagd.../Outro lugar onde/nenhuma lei chega.
+6[154] Acho que a jagd é/o único lugar com/liberdade absoluta...
+6[155] Sem leiss, e sem/proteção. Aqui é/cada um por si.
+6[156] Sem leis, e sem/proteção./Um lugar perigoso!
+6[157] Acho que não quero/me acostumar com essas/batalhas de boas-vindas!
+6[158] {40 21 03}Já sinto falta/das leis, kupo...
+6[169] Nosso destino deve/estar logo adiante!/Ou...assim espero!
+6[170] Temos que passar/por aqui pra/seguir em frente...
+6[171] É bom que esste seja/o último obsstáculo/até o desstino!
+6[172] Talvez estejamos/perto do destino.../Assim espero.
+6[173] Quer dizer que estamos/quase lá! Ah, a/natureza intocada!
+6[174] {40 21 01}Tomara que estejamos/perto do destino,/kupo!
+6[177] Isso! Agora, rumo às/terras inexploradas!
+6[178] Pronto! Certo, agora/vamos chegar aonde/estamos indo!
+6[179] Acho que estou pronto/para a "natureza/intocada".
+6[180] Agora seguiremos./A natureza intocada/nos espera!
+6[181] Certo, vamos lá!/Minhas pernas pedem/um banho de oásis!
+6[182] {40 21 01}Kupopo! Vamos lá!/As terras inexploradas/nos esperam, kupo!
+6[192] Este é o santuário/dos Wyrms de Delia./Fora daqui!
+6[193] Vim pedir ajuda!/Só vocês podem/salvar Baguba!
+6[194] Wyrms de Delia!/Precisamos de ajuda/pra salvar Baguba!
+6[195] Wyrms de Delia, só/vocês podem ssalvar/Baguba! Ouçam-nos!
+6[196] Wyrms de Delia, sua/força é necessária/para salvar Baguba.
+6[197] Por favor, ajudem! O/Dragão de Roda está/destruindo Baguba!
+6[198] {40 21 03}Kupo! Salvem Baguba/do Dragão de Roda,/por favor, kupo!
+6[200] Vejo que vocês têm/a pedra-wyrm e força. ¶ Vamos ajudar a/expulsar o/Dragão de Roda.
+7[0] Miau.../Miau?
+7[1] Está dizendo "miau"!/Só pode ser...Miau!/Achamos!
+7[2] Está dizendo "miau"!/Só pode ser...Miau!/Vamos pegá-lo!
+7[3] Ele diz "miau",/então ssó pode ser.../Miau! Peguem!
+7[4] Hmm? Creio que está/dizendo "miau". Logo,/é o Miau.
+7[5] Está dizendo "miau"!/Só pode ser...Miau!/Vamos pegá-lo!
+7[6] {40 21 01}Disse "miau", kupo!/Achamos, kupo!/Peguem, kupo!
+7[8] Miaaaaaaaau!
+7[24] Fui descoberto!/Só me resta lutar/pra sair daqui!
+7[25] Ladrão!/Devolva aquelas/galinhas!
+7[26] Vamos te enfrentar,/ladrão!
+7[27] Acha que pode/noss vencer, ladrão?/Pense de novo!
+7[28] Eu pediria que se/rendesse, mas duvido/que me ouviria.
+7[29] Você foi pego,/então venha quieto./Senão...
+7[30] {40 21 03}Cuidado, kupo!/Eu não suporto/ladrões, kupo!
+7[32] Aaaaah!/Cheeefe!
+7[48] Quem vocês pensam/que são!? Peguem eles!
+7[49] Clã Borzoi!/Vamos acabar/com vocês!
+7[50] Tentem fugir!/Este lugar está/cercado!
+7[51] Não há esscapatória/pra vocês! Venham/quietoss, ou já sabem!
+7[52] Só estávamos de/olho em vocês, mas/se for preciso lutar...
+7[53] Clã Borzoi!/Desistam agora,/enquanto estão vivos!
+7[54] {40 21 01}Não temos medo/de vocês, kupo!
+7[56] Como.../Como isso pôde/acontecer?
+7[57] Enfim, teremos/paz em Sprohm/de novo.
+7[58] Sprohm é um lugar/mais seguro agora,/graças a nós.
+7[59] Esse Clã Borzoi/sempre aprontando/alguma.
+7[60] Enfim, Sprohm vai/dormir em paz.
+7[61] Agora que Sprohm/está segura, vamos/fazer compras.
+7[62] {40 21 03}Sprohm está segura,/kupo! Vamos fazer/compras, kupo!
+7[72] Vou me vingar pelo/que fizeram com/meus camaradas!
+7[73] Se você é Raven,/devia saber que o Clã/Borzoi nunca vence!
+7[74] Você é Raven, é?/Recebemos sua carta!
+7[75] Ah, ótimo! Adoro/uma boa luta!
+7[76] Não perderemos para/o Clã Borzoi nem/para seus capangas.
+7[77] Você é Raven? Então/saiba: a gente sempre/vence o Borzoi!
+7[78] {40 21 01}Viemos aceitar seu/desafio, kupo!/Não vamos perder!
+7[80] Não! Nããão! O temível/Raven nunca perde!!!
+7[81] Ufa, vencemos!/Que alívio.
+7[82] Vencemos!/Assunto encerrado.
+7[83] Vingar oss amigos é/bom, mas escolha/amigos melhoress.
+7[84] Fico aliviado que/a luta acabou.
+7[85] Vencemos! Será que/os amigos dele vão/tentar se vingar?
+7[86] {40 21 03}Conseguimos, kupo!/Agora é hora de/descansar, kupo!
+7[144] Não vou cair/sem lutar!
+7[145] Sabemos de tudo,/Gukko! Você vem/conosco!
+7[146] Desista! Agora você/enfrenta o Clã/{40 25 03}!
+7[147] Você não vai esscapar,/Gukko! Venha quieto,/ou já ssabe!
+7[148] Não podemos deixá-lo/fugir, Gukko./Venha conosco quieto.
+7[149] Desculpe, Gukko, mas/não podemos deixar/você fugir!
+7[150] {40 21 03}O Clã {40 25 03}/chegou, kupo! Prepare-se/pra perder!
+7[152] Meus...Meus planos!/Meus sonhos de glória!/Nããão!
+7[153] Você chama o sofrimento/dos outros de "glória"?
+7[154] Você causou muito/sofrimento, e agora/vai pagar por isso.
+7[155] O Clã Borzoi/acabou! Fiz minha/parte pela paz!
+7[156] O Clã Borzoi/não existe mais.
+7[157] Adeus, Clã/Borzoi!
+7[158] {40 21 03}Lembrem nosso nome:/Clã {40 25 03},/kupo!
+7[169] De onde vieram/todas essas bombas?
+7[170] Olhem quantas!/De onde vieram/todas elas?
+7[171] Credo! Só de olhar/pra elas minhas/esscamas ardem.
+7[172] O fogo vai se espalhar/se entrarem em Cadoan./Temos que detê-las.
+7[173] Temos que manter/distância dessas/bombas!
+7[174] {40 21 04}Quantas bombas,/kupo! Melhor manter/distância!
+7[177] Ainda bem que demos/conta delas antes/de chegarem a Cadoan.
+7[178] Tantas bombas.../Isso está cheirando mal.
+7[179] Salvando Ivalice uma/cidade de cada vez.
+7[180] De onde será que/vieram todas essas/bombas? Curioso...
+7[181] Foi por pouco!/De onde será que/vieram todas elas?
+7[182] {40 21 02}Apagadas, kupo! Mas/de onde será que/elas vieram?
+7[193] Asas Vermelhas! Tirem/as mãos de Ivalice!
+7[194] Então vocês são os/criminosos de/longe!
+7[195] Asas Vermelhass, é?/Vieram de tão longe/pra apanhar?
+7[196] Ah, as Asas Vermelhas,/presumo. Vocês não/são bem-vindos aqui.
+7[197] Asas Vermelhas! Tirem/as mãos de Ivalice!
+7[198] {40 21 03}Então vocês são os/criminosos de/longe, kupo!
+7[201] Algo me diz que/ainda veremos as/Asas Vermelhas de novo.
+7[202] Mal acabamos com o/Clã Borzoi e esses/caras aparecem!
+7[203] Asass Vermelhass... Vamos/ficar de olho em vocês!
+7[204] Creio que ainda não/vimos o fim das/Asas Vermelhas.
+7[205] Essas Asas Vermelhas me/incomodam...mas pelo/menos Cadoan está salva!
+7[206] {40 21 02}Algo me diz que ainda/veremos as Asas/Vermelhas, kupo.
+7[216] Eu sou a Falgabird/do fogo, Marilith!
+7[217] Ela parece forte./Melhor ter cuidado.
+7[218] Parece que ela está/atrás de nós... Melhor/tomar cuidado!
+7[219] Não importa quem/você é. Estamos/prontos pra lutar!
+7[220] Não é um oponente/fácil. Melhor/ter cuidado.
+7[221] Estamos prontos/pra você, seja/quem for!
+7[222] {40 21 04}Ela parece forte,/kupo! Melhor ter/cuidado, kupo!
+7[224] Não.../Não pode ser!
+7[225] Falgabird.../Vamos lembrar/desse nome.
+7[226] Algo me diz que/isso não acabou.
+7[227] Ela era forte, mas/nada de especial.
+7[228] Falgabird.../É um nome pra/se lembrar.
+7[229] Algo me diz que/isso não acabou.
+7[230] {40 21 03}Falgabird.../É um nome pra/se lembrar, kupo.

@@ -1,0 +1,158 @@
+12[0] Vocês vão virar/história!
+12[1] Não vamos perder/pra nenhum outro/clã!
+12[2] Ei, essa fala/é nossa!
+12[3] Acham que a gente/vai ssair da frente?/Nem morto!
+12[4] Quero evitar esses/confrontos o máximo/possível...
+12[5] Quem vai cair/são vocês!
+12[6] {40 21 03}Vocês não vão me/bater e me jogar/por aí, kupo!
+12[8] C-como.../Como pude perder...?
+12[9] Será que outros/clãs virão com/seus desafios?
+12[10] Ufa!/Ser popular/é difícil.
+12[11] Tem que haver/desafiantess melhores/por aí!!
+12[12] Vencemos, mas prefiro/evitar esse tipo/de confronto.
+12[13] Ufa. Espero que/nenhum outro clã/venha nos desafiar!
+12[14] {40 21 01}Vencemos, kupo!/Cadê o próximo/desafiante, kupo?
+16[24] Quem são vocês!? ¶ Mexam na minha coleção/de armas e eu mando/vocês pra prisão! ¶ ...Ack! Não posso usar/minha lei nova em/batalha. Vou ter que lutar!
+16[25] Os boatos eram verdade!/Esses oficiais estão/fora de controle!
+16[26] Você vai parar de/criar leis por/capricho, ou já sabe!
+16[27] Devia ter vergonha/de se chamar de/oficial!
+16[28] Enfim o encontramos./Diga, quem está/por trás disso tudo?
+16[29] Não acredito que muda/as leis por um/capricho! Francamente!
+16[30] {40 21 03}A lei não é sua/pra mudar, kupo!
+16[31] É por sua causa que/minhas antileis são/necessárias, verme!
+16[32] Você envergonhou/o palácio, e por isso/vai pagar!
+16[33] Não acredito que você/inventa leis como/bem entende!
+16[34] O mal é o mal, e/o mal deve ser punido.
+16[35] Nenhum juiz vai ficar/do seu lado, entendeu?/Você age sozinho!
+16[36] Não...não.../Minhas armas não!/Minhas lindas armas...
+16[37] Não cabe a você/decidir a lei.
+16[38] Tomara que um tempo/na prisão te devolva/o juízo!
+16[39] Hmpf. Elas nem/eram suass, pra começo!
+16[40] Diga: onde você/arrumou aquela carta/em branco?
+16[41] Você pode pensar em/toda a confusão que/causou--na prisão!
+16[42] {40 21 03}Seus planos já/eram, e o mundo ficou/melhor, kupo!
+16[43] Sempre haverá gente/assim no mundo,/infelizmente.
+16[44] Arrependa-se na prisão./Não é tarde para mudar/de vida.
+16[45] Gente como você/me irrita demais!
+16[46] Mais uma missão/cumprida...
+16[47] Agora você vai me/dizer onde arrumou/a carta em branco.
+16[48] Vigia dos Juízes!? Sou/inocente! O que há de/errado em beijar?
+16[49] Beijar pode até ser/bom, mas não dá pra/virar lei!
+16[50] Esse tipo de atitude/está causando muito/sofrimento por aí.
+16[51] As pessoas deviam/poder escolher quem/beijam!
+16[52] Não pensou num jeito/melhor de incentivar/os beijos?
+16[53] Qual a graça de/beijar à força?
+16[54] {40 21 03}Eu beijaria sem uma/lei boba, kupo! ¶ {40 21 04}Mas não quero que/me digam o que/fazer, kupo!
+16[55] Por favor, não crie/leis para coisas/tão bobas!
+16[56] Eu tomaria cuidado/com mulheres irritadas/se fosse você.
+16[57] Entendo o que quer/dizer, mas não há/um jeito melhor?
+16[58] Nada de errado, mas/leia meus lábios: nada/de leis novas!
+16[59] Enquanto não for/ratificada pelos outros/juízes, está errada.
+16[60] Só o que eu queria/era que as pessoas/fossem minhas amigas...
+16[61] (Beijo obrigatório/não parece ser a/resposta...?)
+16[62] Se queria amigos,/podia pedir ajuda/a um clã...?
+16[63] Às vezes, é preciso/resolver as coisass/com as próprias mãos.
+16[64] Uma boa negociação/leva mais longe do/que leis tolas.
+16[65] Então saia e/faça muitos/amigos!
+16[66] {40 21 01}Que tal virar/malabarista, kupo? ¶ {40 21 03}Todo mundo gosta/de malabaristas, kupo!
+16[67] Qual a graça de/forçar as pessoas/a serem suas amigas?
+16[68] Você devia pensar/bem nos efeitos dos/seus atos.
+16[69] Diga só o que você/sente de verdade./Funciona comigo.
+16[70] ...Acabou./Hora de relatar.
+16[71] Oficiais devem/sempre separar o/público do privado.
+16[96] Iá rá rá! Não é/divertido ver todo/mundo se batendo?
+16[97] Incentivar a violência/não tem graça/nenhuma!
+16[98] Vejo que você não/tem jeito. Sinta/um pouco de dor!
+16[99] Vamos ver se você/ri quando sou eu/batendo em você!
+16[100] É errado se/deliciar ferindo/os outros.
+16[101] Ferir pessoas só/pra se divertir./Seu verme!
+16[102] {40 21 03}Se acha tão divertido,/tente bater em/você mesmo, kupo!
+16[103] Então já está/na hora de apanhar.
+16[104] Estou chocado que ache/essas coisas engraçadas!/Você vai pagar!
+16[105] Se conhecesse a dor/de verdade, nunca/diria isso.
+16[106] Qual é a graça?/Você só está ferindo/pessoas!
+16[107] Parece faltar a você/as qualidades básicas/de um oficial.
+16[108] Ai ai ai! Por favor,/pare! Aiiiiii!
+16[109] Agora sabe como/todos na sua/região se sentem!
+16[110] Tem coisas que só/sentindo na pele,/não é?
+16[111] O quê, não estava/se divertindo?
+16[112] Tenha sempre um/coração bondoso com/os outros.
+16[113] Claro que dói,/eu estava te batendo!
+16[114] {40 21 02}E aí, repensou/sua lei, kupo?
+16[115] Todos os oficiais/são tão burros assim!?
+16[116] Arrependa-se atrás/das grades, bandido.
+16[117] Eu ODEIO gente/que fere os outros./Valentão!
+16[118] Dá pra aprender muito/com a dor./Quer outra lição?
+16[119] Um oficial cair/tanto...A culpa/é minha.
+16[120] Ler e escrever/deviam ser proibidos!/Papelada me enjoa!
+16[121] Se é tão chato,/por que não larga/o emprego?
+16[122] Também não gosto/muito de papelada,/mas uma lei!?
+16[123] E um bom romance?/Ou cartas de/amor...
+16[124] Não posso aprovar/lei alguma que/impeça o saber.
+16[125] Não dá pra proibir/algo só porque te/incomoda!
+16[126] {40 21 03}Concordo, kupo!/Mas estou numa missão./Desculpe, kupo!
+16[127] É só pular a/papelada! Por que/tanto drama?
+16[128] Isso não é o seu/trabalho? É errado/fugir do dever.
+16[129] Ler é chato, mas/não podia pensar numa/lei melhor?
+16[130] Não parece o meu/tipo de lei.
+16[131] Você não parece/entender o peso/do seu crime.
+16[132] D-desculpe. Vou fazer/a papelada, prometo!
+16[133] Bom, esse caso/está encerrado.
+16[134] Bom, desde que você/perceba que errou.
+16[135] Espero que peça/desculpas a todos/...por escrito!
+16[136] Sim, trabalhar duro é/o melhor caminho/para você.
+16[137] Não crie mais leis/sozinho de novo,/tá bom?
+16[138] {40 21 03}Era uma boa ideia!/Tomara que façam/uma lei de verdade!
+16[139] Você só levava o/trabalho a sério/demais! Relaxe!
+16[140] Seja sempre/diligente no trabalho.
+16[141] Com certeza há leis/que deixariam as/pessoas felizes...
+16[142] Pronto./Hora de relatar a/{40 25 00}.
+16[143] Tenho que acabar com/quem trata as leis/como brinquedo!
+16[168] Q-quem são vocês?/O que fazem/aqui?
+16[169] ..../(Ei, a lei diz/"sem respostas"!)
+16[170] Como vou responder/a essa/pergunta?
+16[171] Clã {40 25 03}!/Droga! Não era/pra responder!
+16[172] ..../(Não tenho resposta/para gente como você.)
+16[173] Desculpe--/Aqui não é zona de/"sem respostas"?
+16[174] {40 21 03}...Kupo./(Respostas são/proibidas, né, kupo?)
+16[175] Desculpe, não posso/responder. Uma lei/idiota, sabe...
+16[176] Clã {40 25 03}!/Investigando leis/injustas!
+16[177] Não posso responder,/não é contra a/lei?
+16[178] Clã {40 25 03}.../Prepare-se pra lutar!
+16[179] Eu sou o Ju... Não./Sou do/Clã {40 25 03}!
+16[180] Grr.../Por que logo eu/tinha que ser pego?
+16[181] ..../(Os vilões sempre/são pegos!)
+16[182] Quer saber a/resposta? Opa,/desculpe! Azar o seu!
+16[183] Não é só você,/então venha/quieto.
+16[184] Achei que não gostava/de respostas? Pense/você mesmo.
+16[185] .../(Você errou,/por isso!)
+16[186] {40 21 02}Sem respostas, kupo!/Então não posso/te contar! Há!
+16[187] Descubra sozinho./Achei que não gostava/de respostas?
+16[188] Quem erra será/punido. Simples/assim.
+16[189] Todos na cidade/sofrem por causa/da sua lei!
+16[190] Ora, quem sabe?/Por que não tenta/pensar sozinho?
+16[191] Por que você? Quer/dizer que há outros?/Conte!
+16[192] Proibido pular! Proibido/subir escadas!/Não, não, não!
+16[193] Dá um tempo!/Não dá pra lutar/com uma lei dessas!
+16[194] Confira os livros./Não existe uma/lei assim.
+16[195] Tem algo contra/os dragoons?
+16[196] Aquilo é uma carta em/branco? Espero que/não seja completada.
+16[197] Não vou obedecer/uma lei que não/faz sentido!
+16[198] {40 21 01}Então posso te/acertar com magias e/flechas, kupo? OK!
+16[199] Não, não, não? Hmm.../Tenho um "não" pra/você--uma antilei!
+16[200] Que sentido há/em proibir/tudo?
+16[201] Não, não, não, chega!/Pare com essas/leis falsas.
+16[202] Hmm, será que consigo/te vencer sem/me mexer?
+16[203] É tabu um juiz/criar leis por/capricho!
+16[204] Não... Não.../Gaaaah....
+16[205] Ninguém fica livre/restringindo os/outros!
+16[206] Vou criar uma lei nova/só pra você:/Proibido dizer "não"!
+16[207] Ninguém devia/ter tanto poder/ssobre as leiss.
+16[208] Creio que criar leis/deve ficar a cargo/do palácio.
+16[209] Você podia ter criado/leis que deixassem/as pessoas felizes...
+16[210] {40 21 03}Por que não dizer/"sem leis"!?/Brincadeira, kupo!
+16[211] Quem ama o poder/em geral não sabe/lidar com ele. ¶ Com algumas/exceções,/é claro.
+16[212] Seus objetivos e/métodos não têm/aprovação oficial.
+16[213] Algumas leis devem/ser honradas, mas você/passou dos limites!
+16[214] Tanto "não" me/deu dor de cabeça.
+16[215] Diga quem te deu/aquela carta em branco!/Você vai confessar!
