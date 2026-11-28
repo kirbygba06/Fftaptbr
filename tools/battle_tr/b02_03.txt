@@ -106,12 +106,12 @@
 3[173] O fantasma do senhor!?/Bom, Gaol não está./Eu luto com você!
 3[174] {40 21 03}O fantasma do senhor!?/Sem Gaol, é com/a gente, kupo!
 3[176] Sim... Agora me lembro./Ele veio até mim,/espadas erguidas... ¶ E então, aquelas/espadas gêmeas.../guh...gwaaaaarrgh!
-3[177] Esta é uma das/espadas gêmeas./O Ayvuir Vermelho!
-3[178] O Ayvuir Vermelho.../uma das espadas que/o mataram.
-3[179] O Ayvuir Vermelho que/matou o senhor. ¶ Há quanto tempo/esstá aqui esperando?
-3[180] É o Ayvuir Vermelho!/Onde estará a/espada gêmea?
-3[181] Ayvuir Vermelho...venci/o antigo inimigo/de seus mestres!
-3[182] {40 21 03}Kupo! O lendário/Ayvuir Vermelho, kupo!
+3[177] Esta é uma das/espadas gêmeas./O Ayvuir Rubro!
+3[178] O Ayvuir Rubro.../uma das espadas que/o mataram.
+3[179] O Ayvuir Rubro que/matou o senhor. ¶ Há quanto tempo/esstá aqui esperando?
+3[180] É o Ayvuir Rubro!/Onde estará a/espada gêmea?
+3[181] Ayvuir Rubro...venci/o antigo inimigo/de seus mestres!
+3[182] {40 21 03}Kupo! O lendário/Ayvuir Rubro, kupo!
 3[192] {40 21 03}Quem são vocês, kupo!/Como ousam profanar/o túmulo de Lini, kupo!
 3[193] O túmulo da/valente Lini... ¶ Sinto que algo/me chamou para/este lugar.
 3[194] Viemos honrar/a memória de Gaol!/Deixe-nos passar!

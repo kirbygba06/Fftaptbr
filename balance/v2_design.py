@@ -28,7 +28,7 @@ T_MELEE, T_BOW, T_ALLY, T_SELFAREA, T_SELF, T_AREA = 112, 178, 9, 87, 94, 32
 WEAP = dict(basis='W', power=None, rng='As Weapon')
 SKILLS = [
  # slot, nome sim (slot antigo), template, efeitos, extras sim, campos ROM (power, mp, rng, vrng, area, varea), nome PT, descrição PT, classes
- dict(slot=79,  old='Magicbreak',  t=T_MELEE,  eff=['DMG', 'DELAY'], sim=WEAP, rom={}, pt='Pancada',
+ dict(slot=79,  old='Magicbreak',  t=T_MELEE,  eff=['DMG', 'DELAY'], sim=WEAP, rom={}, pt='Golpe Seco',
       desc='Golpe com a arma que\natrasa o turno do alvo.', cls='Soldado, Guerreiro'),
  dict(slot=83,  old='Sensor',      t=T_SELFAREA, eff=['PROT'], sim=dict(rng='Self', area='r1/v2', mp=10), rom=dict(power=0, mp=10), pt='Formação',
       desc='Dá Proteção aos\naliados ao redor.', cls='Soldado'),
@@ -36,7 +36,7 @@ SKILLS = [
       desc='Dá Proteção e Barreira\na um aliado.', cls='Paladino'),
  dict(slot=95,  old='Drop Weapon', t=T_MELEE,  eff=['DMG', 'KNOCK'], sim=WEAP, rom={}, pt='Empurrão',
       desc='Golpe com a arma que\nempurra o alvo.', cls='Paladino, Defensor'),
- dict(slot=97,  old='Hibernate',   t=T_SELFAREA, eff=['SHELL'], sim=dict(rng='Self', area='r1/v2', mp=10), rom=dict(power=0, mp=10), pt='Muralha',
+ dict(slot=97,  old='Hibernate',   t=T_SELFAREA, eff=['SHELL'], sim=dict(rng='Self', area='r1/v2', mp=10), rom=dict(power=0, mp=10), pt='Baluarte',
       desc='Dá Barreira aos\naliados ao redor.', cls='Defensor'),
  dict(slot=126, old='Wyrmtamer',   t=T_SELF,   eff=['REGEN', 'BOOST'], sim=dict(rng='Self', area='Self', mp=0), rom={}, pt='Sangue Wyrm',
       desc='Ganha Regen e reforça\no próximo ataque.', cls='Dragoon'),

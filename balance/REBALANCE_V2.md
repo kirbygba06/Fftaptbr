@@ -12,7 +12,7 @@ Use um save novo.
 | Jogo | Ideia de design | Como entra no FFTA |
 |---|---|---|
 | **Into the Breach** | Empurrar é o verbo central: o dano importa menos que a posição. Clareza acima de esperteza. | **Empurrão** como ferramenta de tanque (Paladino, Defensor, Cavaleiro Mog). O motor já tem "Knockback", que só o Tremor usava. |
-| **Triangle Strategy** | Cada ação mexe no tabuleiro (flanco, seguimento). Turno é recurso. | **Ritmo**: atrasar o turno do inimigo (Raio, Pancada, Tiro Choque) e deixá-lo Lento (Gelo, Rastreio). Controle de tempo vira identidade de classe. |
+| **Triangle Strategy** | Cada ação mexe no tabuleiro (flanco, seguimento). Turno é recurso. | **Ritmo**: atrasar o turno do inimigo (Raio, Golpe Seco, Tiro Choque) e deixá-lo Lento (Gelo, Rastreio). Controle de tempo vira identidade de classe. |
 | **Tactics Ogre Reborn** | Classes fracas ganharam ferramentas próprias (auto-habilidades, buffs) em vez de só números maiores. | As classes do fundo do ranking ganham uma **função** nova, não só +X%. |
 | **FFTA2** | Precisão deixou de ser a principal forma de equilibrar. Leis punem menos. | Nada de "habilidade boa com 30% de acerto": as novas usam efeitos dependentes do acerto do golpe (Eff1Dep). |
 | **FFT / FFV** | Papéis claros (tanque, suporte, controlador) e combinação de conjuntos. Contra-jogo por equipamento (Ribbon, anéis). | **Itens de contra-jogo** acessíveis: imunidade a Encanto e Confusão em itens de loja baratos. |
@@ -35,11 +35,11 @@ Os princípios que segui:
 
 | Classe | Antes (inútil) | Agora | Efeito | Uso no simulador (nv. 25 / 45) |
 |---|---|---|---|---|
-| Soldado, Guerreiro | Magicbreak | **Pancada** | golpe com a arma + atrasa o turno do alvo | 20% / 2% · 12% / 3% |
+| Soldado, Guerreiro | Magicbreak | **Golpe Seco** | golpe com a arma + atrasa o turno do alvo | 20% / 2% · 12% / 3% |
 | Soldado | Sensor | **Formação** | Proteção nos aliados ao redor (10 MP) | – / 3% |
 | Paladino | Parley | **Égide** | Proteção + Barreira em um aliado (12 MP) | 47% / 9% |
 | Paladino, Defensor | Drop Weapon | **Empurrão** | golpe com a arma + empurra | 17% / 2% |
-| Defensor | Hibernate | **Muralha** | Barreira nos aliados ao redor (10 MP) | 2% / 2% |
+| Defensor | Hibernate | **Baluarte** | Barreira nos aliados ao redor (10 MP) | 2% / 2% |
 | Dragoon | Wyrmtamer | **Sangue Wyrm** | Regen + Boost em si mesmo | 37% / 37% |
 | Caçador | Oust | **Rastreio** | tiro com metade do dano + Lento | 55% / 17% |
 | Arqueiro | Burial | **Pregar** | flecha + imobiliza | 23% / 19% |
@@ -55,7 +55,7 @@ Também mudam:
 - **Véus do Ninja:** poder 15 → 28 e MP 4 → 8.
 - **Contra-jogo:** Gauntlets (loja, 2000 gil) ficam imunes a Encanto, e Battle Boots (loja, 1000) imunes a Confusão. Isso dá resposta ao Encanto sem ASM.
 
-Testei em duas rodadas. Na primeira, Pancada e Tiro Choque com meio dano, Fumaça (cegueira em área) e Tudo ou Nada quase não eram usadas, e Rastreio dominava. Corrigi para a versão da tabela.
+Testei em duas rodadas. Na primeira, Golpe Seco e Tiro Choque com meio dano, Fumaça (cegueira em área) e Tudo ou Nada quase não eram usadas, e Rastreio dominava. Corrigi para a versão da tabela.
 
 ## 4. Resultado no simulador (5v5, progressão real; 12 mil batalhas no nível 25, 4 mil no 10, 6 mil no 45)
 
@@ -67,7 +67,7 @@ Testei em duas rodadas. Na primeira, Pancada e Tiro Choque com meio dano, Fumaç
 - **Mais opções sem quebrar:** 13 das 15 habilidades novas passam de 3% de uso, e o equilíbrio geral fica igual (dentro do ruído).
 - **Quem mais ganhou:** Dragoon +3, Arqueiro (Viera) +3, Ninja +2, Elementalist +2.
 - **Ressalva, Paladino:** −4 no simulador. A IA gasta muitos turnos com Égide, e o simulador subestima Proteção e Barreira. Jogando, você só usa quando vale a pena. Se ele parecer fraco no jogo, o próximo passo é mais orçamento de atributos.
-- **Pouco usadas:** Muralha, Coragem e o Empurrão do Defensor ficam abaixo de 3%. O Defensor já tem Mow Down como golpe principal.
+- **Pouco usadas:** Baluarte, Coragem e o Empurrão do Defensor ficam abaixo de 3%. O Defensor já tem Mow Down como golpe principal.
 
 ## 5. E classes novas?
 Criar uma classe do zero ainda não é viável. Ela precisa de:
@@ -81,7 +81,7 @@ Requisitos e lista de habilidades são dados (`0x30` do registro da classe e a l
 - **Caçador** rastreia: Rastreio.
 - **Ninja** atrapalha: Shuriken e Véus úteis.
 - **Dragoon** se sustenta: Sangue Wyrm.
-- **Soldado** é vanguarda: Pancada e Formação.
+- **Soldado** é vanguarda: Golpe Seco e Formação.
 
 ## 6. Próximos passos
 Com dados (sem ASM):
