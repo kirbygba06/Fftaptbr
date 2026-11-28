@@ -182,6 +182,10 @@ def build(rom, code01):
         for bk, tb in _m.RAW2.items():
             raw_idx.setdefault(bk, set()).update(tb)
             plan[bk] = {**plan.get(bk, {}), **tb}
+    if os.environ.get('FFTA_V2'):   # Rebalance v2: descrições das habilidades novas
+        from v2_text import DESCS as _V2D
+        raw_idx.setdefault(0x529514, set()).update(_V2D)
+        plan[0x529514] = {**plan.get(0x529514, {}), **_V2D}
     from dialogue_laws import pen2
     from textbanks import to_markup as _tmk
     _ol = banks.parse_bank(0x54382C); _el = _ol[1:] + [_ol[-1] + 300]

@@ -324,6 +324,9 @@ def px_width(rom, text):
 
 from extra_translations import MENU2, NAMES2
 EXTRA_MENU.update(MENU2)
+if os.environ.get('FFTA_V2'):     # Rebalance v2: nomes das habilidades novas (gerado por balance/make_v2_ips.py)
+    from v2_text import NAMES as _V2N
+    EXTRA_MENU.update(_V2N)
 CLASSES.update(NAMES2)
 from safe_names import SAFE
 CLASSES.update(SAFE)

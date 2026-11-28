@@ -1,0 +1,552 @@
+{
+"3": {
+"100%H, Gadget, Inflict Protect": 1
+},
+"4": {
+"100%H, EqpSword, Inflict Disable": 1
+},
+"5": {
+"100%H, Gadget, Inflict Shell": 1
+},
+"6": {
+"SType, Gadget, Inflict Blind": 1
+},
+"7": {
+"100%H, Gadget, 100% Heal": 1
+},
+"8": {
+"SType, Gadget, Inflict Sleep": 1
+},
+"9": {
+"100%H, Gadget, Inflict Haste": 1
+},
+"10": {
+"100%H, Gadget, Dispel": 1
+},
+"11": {
+"SType, Gadget, Inflict Poison": 1
+},
+"13": {
+"SType, Gadget, Non-Undead: Inflict Doom": 1
+},
+"14": {
+"100%H, KOed Unit, Revive to full HP": 1
+},
+"15": {
+"100%H, KOed Unit, Revive to 25% HP": 3
+},
+"17": {
+"100%H, Self, Draw Weapon": 1
+},
+"18": {
+"100%H, Self, [Eff1 Damage / 4] Damage": 1
+},
+"19": {
+"100%H, Self, Max HP Damage": 2
+},
+"20": {
+"100%H, Self, Caster's HP Damage": 1
+},
+"21": {
+"100%H, Self, Eff1Dep: [Eff1 Damage / 4] Damage": 1
+},
+"22": {
+"100%H, Self, Inflict Speed DOWN": 1
+},
+"23": {
+"100%H, Self, 100% Damage": 1
+},
+"24": {
+"100%H, Self, Eff1Dep: Heal Eff1 Damage": 4
+},
+"26": {
+"100%H, Self, Lose 30 Gil": 1
+},
+"27": {
+"100%H, Default, Eff1Dep: Delay Unit": 3
+},
+"28": {
+"AType, Default, Delay Unit": 1
+},
+"29": {
+"100%H, Default, Inflict Quicken": 2
+},
+"30": {
+"100%H, Default, Inflict WAtk UP/WDef UP/MPow UP/MRes UP": 1
+},
+"31": {
+"SType, Default, Doom Archer Effect": 1
+},
+"32": {
+"AType, Default, Matra Magic Effect": 1
+},
+"33": {
+"AType, Default, [(Target's HP + 1) * 0.9] Damage": 1
+},
+"34": {
+"AType, Default, Steal 2 JP": 1
+},
+"35": {
+"AType, Default, 100% Damage to MP, capped to Target's MP": 6
+},
+"36": {
+"100%H, Default, Heal 80 MP": 1
+},
+"37": {
+"100%H, Default, Inflict Astra": 2
+},
+"38": {
+"100%H, Default, Esuna": 6
+},
+"39": {
+"SType, Default, Eff1Dep: Inflict Frog": 1
+},
+"40": {
+"SType, Default, Inflict Frog": 2
+},
+"41": {
+"100%H, Default, Remove Frog": 1
+},
+"42": {
+"100%H, Cover Effect": 1
+},
+"43": {
+"---, Enemy, Aim: Wallet Effect": 1
+},
+"44": {
+"100%H, Default, Inflict Advice": 1
+},
+"45": {
+"100%H, Default, Inflict Shell": 2
+},
+"46": {
+"SType, Default, Elementalshift Effect": 1
+},
+"47": {
+"SType, Default, Eff1Dep: Inflict Stop": 1
+},
+"48": {
+"SType, Default, Inflict Stop": 4
+},
+"49": {
+"AType, Default, Inflict Speed DOWN": 4
+},
+"50": {
+"AType, Default, 400% Damage": 1
+},
+"51": {
+"100%H, Default, (Target's Kills * 10) Damage": 1
+},
+"53": {
+"100%H, Default, 100% Damage": 1
+},
+"54": {
+"100%H, Default, 999 Damage": 1
+},
+"55": {
+"100%H, Default, Limit Glove Effect": 1
+},
+"56": {
+"AType, Default, 30 Damage": 1
+},
+"57": {
+"AType, Default, [(Target's HP + 1) / 2] Damage": 3
+},
+"58": {
+"AType, Default, [Target's HP / 4] Damage": 1
+},
+"59": {
+"AType, Default, Mutilate Effect": 1
+},
+"60": {
+"AType, Default, Goblin Punch Effect": 1
+},
+"61": {
+"AType, Default, Rand{2..12} Damage": 1
+},
+"62": {
+"AType, NonUndead, (Caster's Max HP - Caster's HP) Damage": 1
+},
+"63": {
+"AType, Default, 100% Damage": 89
+},
+"64": {
+"AType, Default, 100% Damage, capped to Target's Max HP": 3
+},
+"65": {
+"AType, Default, 50% Damage, 2.0x Hit Rate": 2
+},
+"66": {
+"AType, Default, 200% Damage, 0.5x Hit Rate": 2
+},
+"67": {
+"AType, Default, Throw Effect": 1
+},
+"68": {
+"SType, Default, Eff1Dep: Inflict Disable": 2
+},
+"69": {
+"SType, Default, Inflict Disable": 1
+},
+"70": {
+"100%H, Default, Remove Disable": 1
+},
+"72": {
+"SType, Default, Eff1Dep: Inflict Immobilize": 2
+},
+"73": {
+"SType, Default, Inflict Immobilize": 2
+},
+"74": {
+"100%H, Default, Remove Immobilize": 1
+},
+"75": {
+"100%H, Default, Eff1Dep: Knockback": 5
+},
+"76": {
+"SType, Default, Eff1Dep: Inflict Berserk": 1
+},
+"77": {
+"SType, Default, Inflict Berserk": 1
+},
+"78": {
+"100%H, Default, Inflict Protect": 2
+},
+"79": {
+"SType, Default, Hastebreak Effect": 1
+},
+"80": {
+"---, Default, Aim: Vitals Effect": 1
+},
+"81": {
+"---, Default, Acid Effect": 1
+},
+"82": {
+"100%H, Default, Inflict Reflect": 2
+},
+"83": {
+"100%H, Enemy, Detect Hidden Items": 2
+},
+"85": {
+"SType, Default, Eff1Dep: Inflict Blind": 4
+},
+"86": {
+"100%H, Default, Eye2Eye: Inflict Blind": 1
+},
+"87": {
+"SType, Default, Inflict Blind": 2
+},
+"88": {
+"100%H, Default, Remove Blind": 1
+},
+"89": {
+"100%H, Default, Heal to full HP": 2
+},
+"90": {
+"100%H, Default, Heal (Caster's HP) Damage": 1
+},
+"91": {
+"100%H, Default, 100% Heal": 6
+},
+"93": {
+"SType, Default, Eff1Dep: Inflict Confusion": 2
+},
+"94": {
+"100%H, Default, Eye2Eye: Inflict Confusion": 1
+},
+"95": {
+"SType, Default, Inflict Confusion": 1
+},
+"96": {
+"SType, Default, Bad Breath Effect": 1
+},
+"97": {
+"SType, Default, Inflict Sleep": 3
+},
+"98": {
+"SType, Default, Inflict Petrify": 3
+},
+"99": {
+"100%H, Default, Remove Petrify": 1
+},
+"101": {
+"AType, Default, Break Armor Effect": 1
+},
+"103": {
+"SType, Default, Eff1Dep: Inflict Slow": 3
+},
+"104": {
+"SType, Default, Inflict Slow": 2
+},
+"105": {
+"100%H, Default, Inflict Haste": 1
+},
+"106": {
+"100%H, Default, Dispel": 4
+},
+"107": {
+"100%H, Default, Soundwave Effect": 1
+},
+"108": {
+"100%H, Default, Inflict Expert Guard": 1
+},
+"110": {
+"SType, Default, Eff1Dep: Inflict Silence": 3
+},
+"111": {
+"SType, Default, Inflict Silence": 2
+},
+"113": {
+"100%H, Default, Hibernate Effect": 1
+},
+"114": {
+"AType, Enemy, Steal JP": 1
+},
+"115": {
+"AType, Enemy, Steal Gil Effect": 1
+},
+"116": {
+"AType, Enemy, Steal EXP": 1
+},
+"117": {
+"AType, Enemy, Steal Accessory": 1
+},
+"118": {
+"AType, Enemy, Steal Armor": 1
+},
+"119": {
+"AType, Enemy, Steal Helm": 1
+},
+"120": {
+"AType, Enemy, Steal Shield": 1
+},
+"121": {
+"AType, Enemy, Steal Weapon": 1
+},
+"122": {
+"AType, Enemy, Steal Ability, 0.25x Hit Rate": 1
+},
+"123": {
+"100%H, Default, Inflict Conceal": 1
+},
+"124": {
+"SType, Default, Eff1Dep: Inflict Poison": 6
+},
+"125": {
+"SType, Default, Inflict Poison": 2
+},
+"126": {
+"100%H, Default, Remove Poison": 1
+},
+"127": {
+"SType, Default, Inflict Zombie": 1
+},
+"128": {
+"100%H, Default, Remove Zombie": 1
+},
+"129": {
+"---, Default, Break Weapon Effect": 1
+},
+"130": {
+"SType, Default, Inflict WAtk DOWN": 3
+},
+"131": {
+"100%H, Default, Inflict Boost": 2
+},
+"132": {
+"SType, Default, Inflict Addle": 1
+},
+"133": {
+"100%H, Default, Inflict WDef UP": 1
+},
+"134": {
+"AType, Default, Hurl Effect": 1
+},
+"135": {
+"100%H, Default, Inflict Defense": 2
+},
+"136": {
+"100%H, Default, Eff1Dep: Inflict MPow DOWN": 2
+},
+"137": {
+"SType, Default, Inflict MPow DOWN": 1
+},
+"138": {
+"100%H, Default, Inflict MRes UP": 1
+},
+"139": {
+"100%H, Default, Cureall Effect": 1
+},
+"140": {
+"SType, Enemy, Eff1Dep: Inflict Charm": 2
+},
+"142": {
+"SType, Enemy, Inflict Charm": 3
+},
+"143": {
+"100%H, Default, Change Laws": 2
+},
+"148": {
+"100%H, NonUndead, LvlDivBy5: Inflict KO": 1
+},
+"149": {
+"100%H, Undead, LvlDivBy5: Heal to full HP": 1
+},
+"152": {
+"100%H, Enemy, Eff1Dep: 100% Damage": 1
+},
+"154": {
+"AType, Enemy, 100% Damage": 10
+},
+"155": {
+"SType, Enemy, Inflict Berserk": 1
+},
+"156": {
+"---, Enemy, Drop Weapon": 1
+},
+"157": {
+"---, Parley Effect": 1
+},
+"159": {
+"AType, NotSelf, (Caster's HP) Damage": 1
+},
+"160": {
+"AType, NotSelf, 100% Damage": 1
+},
+"161": {
+"SType, NotSelf, Inflict Sleep": 1
+},
+"162": {
+"100%H, NonUndead, Heal to full MP": 1
+},
+"163": {
+"100%H, NonUndead, Esuna": 1
+},
+"164": {
+"AType, NonUndead, 100% Damage": 1
+},
+"165": {
+"100%H, NonUndead, Inflict Regen": 1
+},
+"166": {
+"100%H, NonUndead, Inflict Auto-Life": 2
+},
+"167": {
+"100%H, NonUndead, Heal to full HP": 1
+},
+"168": {
+"100%H, NonUndead, 100% Heal": 7
+},
+"169": {
+"SType, NonUndead, Eff2Dep: Inflict Confuse": 1
+},
+"170": {
+"SType, NonUndead, Inflict Doom": 4
+},
+"171": {
+"SType, NonUndead, Eff1Dep: Inflict Doom": 1
+},
+"172": {
+"100%H, NonUndead, Inflict KO": 1
+},
+"173": {
+"SType, NonUndead, Inflict KO": 2
+},
+"175": {
+"AType, NonAnimal, 100% Damage": 1
+},
+"176": {
+"---, NonAnimal, Break Weapon Effect": 1
+},
+"177": {
+"AType, NonDragon, 100% Damage": 1
+},
+"178": {
+"100%H, Undead, (Target's Max HP) Damage": 1
+},
+"180": {
+"AType, Undead, 100% Damage": 9
+},
+"181": {
+"100%H, Undead, Heal to full HP": 3
+},
+"182": {
+"100%H, Undead, 100% Heal": 1
+},
+"183": {
+"SType, Undead, Remove Unit, 0.5x Hit Rate": 2
+},
+"185": {
+"AType, Animal, 100% Damage": 1
+},
+"186": {
+"AType, Animal, 200% Damage": 1
+},
+"187": {
+"---, Animal, Parley Effect": 1
+},
+"188": {
+"SType, Animal, Inflict Addle": 1
+},
+"189": {
+"---, Animal, Capture Effect": 1
+},
+"190": {
+"AType, Dragon, 200% Damage": 1
+},
+"191": {
+"---, Dragon, Parley Effect": 1
+},
+"192": {
+"AType, Enemy, Mug Effect": 1
+},
+"193": {
+"100%H, Default, Morph Effect": 9,
+"---, Control Effect": 4
+},
+"194": {
+"---, Friend Effect": 1
+},
+"195": {
+"100%H, NonUndead, Inflict Regen": 1
+},
+"196": {
+"100%H, Undead, Heal (Caster's Max HP - Caster's HP) Damage": 1
+},
+"197": {
+"AType, Default, 200% Damage": 2
+},
+"198": {
+"AType, Default, 50% Damage": 3
+},
+"199": {
+"AType, Default, 300% Damage": 5
+},
+"200": {
+"100%H, Default, Morph Effect": 9
+},
+"201": {
+"SType, Enemy, Inflict Sleep": 1
+},
+"202": {
+"100%H, Default, 50% Damage": 1
+},
+"203": {
+"100%H, Judge, Stop Judge": 1
+},
+"204": {
+"SType, Default, Inflict Disable/Immobilize": 1
+},
+"205": {
+"100%H, Default, Give JP": 1
+},
+"206": {
+"100%H, Default, Remove Yellow Card": 1
+},
+"207": {
+"100%H, Default, Add Yellow Card": 1
+},
+"208": {
+"100%H, Default, Eff1Dep: Steal 2 JP": 2
+}
+}

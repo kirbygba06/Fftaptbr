@@ -41,6 +41,11 @@ def parse_effect(s):
     if m: e.update(kind='mpdmg', m=int(m.group(1)) / 100); return e
     m = re.match(r'(\d+)% Damage$', act)
     if m: e.update(kind='dmg', m=int(m.group(1)) / 100); return e
+    m = re.match(r'(\d+)% Damage, ([\d.]+)x Hit Rate$', act)
+    if m: e.update(kind='dmg', m=int(m.group(1)) / 100, hitm=float(m.group(2))); return e
+    if re.match(r"100% Damage, capped to Target's Max HP", act): e.update(kind='dmg', m=1.0); return e
+    if act == 'Heal Eff1 Damage': e.update(kind='drain'); return e
+    if act == 'Knockback': e.update(kind='knock'); return e
     if act == '100% Heal': e.update(kind='heal', m=1.0); return e
     if act.startswith('Heal to full HP') or act.startswith('Cureall'): e.update(kind='healfull'); return e
     m = re.match(r'Revive to (\d+|full)', act)
@@ -277,8 +282,10 @@ def score_ability(u, a, own, foes, rng):
             h = e['hit']
             if kind == 'dmg' and a.basis:
                 hit = hit_a(u, t, rng) if h == 'AType' else (hit_s(u, t, rng, []) if h == 'SType' else 1.0)
+                if e.get('hitm'): hit = min(1.0, hit * e['hitm'])
                 if e['dep']: hit = e1
                 dm = base_dmg(u, t, a, e); tot += hit * min(dm, t['hp']) * (1 if t in foes else -1)
+                lastdm = min(dm, t['hp'])
                 if t in foes and dm >= t['hp']: tot += hit * t.get('dps', 100) * 2
                 if k == 0: e1 = hit
             elif kind == 'hpfrac' and harmful:
@@ -300,7 +307,9 @@ def score_ability(u, a, own, foes, rng):
                     tot += hit * status_value(u, t, nm, 0, ftot, len(live_a)) * P['SV']
             elif kind == 'esuna':
                 tot += sum(status_value(u, t, k_, 0, ftot, len(live_a)) for k_ in t['st'] if k_ in HARM) * 0.7 * P['SV']
-            elif kind == 'delay': tot += t.get('dps', 100) * 0.4 * hit_a(u, t, rng)
+            elif kind == 'delay': tot += t.get('dps', 100) * 0.4 * (e1 if e['dep'] else hit_a(u, t, rng))
+            elif kind == 'drain' and t in foes: tot += e1 * min(locals().get('lastdm', 0), u['maxhp'] - u['hp'])
+            elif kind == 'knock' and t in foes: tot += t.get('dps', 100) * 0.15 * e1
         vals.append((tot * r, t))
     vals.sort(key=lambda x: -x[0]); v0, t0 = vals[0]
     if len(vals) > 1 and ex > 0:
@@ -315,6 +324,7 @@ def do_effects(u, t, a, own, foes, rng, e1ok):
         hit = hit_a(u, t, rng) if h == 'AType' else (hit_s(u, t, rng, e.get('names', []), a.name) if h == 'SType' else 1.0)
         if h not in ('AType', 'SType'):
             m = re.match(r'(\d+)%', h); hit = int(m.group(1)) / 100 if m else 1.0
+        if e.get('hitm'): hit = min(1.0, hit * e['hitm'])
         if e['dep'] and not (P['OBS'] and a.name in OBS_HIT and kind == 'status'): success = ok
         else: success = rng.random() < hit
         if kind == 'status' and (not e['dep'] or (P['OBS'] and a.name in OBS_HIT)):
@@ -327,7 +337,7 @@ def do_effects(u, t, a, own, foes, rng, e1ok):
             dm = base_dmg(u, t, a, e) * rng.uniform(.9, 1.1)
             if a.basis == 'W' and has(t, 'Sleep'): t['st'].pop('Sleep', None)
             if has(t, 'Expert Guard'): dm = 0
-            t['hp'] -= dm; STATS['impact'][a.name] += min(dm, max(0, t['hp'] + dm)) * (1 if t in foes else -1)
+            t['hp'] -= dm; STATS['impact'][a.name] += min(dm, max(0, t['hp'] + dm)) * (1 if t in foes else -1); lastdm = min(dm, max(0, t['hp'] + dm))
             for _s in ('Sleep', 'Charm'): t['st'].pop(_s, None)
         elif kind == 'hpfrac':
             _d = 0 if has(t, 'Expert Guard') else (t['maxhp'] if e.get('mx') else t['hp']) * e['m']; t['hp'] -= _d; STATS['impact'][a.name] += _d
@@ -350,6 +360,8 @@ def do_effects(u, t, a, own, foes, rng, e1ok):
             for k_ in list(t['st']):
                 if k_ in BEN: t['st'].pop(k_, None)
         elif kind == 'delay': t['cnt'] = 0
+        elif kind == 'drain': u['hp'] = min(u['maxhp'], u['hp'] + locals().get('lastdm', 0))
+        elif kind == 'knock': t['cnt'] = t['cnt'] * 0.6
     if t['hp'] <= 0 and t['st'].get('Auto-Life'):
         t['hp'] = t['maxhp'] * 0.25; t['st'].clear()
 FORCE = {}   # id da classe -> nome da habilidade usada sempre que possível (medida de valor por ação)

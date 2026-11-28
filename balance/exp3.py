@@ -32,16 +32,17 @@ def apply_ctx(s, spec):
     saved = {}
     for a in sim2.CAT.values():
         if a.name in s['mods']:
-            m = s['mods'][a.name]; saved[a.name] = (a.mp, a.power, a.area, a.eff)
+            m = s['mods'][a.name]; saved[a.name] = (a.mp, a.power, a.area, a.eff, a.basis, a.rng)
             if isinstance(m, dict):
                 a.mp = m.get('mp', a.mp); a.power = m.get('power', a.power); a.area = m.get('area', a.area)
+                a.basis = m.get('basis', a.basis); a.rng = m.get('rng', a.rng)
                 if 'eff' in m: a.eff = [x for x in (sim2.parse_effect(e) for e in m['eff']) if x]
             else: a.mp = m
     sim2.APMOD.clear(); sim2.APMOD.update(s.get('_ap') or spec.get('ap') or {}); sim2.DISABLE.clear(); sim2.DISABLE.update(spec.get('disable') or ())
     return saved
 def undo_ctx(saved):
     for a in sim2.CAT.values():
-        if a.name in saved: a.mp, a.power, a.area, a.eff = saved[a.name]
+        if a.name in saved: a.mp, a.power, a.area, a.eff, a.basis, a.rng = saved[a.name]
     sim2.APMOD.clear(); sim2.DISABLE.clear()
 DUR0 = dict(sim2.DUR)
 PROG_ON = int(os.environ.get('PROG', '0')); APB = int(os.environ.get('APB', '40'))
