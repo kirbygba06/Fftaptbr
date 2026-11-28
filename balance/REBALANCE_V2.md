@@ -104,3 +104,35 @@ Com ASM (rotinas a localizar com mGBA + GDB):
 - `sim2.py`: agora modela dreno, empurrão e golpes com acerto modificado (Beatdown e Blitz apareciam como 0%).
 
 Fontes: [Into the Breach: clareza acima de ideias legais](https://gamedeveloper.com/design/-i-into-the-breach-i-dev-on-ui-design-sacrifice-cool-ideas-for-the-sake-of-clarity-every-time-), [Into the Breach: falha e telegrafia](https://www.gamedeveloper.com/design/reimagining-failure-in-strategy-game-design-in-i-into-the-breach-i-), [Tactics Ogre Reborn: novidades](https://www.square-enix-games.com/news/tactics-ogre-reborn-new-features), [Tactics Ogre Reborn: ajustes de equilíbrio](https://gematsu.com/2022/10/tactics-ogre-reborn-details-unit-development-charms-battle-updates-balance-adjustments-shop-improvements-classes-and-characters), [Triangle Strategy: dicas de batalha](https://www.nintendo.com/en-ca/whatsnew/tips-for-getting-started-with-triangle-strategy/), [Triangle Strategy: TP](https://nintendolife.com/guides/triangle-strategy-tips-and-battle-tactics-walkthrough-tactical-points-phases-kudos-quietuses-guide), [FFTA2 (TV Tropes)](https://www.tvtropes.org/pmwiki/pmwiki.php/VideoGame/FinalFantasyTacticsA2), [FFTA2 (Siliconera)](https://www.siliconera.com/final-fantasy-tactics-a2-polished-to-amazement/).
+
+## 8. Animações (correção)
+No primeiro v2, o efeito extra das habilidades novas funcionava, mas não aparecia na tela (sem ícone de Lento, sem número de cura no dreno).
+Fiz testes no mGBA com o save do usuário, na missão "Colher Ervas", com o Montblanc e estados salvos.
+
+O campo u16 em +0x14 do registro é o **script de animação**. É ele que decide o que é mostrado:
+- Gelo com o próprio script mostra só o dano.
+- Com o script do Sliprain, o ícone do status aparece.
+- O mesmo vale para dano + Pressa: o ícone só aparece com o script do Sliprain.
+
+Correção aplicada: cada habilidade nova usa o script de uma habilidade original com a mesma estrutura.
+
+| Habilidade | Script |
+|---|---|
+| Gelo | Sliprain |
+| Trovão | Shining Air (clarão amarelo, brilho no alvo) |
+| Égide | Barrier |
+| Formação | Protect |
+| Baluarte | Shell |
+| Sangue Wyrm e Mantra | Aura |
+| Coragem | Cheer |
+| Shuriken | Dagger |
+| Pregar, Rastreio e Tiro Choque | Beso Toxico |
+| Golpe Seco e Faca Venenosa | Swarmstrike |
+| Mog Empurra | Mog Attack |
+| Lâmina Vampira | Lancet, com o tipo de dano do Lancet (efeito 64), que é o par do dreno |
+
+Testado no emulador:
+- Gelo: ícone de status aparece.
+- Trovão: clarão e brilho no alvo.
+- Lâmina Vampira: brilho verde volta ao lançador e mostra o número de cura.
+- Shuriken e Pregar: brilho do status no alvo.

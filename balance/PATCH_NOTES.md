@@ -33,6 +33,8 @@ Elas ocupam o lugar de habilidades que quase não tinham uso. Quem aprendia a an
 | **Coragem** | Friend | Animista | reforça o próximo ataque (aliados ao redor) | 12 |
 | **Tiro Choque** | Aim: Wallet | Atirador | golpe com a arma: dano + atrasa o turno | — |
 
+Cada habilidade nova usa a animação de uma habilidade original com a mesma estrutura (dano + status, dano + dreno etc.). Assim o jogo mostra o ícone de status, o brilho do efeito ou o número de cura, como nas habilidades originais.
+
 ## Magias: Fogo, Gelo e Raio
 
 No original, as três eram idênticas (poder 30/40/50, MP 6/12/24). Agora cada elemento tem um papel:
@@ -48,6 +50,9 @@ No original, as três eram idênticas (poder 30/40/50, MP 6/12/24). Agora cada e
 | Gelo | 30→24 | 6 | causa Lento se acertar |
 | Gelo+ | 40→37 | 12→14 | causa Lento se acertar |
 | Gelo++ | 50→54 | 24→30 | causa Lento se acertar |
+
+Animações: Gelo usa a do Sliprain e Trovão a do Shining Air, para que o Lento e o atraso apareçam na tela (com a animação original do Blizzard e do Thunder, o efeito extra não era mostrado). Fogo mantém a sua.
+
 
 **Fogo** causa mais dano. **Gelo** causa menos dano, mas deixa o alvo Lento. **Raio** fica no meio e atrasa o turno do alvo.
 
@@ -378,3 +383,4 @@ Valores: base → novo. "Cresc." é o crescimento por nível. Só aparece o que 
 - Rotinas do jogo: fórmulas de dano, duração de status, Combo, Doublecast, Dragonheart.
 - Mapas, missões, inimigos fixos, leis e textos da história (além da tradução).
 - As descrições das magias Gelo e Raio no jogo ainda não citam o Lento e o atraso de turno.
+- O atraso de turno (Raio, Golpe Seco, Tiro Choque) não tem ícone próprio no jogo: aparece como um brilho no alvo.

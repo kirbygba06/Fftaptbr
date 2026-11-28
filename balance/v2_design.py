@@ -6,6 +6,7 @@ Do 'template' copia animação, flags e IA; depois troca efeitos, poder, MP, alc
 # efeitos (texto do simulador -> ID de efeito da ROM, já usados por outras habilidades)
 E_ = {
  'DMG':   ('AType, Default, 100% Damage', 63),
+ 'DMGCAP': ("AType, Default, 100% Damage, capped to Target's Max HP", 64),   # par obrigatório do dreno (Lancet/Drain)
  'HALF':  ('AType, Default, 50% Damage', 198),
  'BEAT':  ('AType, Default, 200% Damage, 0.5x Hit Rate', 66),
  'BLITZ': ('AType, Default, 50% Damage, 2.0x Hit Rate', 65),
@@ -28,35 +29,35 @@ T_MELEE, T_BOW, T_ALLY, T_SELFAREA, T_SELF, T_AREA = 112, 178, 9, 87, 94, 32
 WEAP = dict(basis='W', power=None, rng='As Weapon')
 SKILLS = [
  # slot, nome sim (slot antigo), template, efeitos, extras sim, campos ROM (power, mp, rng, vrng, area, varea), nome PT, descrição PT, classes
- dict(slot=79,  old='Magicbreak',  t=T_MELEE,  eff=['DMG', 'DELAY'], sim=WEAP, rom={}, pt='Golpe Seco',
+ dict(slot=79,  old='Magicbreak',  t=T_MELEE,  eff=['DMG', 'DELAY'], anim=0x89, sim=WEAP, rom={}, pt='Golpe Seco',
       desc='Golpe com a arma que\natrasa o turno do alvo.', cls='Soldado, Guerreiro'),
- dict(slot=83,  old='Sensor',      t=T_SELFAREA, eff=['PROT'], sim=dict(rng='Self', area='r1/v2', mp=10), rom=dict(power=0, mp=10), pt='Formação',
+ dict(slot=83,  old='Sensor',      t=T_SELFAREA, eff=['PROT'], anim=0x0a, sim=dict(rng='Self', area='r1/v2', mp=10), rom=dict(power=0, mp=10), pt='Formação',
       desc='Dá Proteção aos\naliados ao redor.', cls='Soldado'),
- dict(slot=91,  old='Parley',      t=T_ALLY,   eff=['PROT', 'SHELL'], sim=dict(rng='3', area='One Unit', mp=12), rom=dict(mp=12, rng=3, area=1, varea=0), pt='Égide',
+ dict(slot=91,  old='Parley',      t=T_ALLY,   eff=['PROT', 'SHELL'], anim=0x0d, sim=dict(rng='3', area='One Unit', mp=12), rom=dict(mp=12, rng=3, area=1, varea=0), pt='Égide',
       desc='Dá Proteção e Barreira\na um aliado.', cls='Paladino'),
- dict(slot=95,  old='Drop Weapon', t=T_MELEE,  eff=['DMG', 'KNOCK'], sim=WEAP, rom={}, pt='Empurrão',
+ dict(slot=95,  old='Drop Weapon', t=T_MELEE,  eff=['DMG', 'KNOCK'], anim=0x6d, sim=WEAP, rom={}, pt='Empurrão',
       desc='Golpe com a arma que\nempurra o alvo.', cls='Paladino, Defensor'),
- dict(slot=97,  old='Hibernate',   t=T_SELFAREA, eff=['SHELL'], sim=dict(rng='Self', area='r1/v2', mp=10), rom=dict(power=0, mp=10), pt='Baluarte',
+ dict(slot=97,  old='Hibernate',   t=T_SELFAREA, eff=['SHELL'], anim=0x09, sim=dict(rng='Self', area='r1/v2', mp=10), rom=dict(power=0, mp=10), pt='Baluarte',
       desc='Dá Barreira aos\naliados ao redor.', cls='Defensor'),
- dict(slot=126, old='Wyrmtamer',   t=T_SELF,   eff=['REGEN', 'BOOST'], sim=dict(rng='Self', area='Self', mp=0), rom={}, pt='Sangue Wyrm',
+ dict(slot=126, old='Wyrmtamer',   t=T_SELF,   eff=['REGEN', 'BOOST'], anim=0x60, sim=dict(rng='Self', area='Self', mp=0), rom={}, pt='Sangue Wyrm',
       desc='Ganha Regen e reforça\no próximo ataque.', cls='Dragoon'),
- dict(slot=181, old='Oust',        t=T_BOW,    eff=['HALF', 'SLOWD'], sim=WEAP, rom={}, pt='Rastreio',
+ dict(slot=181, old='Oust',        t=T_BOW,    eff=['HALF', 'SLOWD'], anim=0xd7, sim=WEAP, rom={}, pt='Rastreio',
       desc='Tiro leve que deixa\no alvo lento.', cls='Caçador'),
- dict(slot=176, old='Burial',      t=T_BOW,    eff=['DMG', 'IMMO'], sim=WEAP, rom={}, pt='Pregar',
+ dict(slot=176, old='Burial',      t=T_BOW,    eff=['DMG', 'IMMO'], anim=0xd7, sim=WEAP, rom={}, pt='Pregar',
       desc='Flecha que fere e\nimobiliza o alvo.', cls='Arqueiro'),
- dict(slot=154, old='Unspell',     t=T_THROW,  eff=['DMG', 'DISABLE'], sim=dict(basis='W', power=35, rng='4', area='One Unit', mp=6), rom=dict(power=35, mp=6, rng=4, vrng=0), pt='Shuriken',
+ dict(slot=154, old='Unspell',     t=T_THROW,  eff=['DMG', 'DISABLE'], anim=0xd4, sim=dict(basis='W', power=35, rng='4', area='One Unit', mp=6), rom=dict(power=35, mp=6, rng=4, vrng=0), pt='Shuriken',
       desc='Arremessa um shuriken\nque fere e paralisa.', cls='Ninja'),
- dict(slot=137, old='Mog Peek',    t=T_MELEE,  eff=['DMG', 'KNOCK'], sim=WEAP, rom={}, pt='Mog Empurra',
+ dict(slot=137, old='Mog Peek',    t=T_MELEE,  eff=['DMG', 'KNOCK'], anim=0x81, sim=WEAP, rom={}, pt='Mog Empurra',
       desc='Golpe com a arma que\nempurra o alvo, kupo!', cls='Cavaleiro Mog'),
- dict(slot=107, old='Holy Sign',   t=T_SELFAREA, eff=['REGEN'], sim=dict(rng='Self', area='r1/v2', mp=0), rom=dict(power=0, mp=0), pt='Mantra',
+ dict(slot=107, old='Holy Sign',   t=T_SELFAREA, eff=['REGEN'], anim=0x60, sim=dict(rng='Self', area='r1/v2', mp=0), rom=dict(power=0, mp=0), pt='Mantra',
       desc='Dá Regen aos aliados\nao redor.', cls='Monge Branco'),
- dict(slot=143, old='Featherblow', t=T_MELEE,  eff=['DMG', 'DRAIN'], sim=WEAP, rom={}, pt='Lâmina Vampira',
+ dict(slot=143, old='Featherblow', t=T_MELEE,  eff=['DMGCAP', 'DRAIN'], anim=0x7a, sim=WEAP, rom={}, pt='Lâmina Vampira',
       desc='Golpe que recupera HP\nigual ao dano causado.', cls='Esgrimista'),
- dict(slot=217, old='Gil Toss',    t=T_MELEE,  eff=['DMG', 'POISON'], sim=WEAP, rom={}, pt='Faca Venenosa',
+ dict(slot=217, old='Gil Toss',    t=T_MELEE,  eff=['DMG', 'POISON'], anim=0x89, sim=WEAP, rom={}, pt='Faca Venenosa',
       desc='Golpe com a arma que\nenvenena o alvo.', cls='Malabarista'),
- dict(slot=233, old='Friend',      t=T_SELFAREA, eff=['BOOST'], sim=dict(rng='Self', area='r1/v2', mp=12), rom=dict(power=0, mp=12), pt='Coragem',
+ dict(slot=233, old='Friend',      t=T_SELFAREA, eff=['BOOST'], anim=0x76, sim=dict(rng='Self', area='r1/v2', mp=12), rom=dict(power=0, mp=12), pt='Coragem',
       desc='Reforça o próximo\nataque dos aliados.', cls='Animista'),
- dict(slot=226, old='Aim: Wallet', t=T_BOW,    eff=['DMG', 'DELAY'], sim=WEAP, rom={}, pt='Tiro Choque',
+ dict(slot=226, old='Aim: Wallet', t=T_BOW,    eff=['DMG', 'DELAY'], anim=0xd7, sim=WEAP, rom={}, pt='Tiro Choque',
       desc='Tiro que atrasa o\nturno do alvo.', cls='Atirador'),
 ]
 # Véus do Ninja: poder 15 -> 28, MP 4 -> 8 (dano mais útil, ainda abaixo das magias de nível 2)
@@ -75,3 +76,8 @@ def sim_mods():
     return out
 NAMES = {}   # preenchido pelo gerador (índice no menu -> nome PT)
 DESCS = {}   # índice no banco 0x529514 -> descrição PT
+
+# Script de animação (u16 em +0x14): decide o que aparece na tela. Só scripts de habilidades com efeito secundário mostram o 2º efeito
+# (ícone de status / brilho). Testado no mGBA: com o script do Blizzard o Lento não aparece; com o do Sliprain aparece.
+ANIM_FIX = {29: 0x39, 30: 0x39, 31: 0x39,     # Gelo/Gelo+/Gelo++ -> script do Sliprain (dano + status)
+            26: 0x36, 27: 0x36, 28: 0x36}     # Trovão/+/++ -> script do Shining Air (clarão + brilho do efeito)

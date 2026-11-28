@@ -48,6 +48,7 @@ def build_data():
         r = s.get('rom', {})
         for k, pos in (('mp', 4), ('rng', 6), ('vrng', 7), ('area', 9), ('varea', 0xA), ('power', 0xB), ('elem', 2)):
             if k in r: new[pos] = r[k]
+        if 'anim' in s: new[0x14:0x16] = s['anim'].to_bytes(2, 'little')
         e24[a] = bytes(new)
         rec = [x for x in RR if x[2] == slot and x[3] == 1]
         assert rec, slot
@@ -60,6 +61,9 @@ def build_data():
         x = [a for a in A.values() if a['name'] == n][0]; a = ABIL_BASE + 0x1C * x['idx']; new = bytearray(rom[a:a + 0x1C])
         new[4] = m['mp']; new[0xB] = m['power']; e24[a] = bytes(new)
         rows.append(dict(id=x['idx'], antes=n, depois=n, classes='Ninja', efeitos='buff', mp=m['mp'], poder=m['power'], raw_antes=rom[a:a + 0x1C].hex(' '), raw_depois=new.hex(' ')))
+    for idx, an in V.ANIM_FIX.items():
+        a = ABIL_BASE + 0x1C * idx; e24[a + 0x14] = an.to_bytes(2, 'little')
+        rows.append(dict(id=idx, antes=A[idx]['name'], depois=A[idx]['name'], efeitos='animação 0x%02x' % an))
     e24 = save('bal24_habilidades_novas', e24)
     with open(os.path.join(OUT, 'csv', 'bal24_habilidades_novas.csv'), 'w', newline='') as f:
         k = list(rows[0].keys()); w = csv.DictWriter(f, k, extrasaction='ignore'); w.writeheader(); [w.writerow(r_) for r_ in rows]

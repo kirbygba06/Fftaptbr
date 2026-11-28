@@ -81,7 +81,7 @@ w('## Habilidades novas\n')
 w('Elas ocupam o lugar de habilidades que quase não tinham uso. Quem aprendia a antiga aprende a nova, com a mesma arma e o mesmo custo de AP.\n')
 w('| Nova | Substitui | Classes | Efeito | MP |')
 w('|---|---|---|---|---|')
-EFX = {'DMG': 'dano', 'HALF': 'metade do dano', 'DELAY': 'atrasa o turno', 'KNOCK': 'empurra', 'DRAIN': 'recupera HP = dano', 'IMMO': 'imobiliza',
+EFX = {'DMG': 'dano', 'DMGCAP': 'dano', 'HALF': 'metade do dano', 'DELAY': 'atrasa o turno', 'KNOCK': 'empurra', 'DRAIN': 'recupera HP = dano', 'IMMO': 'imobiliza',
        'SLOWD': 'Lento', 'PROT': 'Proteção', 'SHELL': 'Barreira', 'REGEN': 'Regen', 'BOOST': 'reforça o próximo ataque', 'DISABLE': 'paralisa', 'POISON': 'veneno', 'BLIND': 'cegueira'}
 for s in V.SKILLS:
     area = ' (aliados ao redor)' if s['t'] == V.T_SELFAREA else (' (em si mesmo)' if s['t'] == V.T_SELF else '')
@@ -89,6 +89,9 @@ for s in V.SKILLS:
     mp = u32(b'\0' * 0, 0) if False else pt[ABIL_BASE + 0x1C * s['slot'] + 4]
     w('| **%s** | %s | %s | %s%s%s | %s |' % (abil_pt(s['slot']), s['old'], who(s['slot']), arma, ' + '.join(EFX[k] for k in s['eff']), area, mp or '—'))
 w('')
+
+w('Cada habilidade nova usa a animação de uma habilidade original com a mesma estrutura (dano + status, dano + dreno etc.). '
+  'Assim o jogo mostra o ícone de status, o brilho do efeito ou o número de cura, como nas habilidades originais.\n')
 
 # ---------- magias
 w('## Magias: Fogo, Gelo e Raio\n')
@@ -98,6 +101,8 @@ w('|---|---|---|---|')
 for r in sorted(rd('final_v1/csv/bal23_magias.csv'), key=lambda r: int(r['id'])):
     ef = {'103': 'causa Lento se acertar', '27': 'atrasa o turno se acertar'}.get(r['efeito2_novo'], '—')
     w('| %s | %s | %s | %s |' % (abil_pt(int(r['id'])), arrow(r['poder_orig'], r['poder_novo']) or r['poder_novo'], arrow(r['mp_orig'], r['mp_novo']) or r['mp_novo'], ef))
+w('\nAnimações: Gelo usa a do Sliprain e Trovão a do Shining Air, para que o Lento e o atraso apareçam na tela (com a animação original do '
+  'Blizzard e do Thunder, o efeito extra não era mostrado). Fogo mantém a sua.\n')
 w('\n**Fogo** causa mais dano. **Gelo** causa menos dano, mas deixa o alvo Lento. **Raio** fica no meio e atrasa o turno do alvo.\n')
 
 # ---------- habilidades alteradas
@@ -166,5 +171,6 @@ w('## Não muda\n')
 w('- Rotinas do jogo: fórmulas de dano, duração de status, Combo, Doublecast, Dragonheart.')
 w('- Mapas, missões, inimigos fixos, leis e textos da história (além da tradução).')
 w('- As descrições das magias Gelo e Raio no jogo ainda não citam o Lento e o atraso de turno.')
+w('- O atraso de turno (Raio, Golpe Seco, Tiro Choque) não tem ícone próprio no jogo: aparece como um brilho no alvo.')
 open(os.path.join(HERE, 'PATCH_NOTES.md'), 'w', encoding='utf-8').write('\n'.join(L) + '\n')
 print('PATCH_NOTES.md:', len(L), 'linhas')
